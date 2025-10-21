@@ -3,17 +3,6 @@ import type { CellId } from './cell_id';
 import type { GridSize } from './grid_size';
 import type { WorksheetDefaults } from './worksheet_defaults';
 
-/** Worksheet is visible. */
-export type WORKSHEET_VISIBLE = 0;
-/** Worksheet is hidden. */
-export type WORKSHEET_HIDDEN = 1;
-/**
- * Worksheet is _very_ hidden.
- *
- * @see {@link https://exceloffthegrid.com/make-excel-sheets-very-hidden/}
- */
-export type WORKSHEET_VERY_HIDDEN = 2;
-
 /**
  * A rectangle of cells. A sheet within a spreadsheet.
  */
@@ -32,8 +21,14 @@ export type Worksheet = {
   defaults: WorksheetDefaults;
   /**
    * Whether or not the sheet should be shown to a user in a UI displaying the workbook.
+   *
+   * - 0 = sheet is visible
+   * - 1 = sheet is hidden
+   * - 2 = sheet is "very hidden"
+   *
+   * @see {@link https://exceloffthegrid.com/make-excel-sheets-very-hidden/}
    */
-  hidden?: WORKSHEET_VISIBLE | WORKSHEET_HIDDEN | WORKSHEET_VERY_HIDDEN;
+  hidden?: 0 | 1 | 2;
   /** Indicates whether a hairline-grid should be drawn when displaying the sheet. */
   showGridLines?: boolean;
 };
