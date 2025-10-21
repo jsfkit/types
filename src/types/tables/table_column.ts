@@ -1,4 +1,4 @@
-import type { TableColumnType } from './table_column_type';
+import type { TableColumnDataType } from './table_column_data_type';
 
 /**
  * Describes a column within a table.
@@ -16,7 +16,7 @@ export type TableColumn = {
    *
    * @default "unknown"
    */
-  dataType?: TableColumnType;
+  dataType?: TableColumnDataType;
   /**
    * If the column is a calculated column, then this field must include the formula used.
    */
