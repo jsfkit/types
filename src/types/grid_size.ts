@@ -1,3 +1,4 @@
+import type { Integer } from './integer';
 import type { PixelValue } from './pixel_value';
 
 /**
@@ -12,11 +13,11 @@ import type { PixelValue } from './pixel_value';
  */
 export type GridSize = {
   /** A 1-based inclusive start index. */
-  start: number;
+  start: Integer;
   /** A 1-based inclusive end index. */
-  end: number;
+  end: Integer;
   /** The size of the grid item in pixels. */
   size: PixelValue;
   /** An index to a style in the workbook styles. */
-  s?: number;
+  s?: Integer;
 };

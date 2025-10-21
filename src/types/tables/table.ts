@@ -1,4 +1,5 @@
 import type { CellRange } from '../cell_range';
+import type { Integer } from '../integer';
 import type { TableColumn } from './table_column';
 import type { TableStyle } from './table_style';
 
@@ -37,13 +38,13 @@ export type Table = {
    *
    * @default 0
    */
-  totalsRowCount?: number;
+  totalsRowCount?: Integer;
   /**
    * A non-negative integer specifying the number of header rows at the top of the table. Default to
    * 1 if absent.
    * @default 1
    */
-  headerRowCount?: number;
+  headerRowCount?: Integer;
   /**
    * Presentation information for the table. When not present tables should be rendered using
    * `"TableStyleMedium2"` style with `showRowStripes` active.

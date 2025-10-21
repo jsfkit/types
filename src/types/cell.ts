@@ -1,5 +1,6 @@
 import type { CellValueType } from './cell_value_type';
 import type { Comment } from './comment';
+import type { Integer } from './integer';
 
 /**
  * A spreadsheet cell.
@@ -17,7 +18,7 @@ export type Cell = {
    * references. When the value is a number is an index to a formula in the workbook's `formulas`
    * array.
    */
-  f?: string | number;
+  f?: string | Integer;
   /** The range of enclosing array if the formula is an array formula. */
   F?: string;
   /**
@@ -29,7 +30,7 @@ export type Cell = {
    *
    * @default 0
    */
-  s?: number;
+  s?: Integer;
   /**
    * Comments associated with the cell.
    */

@@ -7,6 +7,7 @@ export type * from './defined_name';
 export type * from './external';
 export type * from './external_worksheet';
 export type * from './grid_size';
+export type * from './integer';
 export type * from './pixel_value';
 export type * from './styles';
 export type * from './tables';
