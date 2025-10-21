@@ -1,10 +1,10 @@
-import type { PixelValue } from "../pixel_value";
-import type { BorderStyle } from "./border_style";
-import type { Color } from "./color";
-import type { HAlign } from "./h_align";
-import type { PatternStyle } from "./pattern_style";
-import type { Underline } from "./underline";
-import type { VAlign } from "./v_align";
+import type { PixelValue } from '../pixel_value';
+import type { BorderStyle } from './border_style';
+import type { Color } from './color';
+import type { HAlign } from './h_align';
+import type { PatternStyle } from './pattern_style';
+import type { Underline } from './underline';
+import type { VAlign } from './v_align';
 
 /**
  * Style rules that specify the visual presentation of a cell.

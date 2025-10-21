@@ -1,5 +1,5 @@
-import type { CellValueType } from "./cell_value_type";
-import type { Comment } from "./comment";
+import type { CellValueType } from './cell_value_type';
+import type { Comment } from './comment';
 
 /**
  * A spreadsheet cell.

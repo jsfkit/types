@@ -1,6 +1,6 @@
-import type { CellRange } from "../cell_range";
-import type { TableColumn } from "./table_column";
-import type { TableStyle } from "./table_style";
+import type { CellRange } from '../cell_range';
+import type { TableColumn } from './table_column';
+import type { TableStyle } from './table_style';
 
 /**
  * A tabular data structure.

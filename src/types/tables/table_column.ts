@@ -1,4 +1,4 @@
-import type { TableColumnType } from "./table_column_type";
+import type { TableColumnType } from './table_column_type';
 
 /**
  * Describes a column within a table.

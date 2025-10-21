@@ -1,5 +1,5 @@
-import type { DefinedName } from "./defined_name";
-import type { ExternalSheet } from "./external_sheet";
+import type { DefinedName } from './defined_name';
+import type { ExternalSheet } from './external_sheet';
 
 /**
  * A cell from another workbook (i.e. another file) that is referenced in this workbook.

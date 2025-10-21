@@ -1,9 +1,9 @@
-import type { CalcProps } from "./calc_props";
-import type { DefinedName } from "./defined_name";
-import type { External } from "./external";
-import type { Style } from "./styles/style";
-import type { Table } from "./tables/table";
-import type { Worksheet } from "./worksheet";
+import type { CalcProps } from './calc_props';
+import type { DefinedName } from './defined_name';
+import type { External } from './external';
+import type { Style } from './styles/style';
+import type { Table } from './tables/table';
+import type { Worksheet } from './worksheet';
 
 /**
  * A workbook is a collection of worksheets, styles, defined names, and other metadata. It's what's

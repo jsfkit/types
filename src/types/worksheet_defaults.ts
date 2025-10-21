@@ -1,4 +1,4 @@
-import type { PixelValue } from "./pixel_value";
+import type { PixelValue } from './pixel_value';
 
 /**
  * A collection of default properties that apply to cells, rows, or columns in the worksheet.

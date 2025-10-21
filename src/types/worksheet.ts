@@ -1,7 +1,7 @@
-import type { Cell } from "./cell";
-import type { CellId } from "./cell_id";
-import type { GridSize } from "./grid_size";
-import type { WorksheetDefaults } from "./worksheet_defaults";
+import type { Cell } from './cell';
+import type { CellId } from './cell_id';
+import type { GridSize } from './grid_size';
+import type { WorksheetDefaults } from './worksheet_defaults';
 
 /** Worksheet is visible. */
 export type WORKSHEET_VISIBLE = 0;

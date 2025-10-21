@@ -1,4 +1,4 @@
-import type { PixelValue } from "./pixel_value";
+import type { PixelValue } from './pixel_value';
 
 /**
  * A size of a UI-grid measure over a range of items.
