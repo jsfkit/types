@@ -20,8 +20,6 @@ export type Cell = {
   f?: string | number;
   /** The range of enclosing array if the formula is an array formula. */
   F?: string;
-  /** Number format associated with the cell. */
-  z?: string;
   /**
    * Cell hyperlink. Must be a URL.
    */
