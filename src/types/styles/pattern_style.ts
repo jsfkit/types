@@ -19,8 +19,8 @@ export type PATTERN_STYLE_GRAY125 = 'gray125';
 export type PATTERN_STYLE_GRAY0625 = 'gray0625';
 
 /**
- * The style of fill pattern used for a cell background. If the worksheets zoom factor is changed the pixel
- * scale of the pattern is still expected to stay the same.
+ * The style of fill pattern used for a cell background. If the worksheets zoom factor is changed
+ * the pixel scale of the pattern is still expected to stay the same.
  */
 export type PatternStyle =
   | PATTERN_STYLE_NONE |
