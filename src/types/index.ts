@@ -5,7 +5,7 @@ export type * from './cell_value_type';
 export type * from './comment';
 export type * from './defined_name';
 export type * from './external';
-export type * from './external_sheet';
+export type * from './external_worksheet';
 export type * from './grid_size';
 export type * from './pixel_value';
 export type * from './styles';

@@ -1,5 +1,5 @@
 import type { DefinedName } from './defined_name';
-import type { ExternalSheet } from './external_sheet';
+import type { ExternalWorksheet } from './external_worksheet';
 
 /**
  * A cell from another workbook (i.e. another file) that is referenced in this workbook.
@@ -13,7 +13,7 @@ export type External = {
    * These will only be a subset of sheets needed to run calculations, so indexes from the original
    * workbooks will not be preserved.
    */
-  sheets: ExternalSheet[];
+  sheets: ExternalWorksheet[];
   /** Relevant defined names from an external workbook. */
   names: DefinedName[];
 };

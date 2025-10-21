@@ -4,7 +4,7 @@ import type { CellId } from './cell_id';
 /**
  * A simple container sheet for cell values within an external workbook.
  */
-export type ExternalSheet = {
+export type ExternalWorksheet = {
   /**
    * Name of the worksheet.
    */
