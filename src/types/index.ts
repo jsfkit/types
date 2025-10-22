@@ -1,4 +1,5 @@
 export type * from './calc_props';
+export type * from './cell';
 export type * from './cell_id';
 export type * from './cell_range';
 export type * from './cell_value_type';
