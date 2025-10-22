@@ -21,4 +21,9 @@ export default defineConfig([
     singleBlocks: true,
     lineLength: 100,
   }),
+  {
+    rules: {
+      'no-shadow': 'off',
+    },
+  },
 ]);
