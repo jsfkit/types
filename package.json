@@ -8,6 +8,16 @@
     "type": "git",
     "url": "git+https://github.com/jsfkit/types.git"
   },
+  "keywords": [
+    "excel",
+    "json",
+    "xlsx",
+    "jsf",
+    "spreadsheet",
+    "workbook",
+    "types",
+    "typescript"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
