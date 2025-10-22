@@ -4,6 +4,10 @@
   "description": "A JSON representation for spreadsheets",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsfkit/types.git"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
