@@ -1,4 +1,4 @@
-import type { Integer } from './integer';
+import type { integer } from './integer';
 
 /**
  * Directions on how formulas should be recalculated in the workbook.
@@ -13,7 +13,7 @@ export type CalcProps = {
    * The maximum number of calculation iterations, when `iterate` is `true`. Defaults to `100` in
    * Excel.
    */
-  iterateCount: Integer;
+  iterateCount: integer;
   /**
    * When a calculation iteration results in an absolute change that is less than iterateDelta,
    * then no further iterations should be attempted. Defaults to `0.001` in Excel.
