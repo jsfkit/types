@@ -11,8 +11,7 @@ export type CalcProps = {
   iterate: boolean;
   /**
    * The maximum number of calculation iterations, when {@link CalcProps.iterate} is `true`.
-   * Defaults to `100` in
-   * Excel.
+   * Defaults to `100` in Excel.
    */
   iterateCount: integer;
   /**
