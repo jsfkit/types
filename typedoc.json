@@ -4,7 +4,7 @@
   "out": "./docs",
   "router": "kind-dir",
   "navigationLinks": {
-    "GitHub": "https://github.com/jsfkif/types",
+    "GitHub": "https://github.com/jsfkit/types",
     "npm": "https://www.npmjs.com/package/@jsfkit/types"
   },
   "excludeTags": ["@pattern", "@min"]
