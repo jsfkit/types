@@ -1,6 +1,6 @@
 {
   "name": "@jsfkit/types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A JSON representation for spreadsheets",
   "license": "MIT",
   "type": "module",
@@ -24,6 +24,8 @@
       "import": "./dist/index.js"
     }
   },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
