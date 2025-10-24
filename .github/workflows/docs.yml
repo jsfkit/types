@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request: # TODO: Before merging, stop running this action on PRs.
 
 permissions:
   contents: read
