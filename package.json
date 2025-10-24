@@ -9,6 +9,7 @@
     "url": "git+https://github.com/jsfkit/types.git"
   },
   "homepage": "https://jsfkit.github.io/types/",
+  "bugs": "https://github.com/jsfkit/types/issues",
   "keywords": [
     "excel",
     "json",
