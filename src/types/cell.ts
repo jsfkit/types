@@ -17,6 +17,8 @@ export type Cell = {
    * Cell formula expression. When the value is a string it will be a formula with A1-style
    * references. When the value is a number is an index to a formula in the workbook's `formulas`
    * array.
+   *
+   * @see {@link Workbook.formulas}
    */
   f?: string | integer;
   /** The range of enclosing array if the formula is an array formula. */
@@ -28,6 +30,7 @@ export type Cell = {
   /**
    * An index to a style in the workbook's `styles`.
    *
+   * @see {@link Workbook.styles}
    * @default 0
    */
   s?: integer;
@@ -37,7 +40,8 @@ export type Cell = {
   c?: Comment[];
   /**
    * The type of the value contained in the cell. Cells with errors or dates must include this
-   * property, but it's otherwise optional (the type can be inferred from the `v` property).
+   * property, but it's otherwise optional (the type can be inferred from the {@link Cell.v}
+   * property).
    */
   t?: CellValueType;
 };

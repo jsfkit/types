@@ -1,0 +1,11 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["./src"],
+  "out": "./docs",
+  "router": "structure-dir",
+  "navigationLinks": {
+    "GitHub": "https://github.com/jsfkit/types",
+    "npm": "https://www.npmjs.com/package/@jsfkit/types"
+  },
+  "excludeTags": ["@pattern", "@min"]
+}

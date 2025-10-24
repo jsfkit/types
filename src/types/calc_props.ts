@@ -10,8 +10,8 @@ export type CalcProps = {
    */
   iterate: boolean;
   /**
-   * The maximum number of calculation iterations, when `iterate` is `true`. Defaults to `100` in
-   * Excel.
+   * The maximum number of calculation iterations, when {@link CalcProps.iterate} is `true`.
+   * Defaults to `100` in Excel.
    */
   iterateCount: integer;
   /**
@@ -22,7 +22,7 @@ export type CalcProps = {
   /**
    * Which of the two date systems the workbook uses. 1900 is the default.
    *
-   * @see {@link https://support.microsoft.com/office/e7fe7167-48a9-4b96-bb53-5612a800b487}
+   * @see {@link https://support.microsoft.com/office/e7fe7167-48a9-4b96-bb53-5612a800b487 | Date systems in Excel}
    */
   epoch?: 1900 | 1904;
 };

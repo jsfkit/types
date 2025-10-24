@@ -47,7 +47,7 @@ export type Table = {
   headerRowCount?: integer;
   /**
    * Presentation information for the table. When not present tables should be rendered using
-   * `"TableStyleMedium2"` style with `showRowStripes` active.
+   * `"TableStyleMedium2"` style with {@link TableStyle.showRowStripes} set to `true`.
    */
   style?: TableStyle;
 };
