@@ -8,6 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/jsfkit/types.git"
   },
+  "homepage": "https://jsfkit.github.io/types/",
   "keywords": [
     "excel",
     "json",
