@@ -1,4 +1,3 @@
-export type * from './calc_props';
 export type * from './cell';
 export type * from './cell_id';
 export type * from './cell_range';
@@ -11,6 +10,5 @@ export type * from './grid_size';
 export type * from './pixel_value';
 export type * from './styles';
 export type * from './tables';
-export type * from './workbook';
-export type * from './worksheet';
-export type * from './worksheet_defaults';
+export type * from './workbooks';
+export type * from './worksheets';

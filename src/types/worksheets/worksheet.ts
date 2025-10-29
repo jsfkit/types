@@ -1,7 +1,8 @@
-import type { Cell } from './cell';
-import type { CellId } from './cell_id';
-import type { GridSize } from './grid_size';
+import type { Cell } from '../cell';
+import type { CellId } from '../cell_id';
+import type { GridSize } from '../grid_size';
 import type { WorksheetDefaults } from './worksheet_defaults';
+import type { WorksheetView } from './worksheet_view';
 
 /**
  * A rectangle of cells. A sheet within a spreadsheet.
@@ -31,4 +32,6 @@ export type Worksheet = {
   hidden?: 0 | 1 | 2;
   /** Indicates whether a hairline-grid should be drawn when displaying the sheet. */
   showGridLines?: boolean;
+  /** The different display configurations saved for the worksheet. */
+  views?: WorksheetView[];
 };
