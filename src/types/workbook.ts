@@ -15,13 +15,13 @@ export type Workbook = {
   /** An ordered array of the worksheets in the workbook. */
   sheets: Worksheet[];
   /** An array of the workbook's defined names. */
-  names: DefinedName[];
+  names?: DefinedName[];
   /** Metadata on the workbook's tables. */
-  tables: Table[];
+  tables?: Table[];
   /** Directions on how formulas should be recalculated in the workbook. */
   calculationProperties?: CalcProps;
   /** Styles for cells in the workbook. */
-  styles: Style[];
+  styles?: Style[];
   /** External cells referenced by the workbook. An external cell is a cell in another workbook. */
   externals?: External[];
   /**
