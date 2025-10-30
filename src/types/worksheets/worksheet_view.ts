@@ -20,6 +20,10 @@ export type WorksheetView = {
    * The id of the workbook view this worksheet view belongs to.
    *
    * This is a zero-based index of the workbook view, as stored in the {@link Workbook.views} array.
+   *
+   * Within a single worksheet, each view must reference a distinct workbook view (i.e. no two views
+   * in the same worksheet can share the same `workbookView` id). However, views from different
+   * worksheets may reference the same workbook view.
    */
   workbookView: integer;
   /** Cell that is selected by default when the sheet is visible. */
