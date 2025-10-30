@@ -14,6 +14,10 @@ import type { integer } from '../integer';
  * Currently JSF does not include all available settings for a workbook.
  */
 export type WorkbookView = {
-  /** Index to the active sheet in this workbook view. The default value is 0 (first sheet). */
+  /**
+   * Index to the active sheet in this workbook view. The default value is 0 (first sheet).
+   *
+   * @defaultValue 0
+   */
   activeWorksheet?: integer
 };
