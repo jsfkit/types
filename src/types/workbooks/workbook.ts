@@ -32,5 +32,5 @@ export type Workbook = {
    */
   formulas?: string[];
   /** The different display configurations saved for the workbook. */
-  views: WorkbookView[]
+  views?: WorkbookView[]
 };
