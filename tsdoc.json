@@ -9,6 +9,10 @@
     {
       "tagName": "@min",
       "syntaxKind": "block"
+    },
+    {
+      "tagName": "@max",
+      "syntaxKind": "block"
     }
   ]
 }
