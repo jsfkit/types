@@ -12,13 +12,13 @@ export type Worksheet = {
   /** The cells belonging to the worksheet that have some data attached. */
   cells: Record<CellId, Cell>;
   /** Widths and styles of the columns in the worksheet. */
-  columns: GridSize[];
+  columns?: GridSize[];
   /** Heights and styles of the rows in the worksheet. */
-  rows: GridSize[];
+  rows?: GridSize[];
   /** Ranges that capture which cells have been merged. */
-  merges: string[];
+  merges?: string[];
   /** A collection of default properties that apply to cells, rows, or columns in the worksheet. */
-  defaults: WorksheetDefaults;
+  defaults?: WorksheetDefaults;
   /**
    * Whether or not the sheet should be shown to a user in a UI displaying the workbook.
    *
