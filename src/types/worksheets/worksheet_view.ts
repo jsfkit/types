@@ -28,6 +28,6 @@ export type WorksheetView = {
   workbookView: integer;
   /** Cell that is selected by default when the sheet is visible. */
   activeCell?: CellId;
-  /** Range of cells that are selected by default when the sheet is visible. */
-  activeRange?: CellRange;
+  /** Ranges of cells that are selected by default when the sheet is visible. */
+  activeRanges?: CellRange[];
 };
