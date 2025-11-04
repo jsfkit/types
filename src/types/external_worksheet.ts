@@ -12,7 +12,7 @@ export type ExternalWorksheet = {
   /**
    * The cells belonging to the worksheet that have any data attached.
    *
-   * Typically, these will have only values and calculation directives attached as they will not
+   * Typically, these will have only values attached, as they will not
    * be rendered by a spreadsheet application.
    */
   cells: Record<CellId, Cell>;
