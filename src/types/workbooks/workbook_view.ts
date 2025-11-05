@@ -19,5 +19,5 @@ export type WorkbookView = {
    *
    * @defaultValue 0
    */
-  activeWorksheet?: integer
+  activeSheet?: integer
 };
