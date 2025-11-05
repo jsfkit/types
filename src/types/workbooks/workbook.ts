@@ -1,9 +1,10 @@
+import type { DefinedName } from '../defined_name';
+import type { External } from '../external';
+import type { Style } from '../styles';
+import type { Table } from '../tables';
+import type { Worksheet } from '../worksheets';
 import type { CalcProps } from './calc_props';
-import type { DefinedName } from './defined_name';
-import type { External } from './external';
-import type { Style } from './styles/style';
-import type { Table } from './tables/table';
-import type { Worksheet } from './worksheet';
+import type { WorkbookView } from './workbook_view';
 
 /**
  * A workbook is a collection of worksheets, styles, defined names, and other metadata. It's what's
@@ -30,4 +31,6 @@ export type Workbook = {
    * identical.
    */
   formulas?: string[];
+  /** The different display configurations saved for the workbook. */
+  views?: WorkbookView[]
 };
