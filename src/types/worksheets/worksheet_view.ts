@@ -31,7 +31,11 @@ export type WorksheetView = {
   activeCell?: CellId;
   /** Ranges of cells that are selected by default when the sheet is visible. */
   activeRanges?: CellRange[];
-  /** The layout used to display the worksheet. */
+  /**
+   * The layout used to display the worksheet.
+   *
+   * @defaultValue "normal"
+   */
   activeLayout?: 'normal' | 'pageLayout' | 'pageBreakPreview';
   /**
    * Scale (aka zoom level, aka magnification) applied when displaying a worksheet. Each different

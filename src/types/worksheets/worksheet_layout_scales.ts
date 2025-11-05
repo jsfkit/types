@@ -12,6 +12,7 @@ export type WorksheetLayoutScales = {
    *
    * @min 10
    * @max 400
+   * @defaultValue 100
    * */
   normal?: integer;
   /**
@@ -19,6 +20,7 @@ export type WorksheetLayoutScales = {
    *
    * @min 10
    * @max 400
+   * @defaultValue 100
    */
   pageLayout?: integer;
   /**
@@ -26,6 +28,7 @@ export type WorksheetLayoutScales = {
    *
    * @min 10
    * @max 400
+   * @defaultValue 100
    */
   pageBreakPreview?: integer;
 };
