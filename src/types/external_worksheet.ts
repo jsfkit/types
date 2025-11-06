@@ -12,8 +12,8 @@ export type ExternalWorksheet = {
   /**
    * The cells belonging to the worksheet that have any data attached.
    *
-   * Typically, these will have only values and calculation directives attached as they will not
-   * be rendered by a spreadsheet application.
+   * Typically, these will have only values attached, as external worksheet cells serve purely as
+   * inputs to formulas in other sheets.
    */
   cells: Record<CellId, Cell>;
 };
