@@ -21,8 +21,8 @@ export type ThreadedComment = {
   personId: GUID;
   /** The comment text content. */
   text: string;
-  /** Whether the comment is marked as done/resolved. */
-  done?: boolean;
+  /** Whether the comment has been marked as resolved. */
+  resolved?: boolean;
   /** Mentions contained within the comment. */
   mentions?: Mention[];
   /** Hyperlinks contained within the comment. */
