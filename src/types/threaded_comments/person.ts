@@ -8,14 +8,14 @@ export type Person = {
    * Excel always uses a UUID in the format `{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}`, but JSF makes
    * no strict requirement.
    */
-  id: string,
+  id: string;
   /** The person's name as it should be shown to other users. */
-  displayName: string,
+  displayName: string;
   /**
    * Optional provider-issued user identifier that varies in format depending on the provider. See
    * {@link Person.providerId} for details on possible values.
    */
-  userId?: string,
+  userId?: string;
   /**
    * Specifies where the person's information came from. Excel supports the following values:
    *
