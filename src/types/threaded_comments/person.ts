@@ -14,12 +14,12 @@ export type Person = {
    */
   userId?: string,
   /**
-   * Specifies where the person's information came from.
+   * Specifies where the person's information came from. Excel supports the following values:
    *
    * - `None`: no specific provider; {@link Person.userId} is expected to be the person's name.
    * - `AD`: Active Directory; {@link Person.userId} will be Active Directory id.
    * - `Windows Live`: Microsoft account; {@link Person.userId} will be a 64-bit signed decimal.
    * - `PeoplePicker`: SharePoint People Picker; {@link Person.userId} will be an email address.
    */
-  providerId?: 'None' | 'AD' | 'Windows Live' | 'PeoplePicker';
+  providerId?: string;
 };
