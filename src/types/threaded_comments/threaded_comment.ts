@@ -1,6 +1,6 @@
 import type { CellId } from '../cell_id';
-import type { Mention } from './mention';
-import type { ThreadedCommentHyperlink } from './threaded_comment_hyperlink';
+import type { HyperlinkTextRun } from './hyperlink_text_run';
+import type { MentionTextRun } from './mention_text_run';
 
 /**
  * A threaded comment that is attached to an individual cell.
@@ -35,8 +35,6 @@ export type ThreadedComment = {
   text: string;
   /** Whether the comment has been marked as resolved. */
   resolved?: boolean;
-  /** Mentions contained within the comment. */
-  mentions?: Mention[];
-  /** Hyperlinks contained within the comment. */
-  hyperlinks?: ThreadedCommentHyperlink[];
+  /** {@link TextRun | Text runs} that annotate ranges within the comment text. */
+  runs?: MentionTextRun | HyperlinkTextRun[];
 };
