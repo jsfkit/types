@@ -1,11 +1,14 @@
-import type { GUID } from '../guid';
-
 /**
  * An author of a threaded comment, or a person mentioned in a threaded comment.
  */
 export type Person = {
-  /** The person's unique id. */
-  id: GUID,
+  /**
+   * A unique id for the person.
+   *
+   * Excel always uses a UUID in the format `{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}`, but JSF makes
+   * no strict requirement.
+   */
+  id: string,
   /** The person's name as it should be shown to other users. */
   displayName: string,
   /**
