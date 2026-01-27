@@ -24,8 +24,9 @@ export type ThreadedComment = {
   ref: CellId;
   /** Date and time the comment was written, as an ISO formatted string. */
   datetime?: string;
-  /** Unique identifier of the person being mentioned. Use this to find the person's details in a
-   * {@link Workbook.people | workbook's list of people}.
+  /**
+   * Unique identifier of the person who authored this comment. Use this to find the person's
+   * details in a {@link Workbook.people | workbook's list of people}.
    *
    * Excel always uses a UUID in the format `{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}`, but JSF makes
    * no strict requirement.
