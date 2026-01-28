@@ -37,5 +37,5 @@ export type ThreadedComment = {
   /** Whether the comment has been marked as resolved. */
   resolved?: boolean;
   /** {@link TextRun | Text runs} that annotate ranges within the comment text. */
-  runs?: MentionTextRun | HyperlinkTextRun[];
+  runs?: (MentionTextRun | HyperlinkTextRun)[];
 };
