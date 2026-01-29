@@ -16,4 +16,9 @@ export type ExternalWorksheet = {
    * inputs to formulas in other sheets.
    */
   cells: Record<CellId, Cell>;
+  /**
+   * Indicates that the sheet data could not be refreshed/fetched from the external workbook.
+   * In XLSX, this corresponds to the refreshError="1" attribute on sheetData.
+   */
+  refreshError?: boolean;
 };

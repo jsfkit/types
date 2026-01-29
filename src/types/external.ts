@@ -16,4 +16,9 @@ export type External = {
   sheets: ExternalWorksheet[];
   /** Relevant defined names from an external workbook. */
   names: DefinedName[];
+  /**
+   * Indicates that the path to the external workbook file is unknown or missing.
+   * In XLSX, this corresponds to the xlPathMissing relationship type.
+   */
+  pathMissing?: boolean;
 };
