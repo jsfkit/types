@@ -1,6 +1,8 @@
 import type { Cell } from '../cell';
 import type { CellId } from '../cell_id';
 import type { GridSize } from '../grid_size';
+import type { Note } from '../note';
+import type { ThreadedComment } from '../threaded_comments';
 import type { WorksheetDefaults } from './worksheet_defaults';
 import type { WorksheetView } from './worksheet_view';
 
@@ -12,6 +14,8 @@ export type Worksheet = {
   name: string;
   /** The cells belonging to the worksheet that have some data attached. */
   cells: Record<CellId, Cell>;
+  comments?: ThreadedComment[];
+  notes?: Note[];
   /** Widths and styles of the columns in the worksheet. */
   columns?: GridSize[];
   /** Heights and styles of the rows in the worksheet. */

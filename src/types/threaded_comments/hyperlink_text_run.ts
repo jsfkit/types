@@ -1,0 +1,11 @@
+import type { TextRun } from './text_run';
+
+/**
+ * A {@link TextRun | text run} representing a hyperlink within a threaded comment's text.
+ */
+export type HyperlinkTextRun = TextRun & {
+  /** Discriminator to identify this as a hyperlink text run. */
+  type: 'hyperlink';
+  /** The URL that the hyperlink points to. */
+  url: string;
+};

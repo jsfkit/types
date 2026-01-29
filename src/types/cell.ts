@@ -36,6 +36,8 @@ export type Cell = {
   s?: integer;
   /**
    * Comments associated with the cell.
+   *
+   * @deprecated Use a worksheet's {@link Worksheet.notes | notes} and {@link Worksheet.comments | threaded comments} instead.
    */
   c?: Comment[];
   /**

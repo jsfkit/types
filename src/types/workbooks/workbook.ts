@@ -2,6 +2,7 @@ import type { DefinedName } from '../defined_name';
 import type { External } from '../external';
 import type { Style } from '../styles';
 import type { Table } from '../tables';
+import type { Person } from '../threaded_comments';
 import type { Worksheet } from '../worksheets';
 import type { CalcProps } from './calc_props';
 import type { WorkbookView } from './workbook_view';
@@ -33,4 +34,12 @@ export type Workbook = {
   formulas?: string[];
   /** The different display configurations saved for the workbook. */
   views?: WorkbookView[]
+  /**
+   * Individuals who have written a threaded comment in this workbook, or who have been mentioned in
+   * one.
+   *
+   * @see {@link ThreadedComment}
+   */
+  people?: Person[];
+
 };

@@ -1,4 +1,8 @@
-/** A cell comment. */
+/**
+ * A cell comment.
+ *
+ * @deprecated Use {@link Note | notes} and {@link ThreadedComment | threaded comments} instead.
+ */
 export type Comment = {
   /** Author of the comment. */
   a: string;
