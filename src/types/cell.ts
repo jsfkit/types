@@ -3,6 +3,23 @@ import type { Comment } from './comment';
 import type { integer } from './integer';
 
 /**
+ * Data table configuration, present on the master cell of a data table range.
+ * Represents an Excel What-If Analysis data table.
+ */
+export type DataTable = {
+  /** Range of cells the data table manages (e.g., "D3:D5") */
+  ref: string;
+  /** Primary input cell reference to substitute */
+  r1: string;
+  /** Secondary input cell reference, for 2D data tables */
+  r2?: string;
+  /** Whether one-dimensional data table is a row (true) or a column (false/absent) */
+  dtr?: boolean;
+  /** Whether this is a two-dimensional data table */
+  dt2D?: boolean;
+};
+
+/**
  * A spreadsheet cell.
  */
 export type Cell = {
@@ -46,4 +63,6 @@ export type Cell = {
    * property).
    */
   t?: CellValueType;
+  /** Data table configuration. Present on the master cell of a data table range. */
+  dt?: DataTable;
 };
