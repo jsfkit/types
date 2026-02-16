@@ -3,6 +3,6 @@
  *
  * The range consists of two {@link CellId | CellIds} separated by a colon (`:`) character.
  *
- * @pattern ^([A-Z]{1,3}[0-9]{1,3}):([A-Z]{1,3}[0-9]{1,3})$
+ * @pattern ^([A-Z]{1,3}[0-9]{1,7}):([A-Z]{1,3}[0-9]{1,7})$
  */
 export type CellRange = string;
