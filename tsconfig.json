@@ -1,14 +1,17 @@
 {
   "compilerOptions": {
     "target": "ES2023",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "lib": ["ES2023"],
     "noEmit": true,
     "allowJs": true,
     "verbatimModuleSyntax": true,
     "skipLibCheck": true,
     "declaration": true,
+    "allowImportingTsExtensions": true,
+    "forceConsistentCasingInFileNames": true,
+    "erasableSyntaxOnly": true,
 
     /* Strictness */
     "strict": true,
@@ -23,7 +26,7 @@
     "noImplicitReturns": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
   },
   "include": ["src"]
 }

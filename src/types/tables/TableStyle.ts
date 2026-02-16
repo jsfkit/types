@@ -1,4 +1,4 @@
-import type { TableStyleName } from './table_style_name';
+import type { TableStyleName } from './TableStyleName.ts';
 
 /**
  * Describes which style is used to display this table, and specifies which portions of the table

@@ -1,3 +1,3 @@
-export type * from './calc_props';
-export type * from './workbook';
-export type * from './workbook_view';
+export type * from './CalcProps.ts';
+export type * from './Workbook.ts';
+export type * from './WorkbookView.ts';

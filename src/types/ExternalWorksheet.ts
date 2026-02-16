@@ -1,5 +1,5 @@
-import type { Cell } from './cell';
-import type { CellId } from './cell_id';
+import type { Cell } from './Cell.ts';
+import type { CellId } from './CellId.ts';
 
 /**
  * A simple container sheet for cell values within an external workbook.

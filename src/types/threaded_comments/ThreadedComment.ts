@@ -1,6 +1,6 @@
-import type { CellId } from '../cell_id';
-import type { HyperlinkTextRun } from './hyperlink_text_run';
-import type { MentionTextRun } from './mention_text_run';
+import type { CellId } from '../CellId.ts';
+import type { HyperlinkTextRun } from './HyperlinkTextRun.ts';
+import type { MentionTextRun } from './MentionTextRun.ts';
 
 /**
  * A threaded comment that is attached to an individual cell.

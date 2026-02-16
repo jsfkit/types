@@ -1,7 +1,7 @@
-import type { CellRange } from '../cell_range';
-import type { integer } from '../integer';
-import type { TableColumn } from './table_column';
-import type { TableStyle } from './table_style';
+import type { CellRange } from '../CellRange.ts';
+import type { integer } from '../integer.ts';
+import type { TableColumn } from './TableColumn.ts';
+import type { TableStyle } from './TableStyle.ts';
 
 /**
  * A tabular data structure.

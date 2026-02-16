@@ -1,4 +1,4 @@
-import type { TableColumnDataType } from './table_column_data_type';
+import type { TableColumnDataType } from './TableColumnDataType.ts';
 
 /**
  * Describes a column within a table.

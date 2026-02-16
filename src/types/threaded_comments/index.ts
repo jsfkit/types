@@ -1,5 +1,5 @@
-export type * from './hyperlink_text_run';
-export type * from './mention_text_run';
-export type * from './person';
-export type * from './text_run';
-export type * from './threaded_comment';
+export type * from './HyperlinkTextRun.ts';
+export type * from './MentionTextRun.ts';
+export type * from './Person.ts';
+export type * from './TextRun.ts';
+export type * from './ThreadedComment.ts';

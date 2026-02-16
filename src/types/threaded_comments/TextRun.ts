@@ -1,4 +1,4 @@
-import type { integer } from '../integer';
+import type { integer } from '../integer.ts';
 
 /**
  * Base type for text runs that annotate ranges within threaded comment text.

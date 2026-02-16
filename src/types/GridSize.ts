@@ -1,5 +1,5 @@
-import type { integer } from './integer';
-import type { PixelValue } from './pixel_value';
+import type { integer } from './integer.ts';
+import type { PixelValue } from './PixelValue.ts';
 
 /**
  * A size of a UI-grid measure over a range of items.

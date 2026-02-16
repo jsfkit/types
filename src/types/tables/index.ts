@@ -1,5 +1,5 @@
-export type * from './table';
-export type * from './table_column';
-export type * from './table_column_data_type';
-export type * from './table_style';
-export type * from './table_style_name';
+export type * from './Table.ts';
+export type * from './TableColumn.ts';
+export type * from './TableColumnDataType.ts';
+export type * from './TableStyle.ts';
+export type * from './TableStyleName.ts';

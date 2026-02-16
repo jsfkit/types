@@ -1,6 +1,6 @@
-import type { CellValueType } from './cell_value_type';
-import type { Comment } from './comment';
-import type { integer } from './integer';
+import type { CellValueType } from './CellValueType.ts';
+import type { Comment } from './Comment.ts';
+import type { integer } from './integer.ts';
 
 /**
  * A spreadsheet cell.
