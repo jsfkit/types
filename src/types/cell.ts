@@ -8,11 +8,11 @@ import type { integer } from './integer';
  */
 export type DataTable = {
   /** Range of cells the data table manages (e.g., "D3:D5") */
-  ref: string;
+  ref: CellRange;
   /** Primary input cell reference to substitute */
-  r1: string;
+  r1: CellId;
   /** Secondary input cell reference, for 2D data tables */
-  r2?: string;
+  r2?: CellId;
   /** Whether one-dimensional data table is a row (true) or a column (false/absent) */
   dtr?: boolean;
   /** Whether this is a two-dimensional data table */
