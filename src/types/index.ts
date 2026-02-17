@@ -3,6 +3,7 @@ export type * from './cell_id';
 export type * from './cell_range';
 export type * from './cell_value_type';
 export type * from './comment';
+export type * from './data_table';
 export type * from './defined_name';
 export type * from './external';
 export type * from './external_worksheet';
