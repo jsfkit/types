@@ -1,4 +1,4 @@
-import type { CellId } from './cell_id';
+import type { CellId } from './CellId.ts';
 
 /**
  * An annotation associated with a cell.

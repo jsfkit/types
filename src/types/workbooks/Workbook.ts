@@ -1,11 +1,11 @@
-import type { DefinedName } from '../defined_name';
-import type { External } from '../external';
-import type { Style } from '../styles';
-import type { Table } from '../tables';
-import type { Person } from '../threaded_comments';
-import type { Worksheet } from '../worksheets';
-import type { CalcProps } from './calc_props';
-import type { WorkbookView } from './workbook_view';
+import type { DefinedName } from '../DefinedName.ts';
+import type { External } from '../External.ts';
+import type { Style } from '../styles/index.ts';
+import type { Table } from '../tables/index.ts';
+import type { Person } from '../comments/index.ts';
+import type { Worksheet } from '../worksheets/index.ts';
+import type { CalcProps } from './CalcProps.ts';
+import type { WorkbookView } from './WorkbookView.ts';
 
 /**
  * A workbook is a collection of worksheets, styles, defined names, and other metadata. It's what's
@@ -41,5 +41,4 @@ export type Workbook = {
    * @see {@link ThreadedComment}
    */
   people?: Person[];
-
 };

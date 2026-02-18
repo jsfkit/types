@@ -1,4 +1,4 @@
-import type { integer } from '../integer';
+import type { integer } from '../integer.ts';
 
 /**
  * Visual scale (aka zoom level, aka magnification) applied when displaying a worksheet.

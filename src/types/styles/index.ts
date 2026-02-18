@@ -1,7 +1,7 @@
-export type * from './border_style';
-export type * from './color';
-export type * from './h_align';
-export type * from './pattern_style';
-export type * from './style';
-export type * from './underline';
-export type * from './v_align';
+export type * from './BorderStyle.ts';
+export type * from './Color.ts';
+export type * from './HAlign.ts';
+export type * from './PatternStyle.ts';
+export type * from './Style.ts';
+export type * from './Underline.ts';
+export type * from './VAlign.ts';

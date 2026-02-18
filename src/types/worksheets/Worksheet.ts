@@ -1,10 +1,10 @@
-import type { Cell } from '../cell';
-import type { CellId } from '../cell_id';
-import type { GridSize } from '../grid_size';
-import type { Note } from '../note';
-import type { ThreadedComment } from '../threaded_comments';
-import type { WorksheetDefaults } from './worksheet_defaults';
-import type { WorksheetView } from './worksheet_view';
+import type { Cell } from '../Cell.ts';
+import type { CellId } from '../CellId.ts';
+import type { GridSize } from '../GridSize.ts';
+import type { Note } from '../Note.ts';
+import type { ThreadedComment } from '../comments/index.ts';
+import type { WorksheetDefaults } from './WorksheetDefaults.ts';
+import type { WorksheetView } from './WorksheetView.ts';
 
 /**
  * A rectangle of cells. A sheet within a spreadsheet.

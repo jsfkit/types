@@ -1,7 +1,7 @@
-import type { CellId } from '../cell_id';
-import type { CellRange } from '../cell_range';
-import type { integer } from '../integer';
-import type { WorksheetLayoutScales } from './worksheet_layout_scales';
+import type { CellId } from '../CellId.ts';
+import type { CellRange } from '../CellRange.ts';
+import type { integer } from '../integer.ts';
+import type { WorksheetLayoutScales } from './WorksheetLayoutScales.ts';
 
 /**
  * A worksheet view.

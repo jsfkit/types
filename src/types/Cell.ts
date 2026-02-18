@@ -1,7 +1,7 @@
-import type { CellValueType } from './cell_value_type';
-import type { Comment } from './comment';
-import type { DataTable } from './data_table';
-import type { integer } from './integer';
+import type { CellValueType } from './CellValueType.ts';
+import type { Comment } from './Comment_deprecated.ts';
+import type { DataTable } from './DataTable.ts';
+import type { integer } from './integer.ts';
 
 /**
  * A spreadsheet cell.

@@ -1,4 +1,4 @@
-import type { TextRun } from './text_run';
+import type { TextRun } from './TextRun.ts';
 
 /**
  * A {@link TextRun | text run} representing a mention of a person within a threaded comment's text.
