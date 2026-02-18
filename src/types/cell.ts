@@ -1,5 +1,6 @@
 import type { CellValueType } from './cell_value_type';
 import type { Comment } from './comment';
+import type { DataTable } from './data_table';
 import type { integer } from './integer';
 
 /**
@@ -46,4 +47,6 @@ export type Cell = {
    * property).
    */
   t?: CellValueType;
+  /** Data table configuration. Present on the master cell of a data table range. */
+  dt?: DataTable;
 };
