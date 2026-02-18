@@ -3,6 +3,7 @@ export type * from './CellId.ts';
 export type * from './CellRange.ts';
 export type * from './CellValueType.ts';
 export type * from './Comment.ts';
+export type * from './data_table.ts';
 export type * from './DefinedName.ts';
 export type * from './External.ts';
 export type * from './ExternalWorksheet.ts';
