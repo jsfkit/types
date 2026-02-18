@@ -1,5 +1,5 @@
-import type { CellId } from './cell_id';
-import type { CellRange } from './cell_range';
+import type { CellId } from './CellId.ts';
+import type { CellRange } from './CellRange.ts';
 
 /**
  * Data table configuration, present on the master cell of a data table range.
