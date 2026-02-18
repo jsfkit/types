@@ -1,5 +1,5 @@
 import type { CellValueType } from './CellValueType.ts';
-import type { Comment } from './Comment.ts';
+import type { Comment } from './Comment_deprecated.ts';
 import type { DataTable } from './DataTable.ts';
 import type { integer } from './integer.ts';
 
