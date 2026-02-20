@@ -18,7 +18,7 @@ export type GfxCnxShape = {
   name: string,
 
   /** Visual styling properties (line style, color, effects, etc.). */
-  props?: ShapeProperties,
+  shape?: ShapeProperties,
 
   /** 2D transformation (position, rotation, scale). */
   xfrm?: Xfrm,

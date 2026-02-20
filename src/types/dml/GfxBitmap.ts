@@ -1,4 +1,4 @@
-import type { RelativeRect, ShapeProperties, TextBody } from './shape/index.ts';
+import type { Percentage, RelativeRect, ShapeProperties, TextBody } from './shape/index.ts';
 import type { Xfrm } from './Xfrm.ts';
 
 // XXX: Many of these also exist on FillBlip
@@ -25,7 +25,7 @@ export type GfxBitmap = {
   desc?: string,
 
   /** Visual styling properties (fill, line, effects, etc.). */
-  props?: ShapeProperties,
+  shape?: ShapeProperties,
 
   /** Whether to lock the aspect ratio when resizing. */
   noChangeAspect?: boolean,
@@ -38,7 +38,7 @@ export type GfxBitmap = {
 
   // XXX: Normalize to 0-1 or 0-100?
   /** Opacity value (0-100000, where 100000 is fully opaque). */
-  alpha?: number,
+  alpha?: Percentage,
 
   /** Rectangle defining how the image should be stretched (relative coordinates). */
   stretchRect?: RelativeRect,

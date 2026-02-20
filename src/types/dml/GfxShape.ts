@@ -22,7 +22,7 @@ export type GfxShape = {
   xfrm?: Xfrm,
 
   /** Visual styling properties (fill, line, effects, geometry preset, etc.). */
-  props?: ShapeProperties,
+  shape?: ShapeProperties,
 
   /** Optional text content displayed within the shape. */
   text?: TextBody,
