@@ -6,4 +6,4 @@
  * - 'rect': Gradient following rectangular boundaries from center outward.
  * - 'shape': Gradient following the actual contour/outline of the shape.
  */
-export type FillPathType = 'circle' | 'rect' | 'shape';
+export type PathFillType = 'circle' | 'rect' | 'shape';

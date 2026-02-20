@@ -1,16 +1,16 @@
-import type { FillBlip } from './FillBlip.ts';
-import type { FillGradientLinear } from './FillGradientLinear.ts';
-import type { FillGradientPath } from './FillGradientPath.ts';
-import type { FillGroup } from './FillGroup.ts';
-import type { FillNone } from './FillNone.ts';
-import type { FillPattern } from './FillPattern.ts';
-import type { FillSolid } from './FillSolid.ts';
+import type { BlipFill } from './BlipFill.ts';
+import type { GradientLinearFill } from './GradientLinearFill.ts';
+import type { GradientPathFill } from './GradientPathFill.ts';
+import type { GroupFill } from './GroupFill.ts';
+import type { NoFill } from './NoFill.ts';
+import type { PatternFill } from './PatternFill.ts';
+import type { SolidFill } from './SolidFill.ts';
 
 export type Fill =
-  FillPattern |
-  FillSolid |
-  FillGradientLinear |
-  FillGradientPath |
-  FillGroup |
-  FillNone |
-  FillBlip;
+  PatternFill |
+  SolidFill |
+  GradientLinearFill |
+  GradientPathFill |
+  GroupFill |
+  NoFill |
+  BlipFill;

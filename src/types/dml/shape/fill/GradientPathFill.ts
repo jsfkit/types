@@ -1,4 +1,4 @@
-import type { FillPathType } from './FillPathType.ts';
+import type { PathFillType } from './PathFillType.ts';
 import type { FlipAxis } from './FlipAxis.ts';
 import type { GradientColorStop } from './GradientColorStop.ts';
 import type { RelativeRect } from '../RelativeRect.ts';
@@ -9,7 +9,7 @@ import type { RelativeRect } from '../RelativeRect.ts';
  * Defines a gradient fill that radiates from a center point or follows
  * the shape's contour, creating circular, rectangular, or shape-based gradients.
  */
-export type FillGradientPath = {
+export type GradientPathFill = {
   /** Type discriminator for path gradient fills. */
   type: 'pathGradient';
 
@@ -17,7 +17,7 @@ export type FillGradientPath = {
   colorStops: GradientColorStop[],
 
   /** Path type determining the gradient shape (circle, rectangle, or shape contour). */
-  path: FillPathType;
+  path: PathFillType;
 
   /** Rectangle defining the gradient's focus area (relative coordinates). */
   fillToRect?: RelativeRect;

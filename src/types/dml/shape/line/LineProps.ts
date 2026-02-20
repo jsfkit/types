@@ -1,9 +1,9 @@
 import type { PositiveCoordinate } from '../../PositiveCoordinate.ts';
-import type { FillGradientLinear } from '../fill/FillGradientLinear.ts';
-import type { FillGradientPath } from '../fill/FillGradientPath.ts';
-import type { FillNone } from '../fill/FillNone.ts';
-import type { FillPattern } from '../fill/FillPattern.ts';
-import type { FillSolid } from '../fill/FillSolid.ts';
+import type { GradientLinearFill } from '../fill/GradientLinearFill.ts';
+import type { GradientPathFill } from '../fill/GradientPathFill.ts';
+import type { NoFill } from '../fill/NoFill.ts';
+import type { PatternFill } from '../fill/PatternFill.ts';
+import type { SolidFill } from '../fill/SolidFill.ts';
 import type { DashStop } from './DashStop.ts';
 import type { LineAlignment } from './LineAlignment.ts';
 import type { LineCapType } from './LineCapType.ts';
@@ -43,7 +43,7 @@ export type LineProps = {
   /**
    * Fill style applied to the line stroke.
    */
-  fill?: FillPattern | FillSolid | FillGradientLinear | FillGradientPath | FillNone;
+  fill?: PatternFill | SolidFill | GradientLinearFill | GradientPathFill | NoFill;
 
   /**
    * Line width in EMUs.

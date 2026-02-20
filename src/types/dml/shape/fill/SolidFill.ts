@@ -5,7 +5,7 @@ import type { Color } from '../../../styles/Color.ts';
  *
  * Defines a fill using a single uniform color with no gradients, patterns, or images.
  */
-export type FillSolid = {
+export type SolidFill = {
   /** Type discriminator for solid fills. */
   type: 'solid';
 

@@ -8,7 +8,7 @@ import type { GradientColorStop } from './GradientColorStop.ts';
  * Defines a gradient fill that transitions between colors along a straight line,
  * with configurable angle, flip behavior, and color stops.
  */
-export type FillGradientLinear = {
+export type GradientLinearFill = {
   /** Type discriminator for linear gradient fills. */
   type: 'linearGradient';
 

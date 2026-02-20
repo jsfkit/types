@@ -8,7 +8,7 @@ import type { Tile } from './Tile.ts';
  * Defines a fill using an embedded or linked image, with options for
  * tiling, stretching, cropping, and transparency.
  */
-export type FillBlip = {
+export type BlipFill = {
   /** Type discriminator for blip (image) fills. */
   type: 'blip';
 

@@ -1,5 +1,5 @@
 import type { Color } from '../../../styles/Color.ts';
-import type { FillPatternStyle } from './FillPatternStyle.ts';
+import type { FillPatternStyle } from './PatternStyle.ts';
 
 /**
  * Pattern fill.
@@ -7,7 +7,7 @@ import type { FillPatternStyle } from './FillPatternStyle.ts';
  * Defines a fill using a repeating pattern (dots, stripes, crosshatch, etc.)
  * with configurable foreground and background colors.
  */
-export type FillPattern = {
+export type PatternFill = {
   /** Type discriminator for pattern fills. */
   type: 'pattern';
 
