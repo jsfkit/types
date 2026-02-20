@@ -11,7 +11,7 @@ export type Xfrm = {
    * Which axes the shape should be flipped about.
    * @defaultValue "none"
    */
-  flip: FlipAxis,
+  flip?: FlipAxis,
 
   /**
    * Rotation angle in 60,000ths of a degree.
