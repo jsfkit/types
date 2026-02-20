@@ -24,7 +24,7 @@ export type ShapeProperties = {
   bwMode?: BlackWhiteMode,
 
   /** Preset shape type identifier (e.g., "rect", "ellipse", "roundRect"). */
-  shape?: string,
+  preset?: string,
 
   /** Visual style references (fill, line, effect styles from theme). */
   style?: ShapeStyle,
