@@ -4,7 +4,7 @@ import type { Xfrm } from './Xfrm.ts';
 /**
  * Bitmap graphic / Picture.
  */
-export type GfxBitmap = {
+export type GraphicBitmap = {
   /** Type discriminator for bitmap graphics. */
   type: 'bitmap',
 

@@ -1,5 +1,5 @@
 import type { GraphicAnchor } from './anchor/GraphicAnchor.ts';
-import type { GfxObject } from './GfxObject.ts';
+import type { Graphic } from './Graphic.ts';
 
 /**
  * A drawing.
@@ -11,5 +11,5 @@ export type Drawing = {
   /** Defines how the drawing is placed onto a worksheet's cell-grid. */
   anchor: GraphicAnchor,
   /** The graphical elements that make up the drawing. */
-  content: GfxObject[],
+  content: Graphic[],
 };

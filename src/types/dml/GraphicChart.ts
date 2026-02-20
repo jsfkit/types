@@ -3,7 +3,7 @@ import type { Xfrm } from './Xfrm.ts';
 /**
  * A chart or plot.
  */
-export type GfxChart = {
+export type GraphicChart = {
   /** Type discriminator for a chart. */
   type: 'chart',
 

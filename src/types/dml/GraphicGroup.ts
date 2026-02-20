@@ -1,4 +1,4 @@
-import type { GfxObject } from './GfxObject.ts';
+import type { Graphic } from './Graphic.ts';
 import type { XfrmGroup } from './XfrmGroup.ts';
 
 /**
@@ -7,7 +7,7 @@ import type { XfrmGroup } from './XfrmGroup.ts';
  * Represents a collection of graphic objects grouped together as a single unit,
  * allowing them to be transformed, moved, and manipulated collectively.
  */
-export type GfxGroup = {
+export type GraphicGroup = {
   /** Type discriminator for group shapes. */
   type: 'group',
 
@@ -18,7 +18,7 @@ export type GfxGroup = {
   name: string,
 
   /** Array of graphic objects contained within this group. */
-  content: GfxObject[],
+  content: Graphic[],
 
   /** 2D transformation applied to the group (position, rotation, scale). */
   xfrm?: XfrmGroup,

@@ -7,7 +7,7 @@ import type { Xfrm } from './Xfrm.ts';
  * Represents a connector or line shape that connects two other shapes,
  * typically used for creating diagrams, flowcharts, and organizational charts.
  */
-export type GfxCnxShape = {
+export type GraphicConnectionShape = {
   /** Type discriminator for connection shapes. */
   type: 'connectionShape',
 

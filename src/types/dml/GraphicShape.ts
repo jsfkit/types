@@ -8,7 +8,7 @@ import type { TextBody } from './shape/text/index.ts';
  * Represents a standard geometric shape (rectangle, circle, arrow, etc.)
  * with customizable geometry, styling, and text content.
  */
-export type GfxShape = {
+export type GraphicShape = {
   /** Type discriminator for basic shapes. */
   type: 'shape',
 
