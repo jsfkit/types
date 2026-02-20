@@ -35,8 +35,12 @@ export type GfxBitmap = {
   /** Optional text content overlaid on the bitmap. */
   text?: TextBody,
 
-  // XXX: Normalize to 0-1 or 0-100?
-  /** Opacity value (0-100000, where 100000 is fully opaque). */
+  /**
+   * Opacity value (0-100, where 100 is fully opaque).
+   * @min 0
+   * @max 100
+   * @defaultValue 0
+   */
   alpha?: Percentage,
 
   /** Rectangle defining how the image should be stretched (relative coordinates). */

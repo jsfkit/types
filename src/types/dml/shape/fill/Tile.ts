@@ -16,10 +16,10 @@ export type Tile = {
   /** Additional vertical offset after alignment, in EMUs. */
   ty?: Coordinate,
 
-  /** Horizontal scale factor to apply to the source image (percentage, where 100000 = 100%). */
+  /** Horizontal scale factor to apply to the source image. */
   sx?: Percentage,
 
-  /** Vertical scale factor to apply to the source image (percentage, where 100000 = 100%). */
+  /** Vertical scale factor to apply to the source image. */
   sy?: Percentage,
 
   /** Direction(s) in which to flip the source image while tiling. */
