@@ -1,4 +1,4 @@
-import type { Angle } from './Angle.ts';
+import type { DmlAngle } from './DmlAngle.ts';
 import type { Extent } from './Extent.ts';
 import type { Position } from './Position.ts';
 import type { FlipAxis } from './shape/index.ts';
@@ -17,7 +17,7 @@ export type Xfrm = {
    * Rotation angle in 60,000ths of a degree.
    * @defaultValue 0
    */
-  rot?: Angle,
+  rot?: DmlAngle,
 
   /**
    * Offset/position of the graphic object.

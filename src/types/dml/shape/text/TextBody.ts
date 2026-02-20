@@ -1,4 +1,4 @@
-import type { Angle } from '../../Angle.ts';
+import type { DmlAngle } from '../../DmlAngle.ts';
 import type { PositiveCoordinate } from '../../PositiveCoordinate.ts';
 import type { InsetRect } from './InsetRect.ts';
 import type { Paragraph } from './Paragraph.ts';
@@ -42,7 +42,7 @@ export type TextBody = {
    * Text rotation in 60,000ths of a degree (e.g., 5400000 = 90 degrees).
    * @defaultValue 0
    */
-  rot?: Angle,
+  rot?: DmlAngle,
 
   /**
    * Whether columns flow right-to-left.

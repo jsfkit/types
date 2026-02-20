@@ -1,5 +1,5 @@
 import type { AdjPoint } from './AdjPoint.ts';
-import type { Angle } from '../Angle.ts';
+import type { DmlAngle } from '../DmlAngle.ts';
 import type { GeomGuideName } from './GeomGuideName.ts';
 
 /**
@@ -14,5 +14,5 @@ export type ConnectionPoint = {
    * The angle of the connection point, either as a specific angle or a reference
    * to a geometry guide
    */
-  ang?: Angle | GeomGuideName,
+  ang?: DmlAngle | GeomGuideName,
 };

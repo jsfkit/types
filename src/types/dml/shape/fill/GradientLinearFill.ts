@@ -1,4 +1,4 @@
-import type { Angle } from '../../Angle.ts';
+import type { DmlAngle } from '../../DmlAngle.ts';
 import type { FlipAxis } from './FlipAxis.ts';
 import type { GradientColorStop } from './GradientColorStop.ts';
 
@@ -22,7 +22,7 @@ export type GradientLinearFill = {
   colorStops: GradientColorStop[],
 
   /** Angle of the gradient direction in 60,000ths of a degree. */
-  angle?: Angle;
+  angle?: DmlAngle;
 
   /** Whether the gradient should scale with the shape dimensions. */
   scaled?: boolean;

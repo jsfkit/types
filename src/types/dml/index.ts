@@ -1,7 +1,7 @@
 export type * from './anchor/index.ts';
 export type * from './shape/index.ts';
 
-export type * from './Angle.ts';
+export type * from './DmlAngle.ts';
 export type * from './CellOffset.ts';
 export type * from './EmuValue.ts';
 export type * from './Drawing.ts';

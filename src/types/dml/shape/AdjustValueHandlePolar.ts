@@ -1,5 +1,5 @@
 import type { AdjPoint } from './AdjPoint.ts';
-import type { Angle } from '../Angle.ts';
+import type { DmlAngle } from '../DmlAngle.ts';
 import type { EmuValue } from '../EmuValue.ts';
 import type { GeomGuideName } from './GeomGuideName.ts';
 
@@ -17,10 +17,10 @@ export type AdjustValueHandlePolar = {
   gdRefAng?: GeomGuideName,
 
   /** Maximum angle value allowed for this handle (in degrees or reference to guide). */
-  maxAng?: GeomGuideName | Angle,
+  maxAng?: GeomGuideName | DmlAngle,
 
   /** Minimum angle value allowed for this handle (in degrees or reference to guide). */
-  minAng?: GeomGuideName | Angle,
+  minAng?: GeomGuideName | DmlAngle,
 
   /** Name of the guide that this handle adjusts for radius. */
   gdRefR?: GeomGuideName,
