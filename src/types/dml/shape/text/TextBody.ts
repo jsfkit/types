@@ -1,6 +1,6 @@
 import type { Angle } from '../../Angle.ts';
-import type { Coordinate } from '../../Coordinate.ts';
 import type { PositiveCoordinate } from '../../PositiveCoordinate.ts';
+import type { InsetRect } from './InsetRect.ts';
 import type { Paragraph } from './Paragraph.ts';
 import type { TextAnchoring } from './TextAnchoring.ts';
 import type { TextHorzOverflow } from './TextHorzOverflow.ts';
@@ -70,7 +70,6 @@ export type TextBody = {
 
   /**
    * Text orientation is vertical (top-to-bottom).
-   * ST_TextVerticalType
    * @defaultValue "horz"
    */
   vert?: TextVerticalType,
@@ -93,27 +92,10 @@ export type TextBody = {
    */
   wrap?: TextWrapping,
 
-  // XXX: Convert these to a single rect?
   /**
-   * Bottom inset (margin) in EMUs.
-   * @defaultValue 91440
+   * Defines an inset or internal margins for a text box within a shape.
    */
-  bIns?: Coordinate,
-  /**
-   * Right inset (margin) in EMUs.
-   * @defaultValue 91440
-   */
-  rIns?: Coordinate,
-  /**
-   * Top inset (margin) in EMUs.
-   * @defaultValue 91440
-   */
-  tIns?: Coordinate,
-  /**
-   * Left inset (margin) in EMUs.
-   * @defaultValue 91440
-   */
-  lIns?: Coordinate,
+  inset?: InsetRect,
 
   /** Array of paragraphs containing the text content. */
   p: Paragraph[],
