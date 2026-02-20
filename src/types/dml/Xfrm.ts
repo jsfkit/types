@@ -26,11 +26,4 @@ export type Xfrm = {
 
   /** Extents/size of the graphic object. */
   ext?: Extent,
-
-  // XXX: next two props only exist on groups, split to "GroupTransform2D"?
-  /** Child offset - position of child elements within a group (only for groups) */
-  chOff?: Position;
-
-  /** Child extents - size of the child coordinate system within a group (only for groups) */
-  chExt?: Extent;
 };

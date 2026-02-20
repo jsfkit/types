@@ -15,3 +15,4 @@ export type * from './GfxObject.ts';
 export type * from './Position.ts';
 export type * from './PositiveCoordinate.ts';
 export type * from './Xfrm.ts';
+export type * from './XfrmGroup.ts';

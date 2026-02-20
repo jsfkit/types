@@ -1,5 +1,5 @@
 import type { GfxObject } from './GfxObject.ts';
-import type { Xfrm } from './Xfrm.ts';
+import type { XfrmGroup } from './XfrmGroup.ts';
 
 /**
  * Group shape container.
@@ -21,5 +21,5 @@ export type GfxGroup = {
   content: GfxObject[],
 
   /** 2D transformation applied to the group (position, rotation, scale). */
-  xfrm?: Xfrm,
+  xfrm?: XfrmGroup,
 };
