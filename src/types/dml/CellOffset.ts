@@ -1,4 +1,4 @@
-import type { Coordinate } from './Coordinate.ts';
+import type { EmuValue } from './EmuValue.ts';
 
 /**
  * Specifies a point in the cell grid.
@@ -8,11 +8,11 @@ export type CellOffset = {
   row: number,
 
   /** The offset within the row in which the point occurs, in EMUs. */
-  rowOff: Coordinate,
+  rowOff: EmuValue,
 
   /** The column in which the point occurs, 1 indexed. */
   col: number,
 
   /** The position within the column in which the point occurs, in EMUs. */
-  colOff: Coordinate,
+  colOff: EmuValue,
 };

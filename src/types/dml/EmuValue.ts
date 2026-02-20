@@ -8,4 +8,4 @@
  * @min -27273042329600
  * @max 27273042316900
  */
-export type Coordinate = number;
+export type EmuValue = number;

@@ -1,5 +1,5 @@
 import type { AdjPoint } from './AdjPoint.ts';
-import type { Coordinate } from '../Coordinate.ts';
+import type { EmuValue } from '../EmuValue.ts';
 import type { GeomGuideName } from './GeomGuideName.ts';
 
 /**
@@ -16,19 +16,19 @@ export type AdjustValueHandleXY = {
   gdRefX?: GeomGuideName,
 
   /** Maximum X coordinate value allowed for this handle (as coordinate or reference to guide). */
-  maxX?: GeomGuideName | Coordinate,
+  maxX?: GeomGuideName | EmuValue,
 
   /** Minimum X coordinate value allowed for this handle (as coordinate or reference to guide). */
-  minX?: GeomGuideName | Coordinate,
+  minX?: GeomGuideName | EmuValue,
 
   /** Name of the guide that this handle adjusts for the Y axis. */
   gdRefY?: GeomGuideName,
 
   /** Maximum Y coordinate value allowed for this handle (as coordinate or reference to guide). */
-  maxY?: GeomGuideName | Coordinate,
+  maxY?: GeomGuideName | EmuValue,
 
   /** Minimum Y coordinate value allowed for this handle (as coordinate or reference to guide). */
-  minY?: GeomGuideName | Coordinate,
+  minY?: GeomGuideName | EmuValue,
 
   /** Position of the adjustment handle in the shape's coordinate system. */
   pos: AdjPoint,

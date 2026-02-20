@@ -1,4 +1,4 @@
-import type { Coordinate } from '../../Coordinate.ts';
+import type { EmuValue } from '../../EmuValue.ts';
 import type { FlipAxis } from './FlipAxis.ts';
 import type { RectAlignment } from '../RectAlignment.ts';
 import type { Percentage } from '../Percentage.ts';
@@ -11,10 +11,10 @@ import type { Percentage } from '../Percentage.ts';
  */
 export type Tile = {
   /** Additional horizontal offset after alignment, in EMUs. */
-  tx?: Coordinate,
+  tx?: EmuValue,
 
   /** Additional vertical offset after alignment, in EMUs. */
-  ty?: Coordinate,
+  ty?: EmuValue,
 
   /** Horizontal scale factor to apply to the source image. */
   sx?: Percentage,

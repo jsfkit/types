@@ -3,7 +3,7 @@ export type * from './shape/index.ts';
 
 export type * from './Angle.ts';
 export type * from './CellOffset.ts';
-export type * from './Coordinate.ts';
+export type * from './EmuValue.ts';
 export type * from './Drawing.ts';
 export type * from './Extent.ts';
 export type * from './GraphicBitmap.ts';

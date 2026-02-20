@@ -1,4 +1,4 @@
-import type { Coordinate } from './Coordinate.ts';
+import type { EmuValue } from './EmuValue.ts';
 
 /**
  * 2D position in EMUs.
@@ -7,8 +7,8 @@ import type { Coordinate } from './Coordinate.ts';
  */
 export type Position = {
   /** Horizontal position (X-axis). */
-  x: Coordinate,
+  x: EmuValue,
 
   /** Vertical position (Y-axis). */
-  y: Coordinate
+  y: EmuValue
 };

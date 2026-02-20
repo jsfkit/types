@@ -1,6 +1,6 @@
 import type { AdjPoint } from './AdjPoint.ts';
 import type { Angle } from '../Angle.ts';
-import type { Coordinate } from '../Coordinate.ts';
+import type { EmuValue } from '../EmuValue.ts';
 import type { GeomGuideName } from './GeomGuideName.ts';
 
 /**
@@ -26,10 +26,10 @@ export type AdjustValueHandlePolar = {
   gdRefR?: GeomGuideName,
 
   /** Maximum radius value allowed for this handle (in shape coordinates or reference to guide). */
-  maxR?: GeomGuideName | Coordinate,
+  maxR?: GeomGuideName | EmuValue,
 
   /** Minimum radius value allowed for this handle (in shape coordinates or reference to guide). */
-  minR?: GeomGuideName | Coordinate,
+  minR?: GeomGuideName | EmuValue,
 
   /** Position of the adjustment handle in the shape's coordinate system. */
   pos: AdjPoint,
