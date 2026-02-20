@@ -55,10 +55,7 @@ export type LineProps = {
   /**
    * Line dash/dot pattern style.
    */
-  style?: LineStyle;
-
-  /** Custom line dashes (only used when style is unset). */
-  dashes?: DashStop[];
+  style?: LineStyle | DashStop[];
 
   /** Arrow or decoration at the start of the line. */
   head?: LineEnd;

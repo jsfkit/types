@@ -1,7 +1,6 @@
 import type { Percentage, RelativeRect, ShapeProperties, TextBody } from './shape/index.ts';
 import type { Xfrm } from './Xfrm.ts';
 
-// XXX: Many of these also exist on FillBlip
 /**
  * Bitmap graphic / Picture.
  */

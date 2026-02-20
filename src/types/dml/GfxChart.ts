@@ -17,8 +17,8 @@ export type GfxChart = {
   /** ID */
   chartId: string,
 
-  // XXX: Not sure this is really a boolean.
-  // locked?: boolean,
+  // XXX: Will be added in a future update.
+  // locked?: any,
 
   /** 2D transformation (position, rotation, scale). */
   xfrm?: Xfrm,

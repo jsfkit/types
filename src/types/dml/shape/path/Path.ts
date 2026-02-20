@@ -9,8 +9,9 @@ import type { PathFillMode } from './PathFillMode.ts';
  * the path commands and rendering properties for that path.
  */
 export type Path = {
-  /** Whether this path can be extruded in 3D rendering. */
-  extrusionOk: boolean,
+  // XXX: This is not needed until 3D effects are added.
+  // Whether this path can be extruded in 3D rendering.
+  // extrusionOk: boolean,
 
   /** Whether this path should be stroked (outlined). */
   stroke: boolean,
@@ -24,7 +25,7 @@ export type Path = {
    * corresponding path as they will all be calculated using this height attribute as the max y
    * coordinate.
    */
-  h: PositiveCoordinate,
+  height: PositiveCoordinate,
 
   /**
    * Specifies the width, or maximum x coordinate that should be used for within the path
@@ -32,7 +33,7 @@ export type Path = {
    * the corresponding path as they will all be calculated using this width attribute as the max
    * x coordinate.
    */
-  w: PositiveCoordinate,
+  width: PositiveCoordinate,
 
   /** Array of path commands (moveTo, lineTo, etc.) defining the path geometry. */
   d: PathCommand[],
