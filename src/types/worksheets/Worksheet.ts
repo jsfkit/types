@@ -3,6 +3,7 @@ import type { CellId } from '../CellId.ts';
 import type { GridSize } from '../GridSize.ts';
 import type { Note } from '../Note.ts';
 import type { ThreadedComment } from '../comments/index.ts';
+import type { Drawing } from '../dml/Drawing.ts';
 import type { WorksheetDefaults } from './WorksheetDefaults.ts';
 import type { WorksheetView } from './WorksheetView.ts';
 
@@ -38,4 +39,6 @@ export type Worksheet = {
   showGridLines?: boolean;
   /** The different display configurations saved for the worksheet. */
   views?: WorksheetView[];
+  /** A list of drawings that appear in this worksheet. */
+  drawing?: Drawing[];
 };

@@ -41,4 +41,28 @@ export type Workbook = {
    * @see {@link ThreadedComment}
    */
   people?: Person[];
+  /**
+   * A simple dictionary of binary images used by this workbook.
+   *
+   * The keys should be the file paths of the images used to refer to them, commonly these will be
+   * the `mediaId` properties on drawing objects. The values should be data URI encoded binaries.
+   *
+   * The following is a table of formats you may be expected to encounter:
+   *
+   *  | Extension               | MIME type              | Common name
+   *  |-------------------------|------------------------|-------------
+   *  | `.png`                  | `image/png`            | Portable Network Graphics
+   *  | `.jpg`, `.jpeg`         | `image/jpeg`           | JPEG
+   *  | `.gif`                  | `image/gif`            | Graphics Interchange Format
+   *  | `.emf`                  | `image/emf`            | Enhanced Metafile
+   *  | `.wmf`                  | `image/wmf`            | Windows Metafile
+   *  | `.wdp`, `.jxr`, `.hdp`  | `image/vnd.ms-photo`   | Windows Media Photo / JPEG XR
+   *  | `.bmp`                  | `image/bmp`            | Bitmap
+   *  | `.tif`, `.tiff`         | `image/tiff`           | Tagged Image File Format
+   *  | `.svg`                  | `image/svg+xml`        | Scalable Vector Graphics
+   *
+   * @see {@link https://en.wikipedia.org/wiki/Data_URI_scheme}
+   * @see {@link https://www.rfc-editor.org/rfc/rfc2397}
+   */
+  images?: Record<string, string>;
 };
