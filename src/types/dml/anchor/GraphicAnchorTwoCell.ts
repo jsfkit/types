@@ -1,7 +1,7 @@
 import type { CellOffset } from '../CellOffset.ts';
 
 /**
- * Specifies an absolute anchor placeholder for a group, a shape, or a drawing element.
+ * Specifies a two-cell anchor placeholder for a group, a shape, or a drawing element.
  */
 export type GraphicAnchorTwoCell = {
   /** Type discriminator for a two-cell anchor. */

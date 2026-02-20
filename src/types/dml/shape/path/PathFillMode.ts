@@ -3,12 +3,12 @@
  *
  * | Value         | Effect on path fill
  * |---------------|--------------------------------
- * | `darken`      | darker shaded color applied to it’s fill.
- * | `darkenLess`  | slightly darker shaded color applied to it’s fill.
- * | `lighten`     | lightly shaded color applied to it’s fill.
- * | `lightenLess` | slightly lighter shaded color applied to it’s fill.
+ * | `darken`      | darker shaded color applied to its fill.
+ * | `darkenLess`  | slightly darker shaded color applied to its fill.
+ * | `lighten`     | lightly shaded color applied to its fill.
+ * | `lightenLess` | slightly lighter shaded color applied to its fill.
  * | `none`        | should have no fill.
- * | `norm`        | should have a normally shaded color applied to it’s fill.
+ * | `norm`        | should have a normally shaded color applied to its fill.
  */
 export type PathFillMode =
  'none' |

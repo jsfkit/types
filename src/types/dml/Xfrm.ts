@@ -1,4 +1,4 @@
-import type { Angle } from './Angle.js';
+import type { Angle } from './Angle.ts';
 import type { Extent } from './Extent.ts';
 import type { Position } from './Position.ts';
 

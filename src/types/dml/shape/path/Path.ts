@@ -1,6 +1,6 @@
 import type { PositiveCoordinate } from '../../PositiveCoordinate.ts';
-import type { PathDataItem } from './PathDataItem.ts';
-import type { PathFillMode } from './PathFillMode.js';
+import type { PathCommand } from './PathCommand.ts';
+import type { PathFillMode } from './PathFillMode.ts';
 
 /**
  * Shape geometry path definition.
@@ -35,5 +35,5 @@ export type Path = {
   w: PositiveCoordinate,
 
   /** Array of path commands (moveTo, lineTo, etc.) defining the path geometry. */
-  d: PathDataItem[],
+  d: PathCommand[],
 };

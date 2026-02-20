@@ -1,7 +1,7 @@
 import type { AdjPoint } from './AdjPoint.ts';
-import type { Angle } from '../Angle.js';
-import type { Coordinate } from '../Coordinate.js';
-import type { GeomGuideName } from './GeomGuideName.js';
+import type { Angle } from '../Angle.ts';
+import type { Coordinate } from '../Coordinate.ts';
+import type { GeomGuideName } from './GeomGuideName.ts';
 
 /**
  * Polar adjustment handle for custom shapes.

@@ -1,7 +1,7 @@
-export * from './Paragraph.ts';
-export * from './TextAnchoring.ts';
-export * from './TextBody.ts';
-export * from './TextHorzOverflow.ts';
-export * from './TextVertOverflow.ts';
-export * from './TextWrapping.ts';
-export * from './TextVerticalType.ts';
+export type * from './Paragraph.ts';
+export type * from './TextAnchoring.ts';
+export type * from './TextBody.ts';
+export type * from './TextHorzOverflow.ts';
+export type * from './TextVertOverflow.ts';
+export type * from './TextWrapping.ts';
+export type * from './TextVerticalType.ts';

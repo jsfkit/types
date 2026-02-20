@@ -4,7 +4,7 @@ import type { FillNone } from '../fill/FillNone.ts';
 import type { FillPattern } from '../fill/FillPattern.ts';
 import type { FillSolid } from '../fill/FillSolid.ts';
 import type { DashStop } from './DashStop.ts';
-import type { LineEnd } from './LineEnd.js';
+import type { LineEnd } from './LineEnd.ts';
 import type { LineStyle } from './LineStyle.ts';
 
 // FIXME: move values to own types once they have been fully decided.

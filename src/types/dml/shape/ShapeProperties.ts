@@ -6,7 +6,7 @@ import type { GuidePoint } from './GuidePoint.ts';
 import type { AdjustValueHandleXY } from './AdjustValueHandleXY.ts';
 import type { AdjustValueHandlePolar } from './AdjustValueHandlePolar.ts';
 import type { ShapeStyle } from './ShapeStyle.ts';
-import type { FillPattern, FillSolid, FillGradientLinear, FillGradientPath, FillBlip, FillGroup, FillNone } from './fill/index.ts';
+import type { Fill } from './fill/index.ts';
 import type { LineProps } from './line/index.ts';
 import type { BlackWhiteMode } from './BlackWhiteMode.ts';
 
@@ -51,15 +51,6 @@ export type ShapeProperties = {
   /** Line/outline styling properties. */
   line?: LineProps,
 
-  // XXX: define a named union type?
   /** Fill styling (solid, gradient, pattern, image, or none). */
-  fill?: (
-    FillPattern |
-    FillSolid |
-    FillGradientLinear |
-    FillGradientPath |
-    FillGroup |
-    FillNone |
-    FillBlip
-  ),
+  fill?: Fill,
 };

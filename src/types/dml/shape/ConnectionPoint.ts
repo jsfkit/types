@@ -1,6 +1,6 @@
 import type { AdjPoint } from './AdjPoint.ts';
-import type { Angle } from '../Angle.js';
-import type { GeomGuideName } from './GeomGuideName.js';
+import type { Angle } from '../Angle.ts';
+import type { GeomGuideName } from './GeomGuideName.ts';
 
 export type ConnectionPoint = {
   pos: AdjPoint,

@@ -1,6 +1,6 @@
 import type { AdjPoint } from './AdjPoint.ts';
-import type { Coordinate } from '../Coordinate.js';
-import type { GeomGuideName } from './GeomGuideName.js';
+import type { Coordinate } from '../Coordinate.ts';
+import type { GeomGuideName } from './GeomGuideName.ts';
 
 /**
  * XY adjustment handle for custom shapes.

@@ -1,6 +1,6 @@
 import type { Percentage } from '../Percentage.ts';
 import type { RelativeRect } from '../RelativeRect.ts';
-import type { Tile } from './Tile.js';
+import type { Tile } from './Tile.ts';
 
 /**
  * Image/bitmap fill (blip fill).

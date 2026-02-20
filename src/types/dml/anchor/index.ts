@@ -1,4 +1,4 @@
-export * from './GraphicAnchor.ts';
-export * from './GraphicAnchorAbsolute.ts';
-export * from './GraphicAnchorOneCell.ts';
-export * from './GraphicAnchorTwoCell.ts';
+export type * from './GraphicAnchor.ts';
+export type * from './GraphicAnchorAbsolute.ts';
+export type * from './GraphicAnchorOneCell.ts';
+export type * from './GraphicAnchorTwoCell.ts';

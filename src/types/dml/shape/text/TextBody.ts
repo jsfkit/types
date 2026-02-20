@@ -1,4 +1,5 @@
 import type { Angle } from '../../Angle.ts';
+import type { Coordinate } from '../../Coordinate.ts';
 import type { PositiveCoordinate } from '../../PositiveCoordinate.ts';
 import type { Paragraph } from './Paragraph.ts';
 import type { TextAnchoring } from './TextAnchoring.ts';
@@ -76,7 +77,7 @@ export type TextBody = {
 
   /**
    * Horizontal overflow behavior.
-   * @defaultValue false
+   * @defaultValue "overflow"
    */
   horzOverflow?: TextHorzOverflow,
 
@@ -97,22 +98,22 @@ export type TextBody = {
    * Bottom inset (margin) in EMUs.
    * @defaultValue 91440
    */
-  bIns?: number,
+  bIns?: Coordinate,
   /**
    * Right inset (margin) in EMUs.
    * @defaultValue 91440
    */
-  rIns?: number,
+  rIns?: Coordinate,
   /**
    * Top inset (margin) in EMUs.
    * @defaultValue 91440
    */
-  tIns?: number,
+  tIns?: Coordinate,
   /**
    * Left inset (margin) in EMUs.
    * @defaultValue 91440
    */
-  lIns?: number,
+  lIns?: Coordinate,
 
   /** Array of paragraphs containing the text content. */
   p: Paragraph[],

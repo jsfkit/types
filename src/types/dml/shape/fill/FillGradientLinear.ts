@@ -1,4 +1,4 @@
-import type { Angle } from '../../Angle.js';
+import type { Angle } from '../../Angle.ts';
 import type { FlipAxis } from './FlipAxis.ts';
 import type { GradientColorStop } from './GradientColorStop.ts';
 
@@ -21,7 +21,7 @@ export type FillGradientLinear = {
   /** Array of color stops defining the gradient color transitions. */
   colorStops: GradientColorStop[],
 
-  /** Angle of the gradient direction in degrees. */
+  /** Angle of the gradient direction in 60,000ths of a degree. */
   angle?: Angle;
 
   /** Whether the gradient should scale with the shape dimensions. */

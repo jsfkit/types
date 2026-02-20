@@ -1,4 +1,4 @@
-import type { Coordinate } from '../../Coordinate.js';
+import type { Coordinate } from '../../Coordinate.ts';
 import type { FlipAxis } from './FlipAxis.ts';
 import type { RectAlignment } from '../RectAlignment.ts';
 import type { Percentage } from '../Percentage.ts';
