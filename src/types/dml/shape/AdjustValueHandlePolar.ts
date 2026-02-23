@@ -1,4 +1,4 @@
-import type { AdjPoint } from './AdjPoint.ts';
+import type { AdjustPoint } from './AdjustPoint.ts';
 import type { DmlAngle } from '../DmlAngle.ts';
 import type { EmuValue } from '../EmuValue.ts';
 import type { GeomGuideName } from './GeomGuideName.ts';
@@ -32,5 +32,5 @@ export type AdjustValueHandlePolar = {
   minR?: GeomGuideName | EmuValue,
 
   /** Position of the adjustment handle in the shape's coordinate system. */
-  pos: AdjPoint,
+  pos: AdjustPoint,
 };

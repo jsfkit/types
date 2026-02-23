@@ -6,5 +6,5 @@ export type * from './LineEnd.ts';
 export type * from './LineEndSize.ts';
 export type * from './LineEndType.ts';
 export type * from './LineJoinType.ts';
-export type * from './LineProps.ts';
+export type * from './Line.ts';
 export type * from './LineStyle.ts';

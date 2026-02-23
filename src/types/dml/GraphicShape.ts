@@ -1,4 +1,4 @@
-import type { ShapeProperties } from './shape/index.ts';
+import type { Shape } from './shape/index.ts';
 import type { Xfrm } from './Xfrm.ts';
 import type { TextBody } from './shape/text/index.ts';
 
@@ -22,7 +22,7 @@ export type GraphicShape = {
   xfrm?: Xfrm,
 
   /** Visual styling properties (fill, line, effects, geometry preset, etc.). */
-  shape?: ShapeProperties,
+  shape?: Shape,
 
   /** Optional text content displayed within the shape. */
   text?: TextBody,

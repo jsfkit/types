@@ -1,4 +1,4 @@
-import type { AdjCoordinate } from './AdjCoordinate.ts';
+import type { AdjustCoordinate } from './AdjustCoordinate.ts';
 
 /**
  * Shape text margin rectangle.
@@ -8,14 +8,14 @@ import type { AdjCoordinate } from './AdjCoordinate.ts';
  */
 export type ShapeRect = {
   /** Top edge inset from shape bounds. */
-  t: AdjCoordinate;
+  t: AdjustCoordinate;
 
   /** Left edge inset from shape bounds. */
-  l: AdjCoordinate;
+  l: AdjustCoordinate;
 
   /** Bottom edge inset from shape bounds. */
-  b: AdjCoordinate;
+  b: AdjustCoordinate;
 
   /** Right edge inset from shape bounds. */
-  r: AdjCoordinate;
+  r: AdjustCoordinate;
 };

@@ -3,9 +3,9 @@ import type { EmuValue } from './EmuValue.ts';
 /**
  * 2D position in EMUs.
  *
- * Represents a point in 2D space using absolute coordinates measured in EMUs.
+z * Represents a point in 2D space using absolute coordinates measured in EMUs.
  */
-export type Position = {
+export type Point = {
   /** Horizontal position (X-axis). */
   x: EmuValue,
 

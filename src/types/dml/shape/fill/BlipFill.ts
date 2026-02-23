@@ -1,3 +1,4 @@
+import type { integer } from '../../../integer.ts';
 import type { Percentage } from '../Percentage.ts';
 import type { RelativeRect } from '../RelativeRect.ts';
 import type { Tile } from './Tile.ts';
@@ -26,12 +27,22 @@ export type BlipFill = {
    */
   alpha?: Percentage,
 
-  /** Rectangle defining the source crop area of the image (relative coordinates). */
+  /**
+   * The DPI used to calculate the size of the blip.
+   * When this value is not present the DPI in the blip is used.
+   */
+  dpi?: integer,
+
+  /** Whether the blip should rotate when the shape is rotated. */
+  rotWithShape?: boolean;
+
+  /**
+   * Rectangle defining the source crop area of the image (relative coordinates).
+   */
   srcRect?: RelativeRect,
 
   /**
-   * Rectangle defining how the image should be stretched to fill the
-   * shape (relative coordinates).
+   * Rectangle defining how the image should be stretched to fill the shape (relative coordinates).
    */
   stretchRect?: RelativeRect,
 

@@ -1,4 +1,4 @@
-import type { AdjPoint } from './AdjPoint.ts';
+import type { AdjustPoint } from './AdjustPoint.ts';
 import type { DmlAngle } from '../DmlAngle.ts';
 import type { GeomGuideName } from './GeomGuideName.ts';
 
@@ -8,7 +8,7 @@ import type { GeomGuideName } from './GeomGuideName.ts';
  */
 export type ConnectionPoint = {
   /** The position of the connection point on the shape */
-  pos: AdjPoint,
+  pos: AdjustPoint,
 
   /**
    * The angle of the connection point, either as a specific angle or a reference

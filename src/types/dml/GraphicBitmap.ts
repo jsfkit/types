@@ -1,4 +1,4 @@
-import type { Percentage, RelativeRect, ShapeProperties, TextBody } from './shape/index.ts';
+import type { Percentage, RelativeRect, Shape, TextBody } from './shape/index.ts';
 import type { Xfrm } from './Xfrm.ts';
 
 /**
@@ -24,7 +24,7 @@ export type GraphicBitmap = {
   desc?: string,
 
   /** Visual styling properties (fill, line, effects, etc.). */
-  shape?: ShapeProperties,
+  shape?: Shape,
 
   /** Whether to lock the aspect ratio when resizing. */
   noChangeAspect?: boolean,

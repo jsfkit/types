@@ -1,4 +1,4 @@
-import type { AdjPoint } from './AdjPoint.ts';
+import type { AdjustPoint } from './AdjustPoint.ts';
 import type { EmuValue } from '../EmuValue.ts';
 import type { GeomGuideName } from './GeomGuideName.ts';
 
@@ -31,5 +31,5 @@ export type AdjustValueHandleXY = {
   minY?: GeomGuideName | EmuValue,
 
   /** Position of the adjustment handle in the shape's coordinate system. */
-  pos: AdjPoint,
+  pos: AdjustPoint,
 };

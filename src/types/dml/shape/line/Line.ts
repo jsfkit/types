@@ -18,7 +18,7 @@ import type { LineStyle } from './LineStyle.ts';
  * Defines the visual appearance of lines and shape outlines, including
  * stroke style, width, caps, joins, and decorative line ends (arrows).
  */
-export type LineProps = {
+export type Line = {
   /** Compound line type for creating multi-stroke effects. */
   cmpd?: LineCompoundType;
 

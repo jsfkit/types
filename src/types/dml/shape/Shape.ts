@@ -7,7 +7,7 @@ import type { AdjustValueHandleXY } from './AdjustValueHandleXY.ts';
 import type { AdjustValueHandlePolar } from './AdjustValueHandlePolar.ts';
 import type { ShapeStyle } from './ShapeStyle.ts';
 import type { Fill } from './fill/index.ts';
-import type { LineProps } from './line/index.ts';
+import type { Line } from './line/index.ts';
 import type { BlackWhiteMode } from './BlackWhiteMode.ts';
 
 /**
@@ -16,7 +16,7 @@ import type { BlackWhiteMode } from './BlackWhiteMode.ts';
  * Defines the complete visual styling and custom geometry for a shape,
  * including fill, line, transformation, custom paths, and interactive handles.
  */
-export type ShapeProperties = {
+export type Shape = {
   /** 2D transformation (position, rotation, scale). */
   xfrm?: Xfrm,
 
@@ -49,7 +49,7 @@ export type ShapeProperties = {
   cxn?: ConnectionPoint[],
 
   /** Line/outline styling properties. */
-  line?: LineProps,
+  line?: Line,
 
   /** Fill styling (solid, gradient, pattern, image, or none). */
   fill?: Fill,

@@ -1,6 +1,6 @@
 import type { DmlAngle } from './DmlAngle.ts';
 import type { Extent } from './Extent.ts';
-import type { Position } from './Position.ts';
+import type { Point } from './Point.ts';
 import type { FlipAxis } from './shape/index.ts';
 
 /**
@@ -22,7 +22,7 @@ export type Xfrm = {
   /**
    * Offset/position of the graphic object.
    */
-  off?: Position,
+  off?: Point,
 
   /** Extents/size of the graphic object. */
   ext?: Extent,

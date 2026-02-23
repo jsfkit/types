@@ -1,4 +1,4 @@
-import type { ShapeProperties, TextBody } from './shape/index.ts';
+import type { Shape, TextBody } from './shape/index.ts';
 import type { Xfrm } from './Xfrm.ts';
 
 /**
@@ -18,7 +18,7 @@ export type GraphicConnectionShape = {
   name: string,
 
   /** Visual styling properties (line style, color, effects, etc.). */
-  shape?: ShapeProperties,
+  shape?: Shape,
 
   /** 2D transformation (position, rotation, scale). */
   xfrm?: Xfrm,
