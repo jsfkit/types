@@ -25,4 +25,14 @@ export type CalcProps = {
    * @see {@link https://support.microsoft.com/office/e7fe7167-48a9-4b96-bb53-5612a800b487 | Date systems in Excel}
    */
   epoch?: 1900 | 1904;
+  /**
+   * The calculation mode for the workbook.
+   *
+   * - `"auto"` (default when absent): recalculate all formulas automatically.
+   * - `"autoNoTable"`: recalculate automatically but exclude data tables.
+   * - `"manual"`: formulas are only recalculated when explicitly triggered.
+   *
+   * Corresponds to the OOXML `calcPr@calcMode` attribute (ST_CalcMode).
+   */
+  calcMode?: 'auto' | 'autoNoTable' | 'manual';
 };
