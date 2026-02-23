@@ -1,9 +1,11 @@
 /**
- * The alignment of a line stroke against a shape path.
+ * Determines the alignment of a line stroke against its shape path.
  *
- * | Value | Presentation
- * |-------|-------
- * | `ctr` | Stroke is centered on the path.
- * | `in`  | Stroke is drawn inside the path.
+ * | Value    | Presentation
+ * |----------|-------
+ * | `center` | Stroke is centered on the path.
+ * | `inside` | Stroke is drawn inside the path.
+ *
+ * These have been altered from DrawingML which used "ctr" for `center`, and "in" for `inside`.
  */
-export type LineAlignment = 'ctr' | 'in';
+export type LineAlignment = 'center' | 'inside';
