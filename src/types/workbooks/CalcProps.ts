@@ -32,7 +32,7 @@ export type CalcProps = {
    * - `"autoNoTable"`: recalculate automatically but exclude data tables.
    * - `"manual"`: formulas are only recalculated when explicitly triggered.
    *
-   * Corresponds to the OOXML `calcPr@calcMode` attribute (ST_CalcMode).
+   * @defaultValue "auto"
    */
   calcMode?: 'auto' | 'autoNoTable' | 'manual';
 };
