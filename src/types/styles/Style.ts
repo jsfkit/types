@@ -1,6 +1,6 @@
 import type { PixelValue } from '../PixelValue.ts';
 import type { BorderStyle } from './BorderStyle.ts';
-import type { Color } from './Color.ts';
+import type { Color } from '../colors/Color.ts';
 import type { HAlign } from './HAlign.ts';
 import type { PatternStyle } from './PatternStyle.ts';
 import type { Underline } from './Underline.ts';

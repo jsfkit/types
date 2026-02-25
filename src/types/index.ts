@@ -10,6 +10,7 @@ export type * from './ExternalWorksheet.ts';
 export type * from './GridSize.ts';
 export type * from './Note.ts';
 export type * from './PixelValue.ts';
+export type * from './colors/index.ts';
 export type * from './styles/index.ts';
 export type * from './tables/index.ts';
 export type * from './comments/index.ts';
