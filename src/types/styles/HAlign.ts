@@ -1,5 +1,7 @@
 /**
  * Specifies the horizontal alignment of content (text) within a container (cell).
+ *
+ * @group Workbooks
  */
 export type HAlign =
   /**

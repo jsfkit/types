@@ -5,6 +5,8 @@ import type { integer } from '../integer.ts';
  *
  * Each of the three layouts has its own scale. A scale is represented as a percentage, with `100`
  * (100%) being the default 1:1 scale. When a layout has no explicit scale, use 100%.
+ *
+ * @group Workbooks
  */
 export type WorksheetLayoutScales = {
   /**

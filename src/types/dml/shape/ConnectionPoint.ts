@@ -5,6 +5,8 @@ import type { GeomGuideName } from './GeomGuideName.ts';
 /**
  * Defines a connection point on a shape where other shapes can connect.
  * Connection points are used for connecting shapes with connectors/lines in diagrams.
+ *
+ * @group Drawings
  */
 export type ConnectionPoint = {
   /** The position of the connection point on the shape */

@@ -7,6 +7,8 @@ import type { PathFillMode } from './PathFillMode.ts';
  *
  * Defines a single path within a custom shape's geometry, including
  * the path commands and rendering properties for that path.
+ *
+ * @group Drawings
  */
 export type Path = {
   // XXX: This is not needed until 3D effects are added.

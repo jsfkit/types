@@ -8,6 +8,8 @@
  *   "scope": "Sheet1",
  *   "value": "Sheet1!B1:C1" }
  * ```
+ *
+ * @group Workbooks
  */
 export type DefinedName = {
   /**

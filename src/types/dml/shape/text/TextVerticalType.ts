@@ -10,6 +10,8 @@
  * | `wordArtVertRtl` | Vertical WordArt should be shown from right to left.
  * | `eaVert`         | Some fonts are rotated by 90° while some (East Asian) are shown vertically.
  * | `mongolianVert`  | `eaVert` but the text flows top down then LEFT RIGHT, instead of RIGHT LEFT.
+ *
+ * @group Drawings
  */
 export type TextVerticalType =
   'horz' |

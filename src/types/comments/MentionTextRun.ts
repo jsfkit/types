@@ -2,6 +2,8 @@ import type { TextRun } from './TextRun.ts';
 
 /**
  * A {@link TextRun | text run} representing a mention of a person within a threaded comment's text.
+ *
+ * @group Workbooks
  */
 export type MentionTextRun = TextRun & {
   /** Discriminator to identify this as a mention text run. */

@@ -14,5 +14,7 @@
  * | `t`   | Top center     |
  * | `tl`  | Top left       |
  * | `tr`  | Top right      |
+ *
+ * @group Drawings
  */
 export type RectAlignment = 'b' | 'bl' | 'br' | 'ctr' | 'l' | 'r' | 't' | 'tl' | 'tr';

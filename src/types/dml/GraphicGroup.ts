@@ -6,6 +6,8 @@ import type { XfrmGroup } from './XfrmGroup.ts';
  *
  * Represents a collection of graphic objects grouped together as a single unit,
  * allowing them to be transformed, moved, and manipulated collectively.
+ *
+ * @group Drawings
  */
 export type GraphicGroup = {
   /** Type discriminator for group shapes. */

@@ -3,6 +3,8 @@ import type { ExternalWorksheet } from './ExternalWorksheet.ts';
 
 /**
  * A cell from another workbook (i.e. another file) that is referenced in this workbook.
+ *
+ * @group Workbooks
  */
 export type External = {
   /** Filename being referenced. */

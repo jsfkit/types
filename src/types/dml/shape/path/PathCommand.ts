@@ -9,6 +9,8 @@ import type { QuadraticBezierToCommand } from './QuadraticBezierToCommand.ts';
  * Path command for shape geometry.
  *
  * Defines a single drawing command in a shape path, using a subset of SVG path commands.
+ *
+ * @group Drawings
  */
 export type PathCommand =
   ArcToCommand |

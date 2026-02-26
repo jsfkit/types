@@ -3,6 +3,8 @@ import type { Xfrm } from './Xfrm.ts';
 
 /**
  * Bitmap graphic / Picture.
+ *
+ * @group Drawings
  */
 export type GraphicBitmap = {
   /** Type discriminator for bitmap graphics. */

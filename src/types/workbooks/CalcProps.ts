@@ -2,6 +2,8 @@ import type { integer } from '../integer.ts';
 
 /**
  * Directions on how formulas should be recalculated in the workbook.
+ *
+ * @group Workbooks
  */
 export type CalcProps = {
   /**

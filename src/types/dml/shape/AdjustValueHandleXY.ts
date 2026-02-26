@@ -7,6 +7,8 @@ import type { GeomGuideName } from './GeomGuideName.ts';
  *
  * Defines an interactive handle that can be dragged to adjust shape geometry
  * using Cartesian coordinates (X and Y positions).
+ *
+ * @group Drawings
  */
 export type AdjustValueHandleXY = {
   /** Type discriminator for XY adjustment handles. */

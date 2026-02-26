@@ -4,6 +4,8 @@ import type { Xfrm } from './Xfrm.ts';
 
 /**
  * Transform directions to be applied to group objects.
+ *
+ * @group Drawings
  */
 export type XfrmGroup = Xfrm & {
   /** Child offset - position of child elements within a group. */

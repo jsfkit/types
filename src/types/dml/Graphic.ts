@@ -4,7 +4,11 @@ import type { GraphicConnectionShape } from './GraphicConnectionShape.ts';
 import type { GraphicGroup } from './GraphicGroup.ts';
 import type { GraphicShape } from './GraphicShape.ts';
 
-/** A graphic element.  */
+/**
+ * A graphic element.
+ *
+ * @group Drawings
+ */
 export type Graphic =
   GraphicChart |
   GraphicBitmap |

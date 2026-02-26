@@ -18,6 +18,7 @@ import type { integer } from '../integer.ts';
  *
  * @see {@link MentionTextRun} for mentions of people
  * @see {@link HyperlinkTextRun} for hyperlinks
+ * @group Workbooks
  */
 export type TextRun = {
   /** Starting character position of the run in the text (zero-indexed). */

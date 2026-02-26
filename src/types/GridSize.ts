@@ -11,6 +11,8 @@ import type { PixelValue } from './PixelValue.ts';
  * GridSize may have a style-index ({@link GridSize.s}) attribute like individual cells. The styling
  * information on the column should be used for all cells that are not present in the sheet's cell
  * collection.
+ *
+ * @group Workbooks
  */
 export type GridSize = {
   /** A 1-based inclusive start index. */

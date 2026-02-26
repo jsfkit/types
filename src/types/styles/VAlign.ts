@@ -1,4 +1,8 @@
-/** Vertical alignment of a cell content. */
+/**
+ * Vertical alignment of a cell content.
+ *
+ * @group Workbooks
+ */
 export type VAlign =
   'bottom' |
   'top' |

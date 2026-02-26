@@ -3,6 +3,8 @@ import type { CellId } from './CellId.ts';
 
 /**
  * A simple container sheet for cell values within an external workbook.
+ *
+ * @group Workbooks
  */
 export type ExternalWorksheet = {
   /**

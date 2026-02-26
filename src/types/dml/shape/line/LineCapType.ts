@@ -9,5 +9,7 @@
  *
  * These have been altered from DrawingML which used "flat" for `butt`, "rnd" for `round`,
  * and "sq" for `square`.
+ *
+ * @group Drawings
  */
 export type LineCapType = 'butt' | 'rnd' | 'sq';

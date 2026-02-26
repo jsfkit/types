@@ -5,6 +5,8 @@ import type { integer } from './integer.ts';
 
 /**
  * A spreadsheet cell.
+ *
+ * @group Workbooks
  */
 export type Cell = {
   /**

@@ -4,6 +4,8 @@ import type { MentionTextRun } from './MentionTextRun.ts';
 
 /**
  * A threaded comment that is attached to an individual cell.
+ *
+ * @group Workbooks
  */
 export type ThreadedComment = {
   /**

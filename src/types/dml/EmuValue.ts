@@ -21,5 +21,6 @@
  *
  * @min -27273042329600
  * @max 27273042316900
+ * @group Drawings
  */
 export type EmuValue = number;

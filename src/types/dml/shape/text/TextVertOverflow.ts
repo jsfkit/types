@@ -8,5 +8,7 @@
  * | `overflow` | Text extends beyond container bounds          |
  * | `ellipsis` | Text is truncated with ellipsis indicator     |
  * | `clip`     | Text is clipped at container edge             |
+ *
+ * @group Drawings
  */
 export type TextVertOverflow = 'overflow' | 'ellipsis' | 'clip';

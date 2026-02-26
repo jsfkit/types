@@ -18,6 +18,8 @@ import type { TextWrapping } from './TextWrapping.ts';
  *
  * Defines the text content within a shape, including paragraphs and formatting properties
  * such as alignment, overflow behavior, columns, rotation, and insets.
+ *
+ * @group Drawings
  */
 export type TextBody = {
   /**

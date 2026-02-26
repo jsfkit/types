@@ -6,6 +6,11 @@ import type { NoFill } from './NoFill.ts';
 import type { PatternFill } from './PatternFill.ts';
 import type { SolidFill } from './SolidFill.ts';
 
+/**
+ * Union type representing all possible fill types for shapes.
+ *
+ * @group Drawings
+ */
 export type Fill =
   PatternFill |
   SolidFill |

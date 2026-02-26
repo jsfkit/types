@@ -7,5 +7,7 @@
  * | `inside` | Stroke is drawn inside the path.
  *
  * These have been altered from DrawingML which used "ctr" for `center`, and "in" for `inside`.
+ *
+ * @group Drawings
  */
 export type LineAlignment = 'center' | 'inside';

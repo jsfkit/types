@@ -9,6 +9,8 @@ import type { WorksheetView } from './WorksheetView.ts';
 
 /**
  * A rectangle of cells. A sheet within a spreadsheet.
+ *
+ * @group Workbooks
  */
 export type Worksheet = {
   /** Name of the worksheet. */

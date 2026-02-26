@@ -3,6 +3,8 @@ import type { Extent } from '../Extent.ts';
 
 /**
  * Specifies a one cell anchor placeholder for a group, a shape, or a drawing element.
+ *
+ * @group Drawings
  */
 export type GraphicAnchorOneCell = {
   /** Type discriminator for a one-cell anchor. */

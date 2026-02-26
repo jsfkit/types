@@ -7,5 +7,7 @@
  * |------------|-----------------------------------------------|
  * | `overflow` | Text extends beyond container bounds          |
  * | `clip`     | Text is clipped at container edge             |
+ *
+ * @group Drawings
  */
 export type TextHorzOverflow = 'overflow' | 'clip';

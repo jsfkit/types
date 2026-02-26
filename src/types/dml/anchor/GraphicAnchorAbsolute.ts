@@ -3,6 +3,8 @@ import type { Point } from '../Point.ts';
 
 /**
  * Specifies an absolute anchor placeholder for a group, a shape, or a drawing element.
+ *
+ * @group Drawings
  */
 export type GraphicAnchorAbsolute = {
   /** Type discriminator for an absolute anchor. */

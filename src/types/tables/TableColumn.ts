@@ -2,6 +2,8 @@ import type { TableColumnDataType } from './TableColumnDataType.ts';
 
 /**
  * Describes a column within a table.
+ *
+ * @group Workbooks
  */
 export type TableColumn = {
   /**

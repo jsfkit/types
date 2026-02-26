@@ -2,6 +2,8 @@ import type { EmuValue } from '../../EmuValue.ts';
 
 /**
  * Defines an inset or internal margins for a text box within a shape.
+ *
+ * @group Drawings
  */
 export type InsetRect = {
   /**

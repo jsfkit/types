@@ -4,5 +4,6 @@
  *
  * @min 0
  * @max 27273042316900
+ * @group Drawings
  */
 export type PositiveCoordinate = number;

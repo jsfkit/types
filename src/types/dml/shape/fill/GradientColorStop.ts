@@ -6,6 +6,8 @@ import type { Percentage } from '../Percentage.ts';
  *
  * Defines a color transition point within a gradient fill,
  * specifying both the position and color at that point.
+ *
+ * @group Drawings
  */
 export type GradientColorStop = {
   /**

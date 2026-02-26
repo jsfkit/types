@@ -3,6 +3,9 @@
   "entryPoints": ["./src"],
   "out": "./docs",
   "router": "structure-dir",
+  "navigation": {
+    "includeGroups": true
+  },
   "navigationLinks": {
     "GitHub": "https://github.com/jsfkit/types",
     "npm": "https://www.npmjs.com/package/@jsfkit/types"

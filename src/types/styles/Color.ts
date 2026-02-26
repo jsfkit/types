@@ -3,5 +3,6 @@
  *
  * @see {@link https://www.w3.org/TR/css-color-4/#hex-notation | CSS hexadecimal notation spec}
  * @pattern ^#([a-fA-F0-9]{3,4}|([a-fA-F0-9][a-fA-F0-9]){3,4})$
+ * @group Workbooks
  */
 export type Color = `#${string}`;

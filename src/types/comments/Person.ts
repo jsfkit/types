@@ -1,5 +1,7 @@
 /**
  * An author of a threaded comment, or a person mentioned in a threaded comment.
+ *
+ * @group Workbooks
  */
 export type Person = {
   /**

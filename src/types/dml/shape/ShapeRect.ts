@@ -5,6 +5,8 @@ import type { AdjustCoordinate } from './AdjustCoordinate.ts';
  *
  * Defines the inset rectangle within a shape where text should be positioned,
  * specified using adjustable coordinates relative to the shape's geometry.
+ *
+ * @group Drawings
  */
 export type ShapeRect = {
   /** Top edge inset from shape bounds. */

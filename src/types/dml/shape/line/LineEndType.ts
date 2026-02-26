@@ -1,4 +1,8 @@
-/** Line ending shape type. */
+/**
+ * Line ending shape type.
+ *
+ * @group Drawings
+ */
 export type LineEndType =
   'arrow' |
   'diamond' |
