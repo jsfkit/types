@@ -9,6 +9,8 @@
  * | `lightenLess` | slightly lighter shaded color applied to its fill.
  * | `none`        | should have no fill.
  * | `norm`        | should have a normally shaded color applied to its fill.
+ *
+ * @group Drawings
  */
 export type PathFillMode =
  'none' |

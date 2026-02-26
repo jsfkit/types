@@ -8,6 +8,8 @@ import type { RelativeRect } from '../RelativeRect.ts';
  *
  * Defines a gradient fill that radiates from a center point or follows
  * the shape's contour, creating circular, rectangular, or shape-based gradients.
+ *
+ * @group Drawings
  */
 export type GradientPathFill = {
   /** Type discriminator for path gradient fills. */

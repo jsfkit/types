@@ -1,4 +1,8 @@
-/** Excel's built-in table style names. */
+/**
+ * Excel's built-in table style names.
+ *
+ * @group Workbooks
+ */
 export type TableStyleName =
   'TableStyleDark1' |
   'TableStyleDark2' |

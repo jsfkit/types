@@ -5,6 +5,8 @@ import type { Percentage } from './Percentage.ts';
  *
  * Defines a rectangle using relative offsets from each edge, expressed as percentages
  * of the parent rectangle's dimensions.
+ *
+ * @group Drawings
  */
 export type RelativeRect = {
   /** Top edge offset as percentage from top. */

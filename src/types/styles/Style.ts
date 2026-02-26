@@ -8,6 +8,8 @@ import type { VAlign } from './VAlign.ts';
 
 /**
  * Style rules that specify the visual presentation of a cell.
+ *
+ * @group Workbooks
  */
 export type Style = {
   /**

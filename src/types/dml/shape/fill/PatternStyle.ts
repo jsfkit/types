@@ -1,5 +1,7 @@
 /**
  * Pattern fill style presets.
+ *
+ * @group Drawings
  */
 export type FillPatternStyle =
   'pct5' |

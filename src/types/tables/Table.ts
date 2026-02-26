@@ -10,6 +10,7 @@ import type { TableStyle } from './TableStyle.ts';
  * calculated columns.
  *
  * @see {@link https://support.microsoft.com/office/f5ed2452-2337-4f71-bed3-c8ae6d2b276e}
+ * @group Workbooks
  */
 export type Table = {
   /**

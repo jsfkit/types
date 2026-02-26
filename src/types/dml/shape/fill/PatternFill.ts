@@ -6,6 +6,8 @@ import type { FillPatternStyle } from './PatternStyle.ts';
  *
  * Defines a fill using a repeating pattern (dots, stripes, crosshatch, etc.)
  * with configurable foreground and background colors.
+ *
+ * @group Drawings
  */
 export type PatternFill = {
   /** Type discriminator for pattern fills. */

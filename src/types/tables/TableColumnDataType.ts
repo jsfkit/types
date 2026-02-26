@@ -1,4 +1,8 @@
-/** Describes the type of values found in the cells of a table column. */
+/**
+ * Describes the type of values found in the cells of a table column.
+ *
+ * @group Workbooks
+ */
 export type TableColumnDataType =
   'text' |
   'number' |

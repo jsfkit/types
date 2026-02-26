@@ -9,6 +9,8 @@
  * | `d`   | Date    | The {@link Cell.s | cell style} formats the integer cell value as a date |
  * | `s`   | Text    |                                                                          |
  * | `z`   | Empty   | Cell is empty                                                            |
+ *
+ * @group Workbooks
  */
 export type CellValueType =
   'b' |

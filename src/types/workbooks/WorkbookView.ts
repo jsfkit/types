@@ -12,6 +12,8 @@ import type { integer } from '../integer.ts';
  * - Scroll bar visibility
  *
  * Currently JSF does not include all available settings for a workbook.
+ *
+ * @group Workbooks
  */
 export type WorkbookView = {
   /**

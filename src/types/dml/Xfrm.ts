@@ -5,6 +5,8 @@ import type { FlipAxis } from './shape/index.ts';
 
 /**
  * Transform directions to be applied to drawn graphic objects.
+ *
+ * @group Drawings
  */
 export type Xfrm = {
   /**

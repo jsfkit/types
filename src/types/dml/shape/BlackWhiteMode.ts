@@ -14,6 +14,8 @@
  * | `invGray` (Inverse Gray)       | Rendered with inverse gray coloring
  * | `ltGray` (Light Gray)          | Rendered with light gray coloring
  * | `white` (White)                | Rendered within white coloring
+ *
+ * @group Drawings
  */
 export type BlackWhiteMode =
   'clr' |

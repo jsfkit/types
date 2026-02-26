@@ -3,5 +3,7 @@
 /**
  * Defines the shape to be used at the corners of a stroked path.
  * These are equivalent to their CSS/SVG linejoin value counterparts.
+ *
+ * @group Drawings
  */
 export type LineJoinType = 'bevel' | 'round' | 'miter';

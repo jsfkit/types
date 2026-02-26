@@ -8,6 +8,8 @@ import type { Percentage } from '../Percentage.ts';
  *
  * Defines how an image should be repeated (tiled) when used as a fill,
  * including scaling, alignment, offset, and flip transformations.
+ *
+ * @group Drawings
  */
 export type Tile = {
   /** Additional horizontal offset after alignment, in EMUs. */

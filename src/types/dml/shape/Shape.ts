@@ -15,6 +15,8 @@ import type { BlackWhiteMode } from './BlackWhiteMode.ts';
  *
  * Defines the complete visual styling and custom geometry for a shape,
  * including fill, line, transformation, custom paths, and interactive handles.
+ *
+ * @group Drawings
  */
 export type Shape = {
   /** 2D transformation (position, rotation, scale). */

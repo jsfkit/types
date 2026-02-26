@@ -3,6 +3,8 @@
  *
  * Defines a named calculation point that can be referenced in shape paths
  * and used to create parameterized, adjustable geometry.
+ *
+ * @group Drawings
  */
 export type GuidePoint = {
   /**

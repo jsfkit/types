@@ -6,6 +6,8 @@ import type { Graphic } from './Graphic.ts';
  *
  * A drawing is a collection of any graphic objects that should be displayed in a worksheet as
  * well as information on how they are positioned within the cell-grid.
+ *
+ * @group Drawings
  */
 export type Drawing = {
   /** Defines how the drawing is placed onto a worksheet's cell-grid. */

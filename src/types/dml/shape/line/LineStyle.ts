@@ -14,6 +14,8 @@
  * | `sysDashDot`    | Equivalent to SVG dashArray of `[3,1,1,1]`
  * | `sysDashDotDot` | Equivalent to SVG dashArray of `[3,1,1,1,1,1,1]`
  * | `sysDot`        | Equivalent to SVG dashArray of `[1,1]`
+ *
+ * @group Drawings
  */
 export type LineStyle =
   'dash' |

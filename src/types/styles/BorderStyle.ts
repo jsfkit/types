@@ -1,6 +1,8 @@
 /**
  * The style to use when drawing a cell border. If the worksheet's zoom factor is changed the width
  * of the border is expected to stay the same.
+ *
+ * @group Workbooks
  */
 export type BorderStyle =
   /** No border is drawn.*/

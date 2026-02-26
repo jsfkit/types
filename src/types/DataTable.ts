@@ -4,6 +4,8 @@ import type { CellRange } from './CellRange.ts';
 /**
  * Data table configuration, present on the master cell of a data table range.
  * Represents an Excel What-If Analysis data table.
+ *
+ * @group Workbooks
  */
 export type DataTable = {
   /** Range of cells the data table manages (e.g., "D3:D5") */

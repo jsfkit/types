@@ -3,6 +3,8 @@ import type { TableStyleName } from './TableStyleName.ts';
 /**
  * Describes which style is used to display this table, and specifies which portions of the table
  * have which styles applied.
+ *
+ * @group Workbooks
  */
 export type TableStyle = {
   /**

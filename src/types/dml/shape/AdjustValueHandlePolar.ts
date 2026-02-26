@@ -8,6 +8,8 @@ import type { GeomGuideName } from './GeomGuideName.ts';
  *
  * Defines an interactive handle that can be dragged to adjust shape geometry
  * using polar coordinates (angle and radius from a center point).
+ *
+ * @group Drawings
  */
 export type AdjustValueHandlePolar = {
   /** Type discriminator for polar adjustment handles. */

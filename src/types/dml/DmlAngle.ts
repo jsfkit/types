@@ -3,5 +3,7 @@
  *
  * Positive angles are clockwise (i.e., towards the positive y axis);
  * negative angles are counter-clockwise (i.e., towards the negative y axis).
+ *
+ * @group Drawings
  */
 export type DmlAngle = number;

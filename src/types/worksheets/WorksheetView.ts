@@ -15,6 +15,8 @@ import type { WorksheetLayoutScales } from './WorksheetLayoutScales.ts';
  * - Zoom level
  *
  * Currently JSF does not include all available settings for a worksheet.
+ *
+ * @group Workbooks
  */
 export type WorksheetView = {
   /**

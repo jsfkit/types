@@ -2,6 +2,8 @@ import type { EmuValue } from './EmuValue.ts';
 
 /**
  * Specifies a point in the cell grid.
+ *
+ * @group Drawings
  */
 export type CellOffset = {
   /** The row in which the point occurs, 1 indexed. */

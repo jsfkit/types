@@ -3,6 +3,8 @@ import type { LineEndType } from './LineEndType.ts';
 
 /**
  * Defines a line ending decoration.
+ *
+ * @group Drawings
  */
 export type LineEnd = {
   /**

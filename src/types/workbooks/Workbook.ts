@@ -10,6 +10,8 @@ import type { WorkbookView } from './WorkbookView.ts';
 /**
  * A workbook is a collection of worksheets, styles, defined names, and other metadata. It's what's
  * commonly known as a spreadsheet.
+ *
+ * @group Workbooks
  */
 export type Workbook = {
   /** Name of the workbook. In the case of a .xlsx file it will be the filename. */

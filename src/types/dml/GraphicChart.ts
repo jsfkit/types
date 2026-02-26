@@ -2,6 +2,8 @@ import type { Xfrm } from './Xfrm.ts';
 
 /**
  * A chart or plot.
+ *
+ * @group Drawings
  */
 export type GraphicChart = {
   /** Type discriminator for a chart. */
