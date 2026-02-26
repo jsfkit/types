@@ -7,7 +7,7 @@
  * palette across a workbook.
  */
 export type ThemeColor = {
-  type: 'scheme';
+  type: 'theme';
   /**
    * Theme colour name.
    *
