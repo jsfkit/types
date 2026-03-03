@@ -41,6 +41,10 @@ export type Worksheet = {
   showGridLines?: boolean;
   /** The different display configurations saved for the worksheet. */
   views?: WorksheetView[];
-  /** A list of drawings that appear in this worksheet. */
+  /**
+   * @deprecated previous accidental singular name of {@link Worksheet.drawings}
+   */
   drawing?: Drawing[];
+  /** A list of drawings that appear in this worksheet. */
+  drawings?: Drawing[];
 };
