@@ -77,7 +77,7 @@ export type ColorTransform =
      * 40%. The transformed alpha values are limited to a range of 0 to 100%. A 10% alpha offset
      * increase to a 100% opaque object still results in 100% opacity.
      */
-    type: 'alphaOffset';
+    type: 'alphaOff';
     /**
      * Percentage (clamped to -100 to 100).
      * @min -100
@@ -115,7 +115,7 @@ export type ColorTransform =
      * Produces the input colour with its hue shifted, but with its saturation and luminance
      * unchanged.
      */
-    type: 'hueOffset';
+    type: 'hueOff';
     /** Degrees. */
     value: number;
   } |
@@ -125,7 +125,7 @@ export type ColorTransform =
      * Alters the input colour so it has the specified saturation, but with its hue and luminance
      * unchanged.
      */
-    type: 'saturation';
+    type: 'sat';
     /** Unbounded percentage. */
     value: number;
   } |
@@ -136,7 +136,7 @@ export type ColorTransform =
      * A 50% saturation modulate reduces the saturation by half. A 200% saturation modulate doubles
      * the saturation.
      */
-    type: 'saturationMod';
+    type: 'satMod';
     /** Unbounded percentage. */
     value: number;
   } |
@@ -145,7 +145,7 @@ export type ColorTransform =
      * Produces the input colour with its saturation shifted, but with its hue and luminance
      * unchanged. A 10% offset to 20% saturation yields 30% saturation.
      */
-    type: 'saturationOffset';
+    type: 'satOff';
     /** Unbounded percentage. */
     value: number;
   } |
@@ -154,7 +154,7 @@ export type ColorTransform =
      * Alters the input colour so it has the specified luminance, but with its hue and saturation
      * unchanged.
      */
-    type: 'luminance';
+    type: 'lum';
     /** Unbounded percentage. */
     value: number;
   } |
@@ -165,7 +165,7 @@ export type ColorTransform =
      * A 50% luminance modulate reduces the luminance by half. A 200% luminance modulate doubles the
      * luminance.
      */
-    type: 'luminanceMod';
+    type: 'lumMod';
     /** Unbounded percentage. */
     value: number;
   } |
@@ -174,7 +174,7 @@ export type ColorTransform =
      * Produces the input colour with its luminance shifted, but with its hue and saturation
      * unchanged.
      */
-    type: 'luminanceOffset';
+    type: 'lumOff';
     /** Unbounded percentage. */
     value: number;
   } |
@@ -201,7 +201,7 @@ export type ColorTransform =
      * Alters the input colour so its red component is shifted. Its green and blue colour components
      * unchanged.
      */
-    type: 'redOffset';
+    type: 'redOff';
     /** Unbounded percentage. */
     value: number;
   } |
@@ -230,7 +230,7 @@ export type ColorTransform =
      * Alters the input colour so its green component is shifted. Its red and blue colour components
      * unchanged.
      */
-    type: 'greenOffset';
+    type: 'greenOff';
     /** Unbounded percentage. */
     value: number;
   } |
@@ -259,7 +259,7 @@ export type ColorTransform =
      * Alters the input colour so its blue component is shifted, but with its red and green colour
      * components unchanged.
      */
-    type: 'blueOffset';
+    type: 'blueOff';
     /** Unbounded percentage. */
     value: number;
   } |
@@ -268,21 +268,21 @@ export type ColorTransform =
      * Specifies that the colour rendered should be the complement of the input colour with the
      * complement being defined as such.
      */
-    type: 'complement'
+    type: 'comp'
   } |
   {
     /**
      * Specifies the inverse of the input colour. For example, the inverse of red (1, 0, 0) is cyan
      * (0, 1, 1 ).
      */
-    type: 'invert'
+    type: 'inv'
   } |
   {
     /**
      * Specifies a grey scale of the input colour, taking into relative intensities of the red,
      * green, and blue primaries.
      */
-    type: 'grayscale'
+    type: 'gray'
   } |
   {
     /**
@@ -296,5 +296,5 @@ export type ColorTransform =
      * Specifies that the output colour rendered by the generating application should be the inverse
      * sRGB gamma shift of the input colour.
      */
-    type: 'inverseGamma'
+    type: 'invGamma'
   };
