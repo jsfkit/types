@@ -76,6 +76,6 @@
  * |    65 | System background |
  */
 export type IndexedColor = {
-  model: 'indexed';
+  type: 'indexed';
   value: number;
 };
