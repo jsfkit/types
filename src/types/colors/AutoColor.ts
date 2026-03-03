@@ -3,5 +3,5 @@
  * means black for text, white for background.
  */
 export type AutoColor = {
-  model: 'auto';
+  type: 'auto';
 };
