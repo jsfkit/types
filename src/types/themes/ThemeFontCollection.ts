@@ -11,9 +11,9 @@ export type ThemeFontCollection = {
   /** Latin script defaults. */
   latin: ThemeTextFont;
   /** East Asian script defaults. */
-  eastAsian: ThemeTextFont;
+  eastAsian?: ThemeTextFont;
   /** Complex script defaults. */
-  complexScript: ThemeTextFont;
+  complexScript?: ThemeTextFont;
   /**
    * Additional fonts used for language-specific fonts in themes. For example, one can specify a
    * font that gets used only within the Japanese language context.
