@@ -1,8 +1,9 @@
+import type { Person } from '../comments/index.ts';
 import type { DefinedName } from '../DefinedName.ts';
 import type { External } from '../External.ts';
 import type { Style } from '../styles/index.ts';
 import type { Table } from '../tables/index.ts';
-import type { Person } from '../comments/index.ts';
+import type { Theme } from '../themes/index.ts';
 import type { Worksheet } from '../worksheets/index.ts';
 import type { CalcProps } from './CalcProps.ts';
 import type { WorkbookView } from './WorkbookView.ts';
@@ -67,4 +68,9 @@ export type Workbook = {
    * @see {@link https://www.rfc-editor.org/rfc/rfc2397}
    */
   images?: Record<string, string>;
+  /**
+   * The workbook theme. Specifies the colour scheme and fonts referenced throughout the workbook in
+   * order to create a consistent visual presentation.
+   */
+  theme?: Theme;
 };
