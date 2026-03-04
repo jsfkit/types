@@ -8,14 +8,14 @@ import type { Color } from '../colors/Color.ts';
 export type ThemeColorScheme = {
   /** Colour scheme name. */
   name: string;
-  /** The "dark 1" colour. */
-  dk1: Color;
   /** The "light 1" colour. */
   lt1: Color;
-  /** The "dark 2" colour. */
-  dk2: Color;
+  /** The "dark 1" colour. */
+  dk1: Color;
   /** The "light 2" colour. */
   lt2: Color;
+  /** The "dark 2" colour. */
+  dk2: Color;
   /** Accent 1 colour. */
   accent1: Color;
   /** Accent 2 colour. */
