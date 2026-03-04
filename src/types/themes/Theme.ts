@@ -1,5 +1,7 @@
 import type { ThemeCustomColor } from './ThemeCustomColor.ts';
-import type { ThemeElements } from './ThemeElements.ts';
+import type { ThemeColorScheme } from './ThemeColorScheme.ts';
+import type { ThemeFontScheme } from './ThemeFontScheme.ts';
+
 
 /**
  * Workbook theme.
@@ -11,8 +13,10 @@ export type Theme = {
    * @default ""
    */
   name?: string;
-  /** Required theme element bundle. */
-  elements: ThemeElements;
+  /** Theme colour palette. */
+  colorScheme: ThemeColorScheme;
+  /** Theme major/minor font choice. */
+  fontScheme: ThemeFontScheme;
   /**
    * Custom colour palettes.
    */
