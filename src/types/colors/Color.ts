@@ -15,7 +15,7 @@ import type { ThemeColor } from './ThemeColor.ts';
  * The base colour must be defined using one of the following colour models:
  *
  * - {@link SrgbColor}: Standard sRGB colour space, defined by a CSS-style hex string (e.g.
- *   `#FF0000`).
+ *   `FF0000`).
  * - {@link ScRgbColor}: A colour in Microsoft's scRGB colour space, defined by red, green, and blue
  *   values as percentages.
  * - {@link HslColor}: A colour in HSL colour space, defined by hue, saturation, and lightness
