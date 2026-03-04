@@ -10,8 +10,8 @@ export type ThemeTextFont = {
    */
   typeface: string;
   /**
-   * PANOSE classification as hex. Used to guide selection of a similar alternate font if the chosen
-   * font is unavailable.
+   * PANOSE 1.0 classification as hex. Used to guide selection of a similar alternate font if the
+   * chosen font is unavailable.
    *
    * @see {@link https://en.wikipedia.org/wiki/PANOSE}
    */
