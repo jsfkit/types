@@ -2,6 +2,7 @@ import type { DefinedName } from '../DefinedName.ts';
 import type { External } from '../External.ts';
 import type { Style } from '../styles/index.ts';
 import type { Table } from '../tables/index.ts';
+import type { PivotCache, PivotTable } from '../pivotTables/index.ts';
 import type { Person } from '../comments/index.ts';
 import type { Worksheet } from '../worksheets/index.ts';
 import type { CalcProps } from './CalcProps.ts';
@@ -22,6 +23,10 @@ export type Workbook = {
   names?: DefinedName[];
   /** Metadata on the workbook's tables. */
   tables?: Table[];
+  /** Pivot caches storing snapshots of source data used by pivot tables. */
+  pivotCaches?: PivotCache[];
+  /** Metadata on the workbook's pivot tables. */
+  pivotTables?: PivotTable[];
   /** Directions on how formulas should be recalculated in the workbook. */
   calculationProperties?: CalcProps;
   /** Styles for cells in the workbook. */
