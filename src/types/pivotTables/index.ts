@@ -40,3 +40,4 @@ export type * from './PivotSubtotalFunction.ts';
 export type * from './PivotTable.ts';
 export type * from './PivotTableLocation.ts';
 export type * from './PivotTableStyle.ts';
+export type * from './PivotTableStyleName.ts';

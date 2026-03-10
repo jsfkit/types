@@ -1,11 +1,20 @@
+import type { PivotTableStyleName } from './PivotTableStyleName.ts';
+
 /**
  * Presentation style settings for a pivot table.
  *
  * @group PivotTables
  */
 export type PivotTableStyle = {
-  /** The name of the pivot table style (e.g. `"PivotStyleMedium9"`). */
-  name?: string;
+  /**
+   * The name of the pivot table style (e.g. `"PivotStyleMedium9"`).
+   *
+   * If the value is null or omitted the table should not be rendered with any special styling (note
+   * that this only applies if the style object itself is present).
+   *
+   * @default null
+   */
+  name?: PivotTableStyleName | null;
   /**
    * Whether row header formatting should be applied.
    *
