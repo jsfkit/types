@@ -28,6 +28,7 @@ export type * from './PivotCustomFilterOperator.ts';
 export type * from './PivotDataField.ts';
 export type * from './PivotDataFieldAggregation.ts';
 export type * from './PivotField.ts';
+export type * from './PivotFieldAxis.ts';
 export type * from './PivotFieldItem.ts';
 export type * from './PivotFilter.ts';
 export type * from './PivotFilterType.ts';

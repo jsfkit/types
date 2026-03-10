@@ -1,4 +1,5 @@
 import type { integer } from '../integer.ts';
+import type { PivotFieldAxis } from './PivotFieldAxis.ts';
 import type { PivotFieldItem } from './PivotFieldItem.ts';
 import type { PivotSubtotalFunction } from './PivotSubtotalFunction.ts';
 
@@ -18,7 +19,7 @@ export type PivotField = {
   /**
    * Which axis this field is placed on. Absent if the field is not used in the pivot table layout.
    */
-  axis?: 'row' | 'col' | 'page';
+  axis?: PivotFieldAxis;
   /**
    * Whether this field is used as a data field. Data fields appear in the pivot table's
    * {@link PivotDataField} list; this flag indicates

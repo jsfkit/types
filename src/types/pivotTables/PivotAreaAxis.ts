@@ -1,7 +1,9 @@
+import type { PivotFieldAxis } from './PivotFieldAxis.ts';
+
 /**
- * The axis a pivot area targets. Uses the same names as {@link PivotField.axis}, with an
- * additional `'values'` option for the data-values axis.
+ * The axis a pivot area targets. Extends {@link PivotFieldAxis} with an additional `'values'`
+ * option for the data-values axis.
  *
  * @group PivotTables
  */
-export type PivotAreaAxis = 'row' | 'col' | 'page' | 'values';
+export type PivotAreaAxis = PivotFieldAxis | 'values';
