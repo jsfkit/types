@@ -1,3 +1,9 @@
+// These names are a subset of the OOXML ST_ItemType enumeration (see PivotItemType for the full
+// set), so PivotSubtotalFunction uses names like 'avg', 'countA', etc. These differ from the
+// names in PivotDataFieldAggregation ('average', 'countNums', etc.) which come from the OOXML
+// ST_DataConsolidateFunction enumeration — different OOXML constructs use different naming
+// conventions.
+
 /**
  * The subtotal aggregation functions that can be applied to a pivot field.
  *
