@@ -68,11 +68,14 @@ export type Workbook = {
    */
   images?: Record<string, string>;
   /**
-   * Optional metadata about the workbook's origin and the application that created it.
-   * Converters should populate this from file metadata such as `docProps/app.xml`, or
-   * by heuristic detection (in which case they should set `appGuessed: true`).
+   * Optional metadata about the application that originated this workbook.
+   * Converters should populate this from file metadata such as XLSX `docProps/app.xml`,
+   * or by heuristic detection (in which case they should set `appGuessed: true`).
    *
-   * Additional converter-specific or consumer-specific properties may be present.
+   * Additional converter-specific or consumer-specific properties may be present. These
+   * should ideally be namespaced with a `foo:` prefix ending in a colon, where `foo`
+   * represents an application that creates the JSF workbook and defines its own metadata
+   * properties. Beyond this, no specific schema for such metadata is defined.
    *
    * @example
    * An XLSX file with `<Application>Microsoft Macintosh Excel</Application>` and
@@ -81,8 +84,7 @@ export type Workbook = {
    *
    * @example
    * An XLSX file lacking `docProps/app.xml` but identified heuristically as a Google Sheets
-   * export would yield
-   * `meta: { app: 'Google Sheets', appGuessed: true }`.
+   * export would yield `meta: { app: 'Google Sheets', appGuessed: true }`.
    */
   meta?: Record<string, unknown> & {
     /**
