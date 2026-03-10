@@ -1,3 +1,4 @@
+import type { CellValueType } from '../CellValueType.ts';
 import type { integer } from '../integer.ts';
 
 /**
@@ -70,17 +71,14 @@ export type PivotCacheFieldGroup = {
  * A shared item value in a pivot cache field. Each item represents a unique value found in the
  * source data for that field.
  *
- * The `type` discriminant indicates the data type and determines the type of `value`.
- *
  * @group PivotTables
  */
-export type PivotCacheSharedItem =
-  { type: 'string'; value: string } |
-  { type: 'number'; value: number } |
-  { type: 'boolean'; value: boolean } |
-  { type: 'date'; value: string } |
-  { type: 'error'; value: string } |
-  { type: 'missing'; value?: never };
+export type PivotCacheSharedItem = {
+  /** The data type of this shared item. Uses the same single-character codes as {@link CellValueType}. */
+  t: CellValueType;
+  /** The item's value. Absent when `t` is `'z'` (empty/missing). */
+  v?: string | number | boolean;
+};
 
 /**
  * Metadata describing the type composition and value range of a cache field's data. These are

@@ -7,8 +7,7 @@ import type { PivotCacheField } from './PivotCacheField.ts';
  * field.
  *
  * - `number`, `string`, `boolean` represent inline values.
- * - `null` represents a missing value, paralleling
- *   `{ type: 'missing' }` in {@link PivotCacheSharedItem}.
+ * - `null` represents a missing value, paralleling `t: 'z'` in {@link PivotCacheSharedItem}.
  * - `{ d: string }` represents an inline date value (ISO 8601 string).
  * - `{ e: string }` represents an inline error value (e.g. `"#REF!"`).
  * - `{ x: integer }` represents a shared item index, referring to an entry in the corresponding
