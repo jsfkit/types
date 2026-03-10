@@ -10,7 +10,6 @@ export type PivotAreaType =
 
 /**
  * A reference within a pivot area, identifying specific field items that define the area's scope
- * (OOXML `CT_PivotAreaReference`).
  *
  * @group PivotTables
  */
