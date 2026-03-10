@@ -1,5 +1,6 @@
 import type { CellRange } from '../CellRange.ts';
 import type { integer } from '../integer.ts';
+import type { PivotCache } from './PivotCache.ts';
 import type { PivotCalculatedField } from './PivotCalculatedField.ts';
 import type { PivotDataField } from './PivotDataField.ts';
 import type { PivotField } from './PivotField.ts';
@@ -56,11 +57,8 @@ export type PivotTable = {
   name: string;
   /** The name of the sheet where this pivot table's output is rendered. */
   sheet: string;
-  /**
-   * Index into the workbook's {@link Workbook.pivotCaches | pivotCaches} array, identifying which
-   * cache supplies source data for this pivot table.
-   */
-  cacheIndex: integer;
+  /** The pivot cache that supplies source data for this pivot table. */
+  cache: PivotCache;
   /** The A1-style range reference covering the pivot table's output area. */
   ref: CellRange;
   /** Position information for the pivot table's data within its output range. */
