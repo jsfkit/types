@@ -1,4 +1,5 @@
 import type { integer } from '../integer.ts';
+import type { PivotAreaAxis } from './PivotAreaAxis.ts';
 
 /**
  * The type of pivot area targeted.
@@ -178,13 +179,8 @@ export type PivotArea = {
    * @default false
    */
   collapsedLevelsAreSubtotals?: boolean;
-  /**
-   * The axis this area targets.
-   *
-   * Uses the same names as {@link PivotField.axis}, with an additional `'values'` option
-   * for the data-values axis.
-   */
-  axis?: 'row' | 'col' | 'page' | 'values';
+  /** The axis this area targets. */
+  axis?: PivotAreaAxis;
   /** The position of the field on its axis (0-based). */
   fieldPosition?: integer;
   /** References that narrow the area to specific field items. */
