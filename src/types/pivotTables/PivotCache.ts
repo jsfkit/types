@@ -164,22 +164,4 @@ export type PivotCache = (
    * @default false
    */
   upgradeOnRefresh?: boolean;
-  /**
-   * Version of the application that created this cache.
-   *
-   * @default 0
-   */
-  createdVersion?: integer;
-  /**
-   * Version of the application that last refreshed this cache.
-   *
-   * @default 0
-   */
-  refreshedVersion?: integer;
-  /**
-   * Minimum application version required to refresh this cache.
-   *
-   * @default 0
-   */
-  minRefreshableVersion?: integer;
 };
