@@ -1,6 +1,11 @@
 export type * from './PivotArea.ts';
 export type * from './PivotCache.ts';
+export type * from './PivotCacheBase.ts';
+export type * from './PivotCacheConsolidation.ts';
+export type * from './PivotCacheExternal.ts';
 export type * from './PivotCacheField.ts';
+export type * from './PivotCacheScenario.ts';
+export type * from './PivotCacheWorksheet.ts';
 export type * from './PivotCalculatedField.ts';
 export type * from './PivotConditionalFormat.ts';
 export type * from './PivotDataField.ts';

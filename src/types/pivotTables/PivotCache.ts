@@ -1,6 +1,9 @@
 import type { CellRange } from '../CellRange.ts';
 import type { integer } from '../integer.ts';
-import type { PivotCacheField } from './PivotCacheField.ts';
+import type { PivotCacheConsolidation } from './PivotCacheConsolidation.ts';
+import type { PivotCacheExternal } from './PivotCacheExternal.ts';
+import type { PivotCacheScenario } from './PivotCacheScenario.ts';
+import type { PivotCacheWorksheet } from './PivotCacheWorksheet.ts';
 
 /**
  * A single value in a pivot cache record. Each record is an array of these values, one per cache
@@ -96,49 +99,8 @@ export type PivotCacheConsolidationSource = {
  *
  * @group PivotTables
  */
-export type PivotCache = (
-  { sourceType: 'worksheet'; worksheetSource: PivotCacheWorksheetSource } |
-  { sourceType: 'external'; connectionId: integer } |
-  { sourceType: 'consolidation'; consolidation: PivotCacheConsolidationSource } |
-  { sourceType: 'scenario' }
-) & {
-  /**
-   * The fields (columns) in the cache, in source-data order. Each entry parallels the
-   * corresponding pivot table's {@link PivotTable.fields | fields} array by index.
-   */
-  fields: PivotCacheField[];
-  /**
-   * The cached data records. Each record is an array of values corresponding to the cache fields.
-   * When absent, the pivot table relies on the source data directly.
-   */
-  records?: PivotCacheRecord[];
-
-  // --- Cache metadata ---
-
-  /**
-   * Name of the user who last refreshed the cache.
-   */
-  refreshedBy?: string;
-  /**
-   * When the cache was last refreshed, as a serial date number (e.g. `39536.657`).
-   */
-  refreshedDate?: number;
-  /**
-   * Whether the cache is refreshed on file open.
-   *
-   * @default false
-   */
-  refreshOnLoad?: boolean;
-  /**
-   * Whether refresh is enabled for this cache.
-   *
-   * @default true
-   */
-  enableRefresh?: boolean;
-  /**
-   * Whether the cache definition is upgraded when refreshed.
-   *
-   * @default false
-   */
-  upgradeOnRefresh?: boolean;
-};
+export type PivotCache =
+  PivotCacheWorksheet |
+  PivotCacheExternal |
+  PivotCacheConsolidation |
+  PivotCacheScenario;
