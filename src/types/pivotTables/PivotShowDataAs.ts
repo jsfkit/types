@@ -1,11 +1,17 @@
+// The first 9 values ('normal' through 'index') are from the ECMA-376 ST_ShowDataAs
+// enumeration and are written as the showDataAs attribute on CT_DataField.
+//
+// The remaining values ('percentOfParentRow', 'percentOfParentCol', 'percentOfParent',
+// 'percentOfRunningTotal', 'rankAscending', 'rankDescending') are from the [MS-XLSX]
+// ST_PivotShowAs enumeration and are written as the pivotShowAs attribute on the
+// x14:dataField extension element (x14 is the conventional prefix for the
+// http://schemas.microsoft.com/office/spreadsheetml/2009/9/main namespace).
+//
+// Converters to/from XLSX are expected to handle this XML-level distinction.
+
 /**
  * Controls how a data field's values are displayed relative to other values. For example,
  * `'percentOfTotal'` displays each value as a percentage of the grand total.
- *
- * The first 9 values (`'normal'` through `'index'`) are the standard set. The remaining values
- * (`'percentOfParentRow'` through `'rankDescending'`) are
- * {@link https://learn.microsoft.com/en-us/openspecs/office_standards/ms-xlsx/2c5dee00-eff2-4b22-92b6-0738acd4475e | [MS-XLSX]}
- * extensions.
  *
  * @group PivotTables
  */
