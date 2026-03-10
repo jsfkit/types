@@ -69,7 +69,8 @@ export type Workbook = {
   images?: Record<string, string>;
   /**
    * Optional metadata about the workbook's origin and the application that created it.
-   * Converters (e.g. xlsx-convert) populate this from file metadata such as `docProps/app.xml`.
+   * Converters should populate this from file metadata such as `docProps/app.xml`, or
+   * by heuristic detection (in which case they should set `appGuessed: true`).
    *
    * Additional converter-specific or consumer-specific properties may be present.
    *
@@ -77,6 +78,11 @@ export type Workbook = {
    * An XLSX file with `<Application>Microsoft Macintosh Excel</Application>` and
    * `<AppVersion>16.0300</AppVersion>` would yield
    * `meta: { app: 'Microsoft Excel', appVersion: '16.0300', appVariant: 'Macintosh' }`.
+   *
+   * @example
+   * An XLSX file lacking `docProps/app.xml` but identified heuristically as a Google Sheets
+   * export would yield
+   * `meta: { app: 'Google Sheets', appGuessed: true }`.
    */
   meta?: Record<string, unknown> & {
     /**
@@ -85,18 +91,18 @@ export type Workbook = {
      * the `<Application>` element in `docProps/app.xml`, with platform words like `"Macintosh"`
      * stripped out.
      */
-    app?: string,
+    app?: string;
     /**
      * The application version string, if known (e.g. `"16.0300"`). For XLSX files this comes
      * from `<AppVersion>` in `docProps/app.xml`.
      */
-    appVersion?: string,
+    appVersion?: string;
     /**
      * Operating system or other variant of the application (e.g. `"Macintosh"`). Present when
      * the application name in the source file includes a platform qualifier that was separated
      * out from {@link app}.
      */
-    appVariant?: string,
+    appVariant?: string;
     /**
      * When `true`, indicates that {@link app}, {@link appVersion}, and {@link appVariant} were
      * not explicitly stated in the file but inferred heuristically. Absent or `false` means the
@@ -104,12 +110,6 @@ export type Workbook = {
      *
      * @defaultValue false
      */
-    appGuessed?: boolean,
-    /**
-     * A freeform string conveying information about where the workbook originates from. Useful
-     * when the creating application is unknown but the source can be inferred heuristically
-     * (e.g. `"google-sheets"` when `docProps` is absent from an XLSX file).
-     */
-    origin?: string,
+    appGuessed?: boolean;
   };
 };
