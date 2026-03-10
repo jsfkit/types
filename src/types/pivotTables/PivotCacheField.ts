@@ -169,11 +169,7 @@ export type PivotCacheField = {
    * preserves type/range information that would otherwise be lost.
    */
   sharedItemsMeta?: PivotCacheSharedItemsMeta;
-  /**
-   * The number format ID applied to values in this field.
-   *
-   * @default 0
-   */
+  /** The number format code for this field's values (e.g. `"General"`, `"#,##0"`). */
   numFmt?: string;
   /** A formula for a calculated field, expressed in A1-style notation. */
   formula?: string;

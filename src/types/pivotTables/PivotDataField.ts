@@ -92,10 +92,6 @@ export type PivotDataField = {
    * @default 1048832
    */
   baseItem?: integer;
-  /**
-   * The number format ID for this data field's values (an index into the workbook's format table).
-   *
-   * @default 0
-   */
-  numFmtId?: integer;
+  /** The number format code for this data field's values (e.g. `"General"`, `"#,##0"`). */
+  numFmt?: string;
 };

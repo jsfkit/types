@@ -163,12 +163,8 @@ export type PivotField = {
 
   // --- Number format ---
 
-  /**
-   * Number format ID applied to this field's data.
-   *
-   * @default 0
-   */
-  numFmtId?: integer;
+  /** The number format code for this field's data (e.g. `"General"`, `"#,##0"`). */
+  numFmt?: string;
 
   // --- UI/drag behavior (round-trip fidelity) ---
 
