@@ -232,8 +232,8 @@ export type PivotTable = {
 
   // --- Captions ---
 
-  // Required in the OOXML schema (`dataCaption` is a required attribute on 
-  // `CT_pivotTableDefinition`), but optional here to support partial construction.
+  // Required in the OOXML schema (dataCaption is a required attribute on
+  // CT_pivotTableDefinition), but optional here to support partial construction.
   /**
    * Caption for the data (values) area. Excel always writes this (typically `"Data"` or a
    * localized equivalent).
