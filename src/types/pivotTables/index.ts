@@ -24,6 +24,7 @@ export type * from './PivotConditionalFormat.ts';
 export type * from './PivotConditionalFormatScope.ts';
 export type * from './PivotConditionalFormatType.ts';
 export type * from './PivotCustomFilterCriterion.ts';
+export type * from './PivotCustomFilterOperator.ts';
 export type * from './PivotDataField.ts';
 export type * from './PivotDataFieldAggregation.ts';
 export type * from './PivotField.ts';
