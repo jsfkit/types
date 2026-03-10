@@ -105,16 +105,6 @@ export type PivotTable = {
    */
   calculatedFields?: PivotCalculatedField[];
   /**
-   * Opaque OOXML extension elements from `<extLst>`, preserved for round-trip fidelity.
-   * Each entry is the raw XML string of an `<ext>` child element (including the `<ext>` tags).
-   */
-  extensions?: string[];
-  /**
-   * Revision-tracking unique identifier (OOXML `xr:uid`). A GUID string like
-   * `"{93AACE53-8F3A-A04A-893A-A439866B3165}"` assigned by Excel 2014+ for revision tracking.
-   */
-  uid?: string;
-  /**
    * Whether grand totals should be shown for rows.
    *
    * @default true
@@ -385,27 +375,6 @@ export type PivotTable = {
    * @default false
    */
   applyWidthHeightFormats?: boolean;
-
-  // --- Version tracking ---
-
-  /**
-   * Version of the application that created this pivot table.
-   *
-   * @default 0
-   */
-  createdVersion?: integer;
-  /**
-   * Version of the application that last updated this pivot table.
-   *
-   * @default 0
-   */
-  updatedVersion?: integer;
-  /**
-   * Minimum application version required to refresh this pivot table.
-   *
-   * @default 0
-   */
-  minRefreshableVersion?: integer;
 };
 
 /**

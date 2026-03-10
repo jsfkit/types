@@ -46,7 +46,6 @@ export type PivotCacheWorksheetSource =
     name?: string;
   } |
   {
-    ref?: never;
     /** The name of the sheet, when `name` is a sheet-scoped defined name. */
     sheet?: string;
     /** A defined name or table name that identifies the source data. */
@@ -126,17 +125,6 @@ export type PivotCache = (
    */
   refreshedDate?: number;
   /**
-   * Number of records in the cache. Redundant with `records.length` when records are present,
-   * but preserved for roundtrip fidelity.
-   */
-  recordCount?: integer;
-  /**
-   * Whether cache records are saved with the workbook.
-   *
-   * @default true
-   */
-  saveData?: boolean;
-  /**
    * Whether the cache is refreshed on file open.
    *
    * @default false
@@ -148,16 +136,6 @@ export type PivotCache = (
    * @default true
    */
   enableRefresh?: boolean;
-  /**
-   * Opaque OOXML extension elements from `<extLst>`, preserved for round-trip fidelity.
-   * Each entry is the raw XML string of an `<ext>` child element (including the `<ext>` tags).
-   */
-  extensions?: string[];
-  /**
-   * Revision-tracking unique identifier (OOXML `xr:uid`). A GUID string like
-   * `"{93AACE53-8F3A-A04A-893A-A439866B3165}"` assigned by Excel 2014+ for revision tracking.
-   */
-  uid?: string;
   /**
    * Whether the cache definition is upgraded when refreshed.
    *
