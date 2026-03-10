@@ -179,7 +179,7 @@ export type PivotCacheField = {
   formula?: string;
   /**
    * Whether this field comes from the source database. When `false`, the field is a calculated
-   * field not present in the original data source (OOXML `cacheField@databaseField`).
+   * field not present in the original data source.
    *
    * @default true
    */
