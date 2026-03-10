@@ -9,7 +9,7 @@ export type PivotAreaType =
   'none' | 'normal' | 'data' | 'all' | 'origin' | 'button' | 'topRight';
 
 /**
- * A reference within a pivot area, identifying specific field items that define the area's scope
+ * A reference within a pivot area, identifying specific field items that define the area's scope.
  *
  * @group PivotTables
  */
@@ -181,7 +181,7 @@ export type PivotArea = {
   /**
    * The axis this area targets.
    *
-   * Uses the same concise names as {@link PivotField.axis}, with an additional `'values'` option
+   * Uses the same names as {@link PivotField.axis}, with an additional `'values'` option
    * for the data-values axis.
    */
   axis?: 'row' | 'col' | 'page' | 'values';

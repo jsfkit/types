@@ -83,10 +83,10 @@ export type PivotCacheSharedItem =
   { type: 'missing'; value?: never };
 
 /**
- * Metadata attributes on the OOXML `<sharedItems>` element that describe the type composition and
- * value range of a cache field's data. These are redundant when {@link PivotCacheField.sharedItems}
- * contains items (the metadata can be derived), but for fields whose data is stored only in records
- * (no shared items), they preserve min/max and type information that would otherwise be lost.
+ * Metadata describing the type composition and value range of a cache field's data. These are
+ * redundant when {@link PivotCacheField.sharedItems} contains items (the metadata can be derived),
+ * but for fields whose data is stored only in records (no shared items), they preserve min/max
+ * and type information that would otherwise be lost.
  *
  * @group PivotTables
  */
@@ -166,7 +166,7 @@ export type PivotCacheField = {
   /**
    * Metadata about the shared items or record-level values for this field. When
    * {@link sharedItems} is populated, this can be derived from the items; when absent, it
-   * preserves type/range information from the OOXML `<sharedItems>` element attributes.
+   * preserves type/range information that would otherwise be lost.
    */
   sharedItemsMeta?: PivotCacheSharedItemsMeta;
   /**

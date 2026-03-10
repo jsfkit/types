@@ -25,8 +25,7 @@ export type PivotConditionalFormatScope = 'selection' | 'data' | 'field';
 export type PivotConditionalFormatType = 'none' | 'all' | 'row' | 'column';
 
 /**
- * A conditional formatting rule applied to regions of a pivot table
- * (OOXML `CT_ConditionalFormat`).
+ * A conditional formatting rule applied to regions of a pivot table.
  *
  * @group PivotTables
  */

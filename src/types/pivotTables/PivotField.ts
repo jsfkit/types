@@ -3,12 +3,6 @@ import type { integer } from '../integer.ts';
 /**
  * The subtotal aggregation functions that can be applied to a pivot field.
  *
- * These names are a subset of the values of the OOXML `ST_ItemType` enumeration (see
- * {@link PivotItemType} for the full set), so `PivotSubtotalFunction` uses names like `'avg'`,
- * `'countA'`, etc. These differ from the names in {@link PivotDataFieldAggregation} (`'average'`,
- * `'countNums'`, etc.) which come from the OOXML `ST_DataConsolidateFunction` enumeration —
- * different OOXML constructs use different naming conventions.
- *
  * Beware of the `'count'` false cognate: here it means "count of numeric values" (like the COUNT
  * worksheet function), while in {@link PivotDataFieldAggregation} `'count'` means "count of
  * non-empty values" (like the COUNTA worksheet function).
@@ -29,8 +23,7 @@ export type PivotSubtotalFunction =
   'varP';
 
 /**
- * The type of a pivot field item, indicating its role in the pivot table layout (OOXML
- * `ST_ItemType`).
+ * The type of a pivot field item, indicating its role in the pivot table layout.
  *
  * - `'data'` — a regular data item representing a unique value from the field.
  * - `'default'` — the default subtotal item.
@@ -67,19 +60,18 @@ export type PivotFieldItem = {
    */
   hidden?: boolean;
   /**
-   * Display name override for this item (OOXML `n` attribute). When absent, the item's name is
+   * Display name override for this item. When absent, the item's name is
    * derived from the cache field's shared items.
    */
   name?: string;
   /**
-   * Whether this item's children are expanded (visible). Corresponds to OOXML `sd` (showDetail).
+   * Whether this item's children are expanded (visible).
    *
    * @default true
    */
   expanded?: boolean;
   /**
    * Whether this item refers to a value that is no longer in the source data (a "missing" item).
-   * Corresponds to OOXML `m` attribute.
    *
    * @default false
    */
@@ -94,7 +86,7 @@ export type PivotFieldItem = {
  */
 export type PivotField = {
   /**
-   * Display name override for this field (OOXML `pivotField@name`). When present, this replaces
+   * Display name override for this field. When present, this replaces
    * the cache field name in the pivot table's UI. Distinct from {@link PivotFieldItem.name} which
    * overrides individual item labels.
    */
@@ -104,8 +96,8 @@ export type PivotField = {
    */
   axis?: 'row' | 'col' | 'page';
   /**
-   * Whether this field is used as a data field. Corresponds to OOXML `pivotField@dataField`.
-   * Data fields appear in the pivot table's {@link PivotDataField} list; this flag indicates
+   * Whether this field is used as a data field. Data fields appear in the pivot table's
+   * {@link PivotDataField} list; this flag indicates
    * that the field participates as a value source rather than being placed on a row/col/page axis.
    *
    * @default false
@@ -113,7 +105,6 @@ export type PivotField = {
   dataField?: boolean;
   /**
    * Whether to show all items for this field, including those with no data.
-   * Corresponds to OOXML `pivotField@showAll`.
    *
    * @default true
    */

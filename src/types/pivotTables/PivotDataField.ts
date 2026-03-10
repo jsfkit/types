@@ -1,7 +1,7 @@
 import type { integer } from '../integer.ts';
 
 /**
- * The aggregation function applied to a data field's values (OOXML `ST_DataConsolidateFunction`).
+ * The aggregation function applied to a data field's values.
  *
  * Beware of the `'count'` false cognate: here it means "count of non-empty values" (like the
  * COUNTA worksheet function), while in {@link PivotSubtotalFunction} `'count'` means "count of
@@ -27,16 +27,10 @@ export type PivotDataFieldAggregation =
  * Controls how a data field's values are displayed relative to other values. For example,
  * `'percentOfTotal'` displays each value as a percentage of the grand total.
  *
- * The first 9 values (`'normal'` through `'index'`) are from the ECMA-376 `ST_ShowDataAs`
- * enumeration and are written as the `showDataAs` attribute on `CT_DataField`.
- *
- * The remaining values (`'percentOfParentRow'`, `'percentOfParentCol'`, `'percentOfParent'`,
- * `'percentOfRunningTotal'`, `'rankAscending'`, `'rankDescending'`) are from the
+ * The first 9 values (`'normal'` through `'index'`) are the standard set. The remaining values
+ * (`'percentOfParentRow'` through `'rankDescending'`) are
  * {@link https://learn.microsoft.com/en-us/openspecs/office_standards/ms-xlsx/2c5dee00-eff2-4b22-92b6-0738acd4475e | [MS-XLSX]}
- * `ST_PivotShowAs` enumeration and are written as the `pivotShowAs` attribute on the
- * `x14:dataField` extension element (`x14` is the conventional prefix for the
- * `http://schemas.microsoft.com/office/spreadsheetml/2009/9/main` namespace).
- * The converters handle this XML-level distinction.
+ * extensions.
  *
  * @group PivotTables
  */
@@ -65,16 +59,15 @@ export type PivotShowDataAs =
  */
 export type PivotDataField = {
   /**
-   * The display name of the data field (e.g. "Sum of Revenue"). Optional in OOXML (derivable
-   * from the field name and aggregation function), but Excel always writes it.
+   * The display name of the data field (e.g. "Sum of Revenue"). Derivable from the field name
+   * and aggregation function, but Excel always writes it.
    */
   name?: string;
   /** Index into the pivot table's {@link PivotField} array (and the cache's field array). */
   fieldIndex: integer;
   /**
-   * The aggregation function to apply (named `subtotal` per the OOXML `dataField@subtotal`
-   * attribute from `ST_DataConsolidateFunction`; not related to row/column subtotals configured
-   * via {@link PivotField.subtotalFunctions}).
+   * The aggregation function to apply. Not related to row/column subtotals configured
+   * via {@link PivotField.subtotalFunctions}.
    *
    * @default 'sum'
    */

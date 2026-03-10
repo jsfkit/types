@@ -1,7 +1,7 @@
 import type { integer } from '../integer.ts';
 
 /**
- * The type of a pivot table filter (OOXML `ST_PivotFilterType`).
+ * The type of a pivot table filter.
  *
  * @group PivotTables
  */
@@ -40,8 +40,7 @@ export type PivotFilterType =
   'M7' | 'M8' | 'M9' | 'M10' | 'M11' | 'M12';
 
 /**
- * A single criterion within a custom auto-filter, specifying an operator and comparison value
- * (OOXML `CT_CustomFilter`).
+ * A single criterion within a custom auto-filter, specifying an operator and comparison value.
  *
  * @group PivotTables
  */
@@ -52,8 +51,7 @@ export type PivotCustomFilterCriterion = {
 };
 
 /**
- * A filter column within an auto-filter, specifying the filter criteria for a single column
- * (simplified representation of OOXML `CT_FilterColumn`).
+ * A filter column within an auto-filter, specifying the filter criteria for a single column.
  *
  * @group PivotTables
  */
@@ -92,7 +90,7 @@ export type PivotAutoFilterColumn = {
 };
 
 /**
- * An advanced filter applied to a pivot table field (OOXML `CT_PivotFilter`).
+ * An advanced filter applied to a pivot table field.
  *
  * Pivot filters implement features like "Show Top 10", "Show items where value > X",
  * and date-based filters.

@@ -95,13 +95,13 @@ export type PivotTable = {
   style?: PivotTableStyle;
   /** Custom formatting applied to specific regions of the pivot table. */
   formats?: PivotFormat[];
-  /** Conditional formatting rules applied to pivot table regions (OOXML `<conditionalFormats>`). */
+  /** Conditional formatting rules applied to pivot table regions. */
   conditionalFormats?: PivotConditionalFormat[];
-  /** Advanced filters applied to pivot fields (OOXML `<filters>`). */
+  /** Advanced filters applied to pivot fields. */
   filters?: PivotFilter[];
   /**
-   * Calculated field definitions (OOXML `<calculatedFields>`). Each entry defines a formula-based
-   * field that derives its values from other cache fields.
+   * Calculated field definitions. Each entry defines a formula-based field that derives its values
+   * from other cache fields.
    */
   calculatedFields?: PivotCalculatedField[];
   /**
@@ -243,8 +243,8 @@ export type PivotTable = {
   // Required in the OOXML schema (`dataCaption` is a required attribute on 
   // `CT_pivotTableDefinition`), but optional here to support partial construction.
   /**
-   * Caption for the data (values) area. Excel always writes this (typically
-   * `"Data"` or a localized equivalent).
+   * Caption for the data (values) area. Excel always writes this (typically `"Data"` or a
+   * localized equivalent).
    */
   dataCaption?: string;
   /** Custom label for grand total rows/columns. */
@@ -339,7 +339,7 @@ export type PivotTable = {
    */
   pageOverThenDown?: boolean;
 
-  // --- AutoFormat (OOXML AG_AutoFormat attribute group) ---
+  // --- AutoFormat ---
 
   /** Built-in auto-format ID. */
   autoFormatId?: integer;
@@ -415,8 +415,7 @@ export type PivotTable = {
  */
 export type PivotRowColItem = {
   /**
-   * The type of this layout item (same OOXML `ST_ItemType` enumeration as
-   * {@link PivotFieldItem.itemType}).
+   * The type of this layout item (same enumeration as {@link PivotFieldItem.itemType}).
    *
    * @default 'data'
    */
@@ -444,7 +443,7 @@ export type PivotRowColItem = {
   itemIndices?: integer[];
   /**
    * Index into the pivot table's {@link PivotTable.dataFields | dataFields}, indicating which data
-   * field this item represents. Corresponds to the OOXML `i` attribute on `CT_I`.
+   * field this item represents.
    *
    * @default 0
    */

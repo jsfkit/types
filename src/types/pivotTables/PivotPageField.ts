@@ -15,13 +15,13 @@ export type PivotPageField = {
    */
   selectedItem?: integer;
   /**
-   * An optional name override for the page field. Identifies the field
-   * in formulas and programmatic access (e.g. GETPIVOTDATA).
+   * An optional name override for the page field. Identifies the field in formulas and
+   * programmatic access (e.g. GETPIVOTDATA).
    */
   name?: string;
   /**
-   * Display caption for the page field. Shown in the pivot table UI but
-   * not used for programmatic field identification.
+   * Display caption for the page field. Shown in the pivot table UI but not used for programmatic
+   * field identification.
    */
   caption?: string;
   /**
