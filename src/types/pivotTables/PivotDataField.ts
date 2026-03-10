@@ -17,8 +17,8 @@ export type PivotDataField = {
   /** Index into the pivot table's {@link PivotField} array (and the cache's field array). */
   fieldIndex: integer;
   /**
-   * The aggregation function to apply. Not related to row/column subtotals configured
-   * via {@link PivotField.subtotalFunctions}.
+   * The aggregation function to apply (NB: not related to row/column subtotals configured
+   * via {@link PivotField.subtotalFunctions}).
    *
    * @default 'sum'
    */
