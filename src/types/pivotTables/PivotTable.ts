@@ -1,11 +1,9 @@
 import type { CellRange } from '../CellRange.ts';
 import type { integer } from '../integer.ts';
 import type { PivotCalculatedField } from './PivotCalculatedField.ts';
-import type { PivotConditionalFormat } from './PivotConditionalFormat.ts';
 import type { PivotDataField } from './PivotDataField.ts';
 import type { PivotField } from './PivotField.ts';
 import type { PivotFilter } from './PivotFilter.ts';
-import type { PivotFormat } from './PivotFormat.ts';
 import type { PivotPageField } from './PivotPageField.ts';
 import type { PivotRowColItem } from './PivotRowColItem.ts';
 import type { PivotTableLocation } from './PivotTableLocation.ts';
@@ -95,10 +93,9 @@ export type PivotTable = {
   colItems?: PivotRowColItem[];
   /** Presentation style for the pivot table. */
   style?: PivotTableStyle;
-  /** Custom formatting applied to specific regions of the pivot table. */
-  formats?: PivotFormat[];
-  /** Conditional formatting rules applied to pivot table regions. */
-  conditionalFormats?: PivotConditionalFormat[];
+  // formats and conditionalFormats are omitted for now: they depend on the differential
+  // formatting (dxf) table which doesn't exist in JSF yet, and the conditional formatting
+  // model is not finalized.
   /** Advanced filters applied to pivot fields. */
   filters?: PivotFilter[];
   /**
