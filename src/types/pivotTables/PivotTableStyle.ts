@@ -15,13 +15,9 @@ export type PivotTableStyle = {
   /**
    * Whether column header formatting should be applied.
    *
-   * Named `showColHeaders` (not `showColumnHeaders`) to match the OOXML
-   * `pivotTableStyleInfo@showColHeaders` attribute name; cf. `showColumnStripes` in
-   * {@link TableStyle} which matches `tableStyleInfo@showColumnStripes`.
-   *
    * @default false
    */
-  showColHeaders?: boolean;
+  showColumnHeaders?: boolean;
   /**
    * Whether row stripe formatting should be applied.
    *
@@ -31,13 +27,9 @@ export type PivotTableStyle = {
   /**
    * Whether column stripe formatting should be applied.
    *
-   * Named `showColStripes` (not `showColumnStripes`) to match the OOXML
-   * `pivotTableStyleInfo@showColStripes` attribute name; cf. `showColumnStripes` in
-   * {@link TableStyle} which matches `tableStyleInfo@showColumnStripes`.
-   *
    * @default false
    */
-  showColStripes?: boolean;
+  showColumnStripes?: boolean;
   /**
    * Whether the last column's formatting from the named style is applied to the grand total column.
    *
