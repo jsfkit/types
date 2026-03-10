@@ -2,7 +2,7 @@ import type { integer } from '../integer.ts';
 import type { PivotArea } from './PivotArea.ts';
 
 /**
- * The scope of conditional formatting applied to a pivot table (OOXML `ST_Scope`).
+ * The scope of conditional formatting applied to a pivot table.
  *
  * - `'selection'` — applies to the selected cells only.
  * - `'data'` — applies to all data field cells.
@@ -13,7 +13,7 @@ import type { PivotArea } from './PivotArea.ts';
 export type PivotConditionalFormatScope = 'selection' | 'data' | 'field';
 
 /**
- * The rule type for conditional formatting in a pivot table (OOXML `ST_Type`).
+ * The rule type for conditional formatting in a pivot table.
  *
  * - `'none'` — no specific rule type.
  * - `'all'` — applies to all values.

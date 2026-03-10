@@ -1,7 +1,6 @@
 /**
  * A calculated field definition in a pivot table. Calculated fields derive their values from a
- * formula that references other cache fields (OOXML `<calculatedField>` in `<calculatedFields>`,
- * a Microsoft extension to `CT_pivotTableDefinition`).
+ * formula that references other cache fields.
  *
  * @group PivotTables
  */

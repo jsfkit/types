@@ -1,7 +1,7 @@
 import type { integer } from '../integer.ts';
 
 /**
- * The type of pivot area targeted (OOXML `ST_PivotAreaType`).
+ * The type of pivot area targeted.
  *
  * @group PivotTables
  */
@@ -116,13 +116,13 @@ export type PivotAreaReference = {
    */
   varPSubtotal?: boolean;
 
-  /** Indices of the field items included in this reference (OOXML `<x v="..."/>` children). */
+  /** Indices of the field items included in this reference. */
   itemIndices?: integer[];
 };
 
 /**
  * Describes a region of a pivot table, used to target formatting, conditional formatting,
- * and other area-specific features (OOXML `CT_PivotArea`).
+ * and other area-specific features.
  *
  * @group PivotTables
  */
@@ -183,8 +183,7 @@ export type PivotArea = {
    * The axis this area targets.
    *
    * Uses the same concise names as {@link PivotField.axis}, with an additional `'values'` option
-   * for the data-values axis (OOXML `ST_Axis` values `axisRow`, `axisCol`, `axisPage`,
-   * `axisValues` are Anglicized here).
+   * for the data-values axis.
    */
   axis?: 'row' | 'col' | 'page' | 'values';
   /** The position of the field on its axis (0-based). */

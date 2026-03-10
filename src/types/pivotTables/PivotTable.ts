@@ -93,7 +93,7 @@ export type PivotTable = {
   colItems?: PivotRowColItem[];
   /** Presentation style for the pivot table. */
   style?: PivotTableStyle;
-  /** Custom formatting applied to specific regions of the pivot table (OOXML `<formats>`). */
+  /** Custom formatting applied to specific regions of the pivot table. */
   formats?: PivotFormat[];
   /** Conditional formatting rules applied to pivot table regions (OOXML `<conditionalFormats>`). */
   conditionalFormats?: PivotConditionalFormat[];
@@ -128,7 +128,6 @@ export type PivotTable = {
   colGrandTotals?: boolean;
   /**
    * Whether the pivot table should automatically refresh when its source data changes.
-   * Not part of the ECMA-376 `CT_pivotTableDefinition` schema; this is an Excel extension.
    *
    * @default false
    */
@@ -241,10 +240,11 @@ export type PivotTable = {
 
   // --- Captions ---
 
+  // Required in the OOXML schema (`dataCaption` is a required attribute on 
+  // `CT_pivotTableDefinition`), but optional here to support partial construction.
   /**
-   * Caption for the data (values) area. Required in the OOXML schema (`dataCaption` is a
-   * required attribute on `CT_pivotTableDefinition`), but optional here to support partial
-   * construction. Excel always writes this (typically `"Data"` or a localized equivalent).
+   * Caption for the data (values) area. Excel always writes this (typically
+   * `"Data"` or a localized equivalent).
    */
   dataCaption?: string;
   /** Custom label for grand total rows/columns. */
@@ -309,15 +309,13 @@ export type PivotTable = {
    */
   multipleFieldFilters?: boolean;
   /**
-   * Whether field items are shown in the pivot table body. Corresponds to OOXML
-   * `pivotTableDefinition@showItems`.
+   * Whether field items are shown in the pivot table body.
    *
    * @default true
    */
   showItems?: boolean;
   /**
-   * Whether calculated members from OLAP data sources are shown. Corresponds to OOXML
-   * `pivotTableDefinition@showCalcMbrs`.
+   * Whether calculated members from OLAP data sources are shown.
    *
    * @default true
    */

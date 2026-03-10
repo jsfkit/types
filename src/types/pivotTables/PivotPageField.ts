@@ -15,17 +15,17 @@ export type PivotPageField = {
    */
   selectedItem?: integer;
   /**
-   * An optional name override for the page field (OOXML `name` attribute). Identifies the field
+   * An optional name override for the page field. Identifies the field
    * in formulas and programmatic access (e.g. GETPIVOTDATA).
    */
   name?: string;
   /**
-   * Display caption for the page field (OOXML `cap` attribute). Shown in the pivot table UI but
+   * Display caption for the page field. Shown in the pivot table UI but
    * not used for programmatic field identification.
    */
   caption?: string;
   /**
-   * Hierarchy index for OLAP page fields (OOXML `hier` attribute).
+   * Hierarchy index for OLAP page fields.
    *
    * @default -1
    */

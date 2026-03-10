@@ -2,7 +2,7 @@ import type { integer } from '../integer.ts';
 import type { PivotArea } from './PivotArea.ts';
 
 /**
- * A custom format applied to a specific region of a pivot table (OOXML `CT_Format`).
+ * A custom format applied to a specific region of a pivot table.
  *
  * Each format pairs a differential formatting record (referenced by {@link dxfId}) with
  * a {@link pivotArea} that defines which cells the format targets.

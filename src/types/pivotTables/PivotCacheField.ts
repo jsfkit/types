@@ -1,7 +1,7 @@
 import type { integer } from '../integer.ts';
 
 /**
- * The unit used for grouping a cache field's values (OOXML `ST_GroupBy`).
+ * The unit used for grouping a cache field's values.
  *
  * @group PivotTables
  */
@@ -9,8 +9,7 @@ export type PivotGroupBy =
   'range' | 'seconds' | 'minutes' | 'hours' | 'days' | 'months' | 'quarters' | 'years';
 
 /**
- * Range grouping properties that define how a cache field's values are grouped into intervals
- * (OOXML `CT_RangePr`).
+ * Range grouping properties that define how a cache field's values are grouped into intervals.
  *
  * @group PivotTables
  */
@@ -50,8 +49,7 @@ export type PivotCacheRangePr = {
 };
 
 /**
- * Field grouping information that defines how a cache field's values are grouped
- * (OOXML `CT_FieldGroup`).
+ * Field grouping information that defines how a cache field's values are grouped.
  *
  * @group PivotTables
  */
@@ -176,7 +174,7 @@ export type PivotCacheField = {
    *
    * @default 0
    */
-  numFmtId?: integer;
+  numFmt?: string;
   /** A formula for a calculated field, expressed in A1-style notation. */
   formula?: string;
   /**

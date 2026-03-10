@@ -7,10 +7,10 @@ import type { PivotCacheField } from './PivotCacheField.ts';
  * field.
  *
  * - `number`, `string`, `boolean` represent inline values.
- * - `null` represents a missing value (OOXML `<m/>` element), paralleling
+ * - `null` represents a missing value, paralleling
  *   `{ type: 'missing' }` in {@link PivotCacheSharedItem}.
- * - `{ d: string }` represents an inline date value (ISO 8601 string, from an OOXML `<d>` element).
- * - `{ e: string }` represents an inline error value (e.g. `"#REF!"`, from an OOXML `<e>` element).
+ * - `{ d: string }` represents an inline date value (ISO 8601 string).
+ * - `{ e: string }` represents an inline error value (e.g. `"#REF!"`).
  * - `{ x: integer }` represents a shared item index, referring to an entry in the corresponding
  *   field's {@link PivotCacheField.sharedItems | sharedItems} array.
  *
@@ -123,16 +123,8 @@ export type PivotCache = (
   refreshedBy?: string;
   /**
    * When the cache was last refreshed, as a serial date number (e.g. `39536.657`).
-   * This is the transitional-format attribute (`refreshedDate`); the strict-format
-   * equivalent is `refreshedDateIso`.
    */
   refreshedDate?: number;
-  /**
-   * When the cache was last refreshed, as an ISO 8601 date-time string.
-   * This is the strict-format attribute (`refreshedDateIso`); the transitional-format
-   * equivalent is `refreshedDate`.
-   */
-  refreshedDateIso?: string;
   /**
    * Number of records in the cache. Redundant with `records.length` when records are present,
    * but preserved for roundtrip fidelity.
