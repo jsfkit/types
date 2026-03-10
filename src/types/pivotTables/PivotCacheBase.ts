@@ -26,16 +26,8 @@ export type PivotCacheBase = {
   refreshedBy?: string;
   /**
    * When the cache was last refreshed, as a serial date number (e.g. `39536.657`).
-   * This is the transitional-format attribute (`refreshedDate`); the strict-format
-   * equivalent is `refreshedDateIso`.
    */
   refreshedDate?: number;
-  /**
-   * When the cache was last refreshed, as an ISO 8601 date-time string.
-   * This is the strict-format attribute (`refreshedDateIso`); the transitional-format
-   * equivalent is `refreshedDate`.
-   */
-  refreshedDateIso?: string;
   /**
    * Whether the cache is refreshed on file open.
    *
