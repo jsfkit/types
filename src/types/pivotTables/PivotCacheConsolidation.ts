@@ -1,5 +1,5 @@
 import type { PivotCacheBase } from './PivotCacheBase.ts';
-import type { PivotCacheConsolidationSource } from './PivotCache.ts';
+import type { PivotCacheConsolidationSource } from './PivotCacheConsolidationSource.ts';
 
 /**
  * A pivot cache whose source data consolidates multiple ranges.

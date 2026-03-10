@@ -1,5 +1,5 @@
 import type { PivotCacheField } from './PivotCacheField.ts';
-import type { PivotCacheRecord } from './PivotCache.ts';
+import type { PivotCacheRecord } from './PivotCacheRecord.ts';
 
 /**
  * Shared properties for all pivot cache source types.

@@ -3,10 +3,12 @@ import type { integer } from '../integer.ts';
 import type { PivotCalculatedField } from './PivotCalculatedField.ts';
 import type { PivotConditionalFormat } from './PivotConditionalFormat.ts';
 import type { PivotDataField } from './PivotDataField.ts';
-import type { PivotField, PivotItemType } from './PivotField.ts';
+import type { PivotField } from './PivotField.ts';
 import type { PivotFilter } from './PivotFilter.ts';
 import type { PivotFormat } from './PivotFormat.ts';
 import type { PivotPageField } from './PivotPageField.ts';
+import type { PivotRowColItem } from './PivotRowColItem.ts';
+import type { PivotTableLocation } from './PivotTableLocation.ts';
 import type { PivotTableStyle } from './PivotTableStyle.ts';
 
 /**
@@ -375,89 +377,4 @@ export type PivotTable = {
    * @default false
    */
   applyWidthHeightFormats?: boolean;
-};
-
-/**
- * A layout item in the row or column area, describing what each row or column header represents.
- *
- * @group PivotTables
- */
-export type PivotRowColItem = {
-  /**
-   * The type of this layout item (same enumeration as {@link PivotFieldItem.itemType}).
-   *
-   * @default 'data'
-   */
-  itemType?: PivotItemType;
-  /**
-   * The number of leading axis positions whose {@link itemIndices} entries are omitted because
-   * they are identical to the previous {@link PivotRowColItem}'s values (see
-   * {@link PivotTable | PivotTable's type description} for the level/axis model). The omitted
-   * entries are inherited from the preceding item in {@link PivotTable.rowItems | rowItems} or
-   * {@link PivotTable.colItems | colItems}.
-   *
-   * @default 0
-   */
-  repeatedItemCount?: integer;
-  /**
-   * Indices into each axis field's {@link PivotField.items | items} array. Entries correspond
-   * positionally to the fields listed in {@link PivotTable.rowFieldIndices | rowFieldIndices} (for
-   * row items) or {@link PivotTable.colFieldIndices | colFieldIndices} (for column items): entry
-   * *i* indexes into the *i*-th axis field's {@link PivotField.items | items}.
-   *
-   * When {@link repeatedItemCount} is greater than zero, the first that many entries are omitted
-   * (inherited from the previous {@link PivotRowColItem}), so the array starts at position
-   * {@link repeatedItemCount}.
-   */
-  itemIndices?: integer[];
-  /**
-   * Index into the pivot table's {@link PivotTable.dataFields | dataFields}, indicating which data
-   * field this item represents.
-   *
-   * @default 0
-   */
-  dataFieldIndex?: integer;
-};
-
-/**
- * Describes the position of the pivot table's header and data areas within its output range
- * ({@link PivotTable.ref | ref}).
- *
- * All offsets are 0-based from the top-left cell of {@link PivotTable.ref | ref}. The difference
- * `firstDataRow - firstHeaderRow` equals the number of column-field header rows.
- *
- * @group PivotTables
- */
-export type PivotTableLocation = {
-  /**
-   * 0-based row offset from the top of {@link PivotTable.ref | ref} to the first row of the body
-   * area (column-field items, or data if there are no column fields).
-   */
-  firstHeaderRow: integer;
-  /**
-   * 0-based row offset from the top of {@link PivotTable.ref | ref} to the first row containing
-   * data values.
-   */
-  firstDataRow: integer;
-  /**
-   * 0-based column offset from the left of {@link PivotTable.ref | ref} to the first column
-   * containing data values.
-   */
-  firstDataCol: integer;
-  /**
-   * Number of rows occupied by the page field area (see {@link PivotTable | PivotTable's type
-   * description}). Layout depends on {@link PivotTable.pageOverThenDown | pageOverThenDown} and
-   * {@link PivotTable.pageWrap | pageWrap}.
-   *
-   * @default 0
-   */
-  rowPageCount?: integer;
-  /**
-   * Number of columns occupied by the page field area (see {@link PivotTable | PivotTable's type
-   * description}). Layout depends on {@link PivotTable.pageOverThenDown | pageOverThenDown} and
-   * {@link PivotTable.pageWrap | pageWrap}.
-   *
-   * @default 0
-   */
-  colPageCount?: integer;
 };

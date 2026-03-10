@@ -1,55 +1,6 @@
 import type { integer } from '../integer.ts';
-
-/**
- * The aggregation function applied to a data field's values.
- *
- * Beware of the `'count'` false cognate: here it means "count of non-empty values" (like the
- * COUNTA worksheet function), while in {@link PivotSubtotalFunction} `'count'` means "count of
- * numeric values" (like the COUNT worksheet function). The `'countNums'` value here corresponds
- * to COUNT.
- *
- * @group PivotTables
- */
-export type PivotDataFieldAggregation =
-  'sum' |
-  'count' |
-  'average' |
-  'max' |
-  'min' |
-  'product' |
-  'countNums' |
-  'stdDev' |
-  'stdDevP' |
-  'var' |
-  'varP';
-
-/**
- * Controls how a data field's values are displayed relative to other values. For example,
- * `'percentOfTotal'` displays each value as a percentage of the grand total.
- *
- * The first 9 values (`'normal'` through `'index'`) are the standard set. The remaining values
- * (`'percentOfParentRow'` through `'rankDescending'`) are
- * {@link https://learn.microsoft.com/en-us/openspecs/office_standards/ms-xlsx/2c5dee00-eff2-4b22-92b6-0738acd4475e | [MS-XLSX]}
- * extensions.
- *
- * @group PivotTables
- */
-export type PivotShowDataAs =
-  'normal' |
-  'difference' |
-  'percent' |
-  'percentDiff' |
-  'runTotal' |
-  'percentOfRow' |
-  'percentOfCol' |
-  'percentOfTotal' |
-  'index' |
-  'percentOfParentRow' |
-  'percentOfParentCol' |
-  'percentOfParent' |
-  'percentOfRunningTotal' |
-  'rankAscending' |
-  'rankDescending';
+import type { PivotDataFieldAggregation } from './PivotDataFieldAggregation.ts';
+import type { PivotShowDataAs } from './PivotShowDataAs.ts';
 
 /**
  * Describes a data field in a pivot table. Data fields define the values that are aggregated and
