@@ -1,11 +1,10 @@
-import type { integer } from '../integer.ts';
 import type { PivotArea } from './PivotArea.ts';
 
 /**
  * A custom format applied to a specific region of a pivot table.
  *
- * Each format pairs a differential formatting record (referenced by {@link dxfId}) with
- * a {@link pivotArea} that defines which cells the format targets.
+ * Each format pairs a {@link PivotFormat.pivotArea | pivotArea} that defines which cells the
+ * format targets with an action indicating whether formatting is applied or blanked.
  *
  * @group PivotTables
  */
@@ -16,8 +15,6 @@ export type PivotFormat = {
    * @default 'formatting'
    */
   action?: 'formatting' | 'blank';
-  /** Index into the workbook's differential formatting (dxf) table. */
-  dxfId?: integer;
   /** The pivot table region this format applies to. */
   pivotArea: PivotArea;
 };
