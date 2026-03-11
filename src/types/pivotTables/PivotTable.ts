@@ -94,6 +94,10 @@ export type PivotTable = {
   // formats and conditionalFormats are omitted for now: they depend on the differential
   // formatting (dxf) table which doesn't exist in JSF yet, and the conditional formatting
   // model is not finalized.
+  // /** Custom formatting applied to specific regions of the pivot table. */
+  // formats?: PivotFormat[];
+  // /** Conditional formatting rules applied to pivot table regions. */
+  // conditionalFormats?: PivotConditionalFormat[];
   /** Advanced filters applied to pivot fields. */
   filters?: PivotFilter[];
   /**
