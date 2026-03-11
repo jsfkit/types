@@ -13,4 +13,4 @@ import type { PivotCacheSharedItem } from './PivotCacheSharedItem.ts';
  */
 export type PivotCacheRecordValue =
   PivotCacheSharedItem |
-  { x: integer };
+  { t: 'x', v: integer };
