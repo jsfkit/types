@@ -17,7 +17,8 @@ export type PivotField = {
    */
   name?: string;
   /**
-   * Which axis this field is placed on. Absent if the field is not used in the pivot table layout.
+   * Which axis this field is placed on. Absent if the field is not placed on a row, column, or
+   * page axis (e.g. fields used only as data fields, or fields not used in the layout at all).
    */
   axis?: PivotFieldAxis;
   /**
