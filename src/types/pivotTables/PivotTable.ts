@@ -64,7 +64,7 @@ export type PivotTable = {
   /** Position information for the pivot table's data within its output range. */
   location: PivotTableLocation;
   /**
-   * The pivot fields, paralleling the cache's {@link PivotCache.fields | fields} array by index.
+   * The pivot fields, paralleling the cache's {@link PivotCacheBase.fields | fields} array by index.
    * Each field's configuration determines whether and how it participates in the pivot table
    * layout.
    */
@@ -227,8 +227,7 @@ export type PivotTable = {
 
   // --- Captions ---
 
-  // Required in the OOXML schema (dataCaption is a required attribute on
-  // CT_pivotTableDefinition), but optional here to support partial construction.
+  // Required in OOXML but optional here to support partial construction.
   /**
    * Caption for the data (values) area. Excel always writes this (typically `"Data"` or a
    * localized equivalent).
