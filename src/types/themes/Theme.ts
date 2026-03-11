@@ -2,9 +2,11 @@ import type { ThemeCustomColor } from './ThemeCustomColor.ts';
 import type { ThemeColorScheme } from './ThemeColorScheme.ts';
 import type { ThemeFontScheme } from './ThemeFontScheme.ts';
 
-
 /**
  * Workbook theme.
+ *
+ * This covers colours and fonts, but does not include fill styles, background fill styles, line
+ * styles, and effect styles. This is left for a future date.
  */
 export type Theme = {
   /**
