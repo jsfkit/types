@@ -6,12 +6,12 @@ import type { CellRange } from '../CellRange.ts';
  * @group PivotTables
  */
 export type PivotCacheWorksheetSourceRange = {
+  /** Type discriminator for a worksheet range source. */
+  type: 'range';
   /** The A1-style range reference to the source data, including headers. */
   ref: CellRange;
   /** The name of the sheet containing the source data. */
-  sheet: string;
-  /** A defined name or table name that identifies the source data. */
-  name?: string;
+  sheet?: string;
 };
 
 /**
@@ -20,10 +20,12 @@ export type PivotCacheWorksheetSourceRange = {
  * @group PivotTables
  */
 export type PivotCacheWorksheetSourceName = {
-  /** The name of the sheet, when `name` is a sheet-scoped defined name. */
-  sheet?: string;
+  /** Type discriminator for a worksheet name source. */
+  type: 'name';
   /** A defined name or table name that identifies the source data. */
   name: string;
+  /** The name of the sheet, when `name` is a sheet-scoped defined name. */
+  sheet?: string;
 };
 
 /**
