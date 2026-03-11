@@ -64,7 +64,7 @@ export type PivotTable = {
   /** Position information for the pivot table's data within its output range. */
   location: PivotTableLocation;
   /**
-   * The pivot fields, paralleling the cache's {@link PivotCacheBase.fields | fields} array by index.
+   * The pivot fields, paralleling the cache's {@link PivotCacheBase.fields | fields} array.
    * Each field's configuration determines whether and how it participates in the pivot table
    * layout.
    */
