@@ -46,4 +46,9 @@ export type PivotCacheBase = {
    * @default false
    */
   upgradeOnRefresh?: boolean;
+  /**
+   * Revision-tracking unique identifier. A GUID string like
+   * `"{93AACE53-8F3A-A04A-893A-A439866B3165}"` assigned by Excel 2014+ for revision tracking.
+   */
+  uid?: string;
 };
