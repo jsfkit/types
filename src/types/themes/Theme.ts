@@ -7,6 +7,8 @@ import type { ThemeFontScheme } from './ThemeFontScheme.ts';
  *
  * This covers colours and fonts, but does not include fill styles, background fill styles, line
  * styles, and effect styles. This is left for a future date.
+ *
+ * @group Themes
  */
 export type Theme = {
   /**

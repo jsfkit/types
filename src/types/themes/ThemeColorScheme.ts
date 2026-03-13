@@ -4,6 +4,8 @@ import type { Color } from '../colors/Color.ts';
  * Canonical theme colour palette.
  *
  * Consists of twelve colours that come together to form the colour scheme for a theme.
+ *
+ * @group Themes
  */
 export type ThemeColorScheme = {
   /** Colour scheme name. */

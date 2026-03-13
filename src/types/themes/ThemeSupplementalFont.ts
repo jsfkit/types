@@ -1,5 +1,7 @@
 /**
  * Script-specific supplemental font.
+ *
+ * @group Themes
  */
 export type ThemeSupplementalFont = {
   /**

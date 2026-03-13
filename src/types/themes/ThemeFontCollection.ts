@@ -6,6 +6,8 @@ import type { ThemeTextFont } from './ThemeTextFont.ts';
  *
  * A font collection consists of a font definition for Latin, East Asian, and complex script. On top
  * of these, a font collection can also define a font for use in a specific language or languages.
+ *
+ * @group Themes
  */
 export type ThemeFontCollection = {
   /** Latin script defaults. */

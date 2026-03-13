@@ -1,5 +1,7 @@
 /**
  * A font definition.
+ *
+ * @group Themes
  */
 export type ThemeTextFont = {
   /**
