@@ -74,6 +74,8 @@
  * |    63 |           #333333 |
  * |    64 | System foreground |
  * |    65 | System background |
+ *
+ * @group Colors
  */
 export type IndexedColor = {
   type: 'indexed';

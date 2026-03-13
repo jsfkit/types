@@ -26,6 +26,8 @@ import type { ThemeColor } from './ThemeColor.ts';
  * - {@link PresetColor}: A preset colour, similar to CSS's defined colours.
  * - {@link AutoColor}: Colour choice left to the application.
  * - {@link IndexedColor}: A legacy colour indexing scheme.
+ *
+ * @group Colors
  */
 export type Color = (
   SrgbColor |

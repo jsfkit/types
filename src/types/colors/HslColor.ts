@@ -3,6 +3,8 @@
  *
  * Hue, saturation and lightness follow CSS Color Level 4 conventions, but using the range (0-100)
  * rather than (0-1).
+ *
+ * @group Colors
  */
 export type HslColor = {
   type: 'hsl';

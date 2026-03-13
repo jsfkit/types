@@ -6,6 +6,8 @@
  *
  * TODO: DrawingML requires a `lastClr` attribute, an `RRGGBB` colour cached at last save. should
  * JSF store this as the computed value on the {@link Color}?.
+ *
+ * @group Colors
  */
 export type SystemColor = {
   type: 'system';
