@@ -15,5 +15,6 @@ export type * from './comments/index.ts';
 export type * from './dml/index.ts';
 export type * from './styles/index.ts';
 export type * from './tables/index.ts';
+export type * from './pivotTables/index.ts';
 export type * from './workbooks/index.ts';
 export type * from './worksheets/index.ts';
