@@ -70,4 +70,51 @@ export type Workbook = {
    * @see {@link https://www.rfc-editor.org/rfc/rfc2397}
    */
   images?: Record<string, string>;
+  /**
+   * Optional metadata about this workbook.
+   *
+   * @example
+   * An XLSX file with `<Application>Microsoft Macintosh Excel</Application>` and
+   * `<AppVersion>16.0300</AppVersion>` would yield
+   * `meta: { app: { name: 'Microsoft Excel', version: '16.0300', variant: 'Macintosh' } }`.
+   *
+   * @example
+   * An XLSX file lacking `docProps/app.xml` but identified heuristically as a Google Sheets
+   * export would yield `meta: { app: { name: 'Google Sheets', confidence: 0.8 } }`.
+   */
+  meta?: {
+    /**
+     * Information about the application that originated this workbook. Converters should
+     * populate this from file metadata such as XLSX `docProps/app.xml`, or by heuristic
+     * detection (in which case they should set `confidence` to a value less than `1`).
+     */
+    app?: {
+      /**
+       * The plain application name, without platform qualifiers or version suffixes
+       * (e.g. `"Microsoft Excel"`, `"LibreOffice Calc"`). For XLSX files this is derived from
+       * the `<Application>` element in `docProps/app.xml`, with platform words like `"Macintosh"`
+       * stripped out.
+       */
+      name?: string;
+      /**
+       * The application version string, if known (e.g. `"16.0300"`). For XLSX files this comes
+       * from `<AppVersion>` in `docProps/app.xml`.
+       */
+      version?: string;
+      /**
+       * Operating system or other variant of the application (e.g. `"Macintosh"`). Present when
+       * the application name in the source file includes a platform qualifier that was separated
+       * out from {@link name}.
+       */
+      variant?: string;
+      /**
+       * How confident the converter is in the identification. A value of `1` means the app
+       * information came directly from the file (e.g. from `docProps/app.xml`). Values less
+       * than `1` indicate heuristic detection, with lower values representing less certainty.
+       *
+       * @defaultValue 1
+       */
+      confidence?: number;
+    };
+  };
 };
