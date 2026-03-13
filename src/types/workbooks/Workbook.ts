@@ -77,13 +77,13 @@ export type Workbook = {
    *
    * @example
    * An XLSX file lacking `docProps/app.xml` but identified heuristically as a Google Sheets
-   * export would yield `meta: { app: { name: 'Google Sheets', guessed: true } }`.
+   * export would yield `meta: { app: { name: 'Google Sheets', confidence: 0.8 } }`.
    */
   meta?: {
     /**
      * Information about the application that originated this workbook. Converters should
      * populate this from file metadata such as XLSX `docProps/app.xml`, or by heuristic
-     * detection (in which case they should set `guessed: true`).
+     * detection (in which case they should set `confidence` to a value less than `1`).
      */
     app?: {
       /**
@@ -105,13 +105,13 @@ export type Workbook = {
        */
       variant?: string;
       /**
-       * When `true`, indicates that {@link name}, {@link version}, and {@link variant} were
-       * not explicitly stated in the file but inferred heuristically. Absent or `false` means the
-       * app information came directly from the file.
+       * How confident the converter is in the identification. A value of `1` means the app
+       * information came directly from the file (e.g. from `docProps/app.xml`). Values less
+       * than `1` indicate heuristic detection, with lower values representing less certainty.
        *
-       * @defaultValue false
+       * @defaultValue 1
        */
-      guessed?: boolean;
+      confidence?: number;
     };
   };
 };
