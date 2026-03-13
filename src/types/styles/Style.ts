@@ -19,6 +19,24 @@ export type Style = {
    */
   fontFamily?: string;
   /**
+   * Identifies the font scheme, if any, to which this style's font belongs.
+   *
+   * When set, the {@link Style.fontFamily} property is ignored and the font is instead resolved by
+   * the workbook theme. `"major"` maps to the theme's heading font and `"minor"` to the body font.
+   * The actual typeface is determined by the theme's {@link ThemeFontCollection} at render time.
+   *
+   * When the theme changes, an application is expected to update the fonts associated with a scheme
+   * automatically.
+   *
+   * It is an error to set this when a workbook has no theme.
+   *
+   * @see {@link Workbook.theme}
+   * @see {@link Theme.fontScheme}
+   * @see {@link ThemeFontScheme}
+   * @see {@link ThemeFontCollection}
+   */
+  fontScheme?: 'major' | 'minor';
+  /**
    * The font size in pixels.
    *
    * @default 11
