@@ -18,6 +18,8 @@
  *   multiplicative, or additive).
  * - Whole-colour operations: apply transformations that affect the entire colour (complement,
  *   invert, grayscale, gamma adjustments).
+ *
+ * @group Colors
  */
 export type ColorTransform =
   {

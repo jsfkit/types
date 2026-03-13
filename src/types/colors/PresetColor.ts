@@ -3,6 +3,8 @@
  *
  * The preset colours are analogous to the extended colour keywords from CSS Colors Level 3,
  * but using camel casing and abbreviated forms (e.g. `dkMagenta` vs `darkmagenta`).
+ *
+ * @group Colors
  */
 export type PresetColor = {
   type: 'preset';

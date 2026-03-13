@@ -1,5 +1,7 @@
 /**
  * Standard sRGB colour space.
+ *
+ * @group Colors
  */
 export type SrgbColor = {
   type: 'srgb';

@@ -2,6 +2,8 @@
  * A colour in Microsoft's scRGB colour space.
  *
  * Equivalent to CSS `srgb-linear` colour space.
+ *
+ * @group Colors
  */
 export type ScRgbColor = {
   type: 'scrgb';

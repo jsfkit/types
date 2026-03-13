@@ -5,6 +5,8 @@
  *
  * A theme colour is defined in the workbook's theme. Theme colours are used to ensure a consistent
  * palette across a workbook.
+ *
+ * @group Colors
  */
 export type ThemeColor = {
   type: 'theme';
