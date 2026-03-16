@@ -8,7 +8,7 @@
  *
  * @group Colors
  */
-export type ThemeColor = {
+export type SchemeColor = {
   type: 'theme';
   /**
    * Theme colour name.
