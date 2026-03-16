@@ -7,4 +7,4 @@ export type * from './PresetColor.ts';
 export type * from './ScRgbColor.ts';
 export type * from './SrgbColor.ts';
 export type * from './SystemColor.ts';
-export type * from './ThemeColor.ts';
+export type * from './SchemeColor.ts';

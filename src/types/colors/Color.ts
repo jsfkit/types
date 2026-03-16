@@ -6,7 +6,7 @@ import type { PresetColor } from './PresetColor.ts';
 import type { ScRgbColor } from './ScRgbColor.ts';
 import type { SrgbColor } from './SrgbColor.ts';
 import type { SystemColor } from './SystemColor.ts';
-import type { ThemeColor } from './ThemeColor.ts';
+import type { SchemeColor } from './SchemeColor.ts';
 
 /**
  * A colour, which can be used is various parts of a workbook. The base colour can be transformed
@@ -22,7 +22,7 @@ import type { ThemeColor } from './ThemeColor.ts';
  *   values.
  * - {@link SystemColor}: An OS-defined system colour (e.g. window text, highlight), defined using
  *   one of an enumerated set of values.
- * - {@link ThemeColor}: A reference to a theme colour.
+ * - {@link SchemeColor}: A reference to a theme colour.
  * - {@link PresetColor}: A preset colour, similar to CSS's defined colours.
  * - {@link AutoColor}: Colour choice left to the application.
  * - {@link IndexedColor}: A legacy colour indexing scheme.
@@ -34,7 +34,7 @@ export type Color = (
   ScRgbColor |
   HslColor |
   SystemColor |
-  ThemeColor |
+  SchemeColor |
   PresetColor |
   AutoColor |
   IndexedColor
