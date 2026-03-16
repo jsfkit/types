@@ -38,7 +38,7 @@ export type Workbook = {
    */
   formulas?: string[];
   /** The different display configurations saved for the workbook. */
-  views?: WorkbookView[]
+  views?: WorkbookView[];
   /**
    * Individuals who have written a threaded comment in this workbook, or who have been mentioned in
    * one.
