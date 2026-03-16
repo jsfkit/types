@@ -74,32 +74,36 @@ export type Workbook = {
    * Optional metadata about this workbook.
    *
    * @example
-   * An XLSX file with `<Application>Microsoft Macintosh Excel</Application>` and
-   * `<AppVersion>16.0300</AppVersion>` would yield
+   * An XLSX file with metadata explicitly marking it as saved by Excel for Macintosh might have
    * `meta: { app: { name: 'Microsoft Excel', version: '16.0300', variant: 'Macintosh' } }`.
    *
    * @example
-   * An XLSX file lacking `docProps/app.xml` but identified heuristically as a Google Sheets
-   * export would yield `meta: { app: { name: 'Google Sheets', confidence: 0.8 } }`.
+   * An XLSX file lacking app metadata but recognized heuristically as being a Google Sheets
+   * export might have `meta: { app: { name: 'Google Sheets', confidence: 0.8 } }`.
    */
+  // The first example above might be determined by the XLSX file having `docProps/app.xml` with
+  // `<Application>Microsoft Macintosh Excel</Application>` and `<AppVersion>16.0300</AppVersion>`.
+  // The second example might be detected by the XLSX file lacking `docProps/app.xml` and perhaps
+  // containing tell-tale signs like `IFERROR(__xludf.DUMMYFUNCTION("FLATTEN(...)"))` formulas and
+  // `IFERROR(__xludf.DUMMYFUNCTION("""COMPUTED_VALUE"""),2.0)` spilled-value markers.
   meta?: {
     /**
      * Information about the application that originated this workbook. Converters should
-     * populate this from file metadata such as XLSX `docProps/app.xml`, or by heuristic
-     * detection (in which case they should set `confidence` to a value less than `1`).
+     * populate this from file metadata and/or by heuristic detection (in which case they should
+     * set `confidence` to a value less than `1`).
      */
     app?: {
       /**
        * The plain application name, without platform qualifiers or version suffixes
-       * (e.g. `"Microsoft Excel"`, `"LibreOffice Calc"`). For XLSX files this is derived from
-       * the `<Application>` element in `docProps/app.xml`, with platform words like `"Macintosh"`
-       * stripped out.
+       * (e.g. `"Microsoft Excel"`, `"LibreOffice Calc"`).
        */
+      // For XLSX files this can be derived from the `<Application>` element in
+      // `docProps/app.xml`, with platform words like `"Macintosh"` stripped out.
       name?: string;
       /**
-       * The application version string, if known (e.g. `"16.0300"`). For XLSX files this comes
-       * from `<AppVersion>` in `docProps/app.xml`.
+       * The application version string, if known (e.g. `"16.0300"`).
        */
+      // For XLSX files this can be found in `<AppVersion>` in `docProps/app.xml`.
       version?: string;
       /**
        * Operating system or other variant of the application (e.g. `"Macintosh"`). Present when
@@ -109,8 +113,8 @@ export type Workbook = {
       variant?: string;
       /**
        * How confident the converter is in the identification. A value of `1` means the app
-       * information came directly from the file (e.g. from `docProps/app.xml`). Values less
-       * than `1` indicate heuristic detection, with lower values representing less certainty.
+       * information came directly from the metadata in the source file. Values less than `1`
+       * indicate heuristic detection, with lower values representing less certainty.
        *
        * @defaultValue 1
        */
