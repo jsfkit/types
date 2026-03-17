@@ -44,4 +44,6 @@ export type WorksheetView = {
    * layout has its own scale.
    */
   layoutScales?: WorksheetLayoutScales;
+  /** Indicates whether a hairline-grid should be drawn when displaying the worksheet. */
+  showGridLines?: boolean;
 };
