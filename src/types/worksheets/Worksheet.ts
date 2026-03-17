@@ -40,5 +40,5 @@ export type Worksheet = {
   /** The different display configurations saved for the worksheet. */
   views?: WorksheetView[];
   /** A list of drawings that appear in this worksheet. */
-  drawing?: Drawing[];
+  drawings?: Drawing[];
 };
