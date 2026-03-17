@@ -10,7 +10,7 @@ export type PresetColor = {
   type: 'preset';
   /** Preset name, e.g. "aliceBlue", "coral". */
   value:
-  'aliceBlue' |
+    'aliceBlue' |
     'antiqueWhite' |
     'aqua' |
     'aquamarine' |
