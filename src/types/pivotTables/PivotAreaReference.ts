@@ -1,4 +1,5 @@
 import type { integer } from '../integer.ts';
+import type { PivotFieldIndex } from './PivotFieldIndex.ts';
 
 /**
  * A reference within a pivot area, identifying specific field items that define the area's scope.
@@ -6,11 +7,8 @@ import type { integer } from '../integer.ts';
  * @group PivotTables
  */
 export type PivotAreaReference = {
-  /**
-   * Index of the field this reference applies to.
-   * The special value `4294967294` (0xFFFFFFFE) refers to the data (values) field.
-   */
-  field?: integer;
+  /** The field this reference applies to. See {@link PivotFieldIndex} for valid values. */
+  field?: PivotFieldIndex;
   /**
    * Whether this reference participates in the selection. When false, the reference
    * constrains the area without being selected itself.

@@ -1,3 +1,4 @@
+import type { CellRange } from '../CellRange.ts';
 import type { integer } from '../integer.ts';
 import type { PivotAutoFilterColumn } from './PivotAutoFilterColumn.ts';
 import type { PivotFilterType } from './PivotFilterType.ts';
@@ -40,7 +41,7 @@ export type PivotFilter = {
   /** Auto-filter criteria that implement this pivot filter. */
   autoFilter?: {
     /** The reference range for the auto-filter. */
-    ref?: string;
+    ref?: CellRange;
     /** Filter columns with their criteria. */
     filterColumns?: PivotAutoFilterColumn[];
   };
