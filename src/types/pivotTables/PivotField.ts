@@ -1,4 +1,5 @@
 import type { integer } from '../integer.ts';
+import type { PivotArea } from './PivotArea.ts';
 import type { PivotFieldAxis } from './PivotFieldAxis.ts';
 import type { PivotFieldItem } from './PivotFieldItem.ts';
 import type { PivotSubtotalFunction } from './PivotSubtotalFunction.ts';
@@ -178,6 +179,14 @@ export type PivotField = {
 
   // --- Sort (advanced) ---
 
+  /**
+   * Pivot area defining the sort key when `sortType` is `'ascending'` or
+   * `'descending'`. Specifies which data field's values to sort by (via a
+   * reference with `field: -2`), and may include additional references to
+   * constrain the scope. Absent when sorting is alphabetical (by the field's
+   * own labels).
+   */
+  autoSortScope?: PivotArea;
   /** Whether sorting is deferred to the data source. */
   dataSourceSort?: boolean;
   /**
