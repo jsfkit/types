@@ -20,7 +20,15 @@ jobs:
       - run: npm ci
       - run: npm run check
       - run: npm run build
-      - run: npm publish --access public
+      - name: Publish to npm
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          if [[ "$TAG" =~ -([a-zA-Z]+) ]]; then
+            DIST_TAG="${BASH_REMATCH[1]}"
+            npm publish --access public --tag "$DIST_TAG"
+          else
+            npm publish --access public
+          fi
   release:
     runs-on: ubuntu-latest
     permissions:
