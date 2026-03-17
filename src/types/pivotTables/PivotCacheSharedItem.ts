@@ -2,6 +2,8 @@
  * A shared item value in a pivot cache field. Each item represents a unique value found in the
  * source data for that field.
  *
+ * A cache may contain items which longer appear in the source data, marked with `u: true`.
+ *
  * @group PivotTables
  */
 export type PivotCacheSharedItem =

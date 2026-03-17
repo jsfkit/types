@@ -2,6 +2,7 @@ import type { integer } from '../integer.ts';
 import type { PivotAreaAxis } from './PivotAreaAxis.ts';
 import type { PivotAreaReference } from './PivotAreaReference.ts';
 import type { PivotAreaType } from './PivotAreaType.ts';
+import type { PivotFieldIndex } from './PivotFieldIndex.ts';
 
 /**
  * Describes a region of a pivot table, used to target formatting, conditional formatting,
@@ -16,8 +17,8 @@ export type PivotArea = {
    * @default 'normal'
    */
   type?: PivotAreaType;
-  /** The field index this area applies to. */
-  field?: integer;
+  /** The field this area applies to. See {@link PivotFieldIndex} for valid values. */
+  field?: PivotFieldIndex;
   /**
    * Whether the area applies only to data cells (excluding labels).
    *
