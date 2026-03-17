@@ -1,14 +1,7 @@
 /**
- * A defined name (also called "named range") is a labelled reference to a cell, range, constant or
- * formula. Meaningful labels can make formula expressions more readable and more robust to
- * worksheet edits.
+ * A defined name in an external workbook.
  *
- * ```json
- * { "name": "Rates",
- *   "scope": "Sheet1",
- *   "value": "Sheet1!B1:C1" }
- * ```
- *
+ * @see {@link DefinedName}
  * @group Workbooks
  */
 export type ExternalDefinedName = {
