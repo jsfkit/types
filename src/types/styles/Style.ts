@@ -1,3 +1,4 @@
+import type { integer } from '../integer.ts';
 import type { PixelValue } from '../PixelValue.ts';
 import type { BorderStyle } from './BorderStyle.ts';
 import type { Color } from '../colors/Color.ts';
@@ -150,8 +151,12 @@ export type Style = {
   /**
    * The degrees to which the cell text should be rotated. Values range from 0 to 180, and 255 to
    * indicate vertical text. The origin of the rotation is the first letter of the text.
+   *
+   * @min 0
+   * @max 255
+   * @defaultValue 0
    */
-  textRotation?: boolean;
+  textRotation?: integer;
   /**
    * Formatting directions for rendering the cell's value to text.
    */
