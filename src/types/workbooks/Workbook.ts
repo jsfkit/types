@@ -5,7 +5,6 @@ import type { Style } from '../styles/index.ts';
 import type { Table } from '../tables/index.ts';
 import type { Theme } from '../themes/index.ts';
 import type { PivotTable } from '../pivotTables/index.ts';
-import type { Person } from '../comments/index.ts';
 import type { Worksheet } from '../worksheets/index.ts';
 import type { CalcProps } from './CalcProps.ts';
 import type { WorkbookView } from './WorkbookView.ts';
