@@ -6,7 +6,6 @@ export type * from './Comment_deprecated.ts';
 export type * from './DataTable.ts';
 export type * from './DefinedName.ts';
 export type * from './External.ts';
-export type * from './ExternalDefinedName.ts';
 export type * from './ExternalWorksheet.ts';
 export type * from './GridSize.ts';
 export type * from './integer.ts';

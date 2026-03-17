@@ -1,4 +1,4 @@
-import type { ExternalDefinedName } from './ExternalDefinedName.ts';
+import type { DefinedName } from './DefinedName.ts';
 import type { ExternalWorksheet } from './ExternalWorksheet.ts';
 
 /**
@@ -17,7 +17,7 @@ export type External = {
    */
   sheets: ExternalWorksheet[];
   /** Relevant defined names from an external workbook. */
-  names: ExternalDefinedName[];
+  names: DefinedName[];
   /**
    * Indicates that the path to the external workbook file is unknown or missing.
    * In XLSX, this corresponds to the xlPathMissing relationship type.

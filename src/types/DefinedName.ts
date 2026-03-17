@@ -21,7 +21,7 @@ export type DefinedName = {
    * A formula expression, a reference, or value. Whatever the value is will be evaluated by a
    * spreadsheet engine as if it were an expression.
    */
-  value: string;
+  value?: string;
   /**
    * An optional worksheet name that defines the scope for this name. When this field is absent,
    * the defined name should be considered to be scoped to the workbook.
