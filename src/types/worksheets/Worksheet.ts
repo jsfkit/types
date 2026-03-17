@@ -37,8 +37,6 @@ export type Worksheet = {
    * @see {@link https://exceloffthegrid.com/make-excel-sheets-very-hidden/}
    */
   hidden?: 0 | 1 | 2;
-  /** Indicates whether a hairline-grid should be drawn when displaying the sheet. */
-  showGridLines?: boolean;
   /** The different display configurations saved for the worksheet. */
   views?: WorksheetView[];
   /** A list of drawings that appear in this worksheet. */
