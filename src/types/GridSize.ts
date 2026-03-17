@@ -20,7 +20,7 @@ export type GridSize = {
   /** A 1-based inclusive end index. */
   end: integer;
   /** The size of the grid item in pixels. */
-  size: PixelValue;
+  size?: PixelValue;
   /** An index to a style in the workbook styles. */
   s?: integer;
 };
