@@ -1,4 +1,4 @@
-import type { Color } from '../../styles/Color.ts';
+import type { Color } from '../../colors/Color.ts';
 import type { FontStyleIndex } from './FontStyleIndex.ts';
 
 // This has been left in here for future updates but needs more work.
