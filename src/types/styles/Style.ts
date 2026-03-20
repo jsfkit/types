@@ -1,6 +1,7 @@
+import type { integer } from '../integer.ts';
 import type { PixelValue } from '../PixelValue.ts';
 import type { BorderStyle } from './BorderStyle.ts';
-import type { Color } from './Color.ts';
+import type { Color } from '../colors/Color.ts';
 import type { HAlign } from './HAlign.ts';
 import type { PatternStyle } from './PatternStyle.ts';
 import type { Underline } from './Underline.ts';
@@ -18,6 +19,24 @@ export type Style = {
    * @default "Calibri"
    */
   fontFamily?: string;
+  /**
+   * Identifies the font scheme, if any, to which this style's font belongs.
+   *
+   * When set, the {@link Style.fontFamily} property is ignored and the font is instead resolved by
+   * the workbook theme. `"major"` maps to the theme's heading font and `"minor"` to the body font.
+   * The actual typeface is determined by the theme's {@link ThemeFontCollection} at render time.
+   *
+   * When the theme changes, an application is expected to update the fonts associated with a scheme
+   * automatically.
+   *
+   * It is an error to set this when a workbook has no theme.
+   *
+   * @see {@link Workbook.theme}
+   * @see {@link Theme.fontScheme}
+   * @see {@link ThemeFontScheme}
+   * @see {@link ThemeFontCollection}
+   */
+  fontScheme?: 'major' | 'minor';
   /**
    * The font size in pixels.
    *
@@ -132,8 +151,12 @@ export type Style = {
   /**
    * The degrees to which the cell text should be rotated. Values range from 0 to 180, and 255 to
    * indicate vertical text. The origin of the rotation is the first letter of the text.
+   *
+   * @min 0
+   * @max 255
+   * @defaultValue 0
    */
-  textRotation?: boolean;
+  textRotation?: integer;
   /**
    * Formatting directions for rendering the cell's value to text.
    */

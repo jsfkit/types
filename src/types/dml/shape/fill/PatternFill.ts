@@ -1,4 +1,4 @@
-import type { Color } from '../../../styles/Color.ts';
+import type { Color } from '../../../colors/Color.ts';
 import type { FillPatternStyle } from './PatternStyle.ts';
 
 /**
