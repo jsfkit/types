@@ -15,14 +15,14 @@ export type PivotCacheSharedItem =
   PivotCacheSharedItemNil;
 
 /** A string shared item. @group PivotTables */
-export type PivotCacheSharedItemStr = { t: 's'; v: string };
+export type PivotCacheSharedItemStr = { t: 's'; v: string; u?: boolean };
 /** A numeric shared item. @group PivotTables */
-export type PivotCacheSharedItemNum = { t: 'n'; v: number };
+export type PivotCacheSharedItemNum = { t: 'n'; v: number; u?: boolean };
 /** A boolean shared item. @group PivotTables */
-export type PivotCacheSharedItemBool = { t: 'b'; v: boolean };
+export type PivotCacheSharedItemBool = { t: 'b'; v: boolean; u?: boolean };
 /** A date shared item (ISO 8601 string). @group PivotTables */
-export type PivotCacheSharedItemDate = { t: 'd'; v: string };
+export type PivotCacheSharedItemDate = { t: 'd'; v: string; u?: boolean };
 /** An error shared item (e.g. `"#REF!"`). @group PivotTables */
-export type PivotCacheSharedItemErr = { t: 'e'; v: string };
+export type PivotCacheSharedItemErr = { t: 'e'; v: string; u?: boolean };
 /** An empty/missing shared item. @group PivotTables */
-export type PivotCacheSharedItemNil = { t: 'z' };
+export type PivotCacheSharedItemNil = { t: 'z'; u?: boolean };

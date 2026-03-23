@@ -51,4 +51,11 @@ export type PivotCacheBase = {
    * `"{93AACE53-8F3A-A04A-893A-A439866B3165}"` assigned by Excel 2014+ for revision tracking.
    */
   uid?: string;
+  /**
+   * Whether the cache needs to be refreshed. When true, the pivot table's cached data
+   * is out of date with respect to its source.
+   *
+   * @default false
+   */
+  invalid?: boolean;
 };
