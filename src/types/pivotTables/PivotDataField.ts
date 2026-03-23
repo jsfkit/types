@@ -40,7 +40,7 @@ export type PivotDataField = {
    * The index of the base item used for "show data as" calculations. Only meaningful when
    * {@link showDataAs} is set to a relative calculation mode.
    *
-   * @default 1048832
+   * @default 1048832 (0x100100, sentinel meaning "use the previous item")
    */
   baseItem?: integer;
   /** The number format code for this data field's values (e.g. `"General"`, `"#,##0"`). */

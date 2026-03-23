@@ -4,6 +4,7 @@ import type { PivotCache } from './PivotCache.ts';
 import type { PivotCalculatedField } from './PivotCalculatedField.ts';
 import type { PivotDataField } from './PivotDataField.ts';
 import type { PivotField } from './PivotField.ts';
+import type { PivotFieldIndex } from './PivotFieldIndex.ts';
 import type { PivotFilter } from './PivotFilter.ts';
 import type { PivotPageField } from './PivotPageField.ts';
 import type { PivotRowColItem } from './PivotRowColItem.ts';
@@ -70,17 +71,15 @@ export type PivotTable = {
    */
   fields: PivotField[];
   /**
-   * Indices into {@link fields} identifying which fields appear on the row axis, in display order.
-   * Negative indices are special placeholders (e.g. `-2` represents the "Values" virtual field,
-   * used when there are multiple data fields) and do not index into {@link fields}.
+   * Fields on the row axis, in display order. Each entry is a {@link PivotFieldIndex}: either
+   * an index into {@link fields}, or `-2` for the "Values" virtual field.
    */
-  rowFieldIndices?: integer[];
+  rowFieldIndices?: PivotFieldIndex[];
   /**
-   * Indices into {@link fields} identifying which fields appear on the column axis, in display
-   * order. Negative indices are special placeholders (e.g. `-2` represents the "Values" virtual
-   * field) and do not index into {@link fields}.
+   * Fields on the column axis, in display order. Each entry is a {@link PivotFieldIndex}: either
+   * an index into {@link fields}, or `-2` for the "Values" virtual field.
    */
-  colFieldIndices?: integer[];
+  colFieldIndices?: PivotFieldIndex[];
   /** The data fields, defining the aggregated values displayed in the pivot table's data area. */
   dataFields?: PivotDataField[];
   /** The page (filter) fields, allowing the pivot table to be filtered by specific field values. */
