@@ -23,4 +23,8 @@ export type TableColumn = {
    * If the column is a calculated column, then this field must include the formula used.
    */
   formula?: string;
+  /**
+   * When true, the calculated column formula is an array formula (CSE).
+   */
+  formulaIsArray?: boolean;
 };
