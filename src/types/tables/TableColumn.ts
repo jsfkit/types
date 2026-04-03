@@ -24,7 +24,7 @@ export type TableColumn = {
    */
   formula?: string;
   /**
-   * When true, the calculated column formula is an array formula (CSE).
+   * When true, the calculated column formula is an array formula.
    */
   formulaIsArray?: boolean;
 };
