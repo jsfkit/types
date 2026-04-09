@@ -163,8 +163,8 @@ export type Style = {
   numberFormat?: string;
   /**
    * Name of the named style this style inherits from (e.g. "Percent", "Heading 1").
-   * Refers to a {@link NamedStyle.name} in {@link Workbook.namedStyles}.
+   * Refers to a key in {@link Workbook.namedStyles}.
    * When absent, the style inherits from the default style (typically "Normal").
    */
-  parentStyle?: string;
+  extendsStyle?: string;
 };
