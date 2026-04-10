@@ -27,6 +27,11 @@ export type Cell = {
   /** The range of enclosing array if the formula is an array formula. */
   F?: string;
   /**
+   * True if the formula is a CSE (Ctrl+Shift+Enter) array formula rather
+   * than a dynamic array formula.
+   */
+  cse?: boolean;
+  /**
    * Cell hyperlink. Must be a URL.
    */
   l?: string;

@@ -47,6 +47,12 @@ export type Table = {
    */
   headerRowCount?: integer;
   /**
+   * Whether the totals row is shown. When false, the totals row is hidden.
+   *
+   * @default true
+   */
+  totalsRowShown?: boolean;
+  /**
    * Presentation information for the table. When not present tables should be rendered using
    * `"TableStyleMedium2"` style with {@link TableStyle.showRowStripes} set to `true`.
    */
