@@ -1,6 +1,7 @@
 import type { Person } from '../comments/index.ts';
 import type { DefinedName } from '../DefinedName.ts';
 import type { External } from '../External.ts';
+import type { NamedStyle } from '../styles/index.ts';
 import type { Style } from '../styles/index.ts';
 import type { Table } from '../tables/index.ts';
 import type { Theme } from '../themes/index.ts';
@@ -30,6 +31,8 @@ export type Workbook = {
   calculationProperties?: CalcProps;
   /** Styles for cells in the workbook. */
   styles?: Style[];
+  /** Named cell style definitions (e.g. "Normal", "Heading 1"), keyed by style name. */
+  namedStyles?: Record<string, NamedStyle>;
   /** External cells referenced by the workbook. An external cell is a cell in another workbook. */
   externals?: External[];
   /**
