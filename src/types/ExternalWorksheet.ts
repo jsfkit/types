@@ -23,4 +23,14 @@ export type ExternalWorksheet = {
    * In XLSX, this corresponds to the refreshError="1" attribute on sheetData.
    */
   refreshError?: boolean;
+  /**
+   * Indicates that no `<sheetData>` element was recorded for this sheet in the source
+   * workbook, even though the sheet appears in `<sheetNames>`. The emitter should omit
+   * the `<sheetData>` entirely for such sheets rather than emit an empty one —
+   * `<sheetData sheetId="N"/>` (empty but present) and the absence of any sheetData
+   * element are distinct states under OOXML and producers rely on both.
+   *
+   * When set, `cells` is expected to be empty (`{}`) and `refreshError` unset.
+   */
+  noSheetData?: boolean;
 };
