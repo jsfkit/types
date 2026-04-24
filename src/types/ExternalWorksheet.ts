@@ -27,18 +27,15 @@ export type ExternalWorksheet = {
    * Indicates that no `<sheetData>` element was recorded for this sheet in the source
    * workbook, even though the sheet appears in `<sheetNames>`.
    *
-   * Emitter contract:
-   * - `undefined` (the common case): emit `<sheetData sheetId=N>` populated from `cells`.
-   * - `true`: omit the `<sheetData>` element entirely for this sheet.
+   * - `undefined` (the common case) corresponds to `<sheetData sheetId=N>`
+   * - `true` corresponds to `<sheetData>` element being missing for this sheet.
    *
    * The distinction matters because `<sheetData sheetId="N"/>` (empty but present) and
-   * the absence of any `<sheetData>` element are distinct states under OOXML and
-   * producers rely on both.
+   * the absence of any `<sheetData>` element are distinct states under OOXML.
    *
-   * Invariant: when `noSheetData` is `true`, `cells` is expected to be empty (`{}`)
-   * and `refreshError` unset. The jsdoc documents the invariant; the type doesn't
-   * enforce it, and callers setting both risk silently losing `cells`/`refreshError`
-   * on emit.
+   * When `noSheetData` is `true`, `cells` is expected to be empty (`{}`) and
+   * `refreshError` unset. The jsdoc documents the invariant; the type doesn't enforce it,
+   * and callers setting both risk silently losing `cells`/`refreshError` on emit.
    */
   noSheetData?: boolean;
 };
