@@ -27,11 +27,16 @@ export type External = {
    * Alternate URLs for the external workbook — typically used when the source file
    * lives in a cloud location (OneDrive, SharePoint). In XLSX, this corresponds to
    * the `<xxl21:alternateUrls>` extension element inside `<externalBook>` (from the
-   * 2021 extlinks2021 namespace), with each URL captured from the external-link part's
-   * rels entry that the extension's child element references.
+   * 2021 extlinks2021 namespace).
    *
-   * Both child kinds are optional per the OOXML schema; at most one of each may
-   * appear. When omitted, the roundtrip is a single-rel file-path external.
+   * `absoluteUrl`/`relativeUrl` are captured from child elements of
+   * `<xxl21:alternateUrls>`; `driveId`/`itemId` are attributes on the
+   * `<xxl21:alternateUrls>` element itself.
+   *
+   * At least one subfield must be set for the value to be meaningful; a purely
+   * empty `alternateUrls: {}` is allowed by the type but producers and consumers
+   * should omit it in that case. Each subfield is independently optional per the
+   * xxl21 schema.
    */
   alternateUrls?: {
     /** Absolute URL to the external resource (e.g. a OneDrive web URL). */
@@ -39,14 +44,16 @@ export type External = {
     /** Relative URL to the external resource. */
     relativeUrl?: string;
     /**
-     * OneDrive/SharePoint drive identifier. Excel writes this alongside a
-     * cloud alternate URL so the client can reach the same document via the
-     * Graph API. Opaque string; we preserve it verbatim through the round-trip.
+     * OneDrive/SharePoint drive identifier Excel writes alongside cloud
+     * alternate URLs. Used by Microsoft Graph API calls to locate the
+     * container holding the external document, independent of the URL.
+     * Opaque string; round-tripped verbatim.
      */
     driveId?: string;
     /**
-     * OneDrive/SharePoint item identifier. Same role as `driveId` —
-     * preserved verbatim for the round-trip.
+     * OneDrive/SharePoint item identifier — the resource-level counterpart
+     * to `driveId`; used by Microsoft Graph API calls to locate the external
+     * document itself. Opaque string; round-tripped verbatim.
      */
     itemId?: string;
   };
