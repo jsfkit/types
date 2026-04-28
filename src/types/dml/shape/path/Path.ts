@@ -15,11 +15,17 @@ export type Path = {
   // Whether this path can be extruded in 3D rendering.
   // extrusionOk: boolean,
 
-  /** Whether this path should be stroked (outlined). */
-  stroke: boolean,
+  /**
+   * Whether this path should be stroked (outlined).
+   * @default false
+   */
+  stroke?: boolean,
 
-  /** Fill mode for the path. */
-  fill: PathFillMode,
+  /**
+   * Fill mode for the path.
+   * @default "norm"
+   */
+  fill?: PathFillMode,
 
   /**
    * Specifies the height, or maximum y coordinate that should be used for within the path
@@ -27,7 +33,7 @@ export type Path = {
    * corresponding path as they will all be calculated using this height attribute as the max y
    * coordinate.
    */
-  height: PositiveCoordinate,
+  height?: PositiveCoordinate,
 
   /**
    * Specifies the width, or maximum x coordinate that should be used for within the path
@@ -35,8 +41,10 @@ export type Path = {
    * the corresponding path as they will all be calculated using this width attribute as the max
    * x coordinate.
    */
-  width: PositiveCoordinate,
+  width?: PositiveCoordinate,
 
-  /** Array of path commands (moveTo, lineTo, etc.) defining the path geometry. */
+  /**
+   * Array of path commands (moveTo, lineTo, etc.) defining the path geometry.
+   */
   d: PathCommand[],
 };
