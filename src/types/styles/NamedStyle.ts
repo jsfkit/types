@@ -7,9 +7,11 @@ import type { Style } from './Style.ts';
  * In OOXML these correspond to `<cellStyle>` elements and their associated
  * formatting records in `<cellStyleXfs>`.
  *
+ * Named styles don't extend other named styles.
+ *
  * @group Workbooks
  */
-export type NamedStyle = Style & {
+export type NamedStyle = Omit<Style, 'extendsStyle'> & {
   /** The display name of the cell style (e.g. "Normal", "Heading 1"). */
   name: string;
   /**
