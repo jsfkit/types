@@ -1,3 +1,4 @@
+import type { AlternateUrls } from './AlternateUrls.ts';
 import type { ExternalDefinedName } from './ExternalDefinedName.ts';
 import type { ExternalWorksheet } from './ExternalWorksheet.ts';
 
@@ -23,4 +24,9 @@ export type External = {
    * In XLSX, this corresponds to the xlPathMissing relationship type.
    */
   pathMissing?: boolean;
+  /**
+   * Alternate URLs for the external workbook (cloud-sourced externals). See
+   * {@link AlternateUrls}.
+   */
+  alternateUrls?: AlternateUrls;
 };
