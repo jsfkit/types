@@ -1,3 +1,4 @@
+export type * from './AlternateUrls.ts';
 export type * from './Cell.ts';
 export type * from './CellId.ts';
 export type * from './CellRange.ts';
