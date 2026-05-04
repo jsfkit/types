@@ -12,4 +12,4 @@
  *
  * @group Drawings
  */
-export type LineCapType = 'butt' | 'rnd' | 'sq';
+export type LineCapType = 'butt' | 'round' | 'square';
