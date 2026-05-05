@@ -37,4 +37,16 @@ export type CalcProps = {
    * @defaultValue "auto"
    */
   calcMode?: 'auto' | 'autoNoTable' | 'manual';
+  /**
+   * Whether the consuming application should perform a full recalculation when the workbook is
+   * opened. Mirrors the OOXML `<calcPr fullCalcOnLoad="1"/>` attribute (ECMA-376 §18.2.2).
+   *
+   * Per the spec, a writer should set this when cached values may not reflect what the formulas
+   * would now produce, and clear it after a successful recalculation on load. Per the spec, a
+   * reader should suppress the full recalculation when {@link CalcProps.calcMode} is `"manual"` —
+   * manual mode takes precedence.
+   *
+   * @defaultValue false
+   */
+  fullCalcOnLoad?: boolean;
 };
