@@ -167,4 +167,16 @@ export type Style = {
    * When absent, the style inherits from the default style (typically "Normal").
    */
   extendsStyle?: string;
+  /**
+   * Marks the cell as a pivot-table button header (the cell with the
+   * dropdown-arrow filter UI, e.g. "Row Labels" / "Column Labels"). Excel
+   * renders this distinctly from a regular text cell --- a small triangle
+   * is overlaid in the cell --- and the cell's xf record carries
+   * `pivotButton="1"` in OOXML.
+   *
+   * Set this only on cells inside a pivot table's frame (the
+   * row/column-labels headers). Generic cells with no pivot context
+   * should leave it unset.
+   */
+  pivotButton?: boolean;
 };
