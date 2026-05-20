@@ -380,14 +380,10 @@ export type PivotTable = {
    */
   applyWidthHeightFormats?: boolean;
 
-  // --- Display options carried in the x14 extension ---
-
   /**
-   * Whether the synthetic "Values" header row is hidden when the data axis sits
-   * on the column axis with multiple data fields. Excel emits this on the
-   * `<ext uri="{962EF5D1-...}">` x14 extension and only sets it on multi-data
-   * column-axis pivots whose layout intentionally suppresses the values row.
-   * Single-row, empty-axis, and single-data-field pivots leave it unset.
+   * Whether the synthetic "Values" header row is hidden. The synthetic header row appears when
+   * the data axis sits on the column axis with multiple data fields, and labels the data field
+   * column above the data values. Setting this to `true` suppresses that row.
    *
    * @default false
    */
