@@ -45,6 +45,8 @@ export type Worksheet = {
   /**
    * Print/page-layout margins in inches. Used by applications that print the worksheet or render
    * print previews. When absent, applications apply their own defaults.
+   *
+   * @default { left: 0.7, right: 0.7, top: 0.75, bottom: 0.75, header: 0.3, footer: 0.3 }
    */
   pageMargins?: PageMargins;
 };
