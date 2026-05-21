@@ -379,4 +379,13 @@ export type PivotTable = {
    * @default false
    */
   applyWidthHeightFormats?: boolean;
+
+  /**
+   * Whether the synthetic "Values" header row is hidden. The synthetic header row appears when
+   * the data axis sits on the column axis with multiple data fields, and labels the data field
+   * column above the data values. Setting this to `true` suppresses that row.
+   *
+   * @default false
+   */
+  hideValuesRow?: boolean;
 };

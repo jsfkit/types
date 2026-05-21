@@ -167,4 +167,11 @@ export type Style = {
    * When absent, the style inherits from the default style (typically "Normal").
    */
   extendsStyle?: string;
+  /**
+   * Whether the a cell should appear as a pivot-table button header (typically shown with a
+   * dropdown-arrow filter UI, e.g. on "Row Labels" / "Column Labels").
+   *
+   * Should be set only on cell styles used in a pivot table's layout.
+   */
+  pivotButton?: boolean;
 };

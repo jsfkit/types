@@ -4,6 +4,7 @@ import type { GridSize } from '../GridSize.ts';
 import type { Note } from '../Note.ts';
 import type { ThreadedComment } from '../comments/index.ts';
 import type { Drawing } from '../dml/Drawing.ts';
+import type { PageMargins } from './PageMargins.ts';
 import type { WorksheetDefaults } from './WorksheetDefaults.ts';
 import type { WorksheetView } from './WorksheetView.ts';
 
@@ -41,4 +42,11 @@ export type Worksheet = {
   views?: WorksheetView[];
   /** A list of drawings that appear in this worksheet. */
   drawings?: Drawing[];
+  /**
+   * Print/page-layout margins in inches. Used by applications that print the worksheet or render
+   * print previews. When absent, applications apply their own defaults.
+   *
+   * @default { left: 0.7, right: 0.7, top: 0.75, bottom: 0.75, header: 0.3, footer: 0.3 }
+   */
+  pageMargins?: PageMargins;
 };
