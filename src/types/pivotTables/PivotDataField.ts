@@ -40,7 +40,13 @@ export type PivotDataField = {
    * The index of the base item used for "show data as" calculations. Only meaningful when
    * {@link showDataAs} is set to a relative calculation mode.
    *
-   * @default 1048832 (0x100100, sentinel meaning "use the previous item")
+   * This is a zero-based item index, except these sentinel values have specific meanings:
+   *
+   * - `1048828` — "previous value": the item preceding this one along the base field's axis
+   * - `1048829` — "next value": the item following this one
+   * - `1048832` — "not set" / no base item; the schema default
+   *
+   * @default 1048832
    */
   baseItem?: integer;
   /** The number format code for this data field's values (e.g. `"General"`, `"#,##0"`). */
