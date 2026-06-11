@@ -33,7 +33,7 @@ export type * from './PivotFieldIndex.ts';
 export type * from './PivotFieldItem.ts';
 export type * from './PivotFilter.ts';
 export type * from './PivotFilterType.ts';
-// export type * from './PivotFormat.ts';
+export type * from './PivotFormat.ts';
 export type * from './PivotGroupBy.ts';
 export type * from './PivotItemType.ts';
 export type * from './PivotPageField.ts';
