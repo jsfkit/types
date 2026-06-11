@@ -8,13 +8,16 @@ import type { TableStyleName } from './TableStyleName.ts';
  */
 export type TableStyle = {
   /**
-   * The name of the table style to use with this table.
+   * The name of the table style to use with this table: either one of the built-in style names
+   * ({@link TableStyleName}) or the name of a workbook-defined style (see
+   * {@link Workbook.tableStyles}).
    *
    * If the value is null or omitted the table should not be rendered with any special styling (note
-   * that this only applies if the style object itself is present).
+   * that this only applies if the style object itself is present). A name that is neither a
+   * built-in style name nor defined in the workbook should be treated the same way.
    * @default null
    */
-  name?: TableStyleName | null;
+  name?: TableStyleName | (string & {}) | null;
   /**
    * Whether row stripe formatting should be applied.
    *
