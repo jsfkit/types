@@ -30,5 +30,5 @@ export type PivotFormat = {
    *
    * @see {@link Workbook.diffStyles}
    */
-  dxfId?: integer;
+  diffStyleId?: integer;
 };

@@ -37,16 +37,14 @@ export type Workbook = {
    * table styles, and future dynamic/conditional styles).
    *
    * This is the differential-overlay analog of {@link Workbook.styles}: where {@link Cell.s}
-   * indexes a complete cell style in `styles`, an overlay's `dxfId` indexes a partial override
-   * here. Only the properties present in an entry apply; everything else on the target cell is
-   * left as-is.
+   * indexes a complete cell style in `styles`, an overlay's `diffStyleId` indexes a partial
+   * override here. Only the properties present in an entry apply; everything else on the target
+   * cell is left as-is.
    *
    * Each entry reuses the {@link Style} type (already all-optional), but is interpreted
    * differentially: an absent property means "leave unchanged", not "use the default".
    *
-   * The property name is provisional and may change before this is finalized.
-   *
-   * @see {@link PivotFormat.dxfId}
+   * @see {@link PivotFormat.diffStyleId}
    */
   diffStyles?: Style[];
   /** Named cell style definitions (e.g. "Normal", "Heading 1"), keyed by style name. */
