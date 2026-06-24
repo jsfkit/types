@@ -1,5 +1,4 @@
 import type { integer } from '../integer.ts';
-import type { Style } from '../styles/index.ts';
 import type { TableStyleElementType } from './TableStyleElementType.ts';
 
 /**
@@ -19,10 +18,12 @@ export type TableStyleElement = {
    */
   size?: integer;
   /**
-   * The formatting to overlay on the region's cells. Only the properties present apply;
-   * everything else on a cell is left as-is (differential-format semantics). An element
-   * without a style has no visual effect (a stripe element may still carry a meaningful
-   * {@link size}).
+   * Index of the differential style to overlay on the region's cells, into
+   * {@link Workbook.diffStyles}. Only the properties present in that style apply; everything else
+   * on a cell is left as-is. An element without a `dxfId` has no visual effect (a stripe element
+   * may still carry a meaningful {@link size}).
+   *
+   * @see {@link Workbook.diffStyles}
    */
-  style?: Style;
+  dxfId?: integer;
 };
