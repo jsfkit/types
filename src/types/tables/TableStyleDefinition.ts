@@ -5,8 +5,7 @@ import type { TableStyleElement } from './TableStyleElement.ts';
  *
  * Definitions live in {@link Workbook.tableStyles} and are referenced by name from
  * {@link TableStyle.name} and {@link PivotTableStyle.name}, the same way built-in style
- * names are referenced. In OOXML these correspond to `<tableStyle>` elements in the
- * styles part, with each element's formatting held in a `<dxf>` record.
+ * names are referenced.
  *
  * A definition only describes the regions it lists; regions without an element get no
  * formatting from the style. Regions overlap (e.g. a header-row cell is also part of the
@@ -22,17 +21,11 @@ export type TableStyleDefinition = {
    */
   name: string;
   /**
-   * Whether this style can be applied to pivot tables.
+   * Whether this style may be applied to pivot tables, regular tables, or both.
    *
-   * @default true
+   * @default "all"
    */
-  pivot?: boolean;
-  /**
-   * Whether this style can be applied to (non-pivot) tables.
-   *
-   * @default true
-   */
-  table?: boolean;
+  table?: 'table' | 'pivot' | 'all';
   /** The formatting of each table region that this style defines. */
   elements?: TableStyleElement[];
 };
