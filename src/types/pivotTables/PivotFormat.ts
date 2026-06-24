@@ -1,4 +1,4 @@
-import type { Style } from '../styles/index.ts';
+import type { integer } from '../integer.ts';
 import type { PivotArea } from './PivotArea.ts';
 
 /**
@@ -8,7 +8,7 @@ import type { PivotArea } from './PivotArea.ts';
  * format targets with an action indicating whether formatting is applied or blanked.
  *
  * Formats are the durable representation of user formatting on pivot output: a consumer
- * re-resolves each format's area against the current layout and overlays its {@link style} on
+ * re-resolves each format's area against the current layout and overlays its differential style on
  * every repaint, so the formatting follows the targeted region (an item's data cells, the grand
  * total row, ...) when the pivot reshapes, rather than sticking to cell coordinates.
  *
@@ -24,9 +24,11 @@ export type PivotFormat = {
   /** The pivot table region this format applies to. */
   pivotArea: PivotArea;
   /**
-   * The formatting to overlay on the area's cells. Only the properties present apply; everything
-   * else on a cell is left as-is (the differential-format semantics of OOXML's `dxf`).
-   * Absent for `action: 'blank'`.
+   * Index of the differential style to overlay on the area's cells, into
+   * {@link Workbook.diffStyles}. Only the properties present in that style apply; everything else
+   * on a cell is left as-is. Absent for `action: 'blank'`.
+   *
+   * @see {@link Workbook.diffStyles}
    */
-  style?: Style;
+  dxfId?: integer;
 };
