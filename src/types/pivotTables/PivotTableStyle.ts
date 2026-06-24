@@ -1,4 +1,3 @@
-import type { LooseAutocomplete } from '../LooseAutocomplete.ts';
 import type { PivotTableStyleName } from './PivotTableStyleName.ts';
 
 /**
@@ -18,7 +17,7 @@ export type PivotTableStyle = {
    *
    * @default null
    */
-  name?: LooseAutocomplete<PivotTableStyleName> | null;
+  name?: PivotTableStyleName | string | null;
   /**
    * Whether row header formatting should be applied.
    *

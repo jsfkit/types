@@ -11,7 +11,6 @@ export type * from './ExternalDefinedName.ts';
 export type * from './ExternalWorksheet.ts';
 export type * from './GridSize.ts';
 export type * from './integer.ts';
-export type * from './LooseAutocomplete.ts';
 export type * from './Note.ts';
 export type * from './PixelValue.ts';
 export type * from './colors/index.ts';

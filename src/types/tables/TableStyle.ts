@@ -1,4 +1,3 @@
-import type { LooseAutocomplete } from '../LooseAutocomplete.ts';
 import type { TableStyleName } from './TableStyleName.ts';
 
 /**
@@ -18,7 +17,7 @@ export type TableStyle = {
    * built-in style name nor defined in the workbook should be treated the same way.
    * @default null
    */
-  name?: LooseAutocomplete<TableStyleName> | null;
+  name?: TableStyleName | string | null;
   /**
    * Whether row stripe formatting should be applied.
    *
