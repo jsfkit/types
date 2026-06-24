@@ -92,9 +92,9 @@ export type PivotTable = {
   /** Presentation style for the pivot table. */
   style?: PivotTableStyle;
   /**
-   * Custom formatting applied to specific regions of the pivot table. Each format carries its
-   * differential style inline (see {@link PivotFormat.style}); there is no separate dxf table
-   * in JSF.
+   * Custom formatting applied to specific regions of the pivot table. Each format references a
+   * shared differential style by index (see {@link PivotFormat.diffStyleId} and
+   * {@link Workbook.diffStyles}).
    */
   formats?: PivotFormat[];
   // conditionalFormats is omitted for now: the conditional formatting model is not finalized.
