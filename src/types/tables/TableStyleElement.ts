@@ -20,10 +20,10 @@ export type TableStyleElement = {
   /**
    * Index of the differential style to overlay on the region's cells, into
    * {@link Workbook.diffStyles}. Only the properties present in that style apply; everything else
-   * on a cell is left as-is. An element without a `dxfId` has no visual effect (a stripe element
-   * may still carry a meaningful {@link size}).
+   * on a cell is left as-is. An element without a `diffStyleId` has no visual effect (a stripe
+   * element may still carry a meaningful {@link size}).
    *
    * @see {@link Workbook.diffStyles}
    */
-  dxfId?: integer;
+  diffStyleId?: integer;
 };
