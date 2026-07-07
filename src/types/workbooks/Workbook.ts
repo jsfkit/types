@@ -8,6 +8,7 @@ import type { Theme } from '../themes/index.ts';
 import type { PivotTable } from '../pivotTables/index.ts';
 import type { Worksheet } from '../worksheets/index.ts';
 import type { CalcProps } from './CalcProps.ts';
+import type { Connection } from './Connection.ts';
 import type { WorkbookView } from './WorkbookView.ts';
 
 /**
@@ -27,6 +28,11 @@ export type Workbook = {
   tables?: Table[];
   /** Metadata on the workbook's pivot tables. */
   pivotTables?: PivotTable[];
+  /**
+   * Workbook data connections (`xl/connections.xml`) — e.g. the external data source behind a pivot
+   * cache whose {@link PivotCacheExternal.sourceType} is `'external'`, matched by `connectionId`.
+   */
+  connections?: Connection[];
   /** Directions on how formulas should be recalculated in the workbook. */
   calculationProperties?: CalcProps;
   /** Styles for cells in the workbook. */
