@@ -35,7 +35,7 @@ export type Connection = {
   id: integer;
   /** The connection's name. */
   name?: string;
-  /** The connection kind as an OOXML numeric code (e.g. 1 = ODBC, 4 = web, 5 = OLE DB, 6 = text). */
+  /** The connection kind as an OOXML numeric code (1 = ODBC, 4 = web, 5 = OLE DB, 6 = text). */
   type?: integer;
   /** The file this connection was created from, if any. */
   sourceFile?: string;
