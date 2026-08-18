@@ -34,6 +34,22 @@ export type WorksheetView = {
   /** Ranges of cells that are selected by default when the sheet is visible. */
   activeRanges?: CellRange[];
   /**
+   * Identifies which range within {@link WorksheetView.activeRanges} holds the cursor. Zero-based
+   * index.
+   *
+   * Required when `activeRange` is not a single contiguous range. If this value is out of range,
+   * use {@link WorksheetView.activeCell}.
+   *
+   * An active range index is required for cursor movement. Spreadsheet software generally allows a
+   * user to press Tab to cycle though selected cells, cycling through cells in the currently
+   * selected range before moving on to the next range selection. If cell ranges overlap (e.g. A1:E5
+   * and D4:G8), it would be ambiguous which range is active when cell D4 is the selected cell. This
+   * property removes that ambiguity.
+   *
+   * @defaultValue 0
+   */
+  activeRangeIndex?: integer;
+  /**
    * The layout used to display the worksheet.
    *
    * @defaultValue "normal"
