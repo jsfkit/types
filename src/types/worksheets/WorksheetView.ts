@@ -2,6 +2,7 @@ import type { CellId } from '../CellId.ts';
 import type { CellRange } from '../CellRange.ts';
 import type { integer } from '../integer.ts';
 import type { WorksheetLayoutScales } from './WorksheetLayoutScales.ts';
+import type { WorksheetViewFrozenPanes } from './WorksheetViewFrozenPanes.ts';
 
 /**
  * A worksheet view.
@@ -62,4 +63,12 @@ export type WorksheetView = {
   layoutScales?: WorksheetLayoutScales;
   /** Indicates whether a hairline-grid should be drawn when displaying the worksheet. */
   showGridLines?: boolean;
+  /**
+   * Frozen panes.
+   *
+   * Freezing divides a sheet into two or four regions, each called a pane. All but one of the panes
+   * is frozen (their rows and columns are locked in place), and the panes' rows and columns remain
+   * visible while scrolling. The final pane scrolls as usual.
+   */
+  panes?: WorksheetViewFrozenPanes;
 };
