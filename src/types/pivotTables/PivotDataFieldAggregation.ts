@@ -6,6 +6,10 @@
  * numeric values" (like the COUNT worksheet function). The `'countNums'` value here corresponds
  * to COUNT.
  *
+ * The population variants spell their trailing `p` in lowercase (`'stdDevp'`, `'varp'`), as
+ * ST_DataConsolidateFunction does. {@link PivotSubtotalFunction} spells the same two functions
+ * `'stdDevP'` and `'varP'`, after ST_ItemType.
+ *
  * @group PivotTables
  */
 export type PivotDataFieldAggregation =
@@ -17,6 +21,6 @@ export type PivotDataFieldAggregation =
   'product' |
   'countNums' |
   'stdDev' |
-  'stdDevP' |
+  'stdDevp' |
   'var' |
-  'varP';
+  'varp';
