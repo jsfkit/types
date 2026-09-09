@@ -6,9 +6,9 @@
  * numeric values" (like the COUNT worksheet function). The `'countNums'` value here corresponds
  * to COUNT.
  *
- * The population variants spell their trailing `p` in lowercase (`'stdDevp'`, `'varp'`), as
- * ST_DataConsolidateFunction does. {@link PivotSubtotalFunction} spells the same two functions
- * `'stdDevP'` and `'varP'`, after ST_ItemType.
+ * Unlike {@link PivotSubtotalFunction}, the population standard deviation and variance values
+ * here use a lowercase trailing `p`: `'stdDevp'` and `'varp'`, rather than
+ * `'stdDevP'` and `'varP'`.
  *
  * @group PivotTables
  */
