@@ -3,7 +3,7 @@ import type { DefinedName } from '../DefinedName.ts';
 import type { External } from '../External.ts';
 import type { NamedStyle } from '../styles/index.ts';
 import type { Style } from '../styles/index.ts';
-import type { Table } from '../tables/index.ts';
+import type { Table, TableStyleDefinition } from '../tables/index.ts';
 import type { Theme } from '../themes/index.ts';
 import type { PivotTable } from '../pivotTables/index.ts';
 import type { Worksheet } from '../worksheets/index.ts';
@@ -31,8 +31,32 @@ export type Workbook = {
   calculationProperties?: CalcProps;
   /** Styles for cells in the workbook. */
   styles?: Style[];
+  /**
+   * Differential styles: partial style overrides referenced by index from features that overlay
+   * formatting on top of a cell's own style rather than replacing it (pivot table formats, custom
+   * table styles, and future dynamic/conditional styles).
+   *
+   * This is the differential-overlay analog of {@link Workbook.styles}: where {@link Cell.s}
+   * indexes a complete cell style in `styles`, an overlay's `diffStyleId` indexes a partial
+   * override here. Only the properties present in an entry apply; everything else on the target
+   * cell is left as-is.
+   *
+   * Each entry reuses the {@link Style} type (already all-optional), but is interpreted
+   * differentially: an absent property means "leave unchanged", not "use the default".
+   *
+   * @see {@link PivotFormat.diffStyleId}
+   */
+  diffStyles?: Style[];
   /** Named cell style definitions (e.g. "Normal", "Heading 1"), keyed by style name. */
   namedStyles?: Record<string, NamedStyle>;
+  /**
+   * Workbook-defined (custom) table and pivot table style definitions, keyed by style name.
+   *
+   * Tables and pivot tables reference these definitions by name, through
+   * {@link TableStyle.name} and {@link PivotTableStyle.name}, the same way they reference
+   * the built-in style names.
+   */
+  tableStyles?: Record<string, TableStyleDefinition>;
   /** External cells referenced by the workbook. An external cell is a cell in another workbook. */
   externals?: External[];
   /**
