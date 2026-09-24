@@ -159,8 +159,58 @@ export type Style = {
   textRotation?: integer;
   /**
    * Formatting directions for rendering the cell's value to text.
+   *
+   * When this value is a string, it is as a standard Excel [number format pattern](https://support.microsoft.com/en-us/excel/review-guidelines-for-customizing-a-number-format).
+   *
+   * When the format is a number it is one of Excels built in 59 formats. These vary by the
+   * locale the workbook is currently running in so it is beyond this spec to list them all.
+   * The `en-US` table is as follows:
+   *
+   * | ID | Format
+   * |--- |---
+   * | 0 | `General`
+   * | 1 | `0`
+   * | 2 | `0.00`
+   * | 3 | `#,##0`
+   * | 4 | `#,##0.00`
+   * | 5 | `$#,##0_);($#,##0)`
+   * | 6 | `$#,##0_);[Red]($#,##0)`
+   * | 7 | `$#,##0.00_);($#,##0.00)`
+   * | 8 | `$#,##0.00_);[Red]($#,##0.00)`
+   * | 9 | `0%`
+   * | 10 | `0.00%`
+   * | 11 | `0.00E+00`
+   * | 12 | `# ?/?`
+   * | 13 | `# ??/??`
+   * | 14 | `m/d/yyyy`
+   * | 15 | `d-mmm-yy`
+   * | 16 | `d-mmm`
+   * | 17 | `mmm-yy`
+   * | 18 | `h:mm AM/PM`
+   * | 19 | `h:mm:ss AM/PM`
+   * | 20 | `h:mm`
+   * | 21 | `h:mm:ss`
+   * | 22 | `m/d/yyyy h:mm`
+   * | 23-26 | `General`
+   * | 27-31 | `m/d/yyyy`
+   * | 32-35 | `h:mm:ss`
+   * | 36 | `m/d/yyyy`
+   * | 37 | `#,##0_);(#,##0)`
+   * | 38 | `#,##0_);[Red](#,##0)`
+   * | 39 | `#,##0.00_);(#,##0.00)`
+   * | 40 | `#,##0.00_);[Red](#,##0.00)`
+   * | 41 | `_(* #,##0_);_(* (#,##0);_(* "-"_);_(@_)`
+   * | 42 | `_($* #,##0_);_($* (#,##0);_($* "-"_);_(@_)`
+   * | 43 | `_(* #,##0.00_);_(* (#,##0.00);_(* "-"??_);_(@_)`
+   * | 44 | `_($* #,##0.00_);_($* (#,##0.00);_($* "-"??_);_(@_)`
+   * | 45 | `mm:ss`
+   * | 46 | `[h]:mm:ss`
+   * | 47 | `mm:ss.0`
+   * | 48 | `##0.0E+0`
+   * | 49 | `@`
+   * | 50-58 | `m/d/yyyy`
    */
-  numberFormat?: string;
+  numberFormat?: string | integer;
   /**
    * Name of the named style this style inherits from (e.g. "Percent", "Heading 1").
    * Refers to a key in {@link Workbook.namedStyles}.
