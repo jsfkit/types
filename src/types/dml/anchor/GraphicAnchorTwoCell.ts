@@ -1,4 +1,5 @@
 import type { CellOffset } from '../CellOffset.ts';
+import type { EditAsMode } from './EditAsMode.ts';
 
 /**
  * Specifies a two-cell anchor placeholder for a group, a shape, or a drawing element.
@@ -14,4 +15,10 @@ export type GraphicAnchorTwoCell = {
 
   /** The bottom/right position of the graphic in cell coordinates. */
   to: CellOffset,
+
+  /**
+   * Controls how the anchor should be treated when editing happens.
+   * @see {@link EditAsMode}
+   */
+  editAs?: EditAsMode,
 };

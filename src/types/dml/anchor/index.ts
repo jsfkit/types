@@ -1,3 +1,4 @@
+export type * from './EditAsMode.ts';
 export type * from './GraphicAnchor.ts';
 export type * from './GraphicAnchorAbsolute.ts';
 export type * from './GraphicAnchorOneCell.ts';
