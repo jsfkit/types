@@ -126,6 +126,22 @@ export type Style = {
    */
   borderRightColor?: Color;
   /**
+   * Ascending diagonal border style.
+   */
+  borderDiagonalUpStyle?: BorderStyle;
+  /**
+   * Ascending diagonal border color.
+   */
+  borderDiagonalUpColor?: Color;
+  /**
+   * Descending diagonal border style.
+   */
+  borderDiagonalDownStyle?: BorderStyle;
+  /**
+   * Descending diagonal border color.
+   */
+  borderDiagonalDownColor?: Color;
+  /**
    * Horizontal alignment of the cells [text] content.
    *
    * @default "general"
@@ -157,6 +173,11 @@ export type Style = {
    * @defaultValue 0
    */
   textRotation?: integer;
+  /**
+   * Text indent level. A value of 1 represents 3 spaces of indentation.
+   * @defaultValue 0
+   */
+  textIndent?: integer;
   /**
    * Formatting directions for rendering the cell's value to text.
    *
@@ -224,4 +245,9 @@ export type Style = {
    * Should be set only on cell styles used in a pivot table's layout.
    */
   pivotButton?: boolean;
+  /**
+   * When true, a boolean value in a cell should be rendered as a checkbox instead of the normal
+   * `TRUE` or `FALSE` text.
+   */
+  checkbox?: boolean;
 };
