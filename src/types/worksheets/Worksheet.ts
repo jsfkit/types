@@ -2,6 +2,7 @@ import type { Cell } from '../Cell.ts';
 import type { CellId } from '../CellId.ts';
 import type { GridSize } from '../GridSize.ts';
 import type { Note } from '../Note.ts';
+import type { Color } from '../colors/Color.ts';
 import type { ThreadedComment } from '../comments/index.ts';
 import type { Drawing } from '../dml/Drawing.ts';
 import type { PageMargins } from './PageMargins.ts';
@@ -49,4 +50,13 @@ export type Worksheet = {
    * @default { left: 0.7, right: 0.7, top: 0.75, bottom: 0.75, header: 0.3, footer: 0.3 }
    */
   pageMargins?: PageMargins;
+  /**
+   * Highlight color for a UI navigation tab for this workbsheet.
+   */
+  tabColor?: Color;
+  /**
+   * Reference to the media/image resource to use as a background when displaying the sheet.
+   * @see {@link Workbook.assets}.
+   */
+  background?: string;
 };
