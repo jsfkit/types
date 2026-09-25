@@ -27,4 +27,9 @@ export type TableColumn = {
    * When true, the calculated column formula is an array formula.
    */
   formulaIsArray?: boolean;
+  /**
+   * filter button
+   * @default true
+   */
+  filterButton?: boolean;
 };
