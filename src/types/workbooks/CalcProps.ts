@@ -22,6 +22,14 @@ export type CalcProps = {
    */
   iterateDelta?: number;
   /**
+   * Should calculation use full precision or the precision as displayed.
+   *
+   * When this is set to `display`, the calculation results are effectively rounded to the same
+   * number of decimals that a target cell's number format allows.
+   * @default 'full'
+   */
+  precision?: 'full' | 'display';
+  /**
    * Which of the two date systems the workbook uses. 1900 is the default.
    *
    * @see {@link https://support.microsoft.com/office/e7fe7167-48a9-4b96-bb53-5612a800b487 | Date systems in Excel}
