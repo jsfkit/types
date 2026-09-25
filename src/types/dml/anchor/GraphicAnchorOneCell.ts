@@ -1,5 +1,6 @@
 import type { CellOffset } from '../CellOffset.ts';
 import type { Extent } from '../Extent.ts';
+import type { EditAsMode } from './EditAsMode.ts';
 
 /**
  * Specifies a one cell anchor placeholder for a group, a shape, or a drawing element.
@@ -15,4 +16,10 @@ export type GraphicAnchorOneCell = {
 
   /** The size of the graphic in EMUs. */
   ext: Extent,
+
+  /**
+   * Controls how the anchor should be treated when editing happens.
+   * @see {@link EditAsMode}
+   */
+  editAs?: EditAsMode,
 };

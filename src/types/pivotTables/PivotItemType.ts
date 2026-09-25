@@ -1,4 +1,4 @@
-import type { PivotSubtotalFunction } from './PivotSubtotalFunction.ts';
+import type { PivotDataFunction } from './PivotDataFunction.ts';
 
 /**
  * The type of a pivot field item, indicating its role in the pivot table layout.
@@ -11,4 +11,4 @@ import type { PivotSubtotalFunction } from './PivotSubtotalFunction.ts';
  *
  * @group PivotTables
  */
-export type PivotItemType = PivotSubtotalFunction | 'data' | 'default' | 'grand' | 'blank';
+export type PivotItemType = PivotDataFunction | 'data' | 'default' | 'grand' | 'blank';
