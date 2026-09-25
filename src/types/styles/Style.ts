@@ -162,7 +162,7 @@ export type Style = {
    *
    * When this value is a string, it is as a standard Excel [number format pattern](https://support.microsoft.com/en-us/excel/review-guidelines-for-customizing-a-number-format).
    *
-   * When the format is a number it is one of Excels built in 59 formats. These vary by the
+   * When the format is a number it is one of Excel's 59 built-in formats. These vary by the
    * locale the workbook is currently running in so it is beyond this spec to list them all.
    * The `en-US` table is as follows:
    *
