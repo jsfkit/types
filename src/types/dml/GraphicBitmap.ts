@@ -18,7 +18,7 @@ export type GraphicBitmap = {
 
   /**
    * Reference to the media/image resource to use.
-   * @see {@link Workbook.images}.
+   * @see {@link Workbook.assets}.
    */
   mediaId: string,
 

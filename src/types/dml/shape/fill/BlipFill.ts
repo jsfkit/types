@@ -17,7 +17,7 @@ export type BlipFill = {
 
   /**
    * Reference to the media/image resource to use for this fill.
-   * @see {@link Workbook.images}.
+   * @see {@link Workbook.assets}.
    */
   mediaId: string,
 
