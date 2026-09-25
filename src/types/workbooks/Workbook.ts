@@ -10,6 +10,7 @@ import type { Worksheet } from '../worksheets/index.ts';
 import type { CalcProps } from './CalcProps.ts';
 import type { WorkbookView } from './WorkbookView.ts';
 import type { WorkbookMeta } from './WorkbookMeta.ts';
+import type { Asset } from './Asset.ts';
 
 /**
  * A workbook is a collection of worksheets, styles, defined names, and other metadata. It's what's
@@ -52,29 +53,10 @@ export type Workbook = {
    */
   people?: Person[];
   /**
-   * A simple dictionary of binary images used by this workbook.
-   *
-   * The keys should be the file paths of the images used to refer to them, commonly these will be
-   * the `mediaId` properties on drawing objects. The values should be data URI encoded binaries.
-   *
-   * The following is a table of formats you may be expected to encounter:
-   *
-   *  | Extension               | MIME type              | Common name
-   *  |-------------------------|------------------------|-------------
-   *  | `.png`                  | `image/png`            | Portable Network Graphics
-   *  | `.jpg`, `.jpeg`         | `image/jpeg`           | JPEG
-   *  | `.gif`                  | `image/gif`            | Graphics Interchange Format
-   *  | `.emf`                  | `image/emf`            | Enhanced Metafile
-   *  | `.wmf`                  | `image/wmf`            | Windows Metafile
-   *  | `.wdp`, `.jxr`, `.hdp`  | `image/vnd.ms-photo`   | Windows Media Photo / JPEG XR
-   *  | `.bmp`                  | `image/bmp`            | Bitmap
-   *  | `.tif`, `.tiff`         | `image/tiff`           | Tagged Image File Format
-   *  | `.svg`                  | `image/svg+xml`        | Scalable Vector Graphics
-   *
-   * @see {@link https://en.wikipedia.org/wiki/Data_URI_scheme}
-   * @see {@link https://www.rfc-editor.org/rfc/rfc2397}
+   * A list of assets attached to this workbook. Typically these will be images, or VBA projects.
+   * By may also be XML parts of the original workbook needed to be preserved.
    */
-  images?: Record<string, string>;
+  assets?: Asset[];
   /**
    * The workbook theme. Specifies the colour scheme and fonts referenced throughout the workbook in
    * order to create a consistent visual presentation.
