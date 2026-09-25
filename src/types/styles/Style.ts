@@ -212,6 +212,16 @@ export type Style = {
    */
   numberFormat?: string | integer;
   /**
+   * Indicates that the cell should be treated as unaffected when running in protected mode.
+   * @defaultValue false
+   */
+  open?: boolean;
+  /**
+   * Indicates that a formula should not be shown when rendering a cell in protected mode.
+   * @defaultValue false
+   */
+  hidden?: boolean;
+  /**
    * Name of the named style this style inherits from (e.g. "Percent", "Heading 1").
    * Refers to a key in {@link Workbook.namedStyles}.
    * When absent, the style inherits from the default style (typically "Normal").
