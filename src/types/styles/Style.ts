@@ -164,7 +164,7 @@ export type Style = {
    *
    * When the format is a number it is one of Excel's 59 built-in formats. These vary by the
    * locale the workbook is currently running in so it is beyond this spec to list them all.
-   * The `en-US` table is as follows:
+   * As an example, the `en-US` table is as follows:
    *
    * | ID | Format
    * |--- |---
