@@ -32,3 +32,7 @@ Key drawing types:
 
 - [`Graphic`](https://jsfkit.github.io/types/Graphic/)
 - [`Shape`](https://jsfkit.github.io/types/Shape/)
+
+---
+
+Development of @jsfkit/types is sponsored by [GRID](https://grid.is/), the spreadsheet engine for AI agents.
