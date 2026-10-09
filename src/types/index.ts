@@ -13,6 +13,7 @@ export type * from './GridSize.ts';
 export type * from './integer.ts';
 export type * from './Note.ts';
 export type * from './PixelValue.ts';
+export type * from './charts/index.ts';
 export type * from './colors/index.ts';
 export type * from './comments/index.ts';
 export type * from './dml/index.ts';

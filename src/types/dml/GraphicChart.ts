@@ -15,8 +15,9 @@ export type GraphicChart = {
   /** Display name of the chart. */
   name: string,
 
-  // XXX: Not a part of the spec yet but should point to a collection of charts (like bitmaps).
-  /** ID */
+  /**
+   * The key of the chart in {@link Workbook.charts}.
+   */
   chartId: string,
 
   // XXX: Will be added in a future update.
