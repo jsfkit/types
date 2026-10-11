@@ -2,6 +2,7 @@ import type { CellId } from '../CellId.ts';
 import type { CellRange } from '../CellRange.ts';
 import type { integer } from '../integer.ts';
 import type { WorksheetLayoutScales } from './WorksheetLayoutScales.ts';
+import type { WorksheetViewFrozenPanes } from './WorksheetViewFrozenPanes.ts';
 
 /**
  * A worksheet view.
@@ -34,6 +35,22 @@ export type WorksheetView = {
   /** Ranges of cells that are selected by default when the sheet is visible. */
   activeRanges?: CellRange[];
   /**
+   * Identifies which range within {@link WorksheetView.activeRanges} holds the cursor. Zero-based
+   * index.
+   *
+   * Required when `activeRange` is not a single contiguous range. If this value is out of range,
+   * use {@link WorksheetView.activeCell}.
+   *
+   * An active range index is required for cursor movement. Spreadsheet software generally allows a
+   * user to press Tab to cycle though selected cells, cycling through cells in the currently
+   * selected range before moving on to the next range selection. If cell ranges overlap (e.g. A1:E5
+   * and D4:G8), it would be ambiguous which range is active when cell D4 is the selected cell. This
+   * property removes that ambiguity.
+   *
+   * @defaultValue 0
+   */
+  activeRangeIndex?: integer;
+  /**
    * The layout used to display the worksheet.
    *
    * @defaultValue "normal"
@@ -46,4 +63,12 @@ export type WorksheetView = {
   layoutScales?: WorksheetLayoutScales;
   /** Indicates whether a hairline-grid should be drawn when displaying the worksheet. */
   showGridLines?: boolean;
+  /**
+   * Frozen panes.
+   *
+   * Freezing divides a sheet into two or four regions, each called a pane. All but one of the panes
+   * is frozen (their rows and columns are locked in place), and the panes' rows and columns remain
+   * visible while scrolling. The final pane scrolls as usual.
+   */
+  panes?: WorksheetViewFrozenPanes;
 };
