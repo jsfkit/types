@@ -28,7 +28,9 @@ export type ChartTrendline = {
    */
   period?: integer;
 
-  /** Name shown in the legend. When absent, the name is generated. */
+  /**
+   * Name shown in the legend. When absent, the name is generated.
+   */
   name?: string;
 
   /**
@@ -45,21 +47,33 @@ export type ChartTrendline = {
    */
   backward?: number;
 
-  /** Fixed value where the trendline crosses the value axis. When absent, it's fitted. */
+  /**
+   * Fixed value where the trendline crosses the value axis. When absent, it's fitted.
+   */
   intercept?: number;
 
-  /** @default false */
+  /**
+   * @default false
+   */
   displayRSquared?: boolean;
 
-  /** @default false */
+  /**
+   * @default false
+   */
   displayEquation?: boolean;
 
-  /** Style, position, and text of the R² and equation label. */
+  /**
+   * Style, position, and text of the R² and equation label.
+   */
   label?: Pick<ChartDataLabels, 'numberFormat' | 'shape' | 'textStyle'> & {
-    /** Custom label text. Replaces the generated R² and equation text. */
+    /**
+     * Custom label text. Replaces the generated R² and equation text.
+     */
     text?: ChartText;
 
-    /** Manual position of the label. When absent, the position is automatic. */
+    /**
+     * Manual position of the label. When absent, the position is automatic.
+     */
     layout?: ChartManualLayout;
   };
 

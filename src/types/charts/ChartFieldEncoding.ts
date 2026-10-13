@@ -4,7 +4,9 @@
  * @group Charts
  */
 export type ChartFieldEncoding = {
-  /** The field to encode. For multi-level categories, this is the innermost level. */
+  /**
+   * The field to encode. For multi-level categories, this is the innermost level.
+   */
   field: string;
 
   /**
@@ -13,6 +15,8 @@ export type ChartFieldEncoding = {
    */
   levels?: string[];
 
-  /** ID of a scale. Optional for channels without a scale, such as `text`. */
+  /**
+   * ID of a scale. Optional for channels without a scale, such as `text`.
+   */
   scale?: string;
 };

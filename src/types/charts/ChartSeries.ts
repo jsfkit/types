@@ -27,15 +27,16 @@ export type ChartSeries = {
    */
   name?: ChartText;
 
+  // This is OOXML `c:idx`.
   /**
-   * Index that picks the series' automatic color from the theme accents. This is OOXML `c:idx`,
-   * and it can differ from `order`. When absent, it's the series' position in the chart's series
-   * order, counting from 0.
+   * Index that picks the series' automatic color from the theme accents. It can differ from
+   * `order`. When absent, it's the series' position in the chart's series order, counting from 0.
    */
   colorIndex?: integer;
 
+  // This is OOXML `c:order`.
   /**
-   * The series' position in the chart's series order. This is OOXML `c:order`.
+   * The series' position in the chart's series order.
    *
    * The order is chart-wide: in a chart with several plots, a series in one plot can come between
    * two series in another. It decides where the series sits within its plot (for example, its
@@ -65,14 +66,14 @@ export type ChartSeries = {
    */
   key?: ChartValue;
 
+  // An exporter writes one OOXML series per `ChartSeries`, taking each range from here, or from the
+  // dataset's binding when the series doesn't override it.
   /**
    * Where this series' values come from, keyed by dataset field. These bindings define the
    * series' data, and override the dataset's binding for the same field.
    *
    * Each series usually has its own value range here, for example
-   * `{ value: { formula: 'Sheet1!$B$2:$B$3', role: 'value' } }`. An exporter writes one OOXML
-   * series per `ChartSeries`, taking each range from here, or from the dataset's binding when the
-   * series doesn't override it.
+   * `{ value: { formula: 'Sheet1!$B$2:$B$3', role: 'value' } }`.
    */
   bindings?: Record<string, ChartFieldBinding>;
 
@@ -98,14 +99,16 @@ export type ChartSeries = {
    */
   labels?: ChartDataLabels;
 
-  /** Overrides for individual data points. Each sets only what it changes for its point. */
+  /**
+   * Overrides for individual data points. Each sets only what it changes for its point.
+   */
   points?: ChartDataPoint[];
 
+  // This is OOXML `c15:categoryFilterExceptions`.
   /**
    * Overrides for points in categories that are filtered out with Excel's chart filter, so they
    * come back when the filter is removed. These points have no index, because they aren't in
-   * the series' records, so each is keyed by the cell reference of its category. This is OOXML
-   * `c15:categoryFilterExceptions`.
+   * the series' records, so each is keyed by the cell reference of its category.
    */
   filteredPoints?: ChartFilteredPoint[];
 
@@ -142,23 +145,25 @@ export type ChartSeries = {
    */
   barShape?: ChartBarShape;
 
+  // This is OOXML `c:bubble3D`.
   /**
-   * Whether bubbles in this series are shaded to look like spheres (OOXML `c:bubble3D`).
+   * Whether bubbles in this series are shaded to look like spheres.
    *
    * @default false
    */
   shaded?: boolean;
 
-  /** How a picture fill is applied to the bars or areas of this series. */
+  /**
+   * How a picture fill is applied to the bars or areas of this series.
+   */
   pictureOptions?: ChartPictureOptions;
 
+  // In OOXML, a legacy chart stores hidden series in `c15:filtered…Series` extensions on the chart
+  // element (for example `c15:filteredBarSeries`), and ChartEx uses `hidden="1"`.
   /**
    * Whether the series is filtered out with Excel's chart filter. A hidden series stays in the
    * chart with its data, formatting, and order, but it isn't drawn, isn't in the legend, and
    * doesn't count toward the automatic title. It comes back when the filter is removed.
-   *
-   * In OOXML, a legacy chart stores hidden series in `c15:filtered…Series` extensions on the chart
-   * element (for example `c15:filteredBarSeries`), and ChartEx uses `hidden="1"`.
    *
    * @default false
    */

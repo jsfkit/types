@@ -1,6 +1,7 @@
+// `percentage` is ChartEx only.
 /**
- * A built-in unit for scaling tick labels. `percentage` is ChartEx only: it shows values as
- * percentages, as on a Pareto chart's cumulative axis.
+ * A built-in unit for scaling tick labels. `percentage` shows values as percentages, as on a
+ * Pareto chart's cumulative axis.
  *
  * @group Charts
  */

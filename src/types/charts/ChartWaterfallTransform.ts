@@ -22,7 +22,9 @@ export type ChartWaterfallTransform = ChartTransformBase & {
    */
   subtotals?: integer[];
 
-  /** Names of the generated fields. */
+  /**
+   * Names of the generated fields.
+   */
   as: {
     start: string;
     end: string;

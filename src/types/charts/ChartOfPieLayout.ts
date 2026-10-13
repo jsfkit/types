@@ -29,7 +29,9 @@ export type ChartOfPieLayout = {
    */
   splitValue?: number;
 
-  /** For the `custom` split type, zero-based indexes of the points in the secondary plot. */
+  /**
+   * For the `custom` split type, zero-based indexes of the points in the secondary plot.
+   */
   customPoints?: integer[];
 
   /**

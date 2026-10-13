@@ -15,12 +15,20 @@ export type ChartBoxplotLayout = {
    */
   gapWidth?: integer;
 
-  /** @default true */
+  /**
+   * @default true
+   */
   showMeanMarkers?: boolean;
-  /** @default false */
+  /**
+   * @default false
+   */
   showMeanLine?: boolean;
-  /** @default false */
+  /**
+   * @default false
+   */
   showInnerPoints?: boolean;
-  /** @default true */
+  /**
+   * @default true
+   */
   showOutliers?: boolean;
 };

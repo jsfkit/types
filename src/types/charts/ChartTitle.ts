@@ -32,6 +32,8 @@ export type ChartTitle = ChartText & {
    */
   textStyle?: ChartTextStyle;
 
-  /** Manual position of the title. When absent, the position is automatic. */
+  /**
+   * Manual position of the title. When absent, the position is automatic.
+   */
   layout?: ChartManualLayout;
 };

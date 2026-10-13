@@ -10,16 +10,17 @@ import type { ChartTitle } from './ChartTitle.ts';
  * @group Charts
  */
 export type ChartMainTitle = ChartTitle & {
+  // Legacy charts always put the title at the top, and ChartEx charts can use any side (`pos`).
   /**
-   * Which side of the chart the title is on. Legacy charts always put it at the top, and ChartEx
-   * charts can use any side (`pos`).
+   * Which side of the chart the title is on.
    *
    * @default "top"
    */
   position?: 'top' | 'bottom' | 'left' | 'right';
 
+  // This is ChartEx `align`.
   /**
-   * Where the title sits along its side (ChartEx `align`).
+   * Where the title sits along its side.
    *
    * @default "center"
    */

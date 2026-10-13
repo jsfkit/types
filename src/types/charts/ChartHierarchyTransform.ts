@@ -8,7 +8,9 @@ import type { ChartTransformBase } from './ChartTransformBase.ts';
 export type ChartHierarchyTransform = ChartTransformBase & {
   type: 'hierarchy';
 
-  /** Category fields from the outermost level to the innermost level. */
+  /**
+   * Category fields from the outermost level to the innermost level.
+   */
   levels: string[];
 
   valueField: string;

@@ -9,6 +9,8 @@ import type { ChartScaleBase } from './ChartScaleBase.ts';
 export type ChartOrdinalScale = ChartScaleBase & {
   type: 'ordinal';
 
-  /** Explicit output colors. When absent, colors come from the theme accents. */
+  /**
+   * Explicit output colors. When absent, colors come from the theme accents.
+   */
   range?: Color[];
 };

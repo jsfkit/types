@@ -15,9 +15,13 @@ export type ChartDataLabel = ChartDataLabels & {
    */
   hidden?: boolean;
 
-  /** Custom label text. Replaces the generated text. */
+  /**
+   * Custom label text. Replaces the generated text.
+   */
   text?: ChartText;
 
-  /** Manual position of the label. When absent, the position is automatic. */
+  /**
+   * Manual position of the label. When absent, the position is automatic.
+   */
   layout?: ChartManualLayout;
 };

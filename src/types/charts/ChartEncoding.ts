@@ -54,10 +54,14 @@ export type ChartEncoding = {
    */
   color?: ChartFieldEncoding;
 
-  /** Bubble size. */
+  /**
+   * Bubble size.
+   */
   size?: ChartFieldEncoding;
 
-  /** Slice size in pie and doughnut charts. The slices are named by `x`. */
+  /**
+   * Slice size in pie and doughnut charts. The slices are named by `x`.
+   */
   angle?: ChartFieldEncoding;
   radius?: ChartFieldEncoding;
 

@@ -1,8 +1,9 @@
 import type { ChartColorMapName } from './ChartColorMapName.ts';
 import type { ChartThemeColorSlot } from './ChartThemeColorSlot.ts';
 
+// This is OOXML `c:clrMapOvr`.
 /**
- * Maps every theme color name to a theme color slot. This is OOXML `c:clrMapOvr`.
+ * Maps every theme color name to a theme color slot.
  *
  * To resolve a theme color in a chart:
  *

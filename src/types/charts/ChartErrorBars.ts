@@ -31,17 +31,24 @@ export type ChartErrorBars = {
    */
   valueType: 'fixed' | 'percentage' | 'standardDeviation' | 'standardError' | 'custom';
 
-  /** The amount for `fixed`, `percentage`, and `standardDeviation`. Not used by the other types. */
+  /**
+   * The amount for `fixed`, `percentage`, and `standardDeviation`. Not used by the other types.
+   */
   value?: number;
 
-  /** Dataset field holding the plus amounts, when `valueType` is `custom`. */
+  /**
+   * Dataset field holding the plus amounts, when `valueType` is `custom`.
+   */
   plusField?: string;
 
-  /** Dataset field holding the minus amounts, when `valueType` is `custom`. */
+  /**
+   * Dataset field holding the minus amounts, when `valueType` is `custom`.
+   */
   minusField?: string;
 
+  // This is the inverse of OOXML `c:noEndCap`.
   /**
-   * Whether the error bars have end caps. This is the inverse of OOXML `c:noEndCap`.
+   * Whether the error bars have end caps.
    *
    * @default true
    */

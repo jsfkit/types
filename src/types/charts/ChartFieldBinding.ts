@@ -16,17 +16,22 @@ import type { ChartValue } from './ChartValue.ts';
  * @group Charts
  */
 export type ChartFieldBinding = {
-  /** A reference to the source cells, for example `Sheet1!$B$2:$B$10`. */
+  /**
+   * A reference to the source cells, for example `Sheet1!$B$2:$B$10`.
+   */
   formula?: string;
 
+  // Literal data is OOXML `c:numLit` or `c:strLit`.
   /**
    * The field's values, by point index. With a `formula`, they're only a cache of its result,
    * which can be missing or out of date, and a writer may leave them out. Without a `formula`,
-   * they're literal data (OOXML `c:numLit` or `c:strLit`).
+   * they're literal data.
    */
   values?: ChartValue[];
 
-  /** The field's role in the source chart. When absent, the field has no particular role. */
+  /**
+   * The field's role in the source chart. When absent, the field has no particular role.
+   */
   role?: ChartFieldRole;
 
   /**
@@ -39,20 +44,21 @@ export type ChartFieldBinding = {
    */
   level?: integer;
 
+  // This is ChartEx `cx:f` `dir`. Legacy charts don't record it, so an importer infers it from the
+  // range's shape.
   /**
    * How the values run through the range: down columns, or across rows. For a multi-level
-   * category range, this also decides whether each level is a column or a row. This is ChartEx
-   * `cx:f` `dir`. Legacy charts don't record it, so an importer infers it from the range's shape.
+   * category range, this also decides whether each level is a column or a row.
    *
    * @default "column"
    */
   direction?: 'column' | 'row';
 
+  // This is OOXML `c15:fullRef`.
   /**
    * The whole source range, when categories are filtered out with Excel's chart filter. `formula`
    * then refers to the visible cells only, which can be a list of ranges, so evaluating it gives
-   * only the visible points. This is OOXML `c15:fullRef`. When absent, no categories are filtered
-   * out.
+   * only the visible points. When absent, no categories are filtered out.
    */
   fullFormula?: string;
 

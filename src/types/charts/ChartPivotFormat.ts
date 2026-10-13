@@ -27,26 +27,28 @@ export type ChartPivotFormat = {
    */
   series?: boolean;
 
+  // This is OOXML `c:pivotFmt/c:spPr`.
   /**
    * Fill and outline for the series or points that the area selects. It applies as the series'
-   * `shape` or as each point's `shape` would. This is OOXML `c:pivotFmt/c:spPr`.
+   * `shape` or as each point's `shape` would.
    */
   shape?: Shape;
 
+  // This is OOXML `c:pivotFmt/c:marker`.
   /**
-   * Marker for the series or points that the area selects. This is OOXML `c:pivotFmt/c:marker`.
+   * Marker for the series or points that the area selects.
    */
   marker?: ChartMarker;
 
+  // This is OOXML `c:pivotFmt/c:dLbl`.
   /**
-   * Data label for the series or points that the area selects. This is OOXML
-   * `c:pivotFmt/c:dLbl`.
+   * Data label for the series or points that the area selects.
    */
   label?: ChartDataLabel;
 
+  // This is OOXML `c:pivotFmt/c:txPr`.
   /**
-   * Text style for the series or points that the area selects. This is OOXML
-   * `c:pivotFmt/c:txPr`.
+   * Text style for the series or points that the area selects.
    */
   textStyle?: ChartTextStyle;
 };

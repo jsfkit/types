@@ -22,7 +22,9 @@ export type ChartBoxplotTransform = ChartTransformBase & {
    */
   quartileMethod?: 'inclusive' | 'exclusive';
 
-  /** Names of the generated fields. A name that's absent is the same as its key, such as `q1`. */
+  /**
+   * Names of the generated fields. A name that's absent is the same as its key, such as `q1`.
+   */
   as?: {
     min?: string;
     q1?: string;

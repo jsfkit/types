@@ -12,7 +12,9 @@ export type ChartPlotArea = {
    */
   shape?: Shape;
 
-  /** Manual position and size of the plot area. When absent, they're automatic. */
+  /**
+   * Manual position and size of the plot area. When absent, they're automatic.
+   */
   layout?: ChartManualLayout;
 
   /**

@@ -10,10 +10,14 @@ import type { ChartTextStyle } from './ChartTextStyle.ts';
  * @group Charts
  */
 export type ChartDataLabels = {
-  /** What each label shows. An empty list hides the labels. */
+  /**
+   * What each label shows. An empty list hides the labels.
+   */
   show?: ChartDataLabelContent[];
 
-  /** Where labels sit relative to their points. When absent, the chart type's default applies. */
+  /**
+   * Where labels sit relative to their points. When absent, the chart type's default applies.
+   */
   position?: ChartDataLabelPosition;
 
   /**

@@ -17,7 +17,9 @@ export type ChartPlot = {
 
   mark: ChartMark;
 
-  /** ID of the input dataset or transform. */
+  /**
+   * ID of the input dataset or transform.
+   */
   data: string;
 
   /**
@@ -25,9 +27,10 @@ export type ChartPlot = {
    */
   coordinates?: 'cartesian' | 'polar';
 
+  // In OOXML, each chart type on each axis group is its own chart element.
   /**
-   * Whether the plot uses the chart's primary or secondary axes. In OOXML, each chart type on each
-   * axis group is its own chart element, so a bar plot on each axis is two plots.
+   * Whether the plot uses the chart's primary or secondary axes. A plot uses one axis group, so
+   * bars on both groups are two plots.
    *
    * The plot's scales and axes are still named through `encoding`. This says which group they
    * belong to, which the legend order and export depend on.

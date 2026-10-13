@@ -40,18 +40,22 @@ export type ChartDataPoint = {
    */
   invertIfNegative?: boolean;
 
-  /** Overrides {@link ChartSeries.shaded} for this bubble. */
+  /**
+   * Overrides {@link ChartSeries.shaded} for this bubble.
+   */
   shaded?: boolean;
 
-  /** Overrides {@link ChartSeries.pictureOptions} for this point. */
+  /**
+   * Overrides {@link ChartSeries.pictureOptions} for this point.
+   */
   pictureOptions?: ChartPictureOptions;
 
+  // OOXML stores these as `formatCode` on individual `c:pt` elements in a series' cache.
   /**
    * Excel number format codes for this point's values, keyed by dataset field, where they differ
    * from the field binding's `numberFormat`. This happens when the source cells have different
-   * formats. OOXML stores these as `formatCode` on individual `c:pt` elements in a series' cache,
-   * so like other cached data they're optional, and a renderer that evaluates the binding takes
-   * the formats from the cells.
+   * formats. Like other cached data they're optional, and a renderer that evaluates the binding
+   * takes the formats from the cells.
    *
    * Example: `{ value: '0.0%' }`.
    */

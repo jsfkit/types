@@ -8,16 +8,24 @@ import type { ChartScaleBase } from './ChartScaleBase.ts';
 export type ChartContinuousScale = ChartScaleBase & {
   type: 'linear' | 'log';
 
-  /** Fixed minimum. When absent, the minimum is automatic. */
+  /**
+   * Fixed minimum. When absent, the minimum is automatic.
+   */
   min?: number;
 
-  /** Fixed maximum. When absent, the maximum is automatic. */
+  /**
+   * Fixed maximum. When absent, the maximum is automatic.
+   */
   max?: number;
 
-  /** Interval between major ticks and gridlines. When absent, the interval is automatic. */
+  /**
+   * Interval between major ticks and gridlines. When absent, the interval is automatic.
+   */
   majorUnit?: number;
 
-  /** Interval between minor ticks and gridlines. When absent, the interval is automatic. */
+  /**
+   * Interval between minor ticks and gridlines. When absent, the interval is automatic.
+   */
   minorUnit?: number;
 
   /**

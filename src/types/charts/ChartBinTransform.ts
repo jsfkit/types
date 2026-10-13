@@ -24,12 +24,16 @@ export type ChartBinTransform = ChartTransformBase & {
    */
   resolvedBoundaries?: number[];
 
-  /** Names of the generated fields. */
+  /**
+   * Names of the generated fields.
+   */
   as: {
     start: string;
     end: string;
     count: string;
-    /** Cumulative percentage, used for the Pareto line. */
+    /**
+     * Cumulative percentage, used for the Pareto line.
+     */
     cumulative?: string;
   };
 };

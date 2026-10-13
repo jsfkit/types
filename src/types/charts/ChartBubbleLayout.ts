@@ -29,9 +29,9 @@ export type ChartBubbleLayout = {
    */
   showNegative?: boolean;
 
+  // This is OOXML `c:bubble3D`.
   /**
-   * Whether bubbles are shaded to look like spheres (OOXML `c:bubble3D`). A series or point can
-   * override this.
+   * Whether bubbles are shaded to look like spheres. A series or point can override this.
    *
    * @default false
    */

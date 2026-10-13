@@ -7,7 +7,9 @@ import type { ChartNumericBinning } from './ChartNumericBinning.ts';
  * @group Charts
  */
 export type ChartBinning = ChartNumericBinning & {
-  /** Excel's automatic binning. */
+  /**
+   * Excel's automatic binning.
+   */
   type: 'auto';
 } | ChartNumericBinning & {
   type: 'width';
@@ -16,8 +18,12 @@ export type ChartBinning = ChartNumericBinning & {
   type: 'count';
   count: integer;
 } | {
-  /** Each distinct category is its own bin. */
+  /**
+   * Each distinct category is its own bin.
+   */
   type: 'category';
-  /** The field holding each record's category. */
+  /**
+   * The field holding each record's category.
+   */
   categoryField: string;
 };

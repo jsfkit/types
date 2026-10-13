@@ -14,27 +14,43 @@ import type { ChartLayoutMode } from './ChartLayoutMode.ts';
  * @group Charts
  */
 export type ChartManualLayout = {
-  /** Horizontal position. See `xMode`. */
+  /**
+   * Horizontal position. See `xMode`.
+   */
   x?: number;
 
-  /** Vertical position. See `yMode`. */
+  /**
+   * Vertical position. See `yMode`.
+   */
   y?: number;
 
-  /** Width, or right edge. See `wMode`. */
+  /**
+   * Width, or right edge. See `wMode`.
+   */
   w?: number;
 
-  /** Height, or bottom edge. See `hMode`. */
+  /**
+   * Height, or bottom edge. See `hMode`.
+   */
   h?: number;
 
-  /** @default "factor" */
+  /**
+   * @default "factor"
+   */
   xMode?: ChartLayoutMode;
 
-  /** @default "factor" */
+  /**
+   * @default "factor"
+   */
   yMode?: ChartLayoutMode;
 
-  /** @default "factor" */
+  /**
+   * @default "factor"
+   */
   wMode?: ChartLayoutMode;
 
-  /** @default "factor" */
+  /**
+   * @default "factor"
+   */
   hMode?: ChartLayoutMode;
 };

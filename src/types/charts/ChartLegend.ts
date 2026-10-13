@@ -22,25 +22,27 @@ export type ChartLegend = {
    */
   scale?: string;
 
+  // In OOXML, a legend with a manual layout and no `c:legendPos` isn't docked.
   /**
    * Whether the legend is docked to a side of the chart, taking space from the plot area. A legend
    * that isn't docked floats over the chart, placed entirely by its `layout`, and `position`
-   * doesn't apply. In OOXML, a legend with a manual layout and no `c:legendPos` isn't docked.
+   * doesn't apply.
    *
    * @default true
    */
   docked?: boolean;
 
+  // `topRight` is OOXML `c:legendPos val="tr"`, which only legacy charts have.
   /**
-   * Which side of the chart the legend is on. `topRight` is the top-right corner, which only
-   * legacy charts have (`c:legendPos val="tr"`).
+   * Which side of the chart the legend is on. `topRight` is the top-right corner.
    *
    * @default "right"
    */
   position?: 'left' | 'right' | 'top' | 'bottom' | 'topRight';
 
+  // This is ChartEx `align`.
   /**
-   * Where the legend sits along its side (ChartEx `align`). Doesn't apply to `topRight`.
+   * Where the legend sits along its side. Doesn't apply to `topRight`.
    *
    * @default "center"
    */
@@ -53,13 +55,12 @@ export type ChartLegend = {
    */
   overlay?: boolean;
 
+  // Only legacy charts other than surface charts can hide entries. Excel doesn't let you delete
+  // entries from a ChartEx chart's legend, and doesn't save a deleted surface band entry.
   /**
    * Legend entries that have been deleted, each identified by what it shows rather than by its
    * position, so the entries stay right whatever order the legend lists them in. When absent, no
    * entries are hidden.
-   *
-   * Only legacy charts other than surface charts can hide entries. Excel doesn't let you delete
-   * entries from a ChartEx chart's legend, and doesn't save a deleted surface band entry.
    */
   hiddenEntries?: ChartLegendEntryRef[];
 
@@ -74,6 +75,8 @@ export type ChartLegend = {
    */
   textStyle?: ChartTextStyle;
 
-  /** Manual position and size of the legend. When absent, they're automatic. */
+  /**
+   * Manual position and size of the legend. When absent, they're automatic.
+   */
   layout?: ChartManualLayout;
 };

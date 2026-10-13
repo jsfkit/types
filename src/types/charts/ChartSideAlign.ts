@@ -1,3 +1,4 @@
+// This is ChartEx `align` (`min`, `ctr`, `max`).
 /**
  * Where a chart title or legend sits along its side of the chart.
  *
@@ -6,8 +7,6 @@
  * | `start`  | Left                      | Top
  * | `center` | Center                    | Center
  * | `end`    | Right                     | Bottom
- *
- * This is ChartEx `align` (`min`, `ctr`, `max`).
  *
  * @group Charts
  */

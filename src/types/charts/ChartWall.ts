@@ -20,6 +20,8 @@ export type ChartWall = {
    */
   shape?: Shape;
 
-  /** How a picture fill is applied to the wall. */
+  /**
+   * How a picture fill is applied to the wall.
+   */
   pictureOptions?: ChartPictureOptions;
 };

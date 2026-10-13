@@ -20,7 +20,9 @@ export type ChartSurfaceLayout = {
    * starting from the lowest. A band without an entry has its automatic style.
    */
   bandFormats?: {
-    /** Zero-based index of the band. */
+    /**
+     * Zero-based index of the band.
+     */
     index: integer;
     shape?: Shape;
   }[];

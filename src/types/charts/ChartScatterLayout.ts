@@ -4,8 +4,9 @@
  * @group Charts
  */
 export type ChartScatterLayout = {
+  // This is OOXML `c:scatterStyle`.
   /**
-   * Excel's scatter chart subtype, OOXML `c:scatterStyle`.
+   * Excel's scatter chart subtype.
    *
    * | Value          | Subtype
    * |----------------|--------------------------------------------

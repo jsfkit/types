@@ -5,9 +5,10 @@
  * @group Charts
  */
 export type ChartCategoryScaleBase = {
+  // This is OOXML `c:auto`.
   /**
    * Whether the scale type was chosen automatically from the data. This is Excel's "Automatically
-   * select based on data" axis type, OOXML `c:auto`.
+   * select based on data" axis type.
    *
    * The scale's `type` is always the type currently in effect, so a renderer uses it as it is.
    * When `auto` is `true`, an application that changes the data chooses the type again: a

@@ -7,11 +7,17 @@ import type { ChartTextStyle } from './ChartTextStyle.ts';
  * @group Charts
  */
 export type ChartDataTable = {
-  /** @default true */
+  /**
+   * @default true
+   */
   showHorzBorder?: boolean;
-  /** @default true */
+  /**
+   * @default true
+   */
   showVertBorder?: boolean;
-  /** @default true */
+  /**
+   * @default true
+   */
   showOutline?: boolean;
   /**
    * Whether legend keys are shown next to the series names.

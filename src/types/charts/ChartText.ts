@@ -9,10 +9,10 @@
  * JSF will add an optional `runs` property next to it, describing runs of formatting over ranges
  * of `text`. So:
  *
- * - Anywhere OOXML allows rich text, JSFChart uses a `ChartText` object, never a bare string.
+ * - Anywhere a chart can show rich text, JSFChart uses a `ChartText` object, never a bare string.
  * - The name `runs` is reserved. Nothing in `ChartText`, or in types that extend it, may use it
  *   for anything else.
- * - Runs describe literal text. Text that comes from a cell through `formula` is plain in OOXML.
+ * - Runs describe literal text. Text that comes from a cell through `formula` is plain.
  *
  * @group Charts
  */
@@ -23,6 +23,8 @@ export type ChartText = {
    */
   text?: string;
 
-  /** A reference to the cell that the text comes from, for example `Sheet1!$B$1`. */
+  /**
+   * A reference to the cell that the text comes from, for example `Sheet1!$B$1`.
+   */
   formula?: string;
 };
