@@ -1,9 +1,9 @@
+import type { Shape } from '../dml/shape/Shape.ts';
 import type { integer } from '../integer.ts';
 import type { ChartPictureOptions } from './ChartPictureOptions.ts';
-import type { ChartShape } from './ChartShape.ts';
 
 /**
- * The floor or a wall of a 3D chart.
+ * The floor or a wall of a 3D chart or a contour chart.
  *
  * @group Charts
  */
@@ -15,7 +15,10 @@ export type ChartWall = {
    */
   thickness?: integer;
 
-  shape?: ChartShape;
+  /**
+   * Fill and outline of the wall or floor. By default, there are none.
+   */
+  shape?: Shape;
 
   /** How a picture fill is applied to the wall. */
   pictureOptions?: ChartPictureOptions;

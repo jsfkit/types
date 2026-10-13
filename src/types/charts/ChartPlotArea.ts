@@ -1,5 +1,5 @@
+import type { Shape } from '../dml/shape/Shape.ts';
 import type { ChartManualLayout } from './ChartManualLayout.ts';
-import type { ChartShape } from './ChartShape.ts';
 
 /**
  * The plot area: the region the data is drawn in, inside the axes.
@@ -7,7 +7,10 @@ import type { ChartShape } from './ChartShape.ts';
  * @group Charts
  */
 export type ChartPlotArea = {
-  shape?: ChartShape;
+  /**
+   * Fill and outline of the plot area. By default, there are none.
+   */
+  shape?: Shape;
 
   /** Manual position and size of the plot area. When absent, they're automatic. */
   layout?: ChartManualLayout;

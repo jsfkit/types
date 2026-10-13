@@ -1,5 +1,5 @@
+import type { Shape } from '../dml/shape/Shape.ts';
 import type { ChartManualLayout } from './ChartManualLayout.ts';
-import type { ChartShape } from './ChartShape.ts';
 import type { ChartText } from './ChartText.ts';
 import type { ChartTextStyle } from './ChartTextStyle.ts';
 
@@ -21,8 +21,15 @@ export type ChartTitle = ChartText & {
    */
   overlay?: boolean;
 
-  shape?: ChartShape;
+  /**
+   * Fill and outline of the title. By default, there are none.
+   */
+  shape?: Shape;
 
+  /**
+   * Text style of the title. By default, it's `tx1` 65%/35% in the minor font, at 14pt for a chart
+   * title, 10pt for an axis title, and 9pt for a display units label. See {@link ChartTextStyle}.
+   */
   textStyle?: ChartTextStyle;
 
   /** Manual position of the title. When absent, the position is automatic. */

@@ -1,7 +1,7 @@
+import type { Shape } from '../dml/shape/Shape.ts';
 import type { Line } from '../dml/shape/line/Line.ts';
 import type { ChartDataLabelContent } from './ChartDataLabelContent.ts';
 import type { ChartDataLabelPosition } from './ChartDataLabelPosition.ts';
-import type { ChartShape } from './ChartShape.ts';
 import type { ChartTextStyle } from './ChartTextStyle.ts';
 
 /**
@@ -45,9 +45,20 @@ export type ChartDataLabels = {
    */
   showLeaderLines?: boolean;
 
+  /**
+   * Style of the leader lines. By default, they're 0.75pt `tx1` 35%/65%.
+   */
   leaderLines?: Line;
 
-  shape?: ChartShape;
+  /**
+   * Fill and outline of the labels. By default, there are none.
+   */
+  shape?: Shape;
 
+  /**
+   * Text style of the labels. It merges over the style of the labels these override, and then
+   * cascades like other text. By default, labels are 9pt `tx1` 75%/25% in the minor font. See
+   * {@link ChartTextStyle}.
+   */
   textStyle?: ChartTextStyle;
 };

@@ -1,7 +1,7 @@
+import type { Shape } from '../dml/shape/Shape.ts';
 import type { PivotArea } from '../pivotTables/PivotArea.ts';
 import type { ChartDataLabel } from './ChartDataLabel.ts';
 import type { ChartMarker } from './ChartMarker.ts';
-import type { ChartShape } from './ChartShape.ts';
 import type { ChartTextStyle } from './ChartTextStyle.ts';
 
 /**
@@ -13,6 +13,10 @@ import type { ChartTextStyle } from './ChartTextStyle.ts';
  * @group Charts
  */
 export type ChartPivotFormat = {
+  /**
+   * The pivot items that the format applies to. This is the `pivotArea` of the `chartFormat` in
+   * the pivot table part.
+   */
   area: PivotArea;
 
   /**
@@ -23,11 +27,26 @@ export type ChartPivotFormat = {
    */
   series?: boolean;
 
-  shape?: ChartShape;
+  /**
+   * Fill and outline for the series or points that the area selects. It applies as the series'
+   * `shape` or as each point's `shape` would. This is OOXML `c:pivotFmt/c:spPr`.
+   */
+  shape?: Shape;
 
+  /**
+   * Marker for the series or points that the area selects. This is OOXML `c:pivotFmt/c:marker`.
+   */
   marker?: ChartMarker;
 
+  /**
+   * Data label for the series or points that the area selects. This is OOXML
+   * `c:pivotFmt/c:dLbl`.
+   */
   label?: ChartDataLabel;
 
+  /**
+   * Text style for the series or points that the area selects. This is OOXML
+   * `c:pivotFmt/c:txPr`.
+   */
   textStyle?: ChartTextStyle;
 };

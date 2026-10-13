@@ -63,5 +63,9 @@ export type ChartTrendline = {
     layout?: ChartManualLayout;
   };
 
+  /**
+   * Style of the trendline. By default, it's a 1.5pt dotted (`sysDot`) line with round caps, in
+   * the series' automatic color.
+   */
   line?: Line;
 };

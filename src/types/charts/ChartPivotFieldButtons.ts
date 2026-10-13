@@ -1,10 +1,10 @@
 /**
  * Field buttons on a pivot chart. Each button lets a user filter or sort by a pivot field
- * directly on the chart. A pivot chart without these options shows no buttons.
+ * directly on the chart.
  *
  * @group Charts
  */
-export type ChartPivotOptions = {
+export type ChartPivotFieldButtons = {
   /**
    * Whether all field buttons are hidden. Overrides the individual settings below.
    *
@@ -17,33 +17,33 @@ export type ChartPivotOptions = {
    *
    * @default false
    */
-  showFilterButtons?: boolean;
+  filter?: boolean;
 
   /**
    * Whether to show buttons for the fields on the category axis.
    *
    * @default false
    */
-  showCategoryButtons?: boolean;
+  category?: boolean;
 
   /**
    * Whether to show buttons for the value fields.
    *
    * @default false
    */
-  showValueButtons?: boolean;
+  value?: boolean;
 
   /**
    * Whether to show buttons for the fields that make up the series (the legend).
    *
    * @default false
    */
-  showSeriesButtons?: boolean;
+  series?: boolean;
 
   /**
    * Whether to show the buttons that expand and collapse category levels.
    *
    * @default false
    */
-  showExpandCollapseButtons?: boolean;
+  expandCollapse?: boolean;
 };

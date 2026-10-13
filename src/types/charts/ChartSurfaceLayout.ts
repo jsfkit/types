@@ -1,5 +1,5 @@
+import type { Shape } from '../dml/shape/Shape.ts';
 import type { integer } from '../integer.ts';
-import type { ChartShape } from './ChartShape.ts';
 
 /**
  * Settings for surface charts. A surface chart without {@link Chart.view3D} is a contour chart:
@@ -22,6 +22,6 @@ export type ChartSurfaceLayout = {
   bandFormats?: {
     /** Zero-based index of the band. */
     index: integer;
-    shape?: ChartShape;
+    shape?: Shape;
   }[];
 };

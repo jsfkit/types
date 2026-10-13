@@ -1,8 +1,8 @@
+import type { Shape } from '../dml/shape/Shape.ts';
 import type { integer } from '../integer.ts';
 import type { ChartDataLabel } from './ChartDataLabel.ts';
 import type { ChartMarker } from './ChartMarker.ts';
 import type { ChartPictureOptions } from './ChartPictureOptions.ts';
-import type { ChartShape } from './ChartShape.ts';
 
 /**
  * Overrides for one data point in a series: its style, its label, and number formats that differ
@@ -23,7 +23,7 @@ export type ChartDataPoint = {
    */
   index: integer;
 
-  shape?: ChartShape;
+  shape?: Shape;
 
   marker?: ChartMarker;
 

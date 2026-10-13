@@ -47,5 +47,8 @@ export type ChartErrorBars = {
    */
   endCaps?: boolean;
 
+  /**
+   * Style of the error bars. By default, they're 0.75pt `tx1` 65%/35%.
+   */
   line?: Line;
 };

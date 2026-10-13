@@ -1,6 +1,6 @@
+import type { Shape } from '../dml/shape/Shape.ts';
 import type { ChartLegendEntryRef } from './ChartLegendEntryRef.ts';
 import type { ChartManualLayout } from './ChartManualLayout.ts';
-import type { ChartShape } from './ChartShape.ts';
 import type { ChartSideAlign } from './ChartSideAlign.ts';
 import type { ChartTextStyle } from './ChartTextStyle.ts';
 
@@ -63,8 +63,15 @@ export type ChartLegend = {
    */
   hiddenEntries?: ChartLegendEntryRef[];
 
-  shape?: ChartShape;
+  /**
+   * Fill and outline of the legend. By default, there are none.
+   */
+  shape?: Shape;
 
+  /**
+   * Text style of the legend entries. By default, they're 9pt `tx1` 65%/35% in the minor font. See
+   * {@link ChartTextStyle}.
+   */
   textStyle?: ChartTextStyle;
 
   /** Manual position and size of the legend. When absent, they're automatic. */

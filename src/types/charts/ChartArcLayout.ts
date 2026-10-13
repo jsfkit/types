@@ -26,14 +26,14 @@ export type ChartArcLayout = {
   variant?: 'pie' | 'doughnut' | 'pieOfPie' | 'barOfPie';
 
   /**
-   * Angle of the first slice, clockwise from the top, in 60,000ths of a degree (0 to 21600000,
+   * Where the first slice starts, clockwise from the top, in 60,000ths of a degree (0 to 21600000,
    * which is 0-360 degrees).
    *
    * @min 0
    * @max 21600000
    * @default 0
    */
-  firstSliceAngle?: DmlAngle;
+  startAngle?: DmlAngle;
 
   /**
    * Size of the doughnut hole, as a percentage of the chart diameter (10-90). Applies only when

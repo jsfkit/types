@@ -1,6 +1,6 @@
+import type { Shape } from '../dml/shape/Shape.ts';
 import type { integer } from '../integer.ts';
 import type { ChartMarkerSymbol } from './ChartMarkerSymbol.ts';
-import type { ChartShape } from './ChartShape.ts';
 
 /**
  * A marker drawn at each point of a line, scatter, or radar series.
@@ -22,5 +22,9 @@ export type ChartMarker = {
    */
   size?: integer;
 
-  shape?: ChartShape;
+  /**
+   * Fill and outline of the markers. By default, both are the series' automatic color, and the
+   * outline is 0.75pt.
+   */
+  shape?: Shape;
 };

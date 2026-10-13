@@ -1,3 +1,4 @@
+import type { Shape } from '../dml/shape/Shape.ts';
 import type { integer } from '../integer.ts';
 import type { ChartBarShape } from './ChartBarShape.ts';
 import type { ChartDataLabels } from './ChartDataLabels.ts';
@@ -8,7 +9,6 @@ import type { ChartFieldBinding } from './ChartFieldBinding.ts';
 import type { ChartFilteredPoint } from './ChartFilteredPoint.ts';
 import type { ChartMarker } from './ChartMarker.ts';
 import type { ChartPictureOptions } from './ChartPictureOptions.ts';
-import type { ChartShape } from './ChartShape.ts';
 import type { ChartText } from './ChartText.ts';
 import type { ChartTrendline } from './ChartTrendline.ts';
 import type { ChartValue } from './ChartValue.ts';
@@ -82,7 +82,13 @@ export type ChartSeries = {
    */
   encoding?: Partial<ChartEncoding>;
 
-  shape?: ChartShape;
+  /**
+   * Fill and outline of the series. The defaults use the series' automatic color (see
+   * `colorIndex`). A series of a `line`, `candlestick`, or `point` plot has no fill and a 2.25pt
+   * line with round caps and joins. Bubbles, the ribbons of 3D line charts, and other series have
+   * a fill and no line.
+   */
+  shape?: Shape;
 
   marker?: ChartMarker;
 

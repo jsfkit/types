@@ -1,5 +1,5 @@
+import type { Shape } from '../dml/shape/Shape.ts';
 import type { integer } from '../integer.ts';
-import type { ChartShape } from './ChartShape.ts';
 
 /**
  * Settings for waterfall plots.
@@ -27,11 +27,15 @@ export type ChartWaterfallLayout = {
    * Fill and outline of the columns that increase the running total. Excel shows this as the
    * "Increase" legend entry. When absent, the look is automatic.
    */
-  increase?: ChartShape;
+  increase?: Shape;
 
-  /** Fill and outline of the columns that decrease the running total ("Decrease"). */
-  decrease?: ChartShape;
+  /**
+   * Fill and outline of the columns that decrease the running total ("Decrease").
+   */
+  decrease?: Shape;
 
-  /** Fill and outline of the total and subtotal columns ("Total"). */
-  total?: ChartShape;
+  /**
+   * Fill and outline of the total and subtotal columns ("Total").
+   */
+  total?: Shape;
 };
