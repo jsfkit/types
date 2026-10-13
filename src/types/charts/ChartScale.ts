@@ -1,8 +1,8 @@
-import type { ChartBandScale } from './ChartBandScale.ts';
-import type { ChartContinuousScale } from './ChartContinuousScale.ts';
-import type { ChartOrdinalScale } from './ChartOrdinalScale.ts';
-import type { ChartPointScale } from './ChartPointScale.ts';
-import type { ChartTimeScale } from './ChartTimeScale.ts';
+import type { ChartScaleBand } from './ChartScaleBand.ts';
+import type { ChartScaleContinuous } from './ChartScaleContinuous.ts';
+import type { ChartScaleOrdinal } from './ChartScaleOrdinal.ts';
+import type { ChartScalePoint } from './ChartScalePoint.ts';
+import type { ChartScaleTime } from './ChartScaleTime.ts';
 
 /**
  * A scale maps data values to a visual range, such as a position or a color.
@@ -10,8 +10,8 @@ import type { ChartTimeScale } from './ChartTimeScale.ts';
  * @group Charts
  */
 export type ChartScale =
-  ChartBandScale |
-  ChartPointScale |
-  ChartContinuousScale |
-  ChartTimeScale |
-  ChartOrdinalScale;
+  ChartScaleBand |
+  ChartScalePoint |
+  ChartScaleContinuous |
+  ChartScaleTime |
+  ChartScaleOrdinal;

@@ -6,7 +6,7 @@ import type { ChartScaleBase } from './ChartScaleBase.ts';
  *
  * @group Charts
  */
-export type ChartOrdinalScale = ChartScaleBase & {
+export type ChartScaleOrdinal = ChartScaleBase & {
   type: 'ordinal';
 
   /**

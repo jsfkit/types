@@ -1,4 +1,4 @@
-import type { ChartCategoryScaleBase } from './ChartCategoryScaleBase.ts';
+import type { ChartScaleCategoryBase } from './ChartScaleCategoryBase.ts';
 import type { ChartScaleBase } from './ChartScaleBase.ts';
 
 // This is OOXML `c:crossBetween val="between"` on the value axis that crosses this one.
@@ -8,6 +8,6 @@ import type { ChartScaleBase } from './ChartScaleBase.ts';
  *
  * @group Charts
  */
-export type ChartBandScale = ChartScaleBase & ChartCategoryScaleBase & {
+export type ChartScaleBand = ChartScaleBase & ChartScaleCategoryBase & {
   type: 'band';
 };

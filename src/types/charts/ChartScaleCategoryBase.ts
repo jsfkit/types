@@ -4,7 +4,7 @@
  *
  * @group Charts
  */
-export type ChartCategoryScaleBase = {
+export type ChartScaleCategoryBase = {
   // This is OOXML `c:auto`.
   /**
    * Whether the scale type was chosen automatically from the data. This is Excel's "Automatically

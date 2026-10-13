@@ -5,7 +5,7 @@ import type { ChartScaleBase } from './ChartScaleBase.ts';
  *
  * @group Charts
  */
-export type ChartContinuousScale = ChartScaleBase & {
+export type ChartScaleContinuous = ChartScaleBase & {
   type: 'linear' | 'log';
 
   /**
