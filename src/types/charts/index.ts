@@ -42,7 +42,6 @@ export type * from './ChartManualLayout.ts';
 export type * from './ChartMark.ts';
 export type * from './ChartMarker.ts';
 export type * from './ChartMarkerSymbol.ts';
-export type * from './ChartNumericBinning.ts';
 export type * from './ChartOfPieLayout.ts';
 export type * from './ChartPictureOptions.ts';
 export type * from './ChartPivot.ts';
