@@ -1,7 +1,7 @@
-import type { ChartBinTransform } from './ChartBinTransform.ts';
-import type { ChartBoxplotTransform } from './ChartBoxplotTransform.ts';
-import type { ChartHierarchyTransform } from './ChartHierarchyTransform.ts';
-import type { ChartWaterfallTransform } from './ChartWaterfallTransform.ts';
+import type { ChartTransformBin } from './ChartTransformBin.ts';
+import type { ChartTransformBoxplot } from './ChartTransformBoxplot.ts';
+import type { ChartTransformHierarchy } from './ChartTransformHierarchy.ts';
+import type { ChartTransformWaterfall } from './ChartTransformWaterfall.ts';
 
 /**
  * Transforms describe data that a chart derives from its source data. Only the transforms that
@@ -13,7 +13,7 @@ import type { ChartWaterfallTransform } from './ChartWaterfallTransform.ts';
  * @group Charts
  */
 export type ChartTransform =
-  ChartBinTransform |
-  ChartBoxplotTransform |
-  ChartWaterfallTransform |
-  ChartHierarchyTransform;
+  ChartTransformBin |
+  ChartTransformBoxplot |
+  ChartTransformWaterfall |
+  ChartTransformHierarchy;

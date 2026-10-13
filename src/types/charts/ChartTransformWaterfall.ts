@@ -6,7 +6,7 @@ import type { ChartTransformBase } from './ChartTransformBase.ts';
  *
  * @group Charts
  */
-export type ChartWaterfallTransform = ChartTransformBase & {
+export type ChartTransformWaterfall = ChartTransformBase & {
   type: 'waterfall';
   field: string;
   categoryField: string;

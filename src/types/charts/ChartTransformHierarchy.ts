@@ -5,7 +5,7 @@ import type { ChartTransformBase } from './ChartTransformBase.ts';
  *
  * @group Charts
  */
-export type ChartHierarchyTransform = ChartTransformBase & {
+export type ChartTransformHierarchy = ChartTransformBase & {
   type: 'hierarchy';
 
   /**

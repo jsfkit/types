@@ -6,7 +6,7 @@ import type { ChartTransformBase } from './ChartTransformBase.ts';
  *
  * @group Charts
  */
-export type ChartBinTransform = ChartTransformBase & {
+export type ChartTransformBin = ChartTransformBase & {
   type: 'bin';
   field: string;
 

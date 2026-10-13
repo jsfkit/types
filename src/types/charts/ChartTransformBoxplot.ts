@@ -5,7 +5,7 @@ import type { ChartTransformBase } from './ChartTransformBase.ts';
  *
  * @group Charts
  */
-export type ChartBoxplotTransform = ChartTransformBase & {
+export type ChartTransformBoxplot = ChartTransformBase & {
   type: 'boxplot';
   field: string;
 
