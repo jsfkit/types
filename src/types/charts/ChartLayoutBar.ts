@@ -6,7 +6,7 @@ import type { ChartBarShape } from './ChartBarShape.ts';
  *
  * @group Charts
  */
-export type ChartBarLayout = {
+export type ChartLayoutBar = {
   /**
    * Space between category groups, as a percentage of the bar width (0-500).
    *

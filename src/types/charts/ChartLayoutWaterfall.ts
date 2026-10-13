@@ -6,7 +6,7 @@ import type { integer } from '../integer.ts';
  *
  * @group Charts
  */
-export type ChartWaterfallLayout = {
+export type ChartLayoutWaterfall = {
   /**
    * Space between columns, as a percentage of the column width (0-500).
    *

@@ -3,7 +3,7 @@
  *
  * @group Charts
  */
-export type ChartLineLayout = {
+export type ChartLayoutLine = {
   // This is the line chart's OOXML `c:marker` flag.
   /**
    * Whether the plot's series show markers by default. Excel sets this from the chart subtype

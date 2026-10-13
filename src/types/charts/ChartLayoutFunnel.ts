@@ -5,7 +5,7 @@ import type { integer } from '../integer.ts';
  *
  * @group Charts
  */
-export type ChartFunnelLayout = {
+export type ChartLayoutFunnel = {
   /**
    * Space between the bars, as a percentage of the bar height (0-500).
    *

@@ -1,13 +1,13 @@
 import type { DmlAngle } from '../dml/DmlAngle.ts';
 import type { Percentage } from '../dml/shape/Percentage.ts';
-import type { ChartOfPieLayout } from './ChartOfPieLayout.ts';
+import type { ChartLayoutOfPie } from './ChartLayoutOfPie.ts';
 
 /**
  * Settings for arc plots: pie, doughnut, pie-of-pie, and bar-of-pie charts.
  *
  * @group Charts
  */
-export type ChartArcLayout = {
+export type ChartLayoutArc = {
   /**
    * The kind of pie. This decides which series are drawn:
    *
@@ -49,5 +49,5 @@ export type ChartArcLayout = {
    * Which points go to the secondary plot, and how it's sized. Applies only when `variant` is
    * `pieOfPie` or `barOfPie`.
    */
-  ofPie?: ChartOfPieLayout;
+  ofPie?: ChartLayoutOfPie;
 };

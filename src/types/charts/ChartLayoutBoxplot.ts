@@ -5,7 +5,7 @@ import type { integer } from '../integer.ts';
  *
  * @group Charts
  */
-export type ChartBoxplotLayout = {
+export type ChartLayoutBoxplot = {
   /**
    * Space between the boxes of adjacent categories, as a percentage of the box width (0-500).
    *

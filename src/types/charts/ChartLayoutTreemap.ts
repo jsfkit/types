@@ -3,7 +3,7 @@
  *
  * @group Charts
  */
-export type ChartTreemapLayout = {
+export type ChartLayoutTreemap = {
   /**
    * How labels for parent categories are placed.
    *

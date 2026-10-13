@@ -5,7 +5,7 @@ import type { integer } from '../integer.ts';
  *
  * @group Charts
  */
-export type ChartBubbleLayout = {
+export type ChartLayoutBubble = {
   /**
    * Bubble size relative to the default size, as a percentage (0-300).
    *

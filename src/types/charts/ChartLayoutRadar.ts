@@ -3,7 +3,7 @@
  *
  * @group Charts
  */
-export type ChartRadarLayout = {
+export type ChartLayoutRadar = {
   /**
    * @default "standard"
    */

@@ -1,17 +1,17 @@
 import type { Shape } from '../dml/shape/Shape.ts';
 import type { Line } from '../dml/shape/line/Line.ts';
 import type { integer } from '../integer.ts';
-import type { ChartArcLayout } from './ChartArcLayout.ts';
-import type { ChartBarLayout } from './ChartBarLayout.ts';
-import type { ChartBoxplotLayout } from './ChartBoxplotLayout.ts';
-import type { ChartBubbleLayout } from './ChartBubbleLayout.ts';
-import type { ChartFunnelLayout } from './ChartFunnelLayout.ts';
-import type { ChartLineLayout } from './ChartLineLayout.ts';
-import type { ChartRadarLayout } from './ChartRadarLayout.ts';
-import type { ChartScatterLayout } from './ChartScatterLayout.ts';
-import type { ChartSurfaceLayout } from './ChartSurfaceLayout.ts';
-import type { ChartTreemapLayout } from './ChartTreemapLayout.ts';
-import type { ChartWaterfallLayout } from './ChartWaterfallLayout.ts';
+import type { ChartLayoutArc } from './ChartLayoutArc.ts';
+import type { ChartLayoutBar } from './ChartLayoutBar.ts';
+import type { ChartLayoutBoxplot } from './ChartLayoutBoxplot.ts';
+import type { ChartLayoutBubble } from './ChartLayoutBubble.ts';
+import type { ChartLayoutFunnel } from './ChartLayoutFunnel.ts';
+import type { ChartLayoutLine } from './ChartLayoutLine.ts';
+import type { ChartLayoutRadar } from './ChartLayoutRadar.ts';
+import type { ChartLayoutScatter } from './ChartLayoutScatter.ts';
+import type { ChartLayoutSurface } from './ChartLayoutSurface.ts';
+import type { ChartLayoutTreemap } from './ChartLayoutTreemap.ts';
+import type { ChartLayoutWaterfall } from './ChartLayoutWaterfall.ts';
 
 /**
  * Visual settings for a plot.
@@ -22,17 +22,17 @@ import type { ChartWaterfallLayout } from './ChartWaterfallLayout.ts';
  * @group Charts
  */
 export type ChartPlotLayout = {
-  bar?: ChartBarLayout;
-  line?: ChartLineLayout;
-  arc?: ChartArcLayout;
-  bubble?: ChartBubbleLayout;
-  radar?: ChartRadarLayout;
-  scatter?: ChartScatterLayout;
-  boxplot?: ChartBoxplotLayout;
-  treemap?: ChartTreemapLayout;
-  waterfall?: ChartWaterfallLayout;
-  surface?: ChartSurfaceLayout;
-  funnel?: ChartFunnelLayout;
+  bar?: ChartLayoutBar;
+  line?: ChartLayoutLine;
+  arc?: ChartLayoutArc;
+  bubble?: ChartLayoutBubble;
+  radar?: ChartLayoutRadar;
+  scatter?: ChartLayoutScatter;
+  boxplot?: ChartLayoutBoxplot;
+  treemap?: ChartLayoutTreemap;
+  waterfall?: ChartLayoutWaterfall;
+  surface?: ChartLayoutSurface;
+  funnel?: ChartLayoutFunnel;
 
   /**
    * Vertical lines from each point down to the category axis. Applies to `line`, `area`, and

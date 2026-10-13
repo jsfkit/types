@@ -3,7 +3,7 @@
  *
  * @group Charts
  */
-export type ChartScatterLayout = {
+export type ChartLayoutScatter = {
   // This is OOXML `c:scatterStyle`.
   /**
    * Excel's scatter chart subtype.

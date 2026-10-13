@@ -7,7 +7,7 @@ import type { integer } from '../integer.ts';
  *
  * @group Charts
  */
-export type ChartSurfaceLayout = {
+export type ChartLayoutSurface = {
   /**
    * Whether the surface is drawn as a wireframe, without fills.
    *

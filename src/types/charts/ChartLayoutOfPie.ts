@@ -7,7 +7,7 @@ import type { integer } from '../integer.ts';
  *
  * @group Charts
  */
-export type ChartOfPieLayout = {
+export type ChartLayoutOfPie = {
   /**
    * How points are chosen for the secondary plot.
    *
