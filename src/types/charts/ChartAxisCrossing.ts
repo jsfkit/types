@@ -32,9 +32,9 @@ export type ChartAxisCrossing = ({
   value: number;
 }) & {
   /**
-   * ID of the axis that this axis crosses. When absent, it's the other axis of the same plot: a
-   * plot's value axis crosses its category (or `x`) axis, and its category, `x`, and `depth` axes
-   * cross its value axis.
+   * The axis that this axis crosses, named by its `id`. When absent, it's the other axis of the
+   * same plot: a plot's value axis crosses its category (or `x`) axis, and its category, `x`, and
+   * `depth` axes cross its value axis.
    */
   axis?: string;
 };

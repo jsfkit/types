@@ -27,8 +27,22 @@ export type ChartEncoding = {
    * bar only changes the mark.
    */
   x?: ChartFieldEncoding;
+
+  /**
+   * End of a horizontal range that starts at `x`. A histogram's bars run from each bin's start
+   * (`x`) to its end (`x2`).
+   */
   x2?: ChartFieldEncoding;
+
+  /**
+   * Vertical position, usually the value field. In a horizontal bar chart, and in a funnel, `y`
+   * is the category instead, and `x` the value.
+   */
   y?: ChartFieldEncoding;
+
+  /**
+   * End of a vertical range that starts at `y`.
+   */
   y2?: ChartFieldEncoding;
 
   /**
@@ -63,6 +77,10 @@ export type ChartEncoding = {
    * Slice size in pie and doughnut charts. The slices are named by `x`.
    */
   angle?: ChartFieldEncoding;
+
+  /**
+   * Distance from the center in a plot with polar coordinates.
+   */
   radius?: ChartFieldEncoding;
 
   /**
@@ -72,8 +90,24 @@ export type ChartEncoding = {
    */
   text?: ChartFieldEncoding;
 
+  /**
+   * Opening value in a candlestick plot. Each stock series feeds one of `open`, `high`, `low`, and
+   * `close` through its own encoding.
+   */
   open?: ChartFieldEncoding;
+
+  /**
+   * Highest value in a candlestick plot.
+   */
   high?: ChartFieldEncoding;
+
+  /**
+   * Lowest value in a candlestick plot.
+   */
   low?: ChartFieldEncoding;
+
+  /**
+   * Closing value in a candlestick plot.
+   */
   close?: ChartFieldEncoding;
 };

@@ -13,10 +13,13 @@ import type { ChartTitle } from './ChartTitle.ts';
  * @group Charts
  */
 export type ChartAxis = {
+  /**
+   * Identifies the axis within the chart. Another axis names it in its `crosses` to cross it.
+   */
   id: string;
 
   /**
-   * ID of the scale that this axis visualizes.
+   * The scale that this axis draws, named by its `id`.
    */
   scale: string;
 
@@ -133,7 +136,13 @@ export type ChartAxis = {
    * gridlines.
    */
   gridlines?: {
+    /**
+     * Major gridlines, at the major ticks.
+     */
     major?: Line;
+    /**
+     * Minor gridlines, at the minor ticks.
+     */
     minor?: Line;
   };
 

@@ -4,8 +4,7 @@ import type { integer } from '../integer.ts';
 /**
  * How a 3D chart is viewed.
  *
- * Angles are in 60,000ths of a degree ({@link DmlAngle}), like other JSF angles. Other ranges are
- * Excel's own, so conversion is lossless.
+ * Angles are in 60,000ths of a degree ({@link DmlAngle}), like other JSF angles.
  *
  * @group Charts
  */
@@ -55,7 +54,7 @@ export type ChartView3D = {
   rightAngleAxes?: boolean;
 
   /**
-   * Perspective: Excel's field of view value (0-240), where 0 means no perspective.
+   * Perspective: A field of view value (0-240), where 0 means no perspective.
    *
    * @min 0
    * @max 240

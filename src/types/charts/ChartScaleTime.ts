@@ -8,6 +8,9 @@ import type { ChartTimeUnit } from './ChartTimeUnit.ts';
  * @group Charts
  */
 export type ChartScaleTime = ChartScaleBase & ChartScaleCategoryBase & {
+  /**
+   * Dates placed by their value.
+   */
   type: 'time';
 
   // OOXML stores this as `c:crossBetween` on the value axis that crosses this one.

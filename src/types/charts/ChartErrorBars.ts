@@ -21,18 +21,18 @@ export type ChartErrorBars = {
   /**
    * How the error amount is calculated.
    *
-   * | Value               | Amount
-   * |---------------------|------------------------------------------------------
-   * | `fixed`             | `value`, for every point.
-   * | `percentage`        | `value` percent of each point's value.
-   * | `standardDeviation` | `value` standard deviations of the series.
-   * | `standardError`     | The standard error of the series.
-   * | `custom`            | Per point, from the `plusField` and `minusField` fields.
+   * | Value     | Amount
+   * |-----------|----------------------------------------------------------------
+   * | `fixed`   | `value`, for every point.
+   * | `percent` | `value` percent of each point's value.
+   * | `stdDev`  | `value` standard deviations of the series.
+   * | `stdErr`  | The standard error of the series.
+   * | `custom`  | Per point, from the `plusField` and `minusField` fields.
    */
-  valueType: 'fixed' | 'percentage' | 'standardDeviation' | 'standardError' | 'custom';
+  valueType: 'fixed' | 'percent' | 'stdDev' | 'stdErr' | 'custom';
 
   /**
-   * The amount for `fixed`, `percentage`, and `standardDeviation`. Not used by the other types.
+   * The amount for `fixed`, `percent`, and `stdDev`. Not used by the other types.
    */
   value?: number;
 

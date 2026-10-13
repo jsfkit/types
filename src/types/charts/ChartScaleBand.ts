@@ -9,5 +9,8 @@ import type { ChartScaleBase } from './ChartScaleBase.ts';
  * @group Charts
  */
 export type ChartScaleBand = ChartScaleBase & ChartScaleCategoryBase & {
+  /**
+   * Categories placed in bands.
+   */
   type: 'band';
 };

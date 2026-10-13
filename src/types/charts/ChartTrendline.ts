@@ -10,6 +10,18 @@ import type { ChartText } from './ChartText.ts';
  * @group Charts
  */
 export type ChartTrendline = {
+  /**
+   * The kind of trendline.
+   *
+   * | Value           | Fits
+   * |-----------------|----------------------------------------------------------
+   * | `linear`        | A straight line.
+   * | `exponential`   | An exponential curve.
+   * | `logarithmic`   | A logarithmic curve.
+   * | `polynomial`    | A polynomial of degree `order`.
+   * | `power`         | A power curve.
+   * | `movingAverage` | The average of the last `period` points, at each point.
+   */
   type: 'linear' | 'exponential' | 'logarithmic' | 'polynomial' | 'power' | 'movingAverage';
 
   /**

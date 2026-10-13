@@ -24,6 +24,9 @@ export type ChartLayoutSurface = {
      * Zero-based index of the band.
      */
     index: integer;
+    /**
+     * Fill and outline of the band.
+     */
     shape?: Shape;
   }[];
 };

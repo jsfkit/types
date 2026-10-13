@@ -6,6 +6,9 @@ import type { ChartScaleBase } from './ChartScaleBase.ts';
  * @group Charts
  */
 export type ChartScaleContinuous = ChartScaleBase & {
+  /**
+   * Whether values map to positions linearly, or logarithmically with base `logBase`.
+   */
   type: 'linear' | 'log';
 
   /**

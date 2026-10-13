@@ -6,6 +6,9 @@ import type { ChartTransformBase } from './ChartTransformBase.ts';
  * @group Charts
  */
 export type ChartTransformHierarchy = ChartTransformBase & {
+  /**
+   * Builds a hierarchy.
+   */
   type: 'hierarchy';
 
   /**
@@ -13,5 +16,8 @@ export type ChartTransformHierarchy = ChartTransformBase & {
    */
   levels: string[];
 
+  /**
+   * The field holding each record's value, which sizes its tile or segment.
+   */
   valueField: string;
 };

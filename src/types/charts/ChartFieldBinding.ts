@@ -2,6 +2,7 @@ import type { integer } from '../integer.ts';
 import type { ChartFieldRole } from './ChartFieldRole.ts';
 import type { ChartValue } from './ChartValue.ts';
 
+// XXX: cell should be a link here
 /**
  * Where a field's values come from: a formula, literal values, or both.
  *

@@ -7,6 +7,9 @@ import type { ChartScaleBase } from './ChartScaleBase.ts';
  * @group Charts
  */
 export type ChartScaleOrdinal = ChartScaleBase & {
+  /**
+   * Discrete values mapped to discrete outputs.
+   */
   type: 'ordinal';
 
   /**

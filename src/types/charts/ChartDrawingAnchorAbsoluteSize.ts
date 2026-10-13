@@ -9,6 +9,9 @@ import type { ChartRelativePoint } from './ChartRelativePoint.ts';
  * @group Charts
  */
 export type ChartDrawingAnchorAbsoluteSize = {
+  /**
+   * Anchored by the top-left corner, with a fixed size.
+   */
   type: 'absoluteSize';
   /**
    * Top-left corner.

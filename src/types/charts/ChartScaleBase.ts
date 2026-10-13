@@ -6,7 +6,11 @@ import type { ChartScaleDomain } from './ChartScaleDomain.ts';
  * @group Charts
  */
 export type ChartScaleBase = {
+  /**
+   * Identifies the scale within the chart. Axes, encodings, and legends name it to use it.
+   */
   id: string;
+
   /**
    * The values the scale covers. When absent, they come from the data that uses the scale.
    */

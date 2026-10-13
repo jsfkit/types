@@ -9,5 +9,8 @@ import type { ChartScaleBase } from './ChartScaleBase.ts';
  * @group Charts
  */
 export type ChartScalePoint = ChartScaleBase & ChartScaleCategoryBase & {
+  /**
+   * Categories placed on points.
+   */
   type: 'point';
 };

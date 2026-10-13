@@ -32,7 +32,7 @@ export type ChartNumericBinning = {
  */
 export type ChartBinning = (ChartNumericBinning & {
   /**
-   * The application chooses the bins, as Excel's automatic binning does.
+   * The application chooses the bins.
    */
   type: 'auto';
 }) | (ChartNumericBinning & {

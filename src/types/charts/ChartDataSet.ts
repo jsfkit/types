@@ -19,6 +19,10 @@ import type { ChartFieldBinding } from './ChartFieldBinding.ts';
  * @group Charts
  */
 export type ChartDataSet = {
+  /**
+   * Identifies the dataset within the chart. Plots read it by naming this in their `data`,
+   * transforms in their `source`, and scales in their `domain`.
+   */
   id: string;
 
   /**

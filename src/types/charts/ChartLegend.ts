@@ -11,7 +11,7 @@ import type { ChartTextStyle } from './ChartTextStyle.ts';
  */
 export type ChartLegend = {
   /**
-   * ID of a scale that the legend shows, for example a color gradient.
+   * A scale that the legend shows, named by its `id`, for example a color gradient.
    *
    * When absent, the legend lists one entry per series, ordered by chart type, then by
    * {@link ChartPlot.axisGroup} (primary before secondary), then by series order (see

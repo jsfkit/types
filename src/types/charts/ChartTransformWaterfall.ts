@@ -7,8 +7,17 @@ import type { ChartTransformBase } from './ChartTransformBase.ts';
  * @group Charts
  */
 export type ChartTransformWaterfall = ChartTransformBase & {
+  /**
+   * Computes running totals for a waterfall.
+   */
   type: 'waterfall';
+  /**
+   * The field holding each column's change, or its value for a subtotal or total.
+   */
   field: string;
+  /**
+   * The field holding each column's category.
+   */
   categoryField: string;
 
   /**
@@ -26,7 +35,13 @@ export type ChartTransformWaterfall = ChartTransformBase & {
    * Names of the generated fields.
    */
   as: {
+    /**
+     * The field that receives where each column starts.
+     */
     start: string;
+    /**
+     * The field that receives where each column ends.
+     */
     end: string;
   };
 };

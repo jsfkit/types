@@ -7,6 +7,12 @@
  * @group Charts
  */
 export type ChartRelativePoint = {
+  /**
+   * Horizontal position, as a fraction of the chart area's width.
+   */
   x: number;
+  /**
+   * Vertical position, as a fraction of the chart area's height.
+   */
   y: number;
 };

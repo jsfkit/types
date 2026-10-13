@@ -13,12 +13,18 @@ import type { ChartSeries } from './ChartSeries.ts';
  * @group Charts
  */
 export type ChartPlot = {
+  /**
+   * Identifies the plot within the chart.
+   */
   id: string;
 
+  /**
+   * The primary mark that the plot draws.
+   */
   mark: ChartMark;
 
   /**
-   * ID of the input dataset or transform.
+   * The dataset or transform whose records the plot draws, named by its `id`.
    */
   data: string;
 
@@ -64,6 +70,10 @@ export type ChartPlot = {
    */
   varyColors?: boolean;
 
+  /**
+   * Which fields the plot draws on which visual channels. See {@link ChartEncoding} for the
+   * channels each mark needs.
+   */
   encoding: ChartEncoding;
 
   /**
@@ -82,5 +92,8 @@ export type ChartPlot = {
    */
   labels?: ChartDataLabels;
 
+  /**
+   * Visual settings for the plot, such as bar gap widths or a pie's start angle.
+   */
   layout?: ChartPlotLayout;
 };

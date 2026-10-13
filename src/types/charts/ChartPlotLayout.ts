@@ -22,16 +22,49 @@ import type { ChartLayoutWaterfall } from './ChartLayoutWaterfall.ts';
  * @group Charts
  */
 export type ChartPlotLayout = {
+  /**
+   * Settings for `bar` plots.
+   */
   bar?: ChartLayoutBar;
+  /**
+   * Settings for `line` plots.
+   */
   line?: ChartLayoutLine;
+  /**
+   * Settings for `arc` plots: pie, doughnut, pie-of-pie, and bar-of-pie charts.
+   */
   arc?: ChartLayoutArc;
+  /**
+   * Settings for bubble plots: `point` plots with a `size` encoding.
+   */
   bubble?: ChartLayoutBubble;
+  /**
+   * Settings for plots drawn on radar axes.
+   */
   radar?: ChartLayoutRadar;
+  /**
+   * Settings for scatter plots: `point` plots without a `size` encoding.
+   */
   scatter?: ChartLayoutScatter;
+  /**
+   * Settings for `boxplot` plots.
+   */
   boxplot?: ChartLayoutBoxplot;
+  /**
+   * Settings for `treemap` plots.
+   */
   treemap?: ChartLayoutTreemap;
+  /**
+   * Settings for `waterfall` plots.
+   */
   waterfall?: ChartLayoutWaterfall;
+  /**
+   * Settings for `surface` plots.
+   */
   surface?: ChartLayoutSurface;
+  /**
+   * Settings for `funnel` plots.
+   */
   funnel?: ChartLayoutFunnel;
 
   /**

@@ -19,6 +19,10 @@ import type { ChartValue } from './ChartValue.ts';
  * @group Charts
  */
 export type ChartSeries = {
+  /**
+   * Identifies the series within the chart. Legend entry references name it, and the series'
+   * `key` defaults to it.
+   */
   id: string;
 
   /**
@@ -91,6 +95,10 @@ export type ChartSeries = {
    */
   shape?: Shape;
 
+  /**
+   * Markers on the series' points, in line, scatter, and radar charts. When absent, the plot
+   * decides whether the series shows markers.
+   */
   marker?: ChartMarker;
 
   /**
@@ -112,8 +120,15 @@ export type ChartSeries = {
    */
   filteredPoints?: ChartFilteredPoint[];
 
+  /**
+   * Trendlines fitted to the series. When absent, there are none.
+   */
   trendlines?: ChartTrendline[];
 
+  /**
+   * Error bars on the series. A scatter or bubble series can have one set for each direction. When
+   * absent, there are none.
+   */
   errorBars?: ChartErrorBars[];
 
   /**

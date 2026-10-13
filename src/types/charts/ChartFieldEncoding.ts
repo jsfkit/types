@@ -16,7 +16,8 @@ export type ChartFieldEncoding = {
   levels?: string[];
 
   /**
-   * ID of a scale. Optional for channels without a scale, such as `text`.
+   * The scale that maps the field's values, named by its `id`. Optional for channels without a
+   * scale, such as `text`.
    */
   scale?: string;
 };

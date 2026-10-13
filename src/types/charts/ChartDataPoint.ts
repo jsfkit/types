@@ -23,10 +23,19 @@ export type ChartDataPoint = {
    */
   index: integer;
 
+  /**
+   * Fill and outline of the point. Merges over the series' `shape`.
+   */
   shape?: Shape;
 
+  /**
+   * Marker of the point. Merges over the series' `marker`.
+   */
   marker?: ChartMarker;
 
+  /**
+   * Data label of the point. Merges over the series' labels, and then the plot's.
+   */
   label?: ChartDataLabel;
 
   /**

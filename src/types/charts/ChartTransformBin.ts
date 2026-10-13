@@ -7,7 +7,13 @@ import type { ChartTransformBase } from './ChartTransformBase.ts';
  * @group Charts
  */
 export type ChartTransformBin = ChartTransformBase & {
+  /**
+   * Groups values into bins.
+   */
   type: 'bin';
+  /**
+   * The field holding the values to bin.
+   */
   field: string;
 
   /**
@@ -16,6 +22,9 @@ export type ChartTransformBin = ChartTransformBase & {
    */
   groupBy?: string[];
 
+  /**
+   * How the values are divided into bins.
+   */
   binning: ChartBinning;
 
   /**
@@ -28,8 +37,17 @@ export type ChartTransformBin = ChartTransformBase & {
    * Names of the generated fields.
    */
   as: {
+    /**
+     * The field that receives each bin's lower edge.
+     */
     start: string;
+    /**
+     * The field that receives each bin's upper edge.
+     */
     end: string;
+    /**
+     * The field that receives the number of values in each bin.
+     */
     count: string;
     /**
      * Cumulative percentage, used for the Pareto line.

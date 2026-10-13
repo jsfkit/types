@@ -8,6 +8,9 @@ import type { ChartRelativePoint } from './ChartRelativePoint.ts';
  * @group Charts
  */
 export type ChartDrawingAnchorRelative = {
+  /**
+   * Anchored by both corners.
+   */
   type: 'relative';
   /**
    * Top-left corner.
