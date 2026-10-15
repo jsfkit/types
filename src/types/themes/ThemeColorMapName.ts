@@ -1,10 +1,9 @@
-// XXX: promote to Themes?
 /**
- * A theme color name that a chart's color map translates to a slot.
+ * A theme colour name that a colour map ({@link ThemeColorMap}) translates to a theme colour slot.
  *
- * @group Charts
+ * @group Themes
  */
-export type ChartColorMapName =
+export type ThemeColorMapName =
   'bg1' |
   'tx1' |
   'bg2' |

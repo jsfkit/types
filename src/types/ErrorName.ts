@@ -1,7 +1,7 @@
 /**
  * Spreadsheet error codes.
  *
- * @group Charts
+ * @group Workbooks
  */
 export type ErrorName =
   '#BLOCKED!' |

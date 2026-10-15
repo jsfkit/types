@@ -51,7 +51,7 @@ export type Cell = {
   /**
    * The type of the value contained in the cell. Cells with errors or dates must include this
    * property, but it's otherwise optional (the type can be inferred from the {@link Cell.v}
-   * property).
+   * property). For an error, the value is the error's name, an {@link ErrorName}.
    */
   t?: CellValueType;
   /** Data table configuration. Present on the master cell of a data table range. */

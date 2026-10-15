@@ -5,7 +5,7 @@ import type { Style } from '../styles/Style.ts';
 /**
  * Text style for a chart element.
  *
- * Font properties reuse the names and types of the JSF cell {@link Style}.
+ * Font properties reuse the names and types of the cell {@link Style}.
  *
  * The typeface (`fontFamily` or `fontScheme`, as one property), `fontSize`, `color`, `bold`, and
  * `italic` cascade: an element's own value wins, then `Chart.textStyle` (with 1.2 times the font

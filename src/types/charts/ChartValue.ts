@@ -1,6 +1,5 @@
 import type { ChartErrorValue } from './ChartErrorValue.ts';
 
-// XXX: are we peeling a container off? Can we reuse Cell?
 /**
  * A data value.
  *

@@ -1,5 +1,8 @@
 export type * from './Theme.ts';
+export type * from './ThemeColorMap.ts';
+export type * from './ThemeColorMapName.ts';
 export type * from './ThemeColorScheme.ts';
+export type * from './ThemeColorSlot.ts';
 export type * from './ThemeCustomColor.ts';
 export type * from './ThemeFontCollection.ts';
 export type * from './ThemeFontScheme.ts';

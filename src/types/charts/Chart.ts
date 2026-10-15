@@ -1,7 +1,7 @@
 import type { Shape } from '../dml/shape/Shape.ts';
 import type { integer } from '../integer.ts';
+import type { ThemeColorMap } from '../themes/ThemeColorMap.ts';
 import type { ChartAxis } from './ChartAxis.ts';
-import type { ChartColorMap } from './ChartColorMap.ts';
 import type { ChartDataSet } from './ChartDataSet.ts';
 import type { ChartDataTable } from './ChartDataTable.ts';
 import type { ChartDrawing } from './ChartDrawing.ts';
@@ -160,13 +160,22 @@ export type Chart = {
    */
   textStyle?: ChartTextStyle;
 
+  // This is OOXML `c:clrMapOvr`.
   /**
    * How this chart maps theme color names to theme color slots.
    *
    * When absent, the default map applies: `bg1` to `lt1`, `tx1` to `dk1`, `bg2` to `lt2`, `tx2` to
    * `dk2`, and every other name to the slot with the same name.
+   *
+   * To resolve a theme color in a chart:
+   *
+   * 1. Translate the color's name through the color map. Slot names (`lt1`, `dk1`, `lt2`, `dk2`)
+   *    are used as they are, and so is `phClr`, which refers to a style's color.
+   * 2. Look up the slot in the chart's color scheme: `themeOverride.colorScheme` when present,
+   *    otherwise the workbook theme's `colorScheme`.
+   * 3. Apply the color's transforms.
    */
-  colorMap?: ChartColorMap;
+  colorMap?: ThemeColorMap;
 
   /**
    * Parts of the workbook theme that this chart replaces with its own.

@@ -1,4 +1,4 @@
-import type { ErrorName } from './ErrorName.ts';
+import type { ErrorName } from '../ErrorName.ts';
 
 // XXX: This is pretty much the same as PivotCacheSharedItemErr & an error cell
 /**
