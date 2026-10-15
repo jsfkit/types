@@ -1,8 +1,8 @@
 import type { integer } from '../integer.ts';
 import type { PivotArea } from './PivotArea.ts';
+import type { PivotDataFunction } from './PivotDataFunction.ts';
 import type { PivotFieldAxis } from './PivotFieldAxis.ts';
 import type { PivotFieldItem } from './PivotFieldItem.ts';
-import type { PivotSubtotalFunction } from './PivotSubtotalFunction.ts';
 
 /**
  * Configuration for a single field in a pivot table. There is one PivotField per cache field, in
@@ -40,7 +40,7 @@ export type PivotField = {
    * The subtotal functions to show. When absent or empty, the default subtotal (typically sum or
    * count) is used.
    */
-  subtotalFunctions?: PivotSubtotalFunction[];
+  subtotalFunctions?: PivotDataFunction[];
   /**
    * The sort order for this field's items.
    *

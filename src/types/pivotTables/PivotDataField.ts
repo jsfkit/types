@@ -1,5 +1,5 @@
 import type { integer } from '../integer.ts';
-import type { PivotDataFieldAggregation } from './PivotDataFieldAggregation.ts';
+import type { PivotDataFunction } from './PivotDataFunction.ts';
 import type { PivotShowDataAs } from './PivotShowDataAs.ts';
 
 /**
@@ -22,7 +22,7 @@ export type PivotDataField = {
    *
    * @default 'sum'
    */
-  subtotal?: PivotDataFieldAggregation;
+  subtotal?: PivotDataFunction;
   /**
    * How to display the aggregated values.
    *
