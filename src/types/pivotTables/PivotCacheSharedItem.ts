@@ -1,5 +1,3 @@
-import type { ErrorName } from '../ErrorName.ts';
-
 /**
  * A shared item value in a pivot cache field. Each item represents a unique value found in the
  * source data for that field.
@@ -24,8 +22,9 @@ export type PivotCacheSharedItemNum = { t: 'n'; v: number; u?: boolean };
 export type PivotCacheSharedItemBool = { t: 'b'; v: boolean; u?: boolean };
 /** A date shared item (ISO 8601 string). @group PivotTables */
 export type PivotCacheSharedItemDate = { t: 'd'; v: string; u?: boolean };
-// XXX: PivotCacheSharedItemErr is pretty much the same as ChartErrorValue & an error cell
-// /** An error shared item (e.g. `"#REF!"`). @group PivotTables */
-export type PivotCacheSharedItemErr = { t: 'e'; v: ErrorName; u?: boolean };
+// XXX: PivotCacheSharedItemErr is pretty much the same as ChartErrorValue & an error cell,
+//      it's v should be typed as ErrorName in the future
+/** An error shared item (e.g. `"#REF!"`). @group PivotTables */
+export type PivotCacheSharedItemErr = { t: 'e'; v: string; u?: boolean };
 /** An empty/missing shared item. @group PivotTables */
 export type PivotCacheSharedItemNil = { t: 'z'; u?: boolean };
