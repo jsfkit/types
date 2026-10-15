@@ -1,6 +1,7 @@
 import type { Shape } from '../dml/shape/Shape.ts';
 import type { integer } from '../integer.ts';
 import type { ThemeColorMap } from '../themes/ThemeColorMap.ts';
+import type { ThemeOverride } from '../themes/ThemeOverride.ts';
 import type { ChartAxis } from './ChartAxis.ts';
 import type { ChartDataSet } from './ChartDataSet.ts';
 import type { ChartDataTable } from './ChartDataTable.ts';
@@ -11,7 +12,6 @@ import type { ChartPlot } from './ChartPlot.ts';
 import type { ChartPlotArea } from './ChartPlotArea.ts';
 import type { ChartScale } from './ChartScale.ts';
 import type { ChartTextStyle } from './ChartTextStyle.ts';
-import type { ChartThemeOverride } from './ChartThemeOverride.ts';
 import type { ChartTitle } from './ChartTitle.ts';
 import type { ChartTransform } from './ChartTransform.ts';
 import type { ChartView3D } from './ChartView3D.ts';
@@ -180,7 +180,7 @@ export type Chart = {
   /**
    * Parts of the workbook theme that this chart replaces with its own.
    */
-  themeOverride?: ChartThemeOverride;
+  themeOverride?: ThemeOverride;
 
   /**
    * The plot area: its fill and outline, and its manual position and size. When absent, the plot

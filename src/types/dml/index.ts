@@ -14,5 +14,6 @@ export type * from './GraphicShape.ts';
 export type * from './Graphic.ts';
 export type * from './Point.ts';
 export type * from './PositiveCoordinate.ts';
+export type * from './RelativePoint.ts';
 export type * from './Xfrm.ts';
 export type * from './XfrmGroup.ts';
