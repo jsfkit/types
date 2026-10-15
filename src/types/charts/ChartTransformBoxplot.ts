@@ -33,7 +33,8 @@ export type ChartTransformBoxplot = ChartTransformBase & {
    */
   as?: {
     /**
-     * The field that receives the low end of the lower whisker.
+     * The field that receives the end of the lower whisker: the smallest value that isn't an
+     * outlier.
      */
     min?: string;
     /**
@@ -49,11 +50,12 @@ export type ChartTransformBoxplot = ChartTransformBase & {
      */
     q3?: string;
     /**
-     * The field that receives the high end of the upper whisker.
+     * The field that receives the end of the upper whisker: the largest value that isn't an
+     * outlier.
      */
     max?: string;
     /**
-     * The field that receives the mean.
+     * The field that receives the mean of all the values, outliers included.
      */
     mean?: string;
   };

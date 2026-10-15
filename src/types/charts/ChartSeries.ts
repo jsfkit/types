@@ -126,8 +126,8 @@ export type ChartSeries = {
   trendlines?: ChartTrendline[];
 
   /**
-   * Error bars on the series. A scatter or bubble series can have one set for each direction. When
-   * absent, there are none.
+   * Error bars on the series. A scatter, bubble, or area series can have one set for each
+   * direction, and other series one set. When absent, there are none.
    */
   errorBars?: ChartErrorBars[];
 

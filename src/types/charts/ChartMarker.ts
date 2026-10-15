@@ -9,6 +9,9 @@ import type { ChartMarkerSymbol } from './ChartMarkerSymbol.ts';
  */
 export type ChartMarker = {
   /**
+   * The symbol drawn at each point. `auto` gives each series its own symbol, in turn by series,
+   * `none` draws no marker, and `picture` draws the picture set as the marker's fill.
+   *
    * @default "auto"
    */
   symbol?: ChartMarkerSymbol;

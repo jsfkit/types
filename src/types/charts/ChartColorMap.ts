@@ -1,7 +1,7 @@
 import type { ChartColorMapName } from './ChartColorMapName.ts';
 import type { ChartThemeColorSlot } from './ChartThemeColorSlot.ts';
 
-// XXX: promote to Themes
+// XXX: promote to Themes?
 // This is OOXML `c:clrMapOvr`.
 /**
  * Maps every theme color name to a theme color slot.

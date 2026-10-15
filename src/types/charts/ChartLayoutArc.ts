@@ -9,6 +9,11 @@ import type { ChartLayoutOfPie } from './ChartLayoutOfPie.ts';
  */
 export type ChartLayoutArc = {
   /**
+   * The kind of settings. These settings apply to an `arc` plot.
+   */
+  type: 'arc';
+
+  /**
    * The kind of pie. This decides which series are drawn:
    *
    * | Value      | Draws

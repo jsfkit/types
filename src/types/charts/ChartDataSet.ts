@@ -9,12 +9,12 @@ import type { ChartFieldBinding } from './ChartFieldBinding.ts';
  * value still has a record (with `null`), so the Nth record of a series is the point that
  * {@link ChartDataPoint.index} N refers to.
  *
- * Field names carry no meaning of their own, as in Vega: a field means what the encodings and
- * transforms that name it say. The one exception is `series`, which is reserved for the series key
- * in every record, so no binding may be named `series`.
+ * Field names carry no meaning of their own, as in [Vega](https://vega.github.io/vega/docs/data/):
+ * a field means what the encodings and transforms that name it say. The one exception is `series`,
+ * which is reserved for the series key in every record, so no binding may be named `series`.
  *
  * A series without a category binding has no category values. Its points' categories are then
- * their positions, counting from 1, as Excel shows them.
+ * their positions, counting from 1.
  *
  * @group Charts
  */

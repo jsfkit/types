@@ -6,13 +6,13 @@ import type { ChartDataSet } from './ChartDataSet.ts';
 import type { ChartDataTable } from './ChartDataTable.ts';
 import type { ChartDrawing } from './ChartDrawing.ts';
 import type { ChartLegend } from './ChartLegend.ts';
-import type { ChartMainTitle } from './ChartMainTitle.ts';
 import type { ChartPivot } from './ChartPivot.ts';
 import type { ChartPlot } from './ChartPlot.ts';
 import type { ChartPlotArea } from './ChartPlotArea.ts';
 import type { ChartScale } from './ChartScale.ts';
 import type { ChartTextStyle } from './ChartTextStyle.ts';
 import type { ChartThemeOverride } from './ChartThemeOverride.ts';
+import type { ChartTitle } from './ChartTitle.ts';
 import type { ChartTransform } from './ChartTransform.ts';
 import type { ChartView3D } from './ChartView3D.ts';
 import type { ChartWall } from './ChartWall.ts';
@@ -45,15 +45,18 @@ import type { ChartWall } from './ChartWall.ts';
  */
 export type Chart = {
   /**
-   * The chart title. When absent, the chart has no title.
+   * The chart title, at the top of the chart. When absent, the chart has no title.
    *
    * When present without `text` or `formula`, the title text is automatic, and a renderer
    * generates it: when the chart shows exactly one series and that series has a `name`, the series
    * name; otherwise "Chart Title". Hidden series don't count, a pie always shows one series, and a
    * generated name such as "Series1" isn't a name. Importers and exporters should keep the title
    * empty, and not attempt to fill in automatic text themselves.
+   *
+   * A chart title that doesn't set a font size of its own takes 1.2 times the size in
+   * `textStyle`. Other elements take that size as it is.
    */
-  title?: ChartMainTitle;
+  title?: ChartTitle;
 
   /**
    * Datasets that plots read from.

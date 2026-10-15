@@ -2,7 +2,6 @@ import type { Shape } from '../dml/shape/Shape.ts';
 import type { Line } from '../dml/shape/line/Line.ts';
 import type { integer } from '../integer.ts';
 import type { ChartAxisCrossing } from './ChartAxisCrossing.ts';
-import type { ChartDisplayUnit } from './ChartDisplayUnit.ts';
 import type { ChartTextStyle } from './ChartTextStyle.ts';
 import type { ChartTickMark } from './ChartTickMark.ts';
 import type { ChartTitle } from './ChartTitle.ts';
@@ -161,14 +160,20 @@ export type ChartAxis = {
    */
   sourceLinked?: boolean;
 
+  // Excel's built-in units are the factors 100, 1000, 10000, 100000, 1000000, 10000000, 100000000,
+  // 1000000000, and 1000000000000 (OOXML `c:builtInUnit`, from `hundreds` to `trillions`). Any
+  // other factor is OOXML `c:custUnit`. `percent` is ChartEx only, where it's spelled `percentage`.
   /**
-   * Scale the tick labels by a built-in unit or a custom factor. When absent, they aren't scaled.
+   * Scales the tick labels. A number is the factor the values are divided by: with `1000`, 25000
+   * shows as 25. `percent` shows values as percentages, so 0.42 shows as 42%, as on a Pareto
+   * chart's cumulative axis. When absent, the labels aren't scaled.
    */
-  displayUnits?: ChartDisplayUnit | number;
+  displayUnits?: number | 'percent';
 
   /**
    * Label for the display units. When absent, no label is shown. When present without `text` or
-   * `formula`, the text is the unit name, for example "Thousands".
+   * `formula`, the text is the unit's name, such as "Thousands" for 1000, in the application's
+   * language. A factor that isn't a power of ten that the application names has no such text.
    */
   displayUnitsLabel?: ChartTitle;
 

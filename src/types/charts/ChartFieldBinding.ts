@@ -12,7 +12,7 @@ import type { ChartValue } from './ChartValue.ts';
  * | `formula` + `values` | Evaluate the formula. `values` is an optional cache of its result.
  * | `values`             | Literal data. The values are the data.
  *
- * This works like a cell's `f` and `v`.
+ * This works like a {@link Cell}'s `f` and `v`.
  *
  * @group Charts
  */

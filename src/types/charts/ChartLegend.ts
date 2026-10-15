@@ -1,7 +1,6 @@
 import type { Shape } from '../dml/shape/Shape.ts';
 import type { ChartLegendEntryRef } from './ChartLegendEntryRef.ts';
 import type { ChartManualLayout } from './ChartManualLayout.ts';
-import type { ChartSideAlign } from './ChartSideAlign.ts';
 import type { ChartTextStyle } from './ChartTextStyle.ts';
 
 /**
@@ -22,17 +21,6 @@ export type ChartLegend = {
    */
   scale?: string;
 
-  // In OOXML, a legend with a manual layout and no `c:legendPos` isn't docked.
-  /**
-   * Whether the legend is docked to a side of the chart, taking space from the plot area. A legend
-   * that isn't docked floats over the chart, placed entirely by its `layout`, and `position`
-   * doesn't apply.
-   *
-   * @default true
-   */
-  docked?: boolean;
-
-  // `topRight` is OOXML `c:legendPos val="tr"`, which only legacy charts have.
   /**
    * Which side of the chart the legend is on. `topRight` is the top-right corner.
    *
@@ -40,20 +28,25 @@ export type ChartLegend = {
    */
   position?: 'left' | 'right' | 'top' | 'bottom' | 'topRight';
 
-  // This is ChartEx `align`.
   /**
-   * Where the legend sits along its side. Doesn't apply to `topRight`.
-   *
-   * @default "center"
+   * Manual position and size of the legend. When absent, they're automatic.
    */
-  align?: ChartSideAlign;
+  layout?: ChartManualLayout;
 
   /**
-   * Whether the legend overlaps the plot area instead of taking space from it.
+   * Whether the legend overlaps the plot area instead of taking space from it. When `false`, space
+   * is made for the legend at its `position`, whether or not a `layout` has moved it from there.
+   * When `true`, no space is made, and the plot area takes that space too.
    *
    * @default false
    */
   overlay?: boolean;
+
+  /**
+   * Text style of the legend entries. By default, they're 9pt `tx1` 65%/35% in the minor font. See
+   * {@link ChartTextStyle}.
+   */
+  textStyle?: ChartTextStyle;
 
   // Only legacy charts other than surface charts can hide entries. Excel doesn't let you delete
   // entries from a ChartEx chart's legend, and doesn't save a deleted surface band entry.
@@ -68,15 +61,4 @@ export type ChartLegend = {
    * Fill and outline of the legend. By default, there are none.
    */
   shape?: Shape;
-
-  /**
-   * Text style of the legend entries. By default, they're 9pt `tx1` 65%/35% in the minor font. See
-   * {@link ChartTextStyle}.
-   */
-  textStyle?: ChartTextStyle;
-
-  /**
-   * Manual position and size of the legend. When absent, they're automatic.
-   */
-  layout?: ChartManualLayout;
 };

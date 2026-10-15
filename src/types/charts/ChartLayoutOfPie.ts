@@ -1,3 +1,4 @@
+import type { Line } from '../dml/shape/line/Line.ts';
 import type { integer } from '../integer.ts';
 
 /**
@@ -52,4 +53,11 @@ export type ChartLayoutOfPie = {
    * @default 150
    */
   gapWidth?: integer;
+
+  // This is OOXML `c:serLines`, which Excel calls series lines.
+  /**
+   * Lines from the main pie to the secondary plot. When absent, there are none. An empty style
+   * (`{}`) draws them with the default, 0.75pt `tx1` 35%/65%.
+   */
+  connectorLines?: Line;
 };

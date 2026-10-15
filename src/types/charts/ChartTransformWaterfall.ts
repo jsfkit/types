@@ -12,7 +12,8 @@ export type ChartTransformWaterfall = ChartTransformBase & {
    */
   type: 'waterfall';
   /**
-   * The field holding each column's change, or its value for a subtotal or total.
+   * The field holding each column's change. A subtotal or total column shows its own value from
+   * zero, whatever the running total before it.
    */
   field: string;
   /**

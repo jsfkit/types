@@ -4,9 +4,15 @@
  * @group Charts
  */
 export type ChartLayoutScatter = {
+  /**
+   * The kind of settings. These settings apply to a `point` plot without a `size` encoding.
+   */
+  type: 'scatter';
+
+  // XXX: is this really needed, can we not determine subtype from what is there?
   // This is OOXML `c:scatterStyle`.
   /**
-   * Excel's scatter chart subtype.
+   * Scatter chart subtype.
    *
    * | Value          | Subtype
    * |----------------|--------------------------------------------

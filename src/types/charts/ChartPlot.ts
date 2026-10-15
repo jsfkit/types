@@ -29,6 +29,10 @@ export type ChartPlot = {
   data: string;
 
   /**
+   * Whether the plot is drawn on horizontal and vertical axes (`cartesian`), or around a center
+   * point (`polar`). Pie and doughnut charts (`arc` plots) and radar charts (`line` or `area`
+   * plots) are `polar`.
+   *
    * @default "cartesian"
    */
   coordinates?: 'cartesian' | 'polar';
@@ -51,9 +55,16 @@ export type ChartPlot = {
   axisGroup?: 'primary' | 'secondary';
 
   /**
-   * How series are arranged relative to each other.
+   * How the plot's series are arranged in each category.
    *
-   * A horizontal bar chart is a `bar` plot that encodes the category on `y` and the value on `x`.
+   * | Value            | Arrangement
+   * |------------------|-------------------------------------------------------------------------
+   * | `standard`       | Each series is drawn on its own, from zero, so they can overlap.
+   * | `clustered`      | Bars are drawn side by side. Only for `bar` plots.
+   * | `stacked`        | Each series is drawn on top of the ones before it.
+   * | `percentStacked` | Stacked, and scaled so that each category adds up to 100%.
+   *
+   * In a 3D chart, `standard` gives each series its own row, front to back.
    *
    * @default "standard"
    */
@@ -64,7 +75,7 @@ export type ChartPlot = {
    * set this.
    *
    * This only takes effect when the plot draws exactly one series. With more than one, colors
-   * are per series, and the flag is kept so it round-trips.
+   * are per series, but the flag may be kept around in case it becomes relevant again.
    *
    * @default false
    */

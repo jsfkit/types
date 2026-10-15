@@ -9,7 +9,8 @@ import type { ChartTextStyle } from './ChartTextStyle.ts';
  *
  * When a `ChartTitle` is present but has neither `text` nor `formula`, the application supplies
  * the text: "Chart Title" for a chart title, "Axis Title" for an axis title, and the unit name
- * (such as "Thousands") for a display units label. Excel shows this text in its UI language.
+ * (such as "Thousands") for a display units label. This default text may be translated to the
+ * language the UI is set to.
  *
  * @group Charts
  */

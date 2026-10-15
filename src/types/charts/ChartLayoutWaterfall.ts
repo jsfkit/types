@@ -8,6 +8,11 @@ import type { integer } from '../integer.ts';
  */
 export type ChartLayoutWaterfall = {
   /**
+   * The kind of settings. These settings apply to a `waterfall` plot.
+   */
+  type: 'waterfall';
+
+  /**
    * Space between columns, as a percentage of the column width (0-500).
    *
    * @min 0

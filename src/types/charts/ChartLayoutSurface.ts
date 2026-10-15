@@ -9,6 +9,11 @@ import type { integer } from '../integer.ts';
  */
 export type ChartLayoutSurface = {
   /**
+   * The kind of settings. These settings apply to a `surface` plot.
+   */
+  type: 'surface';
+
+  /**
    * Whether the surface is drawn as a wireframe, without fills.
    *
    * @default false

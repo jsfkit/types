@@ -7,7 +7,8 @@ import type { Line } from '../dml/shape/line/Line.ts';
  */
 export type ChartErrorBars = {
   /**
-   * Which values the error bars apply to. Only scatter and bubble charts have x error bars.
+   * Which values the error bars apply to. Only scatter, bubble, and area charts have `x` error
+   * bars. On an area chart, they're measured in categories.
    *
    * @default "y"
    */

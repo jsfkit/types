@@ -7,6 +7,11 @@ import type { integer } from '../integer.ts';
  */
 export type ChartLayoutBubble = {
   /**
+   * The kind of settings. These settings apply to a `point` plot with a `size` encoding.
+   */
+  type: 'bubble';
+
+  /**
    * Bubble size relative to the default size, as a percentage (0-300).
    *
    * @min 0

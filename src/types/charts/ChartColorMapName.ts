@@ -1,4 +1,4 @@
-// XXX: promote to Themes
+// XXX: promote to Themes?
 /**
  * A theme color name that a chart's color map translates to a slot.
  *

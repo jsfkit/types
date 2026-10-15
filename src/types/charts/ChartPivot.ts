@@ -4,19 +4,19 @@ import type { ChartPivotFormat } from './ChartPivotFormat.ts';
 /**
  * The pivot table that a pivot chart plots, with the chart's pivot-specific settings.
  *
- * The pivot table is identified by its name and sheet, matching `PivotTable.name` and
- * `PivotTable.sheet`.
+ * The pivot table is identified by its name and sheet, matching {@link PivotTable.name} and
+ * {@link PivotTable.sheet}.
  *
  * @group Charts
  */
 export type ChartPivot = {
   /**
-   * The name of the pivot table.
+   * The name of the pivot table, matching {@link PivotTable.name}.
    */
   name: string;
 
   /**
-   * The sheet that holds the pivot table.
+   * The sheet that holds the pivot table, matching {@link PivotTable.sheet}.
    */
   sheet: string;
 
