@@ -1,3 +1,4 @@
+import type { Chart } from '../charts/index.ts';
 import type { Person } from '../comments/index.ts';
 import type { DefinedName } from '../DefinedName.ts';
 import type { External } from '../External.ts';
@@ -74,6 +75,11 @@ export type Workbook = {
    * @see {@link https://www.rfc-editor.org/rfc/rfc2397}
    */
   images?: Record<string, string>;
+  /**
+   * The charts used by this workbook, keyed by ID. A drawing shows a chart on a sheet through
+   * {@link GraphicChart.chartId}, which is the chart's key here.
+   */
+  charts?: Record<string, Chart>;
   /**
    * The workbook theme. Specifies the colour scheme and fonts referenced throughout the workbook in
    * order to create a consistent visual presentation.

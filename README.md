@@ -32,6 +32,7 @@ Key workbook types:
 
 Key drawing types:
 
+- [`Chart`](https://jsfkit.github.io/types/Chart/)
 - [`Graphic`](https://jsfkit.github.io/types/Graphic/)
 - [`Shape`](https://jsfkit.github.io/types/Shape/)
 
