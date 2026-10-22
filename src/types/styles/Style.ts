@@ -16,7 +16,7 @@ export type Style = {
   /**
    * The name of the font family used to render text, e.g. `"Arial"`.
    *
-   * @default "Calibri"
+   * @default "Calibri" // For cell styles only. No default for differential styles.
    */
   fontFamily?: string;
   /**
@@ -40,55 +40,55 @@ export type Style = {
   /**
    * The font size in pixels.
    *
-   * @default 11
+   * @default 11 // For cell styles only. No default for differential styles.
    */
   fontSize?: PixelValue;
   /**
    * The color used to render text.
    *
-   * @default "#000"
+   * @default "#000" // For cell styles only. No default for differential styles.
    */
   color?: Color;
   /**
    * Indicates whether the text is bold.
    *
-   * @default false
+   * @default false // For cell styles only. No default for differential styles.
    */
   bold?: boolean;
   /**
    * Indicates whether the text is italic.
    *
-   * @default false
+   * @default false // For cell styles only. No default for differential styles.
    */
   italic?: boolean;
   /**
    * Text underline decoration type.
    *
-   * @default "none"
+   * @default "none" // For cell styles only. No default for differential styles.
    */
   underline?: Underline;
   /**
    * The cell's background color.
    *
-   * @default "#FFFFFF"
+   * @default "#FFFFFF" // For cell styles only. No default for differential styles.
    */
   fillColor?: Color;
   /**
    * The color of a cell's background fill.
    *
-   * @default "#000000"
+   * @default "#000000" // For cell styles only. No default for differential styles.
    */
   patternColor?: Color;
   /**
    * The style of a cell's background fill.
    *
-   * @default "none"
+   * @default "none" // For cell styles only. No default for differential styles.
    */
   patternStyle?: PatternStyle;
   /**
    * Top border style.
    *
-   * @default "none"
+   * @default "none" // For cell styles only. No default for differential styles.
    */
   borderTopStyle?: BorderStyle;
   /**
@@ -98,7 +98,7 @@ export type Style = {
   /**
    * Left border style.
    *
-   * @default "none"
+   * @default "none" // For cell styles only. No default for differential styles.
    */
   borderLeftStyle?: BorderStyle;
   /**
@@ -108,7 +108,7 @@ export type Style = {
   /**
    * Bottom border style.
    *
-   * @default "none"
+   * @default "none" // For cell styles only. No default for differential styles.
    */
   borderBottomStyle?: BorderStyle;
   /**
@@ -118,7 +118,7 @@ export type Style = {
   /**
    * Right border style.
    *
-   * @default "none"
+   * @default "none" // For cell styles only. No default for differential styles.
    */
   borderRightStyle?: BorderStyle;
   /**
@@ -128,19 +128,19 @@ export type Style = {
   /**
    * Horizontal alignment of the cells [text] content.
    *
-   * @default "general"
+   * @default "general" // For cell styles only. No default for differential styles.
    */
   horizontalAlignment?: HAlign;
   /**
    * Vertical alignment of the cells [text] content.
    *
-   * @default "bottom"
+   * @default "bottom" // For cell styles only. No default for differential styles.
    */
   verticalAlignment?: VAlign;
   /**
    * Indicates whether text should be wrapped when it exceeds the cell's width.
    *
-   * @default false
+   * @default false // For cell styles only. No default for differential styles.
    */
   wrapText?: boolean;
   /**
@@ -154,7 +154,7 @@ export type Style = {
    *
    * @min 0
    * @max 255
-   * @defaultValue 0
+   * @default 0 // For cell styles only. No default for differential styles.
    */
   textRotation?: integer;
   /**
