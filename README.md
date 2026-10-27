@@ -18,11 +18,11 @@ import type { Workbook, Worksheet, Cell } from '@jsfkit/types';
 The main parts of JSF
 ---------------------
 
-JSF types are divided into several broad areas, notably workbooks, drawings, and pivot tables.
-Workbooks chiefly covers the data in a spreadsheet: the cells, values, formulas, their formatting.
-Drawings covers objects that are drawn on top of the data: the shapes and images that sit on top of
-the cell grid. Pivot tables cover grouping and aggregation of sheet data. All these types are
-detailed in the [JSF documentation](https://jsfkit.github.io/types/).
+JSF types are divided into several broad areas, notably workbooks, drawings, pivot tables, and
+conditional formatting. Workbooks chiefly covers the data in a spreadsheet: the cells, values,
+formulas, their formatting. Drawings covers objects that are drawn on top of the data: the shapes
+and images that sit on top of the cell grid. Pivot tables cover grouping and aggregation of sheet
+data. All these types are detailed in the [JSF documentation](https://jsfkit.github.io/types/).
 
 Key workbook types:
 
@@ -42,6 +42,10 @@ Key pivot table types:
 - [`PivotCache`](https://jsfkit.github.io/types/PivotCache/)
 - [`PivotField`](https://jsfkit.github.io/types/PivotField/)
 - [`PivotDataField`](https://jsfkit.github.io/types/PivotDataField/)
+
+Key conditional formatting types:
+
+- [`CFRule`](https://jsfkit.github.io/types/CFRule/)
 
 ---
 

@@ -22,5 +22,6 @@ export type * from './styles/index.ts';
 export type * from './tables/index.ts';
 export type * from './themes/index.ts';
 export type * from './pivotTables/index.ts';
+export type * from './conditionalFormatting/index.ts';
 export type * from './workbooks/index.ts';
 export type * from './worksheets/index.ts';
