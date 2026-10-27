@@ -5,3 +5,4 @@ export type * from './PatternStyle.ts';
 export type * from './Style.ts';
 export type * from './Underline.ts';
 export type * from './VAlign.ts';
+export type * from './DifferentialStyle.ts';
