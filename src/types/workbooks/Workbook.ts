@@ -130,7 +130,7 @@ export type Workbook = {
       /**
        * Operating system or other variant of the application (e.g. `"Macintosh"`). Present when
        * the application name in the source file includes a platform qualifier that was separated
-       * out from {@link name}.
+       * out from `name`.
        */
       variant?: string;
       /**
