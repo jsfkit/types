@@ -10,7 +10,7 @@ import type { integer } from '../integer.ts';
 export type CFRuleBase = {
   /**
    * The cells the rule applies to. Relative references in any formula the rule holds are written as
-   * seen from the top-left cell of the first range, and shift for each other cell the rule is
+   * seen from the top-left cell of `ref`'s bounding box, and shift for every other cell the rule is
    * evaluated on.
    *
    * @example
