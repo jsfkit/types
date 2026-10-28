@@ -5,13 +5,13 @@ import type { CFStyleRuleBase } from './CFStyleRuleBase.ts';
  *
  * @group ConditionalFormatting
  */
-export type CFTimePeriodRule = CFStyleRuleBase & {
-  type: 'timePeriod';
+export type CFDateRule = CFStyleRuleBase & {
+  type: 'date';
   /**
    * Date windows, relative to the current date. Weeks run from Sunday to Saturday. `last7Days` is
    * today and the six days before it. Time of day is ignored.
    */
-  timePeriod:
+  period:
     'today' |
     'yesterday' |
     'tomorrow' |

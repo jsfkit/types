@@ -11,5 +11,5 @@ export type CFIconThreshold = CFValueThreshold & {
    *
    * @default true
    */
-  gte?: boolean;
+  inclusive?: boolean;
 };

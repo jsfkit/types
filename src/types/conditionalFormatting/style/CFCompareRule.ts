@@ -6,8 +6,8 @@ import type { CFStyleRuleBase } from './CFStyleRuleBase.ts';
  *
  * @group ConditionalFormatting
  */
-export type CFCellIsRule = CFStyleRuleBase & {
-  type: 'cellIs';
+export type CFCompareRule = CFStyleRuleBase & {
+  type: 'compare';
   operator:
     'lessThan' |
     'lessThanOrEqual' |
@@ -22,7 +22,7 @@ export type CFCellIsRule = CFStyleRuleBase & {
    *
    * Two formulas (lower and upper bounds) are required when `operator` is `between` or
    * `notBetween`. Only one formula for every other operator. Formulas must not include a leading
-   * `=`. Relative references are anchored to the first cell of `ref`.
+   * `=`. Relative references are resolved as described in {@link CFRuleBase.ref}.
    */
   formulas: [string] | [string, string];
 };

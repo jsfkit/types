@@ -10,5 +10,5 @@ import type { CFIconSet } from './CFIconSet.ts';
 export type CFIcon = {
   iconSet: Required<CFIconSet>['name'];
   /** Zero-based position of the icon within `iconSet`. */
-  iconId: integer;
+  index: integer;
 };

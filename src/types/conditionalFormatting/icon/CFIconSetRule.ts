@@ -12,7 +12,7 @@ export type CFIconSetRule = CFRuleBase & {
   /**
    * A condition, as a formula, that limits which cells show an icon. Icons are shown only in cells
    * where the formula returns a nonzero value. When absent, icons are shown in every cell of `ref`.
-   * Relative references are anchored to the first cell of `ref`.
+   * Relative references are resolved as described in {@link CFRuleBase.ref}.
    *
    * The formula should not include a leading `=`.
    */

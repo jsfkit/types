@@ -13,6 +13,9 @@ export type CFIconSet = {
    * Note that the actual icons used for each icon set are left to individual implementations to
    * decide.
    *
+   * `NoIcons` is meant for entries in `customIcons`, to leave a threshold without an icon. As the
+   * set name it shows no icons at all.
+   *
    * @default "3TrafficLights1"
    */
   name?:
@@ -55,8 +58,8 @@ export type CFIconSet = {
    */
   reverse?: boolean;
   /**
-   * Per-threshold icon overrides, in the same order as `thresholds`. Present when icons are picked
-   * individually.
+   * Per-threshold icon choices, in the same order as `thresholds`. Present when the icons are
+   * picked individually rather than taken from `name`.
    */
   customIcons?: CFIcon[];
 };

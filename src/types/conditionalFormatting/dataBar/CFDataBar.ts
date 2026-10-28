@@ -30,34 +30,13 @@ export type CFDataBar = {
    * @default true
    */
   showValue?: boolean;
-  /** Bar colour for positive values. */
+  /** Bar fill colour. */
   fillColor: Color;
-  /**
-   * Whether the bar has a border.
-   *
-   * @default false
-   */
-  border?: boolean;
-  /** Bar border colour for positive values. Only used when `border` is `true`. */
+  /** Bar border colour. When absent, bars have no border. */
   borderColor?: Color;
-  /**
-   * Whether negative bars use `fillColor` instead of `negativeFillColor`.
-   *
-   * @default false
-   */
-  negativeBarColorSameAsPositive?: boolean;
-  /** Bar colour for negative values. Only used when `negativeBarColorSameAsPositive` is `false`. */
+  /** Bar colour for negative values. When absent, `fillColor` is used. */
   negativeFillColor?: Color;
-  /**
-   * Whether negative bar borders use `borderColor` instead of `negativeBorderColor`.
-   *
-   * @default true
-   */
-  negativeBarBorderColorSameAsPositive?: boolean;
-  /**
-   * Bar border colour for negative values. Only used when `border` is `true` and
-   * `negativeBarBorderColorSameAsPositive` is `false`.
-   */
+  /** Bar border colour for negative values. When absent, `borderColor` is used. */
   negativeBorderColor?: Color;
   /** Colour of the axis drawn between positive and negative bars. */
   axisColor?: Color;

@@ -19,13 +19,13 @@ export type CFAverageRule = CFStyleRuleBase & {
    *
    * @default false
    */
-  equalAverage?: boolean;
+  inclusive?: boolean;
   /**
    * When present, match cells more than this many standard deviations _above_ or _below_ the mean,
-   * depending on the value of `direction`. `equalAverage` is then ignored.
+   * depending on the value of `direction`. `inclusive` is then ignored.
    *
    * @min 1
    * @max 3
    */
-  stdDev?: integer;
+  standardDeviations?: integer;
 };

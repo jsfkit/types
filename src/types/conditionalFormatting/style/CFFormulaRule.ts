@@ -5,12 +5,12 @@ import type { CFStyleRuleBase } from './CFStyleRuleBase.ts';
  *
  * @group ConditionalFormatting
  */
-export type CFExpressionRule = CFStyleRuleBase & {
-  type: 'expression';
+export type CFFormulaRule = CFStyleRuleBase & {
+  type: 'formula';
   /**
    * The formatting condition as a formula (without a leading `=`). If the formula evaluates to
-   * `true` then the formatting is applied. Relative references are anchored to the first cell of
-   * `ref`.
+   * `true` then the formatting is applied. Relative references are resolved as described in
+   * {@link CFRuleBase.ref}.
    */
   formula: string;
 };

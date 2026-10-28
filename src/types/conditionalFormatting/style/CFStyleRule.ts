@@ -1,12 +1,12 @@
 import type { CFAverageRule } from './CFAverageRule.ts';
-import type { CFBlanksRule } from './CFBlanksRule.ts';
-import type { CFCellIsRule } from './CFCellIsRule.ts';
-import type { CFErrorsRule } from './CFErrorsRule.ts';
-import type { CFExpressionRule } from './CFExpressionRule.ts';
+import type { CFBlankRule } from './CFBlankRule.ts';
+import type { CFCompareRule } from './CFCompareRule.ts';
+import type { CFDateRule } from './CFDateRule.ts';
+import type { CFDuplicateRule } from './CFDuplicateRule.ts';
+import type { CFErrorRule } from './CFErrorRule.ts';
+import type { CFFormulaRule } from './CFFormulaRule.ts';
 import type { CFRankRule } from './CFRankRule.ts';
 import type { CFTextRule } from './CFTextRule.ts';
-import type { CFTimePeriodRule } from './CFTimePeriodRule.ts';
-import type { CFValuesRule } from './CFValuesRule.ts';
 
 /**
  * Rules that apply a differential style to each cell that meets a condition ("style rules").
@@ -16,12 +16,12 @@ import type { CFValuesRule } from './CFValuesRule.ts';
  * @group ConditionalFormatting
  */
 export type CFStyleRule =
-  CFExpressionRule |
-  CFCellIsRule |
+  CFFormulaRule |
+  CFCompareRule |
   CFTextRule |
-  CFTimePeriodRule |
-  CFBlanksRule |
-  CFErrorsRule |
-  CFValuesRule |
+  CFDateRule |
+  CFBlankRule |
+  CFErrorRule |
+  CFDuplicateRule |
   CFRankRule |
   CFAverageRule;

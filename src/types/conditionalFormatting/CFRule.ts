@@ -9,13 +9,13 @@ import type { CFStyleRule } from './style/CFStyleRule.ts';
  *
  * - Style rules ({@link CFStyleRule}) apply a differential style from
  *   {@link Workbook.diffStyles} to each cell that meets a condition:
- *   - {@link CFExpressionRule}: a formula returns `true`
- *   - {@link CFCellIsRule}: the value compares to one or two formulas
+ *   - {@link CFFormulaRule}: a formula returns `true`
+ *   - {@link CFCompareRule}: the value compares to one or two formulas
  *   - {@link CFTextRule}: the text contains, begins with, or ends with a string
- *   - {@link CFTimePeriodRule}: the date falls in a window relative to today
- *   - {@link CFBlanksRule}: the cell is, or isn't, empty
- *   - {@link CFErrorsRule}: the value is, or isn't, an error
- *   - {@link CFValuesRule}: the value is duplicated, or unique, in the range
+ *   - {@link CFDateRule}: the date falls in a window relative to today
+ *   - {@link CFBlankRule}: the cell is, or isn't, empty
+ *   - {@link CFErrorRule}: the value is, or isn't, an error
+ *   - {@link CFDuplicateRule}: the value is duplicated, or unique, in the range
  *   - {@link CFRankRule}: the value is among the highest or lowest in the range
  *   - {@link CFAverageRule}: the value is above or below the range's mean
  *

@@ -3,28 +3,26 @@ import type { CFStyleRuleBase } from './CFStyleRuleBase.ts';
 
 /**
  * Format cells whose values are among the highest or lowest in `ref`, depending on `direction`.
- * When `percent` is `true`, `rank` is a percentage of the cells in `ref` rather than a count.
  *
  * @group ConditionalFormatting
  */
 export type CFRankRule = CFStyleRuleBase & {
   type: 'rank';
   /**
-   * How many cells to format. Either a count (default) or a percentage of the cells (when `percent`
-   * is `true`).
+   * How many cells to format, as a count or a percentage of the cells, depending on `unit`.
    *
-   * When `percent` is `true` the maximum is 100.
+   * When `unit` is `percent` the maximum is 100.
    *
    * @min 1
    * @max 1000
    */
-  rank: integer;
+  count: integer;
   /**
-   * Whether `rank` is a percentage of the cell count rather than a count.
+   * Whether `count` is a number of cells or a percentage of the cells in `ref`.
    *
-   * @default false
+   * @default "cells"
    */
-  percent?: boolean;
+  unit?: 'cells' | 'percent';
   /**
    * Whether to take the highest values (when `direction` is `top`) or the lowest values (when
    * `direction` is `bottom`).

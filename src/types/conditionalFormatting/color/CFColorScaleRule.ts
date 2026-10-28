@@ -19,7 +19,8 @@ export type CFColorScaleRule = CFRuleBase & {
   /**
    * A condition, as a formula, that limits which cells show the colour scale. The colour scale is
    * shown only in cells where the formula returns a nonzero value. When absent, the colour scale is
-   * shown in every cell of `ref`. Relative references are anchored to the first cell of `ref`.
+   * shown in every cell of `ref`. Relative references are resolved as described in
+   * {@link CFRuleBase.ref}.
    *
    * The formula should not include a leading `=`.
    */
