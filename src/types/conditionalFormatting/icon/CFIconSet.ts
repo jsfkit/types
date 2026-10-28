@@ -55,8 +55,8 @@ export type CFIconSet = {
    */
   reverse?: boolean;
   /**
-   * Per-threshold icon overrides, in the same order as `thresholds`. Present only when the rule
-   * mixes icons from different sets.
+   * Per-threshold icon overrides, in the same order as `thresholds`. Present when icons are picked
+   * individually.
    */
   customIcons?: CFIcon[];
 };
