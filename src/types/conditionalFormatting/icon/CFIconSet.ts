@@ -41,8 +41,7 @@ export type CFIconSet = {
     '5Boxes' |
     'NoIcons';
   /**
-   * Thresholds, lowest first. There is one per icon, and the first should always be
-   * `{ type: 'percent', value: 0 }`.
+   * Thresholds, lowest first. There is one per icon.
    */
   thresholds: CFIconThreshold[];
   /**
