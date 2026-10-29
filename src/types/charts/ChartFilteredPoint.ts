@@ -7,7 +7,7 @@ import type { ChartDataPoint } from './ChartDataPoint.ts';
  */
 export type ChartFilteredPoint = Omit<ChartDataPoint, 'index'> & {
   /**
-   * Cell reference of the point's category, for example `Sheet1!$A$4`.
+   * Cell reference of the point's value, for example `Sheet1!$B$3`.
    */
   ref: string;
 };
