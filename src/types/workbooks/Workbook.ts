@@ -10,6 +10,7 @@ import type { PivotTable } from '../pivotTables/index.ts';
 import type { Worksheet } from '../worksheets/index.ts';
 import type { CalcProps } from './CalcProps.ts';
 import type { WorkbookView } from './WorkbookView.ts';
+import type { DifferentialStyle } from '../styles/DifferentialStyle.ts';
 
 /**
  * A workbook is a collection of worksheets, styles, defined names, and other metadata. It's what's
@@ -32,6 +33,12 @@ export type Workbook = {
   calculationProperties?: CalcProps;
   /** Styles for cells in the workbook. */
   styles?: Style[];
+  /**
+   * Differential styles ("dxf"): partial formatting records that can be referenced by index from
+   * features such as conditional formatting, pivot table formats, and custom table styles. The
+   * style properties are combined with the cell's own styles.
+   */
+  diffStyles?: DifferentialStyle[];
   /** Named cell style definitions (e.g. "Normal", "Heading 1"), keyed by style name. */
   namedStyles?: Record<string, NamedStyle>;
   /** External cells referenced by the workbook. An external cell is a cell in another workbook. */
@@ -123,7 +130,7 @@ export type Workbook = {
       /**
        * Operating system or other variant of the application (e.g. `"Macintosh"`). Present when
        * the application name in the source file includes a platform qualifier that was separated
-       * out from {@link name}.
+       * out from `name`.
        */
       variant?: string;
       /**
