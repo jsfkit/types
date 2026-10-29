@@ -10,6 +10,7 @@ import type { ChartValue } from './ChartValue.ts';
  * | `formula`            | Evaluate the formula to get the values.
  * | `formula` + `values` | Evaluate the formula. `values` is an optional cache of its result.
  * | `values`             | Literal data. The values are the data.
+ * | `fullFormula` only   | The series is hidden, so no cells are visible. See `fullFormula`.
  *
  * This works like a {@link Cell}'s `f` and `v`.
  *
@@ -54,11 +55,13 @@ export type ChartFieldBinding = {
    */
   direction?: 'column' | 'row';
 
-  // This is OOXML `c15:fullRef`.
+  // This is OOXML `c15:fullRef`, or `c15:formulaRef` in a series filtered out of the chart.
   /**
-   * The whole source range, when categories are filtered out with Excel's chart filter. `formula`
-   * then refers to the visible cells only, which can be a list of ranges, so evaluating it gives
-   * only the visible points. When absent, no categories are filtered out.
+   * The whole source range when cells are filtered out with Excel's chart filter. If categories
+   * are filtered out `formula` refers to the visible cells only, which can be a list of ranges so
+   * evaluating it gives only the visible points. When the whole series is filtered out
+   * ({@link ChartSeries.hidden}), no cells are visible and there's no `formula`. When absent,
+   * nothing is filtered out.
    */
   fullFormula?: string;
 

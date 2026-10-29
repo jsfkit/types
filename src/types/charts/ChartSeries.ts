@@ -116,7 +116,7 @@ export type ChartSeries = {
   /**
    * Overrides for points in categories that are filtered out with Excel's chart filter, so they
    * come back when the filter is removed. These points have no index, because they aren't in
-   * the series' records, so each is keyed by the cell reference of its category.
+   * the series' records, so each is keyed by the cell reference of its value.
    */
   filteredPoints?: ChartFilteredPoint[];
 
