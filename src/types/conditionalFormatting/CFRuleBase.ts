@@ -9,14 +9,27 @@ import type { integer } from '../integer.ts';
  */
 export type CFRuleBase = {
   /**
-   * The cells the rule applies to. Relative references in any formula the rule holds are written as
-   * seen from the top-left cell of the smallest rectangle that contains every range in `ref`, and
-   * shift for every other cell the rule is evaluated on.
+   * The cells the rule applies to. The rule's formulas are written for the top-left cell of the
+   * smallest rectangle that contains every range in `ref`. For every other cell, relative
+   * references shift by that cell's distance from the top-left cell.
    *
    * @example
-   * A formula rule with `ref: ['D5:D10', 'B2:B4']` and `formula: 'A2>100'` is written as seen
-   * from B2, the top-left cell of B2:D10. For B2 it tests A2, for B4 it tests A4, and for D7 it
-   * tests C7.
+   * A formula rule has `ref: ['B2:B10']` and `formula: 'A2>100'`. The formula is written for B2,
+   * and A2 is one column to the left of B2. Each cell's formula therefore refers to the cell one
+   * column to its left:
+   *
+   * - B2: `A2>100`
+   * - B3: `A3>100`
+   * - B10: `A10>100`
+   *
+   * @example
+   * A formula rule has `ref: ['D5:D10', 'B2:B4']` and `formula: 'A2>100'`. The smallest rectangle
+   * that contains both ranges is B2:D10, so the formula is written for B2, not D5. Each cell's
+   * formula refers to the cell one column to its left:
+   *
+   * - B2: `A2>100`
+   * - B4: `A4>100`
+   * - D7: `C7>100`
    */
   ref: (CellRange | CellId)[];
   /**

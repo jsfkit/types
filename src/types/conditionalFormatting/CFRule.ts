@@ -5,7 +5,7 @@ import type { CFStyleRule } from './style/CFStyleRule.ts';
 
 /**
  * A conditional formatting rule. Each rule applies to the cells and ranges in its `ref`, and `type`
- * sets which kind of rule it is. There are two kinds:
+ * sets which kind of rule it is. There are two categories of rules:
  *
  * - Style rules ({@link CFStyleRule}) apply a differential style from
  *   {@link Workbook.diffStyles} to each cell that meets a condition:
@@ -25,8 +25,12 @@ import type { CFStyleRule } from './style/CFStyleRule.ts';
  *   - {@link CFIconSetRule}: an icon
  *
  * When more than one rule applies to a cell, all of them apply in `priority` order. If two style
- * rules set the same property, the rule with the lower `priority` value wins. A style rule with
- * `stopIfTrue` prevents rules with a higher `priority` value from applying to the cells it matches.
+ * rules set the same property, the rule with the lower `priority` value wins. Conforming authoring
+ * software should give each rule in a worksheet a unique `priority` value, numbered consecutively
+ * from 1.
+ *
+ * A style rule with `stopIfTrue` prevents rules with a higher `priority` value from applying to the
+ * cells it matches.
  *
  * @group ConditionalFormatting
  */
