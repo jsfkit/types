@@ -2,7 +2,7 @@ import type { integer } from '../../integer.ts';
 import type { CFRuleBase } from '../CFRuleBase.ts';
 
 /**
- * Properties shared by every {@link CFStyleRule}.
+ * Properties shared by every rule that applies a differential style.
  *
  * @group ConditionalFormatting
  */

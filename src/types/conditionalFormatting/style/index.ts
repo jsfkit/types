@@ -6,6 +6,5 @@ export * from './CFDuplicateRule.ts';
 export * from './CFErrorRule.ts';
 export * from './CFFormulaRule.ts';
 export * from './CFRankRule.ts';
-export * from './CFStyleRule.ts';
 export * from './CFStyleRuleBase.ts';
 export * from './CFTextRule.ts';

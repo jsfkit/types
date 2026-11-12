@@ -1,14 +1,22 @@
 import type { CFColorScaleRule } from './color/CFColorScaleRule.ts';
 import type { CFDataBarRule } from './dataBar/CFDataBarRule.ts';
 import type { CFIconSetRule } from './icon/CFIconSetRule.ts';
-import type { CFStyleRule } from './style/CFStyleRule.ts';
+import type { CFAverageRule } from './style/CFAverageRule.ts';
+import type { CFBlankRule } from './style/CFBlankRule.ts';
+import type { CFCompareRule } from './style/CFCompareRule.ts';
+import type { CFDateRule } from './style/CFDateRule.ts';
+import type { CFDuplicateRule } from './style/CFDuplicateRule.ts';
+import type { CFErrorRule } from './style/CFErrorRule.ts';
+import type { CFFormulaRule } from './style/CFFormulaRule.ts';
+import type { CFRankRule } from './style/CFRankRule.ts';
+import type { CFTextRule } from './style/CFTextRule.ts';
 
 /**
  * A conditional formatting rule. Each rule applies to the cells and ranges in its `ref`, and `type`
  * sets which kind of rule it is. There are two categories of rules:
  *
- * - Style rules ({@link CFStyleRule}) apply a differential style from
- *   {@link Workbook.diffStyles} to each cell that meets a condition:
+ * - Style rules apply a differential style from {@link Workbook.diffStyles} to each cell that meets
+ *   a condition:
  *   - {@link CFFormulaRule}: a formula returns `true`
  *   - {@link CFCompareRule}: the value compares to one or two formulas
  *   - {@link CFTextRule}: the text contains, begins with, or ends with a string
@@ -34,4 +42,16 @@ import type { CFStyleRule } from './style/CFStyleRule.ts';
  *
  * @group ConditionalFormatting
  */
-export type CFRule = CFStyleRule | CFColorScaleRule | CFDataBarRule | CFIconSetRule;
+export type CFRule =
+  CFFormulaRule |
+  CFCompareRule |
+  CFTextRule |
+  CFDateRule |
+  CFBlankRule |
+  CFErrorRule |
+  CFDuplicateRule |
+  CFRankRule |
+  CFAverageRule |
+  CFColorScaleRule |
+  CFDataBarRule |
+  CFIconSetRule;
