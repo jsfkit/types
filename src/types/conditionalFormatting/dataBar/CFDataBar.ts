@@ -1,5 +1,5 @@
 import type { Color } from '../../colors/Color.ts';
-import type { integer } from '../../integer.ts';
+import type { Percentage } from '../../Percentage.ts';
 import type { CFDataBarThreshold } from './CFDataBarThreshold.ts';
 
 /**
@@ -17,13 +17,13 @@ export type CFDataBar = {
    *
    * @default 10
    */
-  minLength?: integer;
+  minLength?: Percentage;
   /**
    * Length of the longest bar as a percentage of the cell width.
    *
    * @default 90
    */
-  maxLength?: integer;
+  maxLength?: Percentage;
   /**
    * Whether the cell value is shown alongside the bar.
    *

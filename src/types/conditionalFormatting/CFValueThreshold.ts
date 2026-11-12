@@ -1,3 +1,5 @@
+import type { Percentage } from '../Percentage.ts';
+
 /**
  * A threshold at an explicit value. `type` defines how `value` is interpreted:
  *
@@ -15,5 +17,6 @@
  */
 export type CFValueThreshold =
   { type: 'number'; value: number } |
-  { type: 'percent' | 'percentile'; value: number | string } |
+  { type: 'percent'; value: Percentage | string } |
+  { type: 'percentile'; value: number | string } |
   { type: 'formula'; value: string };

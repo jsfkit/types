@@ -1,5 +1,5 @@
 import type { DmlAngle } from '../dml/DmlAngle.ts';
-import type { Percentage } from '../dml/shape/Percentage.ts';
+import type { Percentage } from '../Percentage.ts';
 import type { ChartLayoutOfPie } from './ChartLayoutOfPie.ts';
 
 /**

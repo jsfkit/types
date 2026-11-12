@@ -1,4 +1,5 @@
-import type { Percentage, RelativeRect, Shape, TextBody } from './shape/index.ts';
+import type { Percentage } from '../Percentage.ts';
+import type { RelativeRect, Shape, TextBody } from './shape/index.ts';
 import type { Xfrm } from './Xfrm.ts';
 
 /**
