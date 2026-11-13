@@ -38,7 +38,7 @@ export type Style = {
    */
   fontScheme?: 'major' | 'minor';
   /**
-   * The font size in points (or 72-dpi pixels).
+   * The font size in points (aka 72-dpi pixels).
    *
    * @default 11 // For cell styles only. No default for differential styles.
    */

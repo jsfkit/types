@@ -1,5 +1,5 @@
 /**
- * A numeric value measured in 72-dpi pixels (or a point).
+ * A numeric value measured in 72-dpi pixels (aka a point).
  *
  * @min 0
  * @group Workbooks
