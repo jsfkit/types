@@ -1,5 +1,6 @@
-export * from './CFIcon.ts';
-export * from './CFIconSet.ts';
-export * from './CFIconSetName.ts';
-export * from './CFIconSetRule.ts';
-export * from './CFIconThreshold.ts';
+export type * from './CFIcon.ts';
+export type * from './CFIconSet.ts';
+export type * from './CFIconSetName.ts';
+export type * from './CFIconSetRule.ts';
+export type * from './CFIconThreshold.ts';
+
