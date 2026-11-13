@@ -1,5 +1,5 @@
 import type { Color } from '../../../colors/Color.ts';
-import type { Percentage } from '../Percentage.ts';
+import type { Percentage } from '../../../Percentage.ts';
 
 /**
  * Gradient color stop.

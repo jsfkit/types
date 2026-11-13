@@ -1,7 +1,7 @@
+import type { Percentage } from '../../../Percentage.ts';
 import type { EmuValue } from '../../EmuValue.ts';
 import type { FlipAxis } from './FlipAxis.ts';
 import type { RectAlignment } from '../RectAlignment.ts';
-import type { Percentage } from '../Percentage.ts';
 
 /**
  * Tile settings for image fills.

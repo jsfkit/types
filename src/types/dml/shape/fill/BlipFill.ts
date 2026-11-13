@@ -1,5 +1,5 @@
 import type { integer } from '../../../integer.ts';
-import type { Percentage } from '../Percentage.ts';
+import type { Percentage } from '../../../Percentage.ts';
 import type { RelativeRect } from '../RelativeRect.ts';
 import type { Tile } from './Tile.ts';
 

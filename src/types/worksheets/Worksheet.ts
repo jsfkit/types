@@ -3,6 +3,7 @@ import type { CellId } from '../CellId.ts';
 import type { GridSize } from '../GridSize.ts';
 import type { Note } from '../Note.ts';
 import type { ThreadedComment } from '../comments/index.ts';
+import type { CFRule } from '../conditionalFormatting/index.ts';
 import type { Drawing } from '../dml/Drawing.ts';
 import type { PageMargins } from './PageMargins.ts';
 import type { WorksheetDefaults } from './WorksheetDefaults.ts';
@@ -42,6 +43,14 @@ export type Worksheet = {
   views?: WorksheetView[];
   /** A list of drawings that appear in this worksheet. */
   drawings?: Drawing[];
+  /**
+   * Conditional formatting rules for this worksheet.
+   *
+   * Conditional formatting automatically changes how cells look based on rules set by the user. It
+   * can be applied to ranges, tables, or pivot tables. Each rule holds the ranges it applies to, so
+   * multiple rules can be applied to the same area of a worksheet.
+   */
+  conditionalFormatting?: CFRule[];
   /**
    * Print/page-layout margins in inches. Used by applications that print the worksheet or render
    * print previews. When absent, applications apply their own defaults.

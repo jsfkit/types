@@ -1,0 +1,57 @@
+import type { CFColorScaleRule } from './color/CFColorScaleRule.ts';
+import type { CFDataBarRule } from './dataBar/CFDataBarRule.ts';
+import type { CFIconSetRule } from './icon/CFIconSetRule.ts';
+import type { CFAverageRule } from './style/CFAverageRule.ts';
+import type { CFBlankRule } from './style/CFBlankRule.ts';
+import type { CFCompareRule } from './style/CFCompareRule.ts';
+import type { CFDateRule } from './style/CFDateRule.ts';
+import type { CFDuplicateRule } from './style/CFDuplicateRule.ts';
+import type { CFErrorRule } from './style/CFErrorRule.ts';
+import type { CFFormulaRule } from './style/CFFormulaRule.ts';
+import type { CFRankRule } from './style/CFRankRule.ts';
+import type { CFTextRule } from './style/CFTextRule.ts';
+
+/**
+ * A conditional formatting rule. Each rule applies to the cells and ranges in its `ref`, and `type`
+ * sets which kind of rule it is. There are two categories of rules:
+ *
+ * - Style rules apply a differential style from {@link Workbook.diffStyles} to each cell that meets
+ *   a condition:
+ *   - {@link CFFormulaRule}: a formula returns `true`
+ *   - {@link CFCompareRule}: the value compares to one or two formulas
+ *   - {@link CFTextRule}: the text contains, begins with, or ends with a string
+ *   - {@link CFDateRule}: the date falls in a window relative to today
+ *   - {@link CFBlankRule}: the cell is, or isn't, empty
+ *   - {@link CFErrorRule}: the value is, or isn't, an error
+ *   - {@link CFDuplicateRule}: the value is duplicated, or unique, in the range
+ *   - {@link CFRankRule}: the value is among the highest or lowest in the range
+ *   - {@link CFAverageRule}: the value is above or below the range's mean
+ *
+ * - Visual rules draw in each cell according to where its value falls in the range:
+ *   - {@link CFColorScaleRule}: a background colour
+ *   - {@link CFDataBarRule}: a bar
+ *   - {@link CFIconSetRule}: an icon
+ *
+ * When more than one rule applies to a cell, all of them apply in `priority` order. If two style
+ * rules set the same property, the rule with the lower `priority` value wins. Conforming authoring
+ * software should give each rule in a worksheet a unique `priority` value, numbered consecutively
+ * from 1.
+ *
+ * A style rule with `stopIfTrue` prevents rules with a higher `priority` value from applying to the
+ * cells it matches.
+ *
+ * @group ConditionalFormatting
+ */
+export type CFRule =
+  CFFormulaRule |
+  CFCompareRule |
+  CFTextRule |
+  CFDateRule |
+  CFBlankRule |
+  CFErrorRule |
+  CFDuplicateRule |
+  CFRankRule |
+  CFAverageRule |
+  CFColorScaleRule |
+  CFDataBarRule |
+  CFIconSetRule;

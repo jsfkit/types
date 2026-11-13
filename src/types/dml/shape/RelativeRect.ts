@@ -1,4 +1,4 @@
-import type { Percentage } from './Percentage.ts';
+import type { Percentage } from '../../Percentage.ts';
 
 /**
  * Relative rectangle with percentage-based insets.

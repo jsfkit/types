@@ -1,4 +1,4 @@
-import type { Percentage } from '../Percentage.ts';
+import type { Percentage } from '../../../Percentage.ts';
 
 /**
  * A dash stop primitive consisting of a dash and a space.

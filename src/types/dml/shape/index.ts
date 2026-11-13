@@ -11,7 +11,6 @@ export type * from './ConnectionPoint.ts';
 export type * from './FontStyleIndex.ts';
 export type * from './GeomGuideName.ts';
 export type * from './GuidePoint.ts';
-export type * from './Percentage.ts';
 export type * from './RectAlignment.ts';
 export type * from './RelativeRect.ts';
 export type * from './Shape.ts';
