@@ -1,4 +1,5 @@
-export * from './CFAutoThreshold.ts';
-export * from './CFDataBar.ts';
-export * from './CFDataBarRule.ts';
-export * from './CFDataBarThreshold.ts';
+export type * from './CFAutoThreshold.ts';
+export type * from './CFDataBar.ts';
+export type * from './CFDataBarRule.ts';
+export type * from './CFDataBarThreshold.ts';
+

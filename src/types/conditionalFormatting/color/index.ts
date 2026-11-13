@@ -1,2 +1,3 @@
-export * from './CFColorScaleRule.ts';
-export * from './CFColorStop.ts';
+export type * from './CFColorScaleRule.ts';
+export type * from './CFColorStop.ts';
+

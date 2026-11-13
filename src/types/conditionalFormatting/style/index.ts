@@ -1,10 +1,11 @@
-export * from './CFAverageRule.ts';
-export * from './CFBlankRule.ts';
-export * from './CFCompareRule.ts';
-export * from './CFDateRule.ts';
-export * from './CFDuplicateRule.ts';
-export * from './CFErrorRule.ts';
-export * from './CFFormulaRule.ts';
-export * from './CFRankRule.ts';
-export * from './CFStyleRuleBase.ts';
-export * from './CFTextRule.ts';
+export type * from './CFAverageRule.ts';
+export type * from './CFBlankRule.ts';
+export type * from './CFCompareRule.ts';
+export type * from './CFDateRule.ts';
+export type * from './CFDuplicateRule.ts';
+export type * from './CFErrorRule.ts';
+export type * from './CFFormulaRule.ts';
+export type * from './CFRankRule.ts';
+export type * from './CFStyleRuleBase.ts';
+export type * from './CFTextRule.ts';
+

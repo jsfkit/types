@@ -1,9 +1,10 @@
-export * from './color/index.ts';
-export * from './dataBar/index.ts';
-export * from './icon/index.ts';
-export * from './style/index.ts';
+export type * from './color/index.ts';
+export type * from './dataBar/index.ts';
+export type * from './icon/index.ts';
+export type * from './style/index.ts';
 
-export * from './CFMinMaxThreshold.ts';
-export * from './CFRule.ts';
-export * from './CFRuleBase.ts';
-export * from './CFValueThreshold.ts';
+export type * from './CFMinMaxThreshold.ts';
+export type * from './CFRule.ts';
+export type * from './CFRuleBase.ts';
+export type * from './CFValueThreshold.ts';
+
