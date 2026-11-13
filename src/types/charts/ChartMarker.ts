@@ -27,7 +27,7 @@ export type ChartMarker = {
 
   /**
    * Fill and outline of the markers. By default, both are the series' automatic color, and the
-   * outline is 0.75pt.
+   * outline is 0.75pt. Markers drawn as lines (`x`, `star`, and `plus`) have no fill by default.
    */
   shape?: Shape;
 };
