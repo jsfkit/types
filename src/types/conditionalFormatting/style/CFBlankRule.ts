@@ -7,6 +7,7 @@ import type { CFStyleRuleBase } from './CFStyleRuleBase.ts';
  * @group ConditionalFormatting
  */
 export type CFBlankRule = CFStyleRuleBase & {
+  /** Type discriminator. */
   type: 'blank';
   /**
    * Match cells that are not blank instead.

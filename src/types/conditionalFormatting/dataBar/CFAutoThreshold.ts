@@ -6,5 +6,6 @@
  * @group ConditionalFormatting
  */
 export type CFAutoThreshold = {
+  /** Type discriminator. */
   type: 'autoMin' | 'autoMax';
 };

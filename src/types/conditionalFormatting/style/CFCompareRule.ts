@@ -7,7 +7,9 @@ import type { CFStyleRuleBase } from './CFStyleRuleBase.ts';
  * @group ConditionalFormatting
  */
 export type CFCompareRule = CFStyleRuleBase & {
+  /** Type discriminator. */
   type: 'compare';
+  /** How the cell value is compared to `formulas`. */
   operator:
     'lessThan' |
     'lessThanOrEqual' |

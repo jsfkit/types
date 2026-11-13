@@ -8,6 +8,7 @@ import type { CFColorStop } from './CFColorStop.ts';
  * @group ConditionalFormatting
  */
 export type CFColorScaleRule = CFRuleBase & {
+  /** Type discriminator. */
   type: 'colorScale';
   /**
    * Colour stops in ascending threshold order (at least two). Two stops set the colours at the low

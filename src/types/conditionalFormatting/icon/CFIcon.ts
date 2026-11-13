@@ -8,6 +8,7 @@ import type { CFIconSetName } from './CFIconSetName.ts';
  * @group ConditionalFormatting
  */
 export type CFIcon = {
+  /** Which built-in icon set to pull the icon from. */
   iconSet: CFIconSetName;
   /** Zero-based position of the icon within `iconSet`. */
   index: integer;

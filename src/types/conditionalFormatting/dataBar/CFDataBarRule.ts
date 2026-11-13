@@ -7,7 +7,9 @@ import type { CFDataBar } from './CFDataBar.ts';
  * @group ConditionalFormatting
  */
 export type CFDataBarRule = CFRuleBase & {
+  /** Type discriminator. */
   type: 'dataBar';
+  /** Data bar settings. */
   dataBar: CFDataBar;
   /**
    * A condition, as a formula, that limits which cells show the data bar. The data bar is shown

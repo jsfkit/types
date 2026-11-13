@@ -7,7 +7,9 @@ import type { CFIconSet } from './CFIconSet.ts';
  * @group ConditionalFormatting
  */
 export type CFIconSetRule = CFRuleBase & {
+  /** Type discriminator. */
   type: 'iconSet';
+  /** Icon set settings. */
   iconSet: CFIconSet;
   /**
    * A condition, as a formula, that limits which cells show an icon. Icons are shown only in cells

@@ -6,6 +6,7 @@ import type { CFStyleRuleBase } from './CFStyleRuleBase.ts';
  * @group ConditionalFormatting
  */
 export type CFErrorRule = CFStyleRuleBase & {
+  /** Type discriminator. */
   type: 'error';
   /**
    * Match cells whose value is not an error instead.

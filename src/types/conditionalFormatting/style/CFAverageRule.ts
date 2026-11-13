@@ -7,6 +7,7 @@ import type { CFStyleRuleBase } from './CFStyleRuleBase.ts';
  * @group ConditionalFormatting
  */
 export type CFAverageRule = CFStyleRuleBase & {
+  /** Type discriminator. */
   type: 'average';
   /**
    * Whether to match cells above or below the mean.

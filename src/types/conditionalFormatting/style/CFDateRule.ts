@@ -6,6 +6,7 @@ import type { CFStyleRuleBase } from './CFStyleRuleBase.ts';
  * @group ConditionalFormatting
  */
 export type CFDateRule = CFStyleRuleBase & {
+  /** Type discriminator. */
   type: 'date';
   /**
    * Date windows, relative to the current date. Weeks run from Sunday to Saturday. `last7Days` is

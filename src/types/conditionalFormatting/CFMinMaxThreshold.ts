@@ -4,5 +4,6 @@
  * @group ConditionalFormatting
  */
 export type CFMinMaxThreshold = {
+  /** Type discriminator. */
   type: 'min' | 'max';
 };

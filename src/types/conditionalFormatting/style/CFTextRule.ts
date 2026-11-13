@@ -10,7 +10,9 @@ import type { CFStyleRuleBase } from './CFStyleRuleBase.ts';
  * @group ConditionalFormatting
  */
 export type CFTextRule = CFStyleRuleBase & {
+  /** Type discriminator. */
   type: 'text';
+  /** How the cell's text is compared to `match`. */
   operator: 'contains' | 'notContains' | 'beginsWith' | 'endsWith';
   /**
    * The text to look for, or a formula (no leading `=`) producing it when `matchIsFormula` is

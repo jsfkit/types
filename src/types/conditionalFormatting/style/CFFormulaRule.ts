@@ -6,6 +6,7 @@ import type { CFStyleRuleBase } from './CFStyleRuleBase.ts';
  * @group ConditionalFormatting
  */
 export type CFFormulaRule = CFStyleRuleBase & {
+  /** Type discriminator. */
   type: 'formula';
   /**
    * The formatting condition as a formula (without a leading `=`). If the formula evaluates to

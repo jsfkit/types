@@ -7,6 +7,7 @@ import type { CFStyleRuleBase } from './CFStyleRuleBase.ts';
  * @group ConditionalFormatting
  */
 export type CFRankRule = CFStyleRuleBase & {
+  /** Type discriminator. */
   type: 'rank';
   /**
    * How many cells to format, as a count or a percentage of the cells, depending on `unit`.

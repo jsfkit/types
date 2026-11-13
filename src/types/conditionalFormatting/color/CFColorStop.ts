@@ -8,5 +8,6 @@ import type { CFValueThreshold } from '../CFValueThreshold.ts';
  * @group ConditionalFormatting
  */
 export type CFColorStop = (CFMinMaxThreshold | CFValueThreshold) & {
+  /** The colour the scale reaches at this stop's threshold. */
   color: Color;
 };

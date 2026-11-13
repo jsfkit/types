@@ -30,6 +30,7 @@ import type { CFStyleRuleBase } from './CFStyleRuleBase.ts';
  * @group ConditionalFormatting
  */
 export type CFDuplicateRule = CFStyleRuleBase & {
+  /** Type discriminator. */
   type: 'duplicate';
   /**
    * Format the cells that aren't duplicates instead. Empty cells are still never formatted.
