@@ -12,11 +12,12 @@ import type { CFIconThreshold } from './CFIconThreshold.ts';
  */
 export type CFIconSet = {
   /**
-   * Which built-in icon set to draw from. Ignored for icons overridden in `customIcons`.
+   * The icons to draw from. This is either the name of a built-in icon set, or a list of icons
+   * picked individually from any of the built-in sets.
    *
-   * @default "3TrafficLights1"
+   * If this is a list, it has one icon per threshold in the same order as `thresholds`.
    */
-  name?: CFIconSetName;
+  set: CFIconSetName | CFIcon[];
   /**
    * Thresholds, lowest first. There is one per icon.
    */
@@ -33,9 +34,4 @@ export type CFIconSet = {
    * @default false
    */
   reverse?: boolean;
-  /**
-   * Per-threshold icon choices, in the same order as `thresholds`. Present when the icons are
-   * picked individually rather than taken from `name`.
-   */
-  customIcons?: CFIcon[];
 };
