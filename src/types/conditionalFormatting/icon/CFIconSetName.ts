@@ -1,8 +1,12 @@
 /**
  * The name of a built-in icon set.
  *
- * `NoIcons` is meant for entries in {@link CFIconSet.customIcons}, to leave a threshold without an
- * icon. As the set name it shows no icons at all.
+ * The `NoIcons` value is a special case:
+ *
+ * - When {@link CFIconSet.set} is an array, `NoIcons` is used for thresholds that should have no
+ *   icon.
+ * - When {@link CFIconSet.set} is a string and `NoIcons` is used as the set name, it shows no icons
+ *   at all.
  *
  * @group ConditionalFormatting
  */
