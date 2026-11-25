@@ -32,7 +32,7 @@ export type DefinedName = {
    */
   comment?: string;
   /**
-   * Is the name hidden.
+   * Whether or not the name should be shown to a user in UIs that display workbook names.
    */
   hidden?: boolean;
 };
