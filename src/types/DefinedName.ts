@@ -31,4 +31,8 @@ export type DefinedName = {
    * An optional comment explaining the defined name.
    */
   comment?: string;
+  /**
+   * Whether or not the name should be shown to a user in UIs that display workbook names.
+   */
+  hidden?: boolean;
 };
