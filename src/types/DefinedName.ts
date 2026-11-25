@@ -31,4 +31,8 @@ export type DefinedName = {
    * An optional comment explaining the defined name.
    */
   comment?: string;
+  /**
+   * Is the name hidden.
+   */
+  hidden?: boolean;
 };
